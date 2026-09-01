@@ -24,3 +24,11 @@ What characteristics make a Python question more likely to receive a quick or ac
 
 #### Commit on README.md:
 First week test
+
+0901
+## 计划：逐条分析之前提出的potential topic
+1. 考虑到难度和风险，排除了需要对中国社交媒体爬虫的项目1&2。
+2. 项目3进行进一步分析看看kaggle上的数据集
+3. 项目4可以看看选择哪些期刊，不一定是CNS，然后最好narrowed down 在一个限定的话题里比如污染，教育etc.
+4. 项目5已经有比较完善的数据集，可以初步评估一下几个变量相关性了
+5. 项目6也已经有比较完善的数据集，可以初步探索一下
