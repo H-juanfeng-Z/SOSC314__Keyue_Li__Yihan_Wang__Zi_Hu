@@ -1,0 +1,7 @@
+Why did we gave up the topic:"Are 'Science' prone to publish articles that negatively potraits China?"
+By using the Crossref, a method mentioned in tweet on Wechat https://mp.weixin.qq.com/s/xwZxrmsq_V-WS__iNyAyRA, I successfully scraped the all Science 
+published paper those were related to China. However, when i looked into the details, I found several critical problems:
+1. The database is full of 'bad data'. Since the filtering only focus on the titles and abstracts, much unrelated ariticles were included like papers research into China cereamics, and
+a biology paper just mentioned Chinese researcher in their abstract were also included.
+2. Though there existed a lot of "bad data", the total number of the rows were only around 600, which was considered to be too small for data analysis. If we 
+want to filtered it, probably only half of them would finally fall into the scope that we actually focused on, which made it even less robust.
