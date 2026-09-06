@@ -32,3 +32,5 @@ policy.
   `6698aac`.
 - Figure generation (Zi Hu): OpenAI Codex was used to assist with generating and
   debugging `scripts/03_make_figures.py`. Related commit: `cb123ef`.
+- Data cleaning (Keyue Li): Kimi was used to assist with generating and
+  debugging `simple_exclusion.ipynb`. Related commit: `1a3eef0`.
