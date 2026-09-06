@@ -5,3 +5,11 @@ published paper those were related to China. However, when i looked into the det
 a biology paper just mentioned Chinese researcher in their abstract were also included.
 2. Though there existed a lot of "bad data", the total number of the rows were only around 600, which was considered to be too small for data analysis. If we 
 want to filtered it, probably only half of them would finally fall into the scope that we actually focused on, which made it even less robust.
+
+Why did we gave up the topic :" what factors are associated with the popularity of video games in steam?"
+We initially considered using the "Steam Games Dataset 2025" from Kaggle to investigate. 
+This dataset has 47 columns including prices, genres, release dates, reviews, estimated number of players, Metacritic scores and playtime. 
+However, after applying a minimum threshold of 50 reviews to identify popular games, 70% games generally had very few reviews and low estimated numbers of players. 
+After initial analysing, we found that popular games tended to have higher prices, higher estimated numbers of players, older release dates, and more Metacritic user ratings. 
+Moreover, positive and negative reviews have strong correlation with recommendation. 
+These patterns were relatively straightforward to identify. As a result, the analysis hardly becomes an interesting statistical investigation into what actually causes a game to become popular. 
