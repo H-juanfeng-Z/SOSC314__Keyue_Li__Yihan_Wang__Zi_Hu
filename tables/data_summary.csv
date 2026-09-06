@@ -1,0 +1,11 @@
+metric,value
+raw_questions,607282
+raw_answers,987122
+raw_tags,1885078
+excluded_answers_from_stage_1,25
+excluded_tags_from_stage_1,4
+retained_questions,607282
+retained_answers,987097
+retained_tags,1885074
+questions_with_answer,539237
+questions_without_answer,68045
