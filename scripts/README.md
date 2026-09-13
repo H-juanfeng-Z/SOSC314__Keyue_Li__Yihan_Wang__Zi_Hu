@@ -57,3 +57,48 @@ pip install -r requirements.txt
 Both Stage 2 and Stage 3 are owned and should be explainable by Zi Hu. The code
 was developed with generative-AI assistance; that assistance and the human
 verification steps must be disclosed in the project AI-use record.
+
+## Optional Week 3 text-model feasibility workflow
+
+This optional workflow tests whether text representations add predictive
+information for the preliminary outcome of receiving an answer within 24 hours.
+It is not a final measure of answer quality or successful help-seeking.
+
+Install the additional modeling dependencies:
+
+```bash
+pip install -r requirements.txt -r requirements-models.txt
+```
+
+Then create a deterministic sample from the Stage 2 Parquet file:
+
+```bash
+python scripts/04_prepare_model_sample.py \
+  --features data/processed/question_response_features.parquet \
+  --output data/interim/model_sample_60000.jsonl
+```
+
+The script separates natural-language text and code, excludes questions whose
+full 24-hour response window is not observable, and writes a JSON metadata file
+beside the sample. It does not alter the source Parquet file.
+
+Run the text-model comparison. TF-IDF can run without a MiniLM path; supplying
+the local path to a downloaded model adds the frozen-MiniLM comparison:
+
+```bash
+python scripts/05_compare_text_models.py \
+  --data data/interim/model_sample_60000.jsonl \
+  --output tables/text_model_results.json \
+  --minilm path/to/local/MiniLM
+```
+
+The comparison uses questions from 2008--2014 for training, 2015 for
+validation, and 2016 for testing. It uses title, natural-language body, and
+tags as text input; raw code text is intentionally excluded in this initial
+comparison.
+
+The versioned model-comparison figure can be regenerated from its metric table:
+
+```bash
+python scripts/06_make_model_comparison_figure.py
+```

@@ -34,3 +34,12 @@ policy.
   debugging `scripts/03_make_figures.py`. Related commit: `cb123ef`.
 - Data cleaning (Keyue Li): Kimi was used to assist with generating and
   debugging `simple_exclusion.ipynb`. Related commit: `1a3eef0`.
+
+## Week 3
+
+- Text-model feasibility workflow (Zi Hu): OpenAI Codex was used to assist with
+  generating and debugging the model-sample preparation and text-model
+  comparison code. Related commits: `77b84d0`, `a2a5406`.
+- Model-comparison visualization (Zi Hu): OpenAI Codex was used to assist with
+  generating and debugging the figure-generation code and its versioned output.
+  Related commit: `32547a1`.
