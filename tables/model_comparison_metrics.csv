@@ -1,0 +1,4 @@
+model,representation,roc_auc,average_precision,test_rows
+Structured logistic regression,Question-level structural and time features,0.628723,0.792301,12738
+TF-IDF + logistic regression,Title plus natural-language body plus tags,0.727910,0.859662,12738
+MiniLM embeddings + logistic regression,Title plus natural-language body plus tags,0.755260,0.876606,12738
