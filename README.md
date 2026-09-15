@@ -112,7 +112,7 @@ The question-characteristic variables are descriptive features rather than compl
 | `tables/` | Versioned CSV outputs used for initial descriptive analysis. |
 | `figures/` | Versioned exploratory figures generated from the question-level data. |
 | `docs/` | Project documentation, including the [AI-use record](docs/AI_USE.md). |
-| `group meeting 1`, `group meeting 2`, `group meeting 3` | Records of the group’s early project decisions. |
+| [docs/meetings/](docs/meetings/README.md) | Dated meeting records, including topic selection, oral preparation, and progress discussions. |
 | `Topic choice reasoning` | Rationale for rejecting earlier project topics. |
 | `Schedule.md` | Early topic exploration and project-planning notes. |
 | `requirements.txt` | Python package requirements for the reproducible workflow. |
