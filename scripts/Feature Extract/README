@@ -1,1 +1,76 @@
+# Stack Overflow Question Feature Extraction
 
+This repository contains the scripts used to extract observable characteristics
+from a cleaned Stack Overflow question dataset stored as Parquet.
+
+## Files
+
+- `01_preprocess.py` — text preprocessing utilities, including HTML cleaning,
+  tokenization, stopword removal, and uppercase character ratio calculation.
+- `02_feature_extract_singlequestion.py` — definitions of the question-level
+  features extracted from each Stack Overflow question.
+- `03-extract_features_full.py` — main script. Reads the full cleaned dataset,
+  extracts features for all questions, computes descriptive statistics, and
+  saves the results in a single Excel workbook.
+
+The project does **not** use a custom Parquet reader. Parquet files are read
+directly using PyArrow and pandas.
+
+Affect/sentiment features and tag-count features are intentionally excluded.
+
+## Features
+
+The current pipeline extracts the following observable characteristics.
+
+### Question detail
+
+- `title_word_count`
+- `body_word_count`
+- `explanatory_text_length`
+- `paragraphs`
+- `question_marks`
+
+### Code and technical information
+
+- `has_code`
+- `code_length`
+- `code_text_ratio`
+- `has_error_message`
+
+### Presentation and structure
+
+- `has_url`
+- `has_list`
+- `uppercase_ratio`
+
+These variables are treated as observable characteristics of how questions
+are written and presented. They are not assumed to be direct or objective
+measures of question quality.
+
+## Input
+
+The main script expects a cleaned Parquet file containing at least the
+following columns:
+
+- `title`
+- `body_html`
+
+The input dataset should be placed in the location specified by the script.
+
+## Output
+
+The main script produces a single Excel workbook:
+
+`stackoverflow_question_features.xlsx`
+
+The workbook contains two sheets:
+
+- **Question Features** — feature values for each question.
+- **Descriptive Statistics** — summary statistics for the extracted features.
+
+## Installation
+
+Install the required Python packages with:
+
+```bash
+pip install -r requirements.txt
