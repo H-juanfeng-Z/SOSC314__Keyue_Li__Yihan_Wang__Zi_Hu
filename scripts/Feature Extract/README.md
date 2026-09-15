@@ -55,8 +55,6 @@ following columns:
 - `title`
 - `body_html`
 
-The input dataset should be placed in the location specified by the script.
-
 ## Output
 
 The main script produces a single Excel workbook:
