@@ -25,7 +25,7 @@ import time
 import numpy as np
 import pandas as pd
 
-from feature_extract import extract_features
+from feature_extract_singlequestion import extract_features
 
 
 def describe(name, values, is_binary=False):
