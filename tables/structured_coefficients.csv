@@ -1,0 +1,53 @@
+feature,coefficient,exp_coefficient,interpretation_unit
+numeric__tag_count,-0.32196383239278303,0.7247244014033947,one training standard deviation
+numeric__title_chars,-0.024946250704748974,0.9753623356576094,one training standard deviation
+numeric__body_html_chars,-0.002644825245176533,0.9973586692236802,one training standard deviation
+numeric__code_block_count,0.14374283422219242,1.1545871500402836,one training standard deviation
+numeric__code_element_count,0.03472205722173527,1.0353319057787722,one training standard deviation
+numeric__link_count,-0.1602448067057414,0.8519352039849593,one training standard deviation
+numeric__question_mark_count,0.0689979615031407,1.071434025031225,one training standard deviation
+numeric__natural_language_chars,-0.19524774334651168,0.8226308314935856,one training standard deviation
+numeric__code_chars,-0.2769843142806693,0.7580663878338444,one training standard deviation
+time__creation_month_1,-0.0025329185821344915,0.9974702865494538,one-hot category; no omitted reference category
+time__creation_month_2,0.06850539858050755,1.0709064063098244,one-hot category; no omitted reference category
+time__creation_month_3,0.03826212300409095,1.0390035439176375,one-hot category; no omitted reference category
+time__creation_month_4,-0.033254937143407555,0.9672919295114332,one-hot category; no omitted reference category
+time__creation_month_5,-0.08728677727553862,0.9164142511638298,one-hot category; no omitted reference category
+time__creation_month_6,-0.007921305064163772,0.9921099857968005,one-hot category; no omitted reference category
+time__creation_month_7,0.05982843532484672,1.0616543885295728,one-hot category; no omitted reference category
+time__creation_month_8,0.04751240694168393,1.0486592116942601,one-hot category; no omitted reference category
+time__creation_month_9,-0.019529544457268545,0.9806599216955137,one-hot category; no omitted reference category
+time__creation_month_10,-0.06955218823006863,0.9328114503356452,one-hot category; no omitted reference category
+time__creation_month_11,0.09858228118784133,1.1036052066059907,one-hot category; no omitted reference category
+time__creation_month_12,-0.021606930171975527,0.9786248273530315,one-hot category; no omitted reference category
+time__creation_weekday_utc_0,0.05552219934796083,1.057092483575821,one-hot category; no omitted reference category
+time__creation_weekday_utc_1,0.013150995133005374,1.0132378497936128,one-hot category; no omitted reference category
+time__creation_weekday_utc_2,0.039072170575747064,1.0398455271925429,one-hot category; no omitted reference category
+time__creation_weekday_utc_3,-0.0342444722551064,0.9663352336040792,one-hot category; no omitted reference category
+time__creation_weekday_utc_4,-0.00756439974117446,0.9924641383274245,one-hot category; no omitted reference category
+time__creation_weekday_utc_5,-0.04989502465211018,0.9513292853818477,one-hot category; no omitted reference category
+time__creation_weekday_utc_6,0.054964575706089744,1.0565031881331401,one-hot category; no omitted reference category
+time__creation_hour_utc_0,0.02132154592531737,1.0215504742257198,one-hot category; no omitted reference category
+time__creation_hour_utc_1,-0.10573418537750101,0.899663760077544,one-hot category; no omitted reference category
+time__creation_hour_utc_2,0.027016952386770512,1.0273852192474624,one-hot category; no omitted reference category
+time__creation_hour_utc_3,-0.01879285985818315,0.9813826249262525,one-hot category; no omitted reference category
+time__creation_hour_utc_4,-0.16637688193773187,0.8467270579129746,one-hot category; no omitted reference category
+time__creation_hour_utc_5,-0.04429517393220783,0.9566715312949509,one-hot category; no omitted reference category
+time__creation_hour_utc_6,-0.053009724697656,0.9483707898182577,one-hot category; no omitted reference category
+time__creation_hour_utc_7,-0.038346180738811325,0.9623797258936934,one-hot category; no omitted reference category
+time__creation_hour_utc_8,-0.09485518541684904,0.9095046344664752,one-hot category; no omitted reference category
+time__creation_hour_utc_9,-0.06748134287371861,0.9347451601118347,one-hot category; no omitted reference category
+time__creation_hour_utc_10,-0.14115833927845814,0.8683518066132203,one-hot category; no omitted reference category
+time__creation_hour_utc_11,0.09228907132023656,1.0966817955191548,one-hot category; no omitted reference category
+time__creation_hour_utc_12,-0.014198157128117754,0.9859021613643432,one-hot category; no omitted reference category
+time__creation_hour_utc_13,0.08710332241023831,1.0910093996156927,one-hot category; no omitted reference category
+time__creation_hour_utc_14,0.04113698146553665,1.0419948297488317,one-hot category; no omitted reference category
+time__creation_hour_utc_15,0.08142019750276831,1.0848266422544666,one-hot category; no omitted reference category
+time__creation_hour_utc_16,0.04796242862733207,1.0491312372832866,one-hot category; no omitted reference category
+time__creation_hour_utc_17,-0.018433090266934484,0.9817357600719153,one-hot category; no omitted reference category
+time__creation_hour_utc_18,0.07756567485958044,1.0806532018753694,one-hot category; no omitted reference category
+time__creation_hour_utc_19,-0.014376798870222406,0.9857260538152404,one-hot category; no omitted reference category
+time__creation_hour_utc_20,0.16663225723687966,1.181319763626829,one-hot category; no omitted reference category
+time__creation_hour_utc_21,0.06517875200536268,1.0673497982499398,one-hot category; no omitted reference category
+time__creation_hour_utc_22,0.04478214882568158,1.045800006331052,one-hot category; no omitted reference category
+time__creation_hour_utc_23,0.09565463192510103,1.1003789625963418,one-hot category; no omitted reference category
