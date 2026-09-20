@@ -1,0 +1,51 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+5,0,1,3.5679162,21615158,reshaping a data frame in pandas,reshaping a data frame in pandas is there a simple way in pandas to reshape the following data frame: to this format?:
+5,0,2,4.434404,22732449,Categorical variable in Rpy2 (factor function),categorical variable in rpy2 (factor function) how can i do this in rpy2? mydata is a dataframe and rank is a varaible from 1 to 4
+5,0,3,4.769078,4239205,Inverse of a matrix in SymPy?,"inverse of a matrix in sympy? i was wondering how to create a matrix and compute its inverse using sympy in python? for example, for this symbolic matrix thanks and regards!"
+5,0,4,4.8116317,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+5,0,5,4.913854,35281691,scikit cosine_similarity vs pairwise_distances,"scikit cosine_similarity vs pairwise_distances what is the difference between scikit-learn's sklearn.metrics.pairwise.cosine_similarity and sklearn.metrics.pairwise.pairwise_distances(.. metric=""cosine"")? 0.37997836 0.62002164 why are these different?"
+5,0,6,5.0050826,37532410,How to visualize a SVM using Matplotlib in python?,how to visualize a svm using matplotlib in python? is there any way to visualize svm model in opencv using matplotlib in python like this one .
+5,0,7,5.0889235,33525279,Pyqtgraph: How do I plot an ellipse or a circle,pyqtgraph: how do i plot an ellipse or a circle i would like plot circles or ellipses in pyqtgraph gl.glviewwidget(). however i did not find a function to do that. anyone know the way to do that?
+5,0,8,5.113643,38093965,Group by with min,group by with min i have a dataframe and i get the following: i want to group by and get the value minimum. i expect an output like this:
+5,0,9,5.2846217,6019473,Save matplotlib plot in grayscale,save matplotlib plot in grayscale i have some color plots that i need to be saved in grayscale. is there an easy way to do this without changing the plotting formats?
+5,0,10,5.3008327,39318232,np.cast in numpy results in incorrect result,np.cast in numpy results in incorrect result this use of np.cast: results in an incorrect value for pi: why did this happen?
+5,1,1,3.8467398,14645466,Is it a good idea to define properties in Python interfaces?,is it a good idea to define properties in python interfaces? is it a good practice to define properties in an interface like this?
+5,1,2,3.9077241,2824612,Handle iterable and non-iterable seamlessly,handle iterable and non-iterable seamlessly could you let me know how i can optimize the following code?
+5,1,3,4.012522,40074315,"""TypeError: 'str' does not support the buffer interface"" when writing to a socket","""typeerror: 'str' does not support the buffer interface"" when writing to a socket the above python code is giving me this error:"
+5,1,4,4.477303,38704037,What is the difference between Hypothesis Testing (Property Based Testing) and Mutation testing?,what is the difference between hypothesis testing (property based testing) and mutation testing? my context for this question is in python. hypothesis testing library: mutation testing library:
+5,1,5,4.635457,11208645,Using AMQP with graphite 9.9,using amqp with graphite 9.9 i'm attempting to connect rabbitmq to graphite using amqp that is built into graphite. however when i uncomment the setting in i get:
+5,1,6,4.7990584,28069953,How are pure virtual methods implemented in Python?,how are pure virtual methods implemented in python? i have not found how yet. meanwhile am currently using like this:
+5,1,7,4.805955,10831075,"How to automate UI using python, pls any can share example","how to automate ui using python, pls any can share example i have a web application i need to automate ui design using python script"
+5,1,8,4.8495545,45500,Wacom tablet Python interface,wacom tablet python interface if possible i want to catch pressure sensitive input from a wacom tablet in python. are there any python libraries available that can do this?
+5,1,9,4.9985113,6165819,widget.setLayout(layout) vs layout = QLayout(widget),widget.setlayout(layout) vs layout = qlayout(widget) are and the same things? they look like the same. but may be i am missing something?
+5,1,10,5.1660247,20936693,AttributeError: VerifiedHTTPSConnection instance has no attribute '_tunnel_host',attributeerror: verifiedhttpsconnection instance has no attribute '_tunnel_host' when executing many commands eg. the following error occurs there seems to be an error with the connection
+5,2,1,4.0257287,32983085,DJANGO -ImportError: No module named pagination,"django -importerror: no module named pagination i clone this fairybbs project . when runserver in console,error message appears as below:"
+5,2,2,4.178837,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+5,2,3,4.4292736,22925096,django and mysql_config error,django and mysql_config error i tried to install mysql module with and i got this:
+5,2,4,4.622252,4170031,"How do you do a ""hidden"" field in Django's forms.Form models?","how do you do a ""hidden"" field in django's forms.form models? how do you make this hidden?"
+5,2,5,4.6595936,19869123,Query in ManyToMany relation,query in manytomany relation i have two models with manytomany relation. here is the code: i'm trying to make a query to fetch related fields but it doesn't work what am i doing wrong?
+5,2,6,4.8264775,17633734,Django model column,django model column how i can make a model field to return a default value from function?
+5,2,7,4.8416905,16694298,mongodb keyerror even though field exists,mongodb keyerror even though field exists i have a mongodb collection friends and i run the code i get: but if i do: i get the error:
+5,2,8,4.870656,33328656,django type object Http404 has no attribute get,django type object http404 has no attribute get i have this code: while returning the http 404 i got this :
+5,2,9,4.953542,17907109,error during syncdb django python,error during syncdb django python i am getting an error when i am trying to do a python manage.py syncdb. the error is as shown below any idea what could be the reason?
+5,2,10,5.0149083,21483003,Replacing a character in Django template,replacing a character in django template i want to change to in the my page's meta description. this is what i tried this doesn't work. it still shows as
+5,3,1,2.476697,919056,Case insensitive replace,case insensitive replace what's the easiest way to do a case-insensitive string replacement in python?
+5,3,2,2.6563318,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+5,3,3,2.7277596,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+5,3,4,2.8891475,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+5,3,5,2.936105,27212153,Python Sorting a List of Namedtuples,python sorting a list of namedtuples i'm trying to sort this by and i have no clue where to start.
+5,3,6,2.993911,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+5,3,7,3.0016954,22905129,"rpy2, R and ubuntu 12.04 - Invalid substring -fopenmp","rpy2, r and ubuntu 12.04 - invalid substring -fopenmp whats tbe delio with isntalling rpy2 on ubuntu 12.04?"
+5,3,8,3.0327146,3887381,TypeError: 'NoneType' object is not iterable in Python,typeerror: 'nonetype' object is not iterable in python what does error mean? i am getting it on this python code:
+5,3,9,3.0358584,32245625,Pandas: consolidating columns in DataFrame,pandas: consolidating columns in dataframe using the dataframe below as an example: how can i get
+5,3,10,3.0894098,32929910,Does anyone know to make this a single line statement? (python),does anyone know to make this a single line statement? (python)
+5,4,1,2.448819,8983019,Unable to install gdata python library client,unable to install gdata python library client
+5,4,2,3.2608242,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+5,4,3,3.4108005,25718961,How can I get permanent URL of file uploaded on rackspace using python pyrax,how can i get permanent url of file uploaded on rackspace using python pyrax i am able to to upload image successfully. my code is:
+5,4,4,3.658312,30006169,read files from linux usb drive under Windows,"read files from linux usb drive under windows i use psutil , but seam the f: drive can be seen ..."
+5,4,5,3.7120883,39303157,How to install flaskext.mysql with yum/centos?,"how to install flaskext.mysql with yum/centos? while running a program, i get the error . how can i fix this with yum?"
+5,4,6,3.7894845,4996085,Python CGEventTap Bus Error,python cgeventtap bus error i get a bus error whenever i run this python cgeventtap code: is there something obvious that i'm missing?
+5,4,7,3.8236303,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+5,4,8,3.8315902,27152673,Django makemessages command throws error,django makemessages command throws error when i am trying to run makemessages command i get following errors: i use virtualenv with django 1.7 installed. any ideas?
+5,4,9,3.8760026,11687302,PyCharm not recognizing Python files,pycharm not recognizing python files my pycharm is no longer recognizing python files (attached screenshot) the interpreter path is correctly set.
+5,4,10,3.8887188,37008080,Python Hive/hadoop connection error,python hive/hadoop connection error i am trying to use hive/hadoop using python. i am getting the following error. can someone tell me how to go about this?

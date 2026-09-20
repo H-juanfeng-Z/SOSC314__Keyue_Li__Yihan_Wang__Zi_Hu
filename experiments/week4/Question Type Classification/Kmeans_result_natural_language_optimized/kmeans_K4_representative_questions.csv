@@ -1,0 +1,41 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+4,0,1,3.68795,21615158,reshaping a data frame in pandas,reshaping a data frame in pandas is there a simple way in pandas to reshape the following data frame: to this format?:
+4,0,2,4.4962564,22732449,Categorical variable in Rpy2 (factor function),categorical variable in rpy2 (factor function) how can i do this in rpy2? mydata is a dataframe and rank is a varaible from 1 to 4
+4,0,3,4.687436,4239205,Inverse of a matrix in SymPy?,"inverse of a matrix in sympy? i was wondering how to create a matrix and compute its inverse using sympy in python? for example, for this symbolic matrix thanks and regards!"
+4,0,4,4.724031,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+4,0,5,4.7821293,35281691,scikit cosine_similarity vs pairwise_distances,"scikit cosine_similarity vs pairwise_distances what is the difference between scikit-learn's sklearn.metrics.pairwise.cosine_similarity and sklearn.metrics.pairwise.pairwise_distances(.. metric=""cosine"")? 0.37997836 0.62002164 why are these different?"
+4,0,6,4.9779806,37532410,How to visualize a SVM using Matplotlib in python?,how to visualize a svm using matplotlib in python? is there any way to visualize svm model in opencv using matplotlib in python like this one .
+4,0,7,5.068376,33525279,Pyqtgraph: How do I plot an ellipse or a circle,pyqtgraph: how do i plot an ellipse or a circle i would like plot circles or ellipses in pyqtgraph gl.glviewwidget(). however i did not find a function to do that. anyone know the way to do that?
+4,0,8,5.166212,38093965,Group by with min,group by with min i have a dataframe and i get the following: i want to group by and get the value minimum. i expect an output like this:
+4,0,9,5.3052454,18902102,What is the equivalent of matlab's smooth3 function in python?,what is the equivalent of matlab's smooth3 function in python? i couldn't find an equivalent of matlab's smooth3 in python. how do you perform 3d smoothing in python?
+4,0,10,5.3230753,6019473,Save matplotlib plot in grayscale,save matplotlib plot in grayscale i have some color plots that i need to be saved in grayscale. is there an easy way to do this without changing the plotting formats?
+4,1,1,2.4125795,919056,Case insensitive replace,case insensitive replace what's the easiest way to do a case-insensitive string replacement in python?
+4,1,2,2.6215777,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+4,1,3,2.7021053,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+4,1,4,2.878,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+4,1,5,2.9323204,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+4,1,6,2.9352796,27212153,Python Sorting a List of Namedtuples,python sorting a list of namedtuples i'm trying to sort this by and i have no clue where to start.
+4,1,7,2.9618266,32245625,Pandas: consolidating columns in DataFrame,pandas: consolidating columns in dataframe using the dataframe below as an example: how can i get
+4,1,8,2.9869957,3887381,TypeError: 'NoneType' object is not iterable in Python,typeerror: 'nonetype' object is not iterable in python what does error mean? i am getting it on this python code:
+4,1,9,2.9918282,22905129,"rpy2, R and ubuntu 12.04 - Invalid substring -fopenmp","rpy2, r and ubuntu 12.04 - invalid substring -fopenmp whats tbe delio with isntalling rpy2 on ubuntu 12.04?"
+4,1,10,3.0636714,32929910,Does anyone know to make this a single line statement? (python),does anyone know to make this a single line statement? (python)
+4,2,1,2.4377022,8983019,Unable to install gdata python library client,unable to install gdata python library client
+4,2,2,3.139941,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+4,2,3,3.4961548,25718961,How can I get permanent URL of file uploaded on rackspace using python pyrax,how can i get permanent url of file uploaded on rackspace using python pyrax i am able to to upload image successfully. my code is:
+4,2,4,3.7420647,14645466,Is it a good idea to define properties in Python interfaces?,is it a good idea to define properties in python interfaces? is it a good practice to define properties in an interface like this?
+4,2,5,3.803809,30006169,read files from linux usb drive under Windows,"read files from linux usb drive under windows i use psutil , but seam the f: drive can be seen ..."
+4,2,6,3.830302,39303157,How to install flaskext.mysql with yum/centos?,"how to install flaskext.mysql with yum/centos? while running a program, i get the error . how can i fix this with yum?"
+4,2,7,3.8316252,4996085,Python CGEventTap Bus Error,python cgeventtap bus error i get a bus error whenever i run this python cgeventtap code: is there something obvious that i'm missing?
+4,2,8,3.8340561,15316428,AttributeError: 'myThread' object has no attribute '_initialized',attributeerror: 'mythread' object has no attribute '_initialized' any idea why i get the following error when running the code below: code:
+4,2,9,3.8938153,37008080,Python Hive/hadoop connection error,python hive/hadoop connection error i am trying to use hive/hadoop using python. i am getting the following error. can someone tell me how to go about this?
+4,2,10,3.9036872,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+4,3,1,4.024502,32983085,DJANGO -ImportError: No module named pagination,"django -importerror: no module named pagination i clone this fairybbs project . when runserver in console,error message appears as below:"
+4,3,2,4.1699753,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+4,3,3,4.4587436,22925096,django and mysql_config error,django and mysql_config error i tried to install mysql module with and i got this:
+4,3,4,4.62159,4170031,"How do you do a ""hidden"" field in Django's forms.Form models?","how do you do a ""hidden"" field in django's forms.form models? how do you make this hidden?"
+4,3,5,4.665672,19869123,Query in ManyToMany relation,query in manytomany relation i have two models with manytomany relation. here is the code: i'm trying to make a query to fetch related fields but it doesn't work what am i doing wrong?
+4,3,6,4.864608,16694298,mongodb keyerror even though field exists,mongodb keyerror even though field exists i have a mongodb collection friends and i run the code i get: but if i do: i get the error:
+4,3,7,4.876563,33328656,django type object Http404 has no attribute get,django type object http404 has no attribute get i have this code: while returning the http 404 i got this :
+4,3,8,4.900279,17633734,Django model column,django model column how i can make a model field to return a default value from function?
+4,3,9,4.907644,17907109,error during syncdb django python,error during syncdb django python i am getting an error when i am trying to do a python manage.py syncdb. the error is as shown below any idea what could be the reason?
+4,3,10,4.967023,38892192,what is the best pratice of nested dict for mongoengine ODM?,what is the best pratice of nested dict for mongoengine odm? i have some data like this in my mongodb: how to i modeling it with mongoengine odm?
