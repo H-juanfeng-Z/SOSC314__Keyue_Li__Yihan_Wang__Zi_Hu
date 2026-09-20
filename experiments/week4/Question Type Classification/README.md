@@ -7,7 +7,7 @@ This project classifies Stack Overflow questions into **8 topic categories** usi
 ## Task
 
 Given a dataset of Stack Overflow questions, the goal is to **group them into meaningful topic categories** without using any labels. 
-The current solution classifies each question into one of **8 topics**:
+The current solution classifies each question into one of **8 topics** using NMF method for baseline within K=8:
 
 - Python basics
 - Error / environment
