@@ -43,3 +43,6 @@ policy.
 - Model-comparison visualization (Zi Hu): OpenAI Codex was used to assist with
   generating and debugging the figure-generation code and its versioned output.
   Related commit: `32547a1`.
+  
+## Week 4
+-Reproduing A&S LDA model (Keyue Li): Kimi K3 was used to assist with generating and debugging. Related commits: '5981726'
