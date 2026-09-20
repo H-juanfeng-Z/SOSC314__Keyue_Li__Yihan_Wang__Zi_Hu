@@ -1,0 +1,41 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+4,0,1,1.7444636,5559349,python regular expression,python regular expression whats the regular expression in python for any string without the char '/'. thanks
+4,0,2,1.7937982,919056,Case insensitive replace,case insensitive replace what's the easiest way to do a case-insensitive string replacement in python?
+4,0,3,1.8007348,4413912,Why is print not a function in python?,why is print not a function in python? why is print a keyword in python and not a function?
+4,0,4,1.8106472,36139,How do I sort a list of strings in Python?,how do i sort a list of strings in python? what is the best way of creating an alphabetically sorted list in python?
+4,0,5,1.9308478,15675667,column matrix representation in python,"column matrix representation in python how can i represent a column matrix and row matrix in python? a =[1,2,3,4] and 1 2 3 4"
+4,0,6,1.9631348,13356680,Python Convert to date and compare,python convert to date and compare i have two strings like 1352789792.757637 and 1352789919.235815. how to convert them back to time and compare? thanks for help
+4,0,7,1.9760467,22362736,Get string of certain length out of a list,"get string of certain length out of a list what i am after is like this: list1 = [""well"", ""455"", ""antifederalist"", ""mooooooo""] something that pulls ""455"" from the list because of the number of characters."
+4,0,8,2.0085528,29597831,How to convert a single number into a single item list in python,how to convert a single number into a single item list in python my solution: >>> i = 2 >>> list1 = [] >>> list1.append(i) >>> list1 [2] is there a more elegant solution?
+4,0,9,2.0361063,15606138,Remove punctuation from a list of list of strings in python,"remove punctuation from a list of list of strings in python lets say i have a [[""hello, world!""],[""hello!!, world!!""]] i want it to produce [[""hello"",""world""],[""hello"",""world""]]"
+4,0,10,2.0440357,13167990,Check for strings inside list python,"check for strings inside list python lets say i have a = ""fifa 13"" then i writing ""bla"" and ""13"" in a and result is true... why? bla is not in the a"
+4,1,1,1.4862471,697594,How to integrate BIRT with Python,how to integrate birt with python has anyone ever tried that?
+4,1,2,1.5149424,35510666,"Python/Selenium click on <div class=""foo'>",python/selenium click on is it possible?
+4,1,3,1.5759791,113007,Writing to the windows logs in Python,writing to the windows logs in python is it possible to write to the windows logs in python?
+4,1,4,1.7211883,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+4,1,5,1.7433583,11475885,python .replace() regex,"python .replace() regex i am trying to do a grab everything after the """
+4,1,6,1.7827212,1554362,reading midi input,reading midi input is there a module to read midi input (live) with python?
+4,1,7,1.7910125,15941956,Python installation on aix,python installation on aix is it possible to install python on aix server. i have installed it on linux and windows but not able to find the correct installables for aix
+4,1,8,1.8259546,1111356,Is there anything like HTTP::Recorder for Python?,is there anything like http::recorder for python? i really like perl's http::recorder. is there something like it for python?
+4,1,9,1.9038885,295670,What is a partial class?,what is a partial class? what is and how can it be used in c#. can you use the same concept in python/perl?
+4,1,10,1.9186789,1491796,get the exit code for python program,"get the exit code for python program i'm running a python program on windowsxp, how can i obtain the exit code after my program ends ? thanks."
+4,2,1,2.0463777,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+4,2,2,2.0937417,22507707,Finding largest eigenvalue in sparse matrix,finding largest eigenvalue in sparse matrix i'm using numpy and scipy. i have a large sparse matrix and i want to find the largest eigenvalue of the sparse matrix. how can i do that?
+4,2,3,2.094586,33525279,Pyqtgraph: How do I plot an ellipse or a circle,pyqtgraph: how do i plot an ellipse or a circle i would like plot circles or ellipses in pyqtgraph gl.glviewwidget(). however i did not find a function to do that. anyone know the way to do that?
+4,2,4,2.1558418,15341762,How to determine size (in bytes) of a PyTables array?,how to determine size (in bytes) of a pytables array? how can i determine the size (in bytes) of a pytables array?
+4,2,5,2.1574934,1602122,Casting vs. coercion in Python,"casting vs. coercion in python in the python documentation and on mailing lists i see that values are sometimes ""cast"", and sometimes ""coerced"". what is the difference?"
+4,2,6,2.1850767,18902102,What is the equivalent of matlab's smooth3 function in python?,what is the equivalent of matlab's smooth3 function in python? i couldn't find an equivalent of matlab's smooth3 in python. how do you perform 3d smoothing in python?
+4,2,7,2.1960073,2631311,Converting BMP to Grey Scale in Image Module Python,converting bmp to grey scale in image module python hi i was wondering how i can convert bmps to a grey scale using image module of python? thanks
+4,2,8,2.1975327,32448939,How to set fontSize for xticks in boxplot using Python pylab module?,how to set fontsize for xticks in boxplot using python pylab module? i would like to change the fontsize of the labels for y axis using pylab. how could i do?
+4,2,9,2.1989067,3520672,Can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)?,can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)? (couldn't upload the picture showing the integral as i'm a new user.)
+4,2,10,2.209804,6019473,Save matplotlib plot in grayscale,save matplotlib plot in grayscale i have some color plots that i need to be saved in grayscale. is there an easy way to do this without changing the plotting formats?
+4,3,1,1.536622,38008453,Flask not interacting with Ajax,flask not interacting with ajax this script
+4,3,2,1.6792892,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+4,3,3,1.7182233,1727429,Implement OpenID in Python,implement openid in python how should i implement openid in python using the openid api?
+4,3,4,1.8577733,9125997,How to call subclass methods in a superclass in Python,how to call subclass methods in a superclass in python i want to know how to call subclass methods in the superclass.
+4,3,5,1.9331764,15147189,Class attr and methods,"class attr and methods with class attributes and methods, to reference them within the class, should we use classname. or self."
+4,3,6,2.0382905,18232150,All expressions from one page,"all expressions from one page i have this code to retrieve information from a page: def between_strings(source, start='"
+4,3,7,2.0394993,1640054,Multiple CouchDB Document fetch with couchdb-python,"multiple couchdb document fetch with couchdb-python how to fetch multiple documents from couchdb, in particular with couchdb-python?"
+4,3,8,2.0439222,37976477,How to use RoboBrowser to click a button,"how to use robobrowser to click a button how can i click a button with robobrowser? this is the html code: esporta selezionare i valori e premere ""filtra"""
+4,3,9,2.047914,39660927,What method is equivalent to_internal_value in DRF 2?,what method is equivalent to_internal_value in drf 2? i can not find this in the documentation. i remember that i used such a method in drf 2 but can not recall the name.
+4,3,10,2.052617,6000205,How to get an app name using python in django,"how to get an app name using python in django if you are in the view and want to retrieve the app name using python ( the app name will be used for further logic ), how would you do it ?"
