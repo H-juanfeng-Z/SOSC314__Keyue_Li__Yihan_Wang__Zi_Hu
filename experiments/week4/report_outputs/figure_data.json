@@ -1,0 +1,174 @@
+{
+  "metrics": [
+    {
+      "model": "7B",
+      "variant": "examples",
+      "valid": 1016,
+      "calls": 1036,
+      "strict_constraints": 40,
+      "decision_constraints": 40,
+      "constraints": 52,
+      "real_invalid": 4,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 82,
+        "discrepancy": 64,
+        "errors": 39,
+        "review": 63,
+        "conceptual": 70,
+        "api_change": 2,
+        "learning": 38
+      }
+    },
+    {
+      "model": "7B",
+      "variant": "shared_json",
+      "valid": 1012,
+      "calls": 1036,
+      "strict_constraints": 40,
+      "decision_constraints": 40,
+      "constraints": 52,
+      "real_invalid": 4,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 57,
+        "discrepancy": 52,
+        "errors": 34,
+        "review": 43,
+        "conceptual": 52,
+        "api_change": 2,
+        "learning": 22
+      }
+    },
+    {
+      "model": "7B",
+      "variant": "isolated",
+      "valid": 996,
+      "calls": 1036,
+      "strict_constraints": 52,
+      "decision_constraints": 52,
+      "constraints": 52,
+      "real_invalid": 40,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 12,
+        "discrepancy": 17,
+        "errors": 17,
+        "review": 13,
+        "conceptual": 10,
+        "api_change": 0,
+        "learning": 2
+      }
+    },
+    {
+      "model": "7B",
+      "variant": "isolated_json",
+      "valid": 1033,
+      "calls": 1036,
+      "strict_constraints": 48,
+      "decision_constraints": 48,
+      "constraints": 52,
+      "real_invalid": 3,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 27,
+        "discrepancy": 24,
+        "errors": 29,
+        "review": 28,
+        "conceptual": 12,
+        "api_change": 0,
+        "learning": 6
+      }
+    },
+    {
+      "model": "3B",
+      "variant": "examples",
+      "valid": 607,
+      "calls": 1036,
+      "strict_constraints": 25,
+      "decision_constraints": 49,
+      "constraints": 52,
+      "real_invalid": 345,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 55,
+        "discrepancy": 63,
+        "errors": 22,
+        "review": 30,
+        "conceptual": 71,
+        "api_change": 7,
+        "learning": 21
+      }
+    },
+    {
+      "model": "3B",
+      "variant": "shared_json",
+      "valid": 993,
+      "calls": 1036,
+      "strict_constraints": 44,
+      "decision_constraints": 52,
+      "constraints": 52,
+      "real_invalid": 31,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 31,
+        "discrepancy": 60,
+        "errors": 19,
+        "review": 19,
+        "conceptual": 54,
+        "api_change": 2,
+        "learning": 7
+      }
+    },
+    {
+      "model": "3B",
+      "variant": "isolated",
+      "valid": 367,
+      "calls": 1036,
+      "strict_constraints": 20,
+      "decision_constraints": 44,
+      "constraints": 52,
+      "real_invalid": 580,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 0,
+        "discrepancy": 0,
+        "errors": 0,
+        "review": 1,
+        "conceptual": 0,
+        "api_change": 0,
+        "learning": 0
+      }
+    },
+    {
+      "model": "3B",
+      "variant": "isolated_json",
+      "valid": 991,
+      "calls": 1036,
+      "strict_constraints": 36,
+      "decision_constraints": 44,
+      "constraints": 52,
+      "real_invalid": 33,
+      "real_calls": 840,
+      "valid_yes_counts": {
+        "api_usage": 1,
+        "discrepancy": 3,
+        "errors": 1,
+        "review": 5,
+        "conceptual": 8,
+        "api_change": 0,
+        "learning": 1
+      }
+    }
+  ],
+  "source_sha256": {
+    "intent_round3_downloaded\\results\\7b-examples\\calls.jsonl": "c06f12c72025adff0a603a43d6a4a75b95238ac955f61d63148e90c4496cc9c5",
+    "intent_round4_downloaded\\results\\7b-shared_json\\calls.jsonl": "339e5db92c5a36de592a259b0373a42bf3481ebe71f5dc1d2c21782adca4b526",
+    "intent_round4_downloaded\\results\\7b-isolated\\calls.jsonl": "11bfa46cbe904e800cecf923dc986f14b5868cddd455689dfdce5d5704d013a3",
+    "intent_round4_downloaded\\results\\7b-isolated_json\\calls.jsonl": "6b71993984e3d2167275f65110aad608548d299c49ceddcc7a70e2b820cda7f9",
+    "intent_round3_downloaded\\results\\3b-examples\\calls.jsonl": "6e2a32460fb31a5dcfbd96d3cf27d73b63d58b8f7629bb66b1bc1894288041dd",
+    "intent_round4_downloaded\\results\\3b-shared_json\\calls.jsonl": "dfd466827d059b2e96d0ddc70e63d24da1038de339c1d65b383de279ca3b859c",
+    "intent_round4_downloaded\\results\\3b-isolated\\calls.jsonl": "137a035a80cea3527f15a5bd2a2e799821c90cef8ec953457f1f8226a9d1a0db",
+    "intent_round4_downloaded\\results\\3b-isolated_json\\calls.jsonl": "bfea639f57edeaac7f2b9fbd6a0df12cf10fb61b493a477445715aa4fd514e91"
+  }
+}
