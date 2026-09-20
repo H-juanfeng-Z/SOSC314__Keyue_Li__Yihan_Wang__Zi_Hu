@@ -45,4 +45,4 @@ policy.
   Related commit: `32547a1`.
   
 ## Week 4
--Reproduing A&S LDA model (Keyue Li): Kimi K3 was used to assist with generating and debugging. Related commits: '5981726'
+- Reproduing A&S LDA model (Keyue Li): Kimi K3 was used to assist with generating and debugging. Related commits: '5981726'
