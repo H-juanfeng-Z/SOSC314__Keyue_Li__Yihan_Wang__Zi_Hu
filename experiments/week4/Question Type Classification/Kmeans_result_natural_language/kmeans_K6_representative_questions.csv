@@ -1,0 +1,61 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+6,0,1,1.3620576,12692641,Python OR'ing arrays together,python or'ing arrays together is there an easier way of doing: to get
+6,0,2,1.4163603,15675667,column matrix representation in python,column matrix representation in python how can i represent a column matrix and row matrix in python? and
+6,0,3,1.5037798,1970680,Integer overflow in numpy arrays,integer overflow in numpy arrays with this code i get this answer. why do i get negative values?
+6,0,4,1.5120293,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+6,0,5,1.5128347,22878113,Gray rank algorithm implementation in python,gray rank algorithm implementation in python how can i implement the following algorithm in python: ( source )
+6,0,6,1.5309079,1544948,python numpy savetxt,python numpy savetxt can someone indicate what i am doing wrong here? the output is:
+6,0,7,1.576271,22507707,Finding largest eigenvalue in sparse matrix,finding largest eigenvalue in sparse matrix i'm using numpy and scipy. i have a large sparse matrix and i want to find the largest eigenvalue of the sparse matrix. how can i do that?
+6,0,8,1.6018131,29359564,How to find indices of the leaf nodes X is mapped to in GBRT estimators (Python)?,how to find indices of the leaf nodes x is mapped to in gbrt estimators (python)? there's the function in random forests implemented in sklearn - is there an equivalent for gbrt? edited: gives:
+6,0,9,1.612429,21923120,How do I multiply a numpy array by a numpy matrix?,"how do i multiply a numpy array by a numpy matrix? i have a matrix : i have vector , numpy.array(73543, -36772, 36772) how do i multiply the array by the matrix correctly in python? thanks, chris"
+6,0,10,1.614026,7391871,String Interpolation in Python,string interpolation in python i am trying to interpolate this string correctly: i want the the %20 to rendered as is and the %d to serve as place-holderes for the variables mid and cid. how do i do this?
+6,1,1,1.2407327,28792202,Identity of class methods,"identity of class methods given the class: why does evaluate to , while this is ?"
+6,1,2,1.253014,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+6,1,3,1.2914169,3153112,Expose __main__,expose __main__ is this legal in python?. seems to work ... thanks output
+6,1,4,1.2982137,4413912,Why is print not a function in python?,why is print not a function in python? why is a keyword in python and not a function?
+6,1,5,1.3108852,27599654,"what is the meaning of this python code: <L in struct.pack(""<L"",self.src)",what is the meaning of this python code: my problem is to understand the meaning of: in this python code:
+6,1,6,1.3253573,37416600,python - Lambda Replace,python - lambda replace what other approach can i use instead of 'lambda'
+6,1,7,1.3285677,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+6,1,8,1.3590467,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+6,1,9,1.3739315,21221257,functools.partial and generators,functools.partial and generators i am trying do the following: what wrong there?
+6,1,10,1.3891268,6722162,"How do I properly subclass a ""dict""?","how do i properly subclass a ""dict""? how do i write the constructor so that it sets the key ' ' to ' '."
+6,2,1,1.0905055,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+6,2,2,1.1411688,8983019,Unable to install gdata python library client,unable to install gdata python library client
+6,2,3,1.217067,697594,How to integrate BIRT with Python,how to integrate birt with python has anyone ever tried that?
+6,2,4,1.2259579,1983332,"i can't found '_weakref.py',where is '_weakref.py'","i can't found '_weakref.py',where is '_weakref.py'"
+6,2,5,1.3838345,31411357,Boilerpipe import error in python,boilerpipe import error in python i have successfully installed boilerpipe and jpype in python but getting error while importing boilerpipe how can i solve this issue? thanks in advance
+6,2,6,1.4097117,1913613,xml.dom.minidom python issue,xml.dom.minidom python issue gives the following error:
+6,2,7,1.4422648,22905129,"rpy2, R and ubuntu 12.04 - Invalid substring -fopenmp","rpy2, r and ubuntu 12.04 - invalid substring -fopenmp whats tbe delio with isntalling rpy2 on ubuntu 12.04?"
+6,2,8,1.444352,10985157,"getting Ant build error: Cannot run program ""python""","getting ant build error: cannot run program ""python"" this is the build file: and the output:"
+6,2,9,1.4450808,34895668,Spyder shortcuts changing doesn't work,spyder shortcuts changing doesn't work i tried to change two shortcuts:
+6,2,10,1.4533587,34737206,How to launch a Window's shortcut using Python,"how to launch a window's shortcut using python i want to launch a shortcut named located at . i have tryed using:- but it failed, it only launches exe files."
+6,3,1,1.2493999,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+6,3,2,1.2768339,28302556,Split a string using Python,split a string using python my string is i want to split the string into: i tried this steps:
+6,3,3,1.338007,32699740,Python Concatenate two dictionaries,"python concatenate two dictionaries i have two dictionaries, i would like to concatenate these to produce, how is this achieved?"
+6,3,4,1.3464258,23975202,Python: Convince Decimal to not use the E notation,python: convince decimal to not use the e notation how can i get rid of this rewriting?
+6,3,5,1.3541228,10113270,python string list to list ast.listeral_eval,python string list to list ast.listeral_eval how to fix?
+6,3,6,1.3739053,37055549,How to split the below string in python as below?,how to split the below string in python as below? string examples --> expected output
+6,3,7,1.3789278,14554178,Python reversing nested dictionaries,python reversing nested dictionaries i want to take a nested dictionary and reverse the values for example what i have:
+6,3,8,1.4074844,13169535,Another Nesting List comprehension?,"another nesting list comprehension? in python, suppose i want to turn this list: into: thanks"
+6,3,9,1.4431313,6649096,Detect numbers in string,detect numbers in string there a cleaner way of detecting numbers in a string in python?
+6,3,10,1.4475003,13844158,Sort week day texts,"sort week day texts i have list as list, i want to make it as . how to sort this?"
+6,4,1,1.2477868,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+6,4,2,1.3534579,113007,Writing to the windows logs in Python,writing to the windows logs in python is it possible to write to the windows logs in python?
+6,4,3,1.4603934,92928,time.sleep -- sleeps thread or process?,"time.sleep -- sleeps thread or process? in python for the *nix, does block the thread or the process?"
+6,4,4,1.4719635,1554362,reading midi input,reading midi input is there a module to read midi input (live) with python?
+6,4,5,1.5610948,7427898,How to start external program from Python script in the foreground?,how to start external program from python script in the foreground? or both start notepad in the background. how to start it in the foreground?
+6,4,6,1.5802137,2081281,How to conduct buffer overflow in PHP/Python?,how to conduct buffer overflow in php/python? here is an example in c:
+6,4,7,1.6005628,1111356,Is there anything like HTTP::Recorder for Python?,is there anything like http::recorder for python? i really like perl's http::recorder . is there something like it for python?
+6,4,8,1.6182846,22412231,Declaring a Filehandle in Python,declaring a filehandle in python i need to do a try block on open but i want my variable to be available externally:
+6,4,9,1.6242006,36098619,Quagga routers with ospf emulated in mininext: Ping failing randomly,quagga routers with ospf emulated in mininext: ping failing randomly i am using mininext to run emulate quagga routers which are running ospf. but the pingall command fails randomly. any ideas?
+6,4,10,1.6243443,1491796,get the exit code for python program,"get the exit code for python program i'm running a python program on windowsxp, how can i obtain the exit code after my program ends ? thanks."
+6,5,1,1.3736128,14260601,How to select radio buttons and submit a form,"how to select radio buttons and submit a form this is the html: this is the code i have, and it is not working:"
+6,5,2,1.4345065,37976477,How to use RoboBrowser to click a button,how to use robobrowser to click a button how can i click a button with robobrowser? this is the html code:
+6,5,3,1.4393349,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+6,5,4,1.4476919,5761208,Is this iteration necessary?,is this iteration necessary? hi my usage of get_serving_url is serverside now i wonder if this can be done in template instead of iterating serverside?
+6,5,5,1.4605726,38892192,what is the best pratice of nested dict for mongoengine ODM?,what is the best pratice of nested dict for mongoengine odm? i have some data like this in my mongodb: how to i modeling it with mongoengine odm?
+6,5,6,1.4699101,2577252,what is the 'extra' mean in this django code,"what is the 'extra' mean in this django code i don't know this mean, thanks"
+6,5,7,1.4802471,1727429,Implement OpenID in Python,implement openid in python how should i implement openid in python using the openid api?
+6,5,8,1.4892021,27901254,Python - SPARQLWrapper badformed (semantic web),"python - sparqlwrapper badformed (semantic web) i have this but no results back. on the query is ok, where is the error?"
+6,5,9,1.5207168,33437134,flask python update operation,flask python update operation i update collection in mongo db . but cant find matches. this is my code.
+6,5,10,1.5543189,29070176,How do I see mongoengine built query?,how do i see mongoengine built query? how can i print the mongodb query i buid with mongoengine? example:

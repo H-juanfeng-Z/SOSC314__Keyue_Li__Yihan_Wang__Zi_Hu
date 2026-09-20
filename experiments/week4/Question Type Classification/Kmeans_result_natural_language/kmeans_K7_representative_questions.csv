@@ -1,0 +1,71 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+7,0,1,1.1302813,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+7,0,2,1.1820159,8983019,Unable to install gdata python library client,unable to install gdata python library client
+7,0,3,1.2674426,1983332,"i can't found '_weakref.py',where is '_weakref.py'","i can't found '_weakref.py',where is '_weakref.py'"
+7,0,4,1.4034756,31411357,Boilerpipe import error in python,boilerpipe import error in python i have successfully installed boilerpipe and jpype in python but getting error while importing boilerpipe how can i solve this issue? thanks in advance
+7,0,5,1.4308143,33698318,"Anaconda changes environment for python, but not ipython","anaconda changes environment for python, but not ipython in short: how do i set the environment for ipython with conda?"
+7,0,6,1.4469956,34737206,How to launch a Window's shortcut using Python,"how to launch a window's shortcut using python i want to launch a shortcut named located at . i have tryed using:- but it failed, it only launches exe files."
+7,0,7,1.4652398,16192346,Python how to import urlib?,"python how to import urlib? i'm using python from the command line, with a fresh installation of mint linux 14. what must i do to make this work?"
+7,0,8,1.4776081,22925096,django and mysql_config error,django and mysql_config error i tried to install mysql module with and i got this:
+7,0,9,1.4776188,34895668,Spyder shortcuts changing doesn't work,spyder shortcuts changing doesn't work i tried to change two shortcuts:
+7,0,10,1.4837952,10985157,"getting Ant build error: Cannot run program ""python""","getting ant build error: cannot run program ""python"" this is the build file: and the output:"
+7,1,1,1.22995,28792202,Identity of class methods,"identity of class methods given the class: why does evaluate to , while this is ?"
+7,1,2,1.2681664,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+7,1,3,1.291301,3153112,Expose __main__,expose __main__ is this legal in python?. seems to work ... thanks output
+7,1,4,1.3093392,4413912,Why is print not a function in python?,why is print not a function in python? why is a keyword in python and not a function?
+7,1,5,1.3249006,27599654,"what is the meaning of this python code: <L in struct.pack(""<L"",self.src)",what is the meaning of this python code: my problem is to understand the meaning of: in this python code:
+7,1,6,1.3324374,37416600,python - Lambda Replace,python - lambda replace what other approach can i use instead of 'lambda'
+7,1,7,1.3486768,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+7,1,8,1.3591942,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+7,1,9,1.3962654,33629782,How to define __contains__ in a Python class,how to define __contains__ in a python class how to write to enable: and return or .
+7,1,10,1.3992677,6722162,"How do I properly subclass a ""dict""?","how do i properly subclass a ""dict""? how do i write the constructor so that it sets the key ' ' to ' '."
+7,2,1,1.2258795,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+7,2,2,1.2828978,32699740,Python Concatenate two dictionaries,"python concatenate two dictionaries i have two dictionaries, i would like to concatenate these to produce, how is this achieved?"
+7,2,3,1.3072188,14554178,Python reversing nested dictionaries,python reversing nested dictionaries i want to take a nested dictionary and reverse the values for example what i have:
+7,2,4,1.362002,28302556,Split a string using Python,split a string using python my string is i want to split the string into: i tried this steps:
+7,2,5,1.3957164,13169535,Another Nesting List comprehension?,"another nesting list comprehension? in python, suppose i want to turn this list: into: thanks"
+7,2,6,1.419485,13844158,Sort week day texts,"sort week day texts i have list as list, i want to make it as . how to sort this?"
+7,2,7,1.419968,4644025,Python how to sort this list?,"python how to sort this list? i want to sort by the first value, descending order."
+7,2,8,1.4541752,6649096,Detect numbers in string,detect numbers in string there a cleaner way of detecting numbers in a string in python?
+7,2,9,1.4809138,32326771,How to get unigrams (words) from a list in python?,"how to get unigrams (words) from a list in python? input is list1=['water vapor','evaporation','carbon dioxide','sunlight','green plants'] output should be"
+7,2,10,1.4899387,36139,How do I sort a list of strings in Python?,how do i sort a list of strings in python? what is the best way of creating an alphabetically sorted list in python?
+7,3,1,1.2312894,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+7,3,2,1.3710406,113007,Writing to the windows logs in Python,writing to the windows logs in python is it possible to write to the windows logs in python?
+7,3,3,1.4394755,92928,time.sleep -- sleeps thread or process?,"time.sleep -- sleeps thread or process? in python for the *nix, does block the thread or the process?"
+7,3,4,1.5689068,7427898,How to start external program from Python script in the foreground?,how to start external program from python script in the foreground? or both start notepad in the background. how to start it in the foreground?
+7,3,5,1.6146616,1111356,Is there anything like HTTP::Recorder for Python?,is there anything like http::recorder for python? i really like perl's http::recorder . is there something like it for python?
+7,3,6,1.6217127,36098619,Quagga routers with ospf emulated in mininext: Ping failing randomly,quagga routers with ospf emulated in mininext: ping failing randomly i am using mininext to run emulate quagga routers which are running ospf. but the pingall command fails randomly. any ideas?
+7,3,7,1.6306998,1491796,get the exit code for python program,"get the exit code for python program i'm running a python program on windowsxp, how can i obtain the exit code after my program ends ? thanks."
+7,3,8,1.6465405,28069953,How are pure virtual methods implemented in Python?,how are pure virtual methods implemented in python? i have not found how yet. meanwhile am currently using like this:
+7,3,9,1.6858314,1189253,How do I resolve an SRV record in Python?,how do i resolve an srv record in python? something which doesn't rely on native libraries would be better.
+7,3,10,1.6968471,1423345,Can I run a Python script as a service?,can i run a python script as a service? is it possible to run a python script as a background service on a webserver? i want to do this for socket communication.
+7,4,1,1.3907737,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+7,4,2,1.4016068,14260601,How to select radio buttons and submit a form,"how to select radio buttons and submit a form this is the html: this is the code i have, and it is not working:"
+7,4,3,1.4536756,5761208,Is this iteration necessary?,is this iteration necessary? hi my usage of get_serving_url is serverside now i wonder if this can be done in template instead of iterating serverside?
+7,4,4,1.4697185,38892192,what is the best pratice of nested dict for mongoengine ODM?,what is the best pratice of nested dict for mongoengine odm? i have some data like this in my mongodb: how to i modeling it with mongoengine odm?
+7,4,5,1.4723643,2577252,what is the 'extra' mean in this django code,"what is the 'extra' mean in this django code i don't know this mean, thanks"
+7,4,6,1.4868932,37976477,How to use RoboBrowser to click a button,how to use robobrowser to click a button how can i click a button with robobrowser? this is the html code:
+7,4,7,1.4984568,1727429,Implement OpenID in Python,implement openid in python how should i implement openid in python using the openid api?
+7,4,8,1.5136397,4170031,"How do you do a ""hidden"" field in Django's forms.Form models?","how do you do a ""hidden"" field in django's forms.form models? how do you make this hidden?"
+7,4,9,1.5440092,33437134,flask python update operation,flask python update operation i update collection in mongo db . but cant find matches. this is my code.
+7,4,10,1.5714087,39926533,Deleting a nested object,deleting a nested object how do i delete a specific translation given the following serializer structure:
+7,5,1,1.1329901,1913613,xml.dom.minidom python issue,xml.dom.minidom python issue gives the following error:
+7,5,2,1.2277181,697594,How to integrate BIRT with Python,how to integrate birt with python has anyone ever tried that?
+7,5,3,1.27394,10113270,python string list to list ast.listeral_eval,python string list to list ast.listeral_eval how to fix?
+7,5,4,1.3324497,4117038,anyone knows why my program is not giving result?,anyone knows why my program is not giving result?
+7,5,5,1.3687875,23975202,Python: Convince Decimal to not use the E notation,python: convince decimal to not use the e notation how can i get rid of this rewriting?
+7,5,6,1.369172,21221257,functools.partial and generators,functools.partial and generators i am trying do the following: what wrong there?
+7,5,7,1.3730541,32940708,How could I fetch the string in the brackets,how could i fetch the string in the brackets i tried but i got no luck
+7,5,8,1.4123286,10908877,Extracting a zipfile to memory?,extracting a zipfile to memory? how do i extract a zip to memory? my attempt (returning on ):
+7,5,9,1.4219509,13595674,How to write Python ElemenTree as XML File?,how to write python elementree as xml file? my code how can i write this as some ?
+7,5,10,1.4338417,1554362,reading midi input,reading midi input is there a module to read midi input (live) with python?
+7,6,1,1.3800831,12692641,Python OR'ing arrays together,python or'ing arrays together is there an easier way of doing: to get
+7,6,2,1.4431391,15675667,column matrix representation in python,column matrix representation in python how can i represent a column matrix and row matrix in python? and
+7,6,3,1.4998772,22878113,Gray rank algorithm implementation in python,gray rank algorithm implementation in python how can i implement the following algorithm in python: ( source )
+7,6,4,1.5042533,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+7,6,5,1.5181459,1970680,Integer overflow in numpy arrays,integer overflow in numpy arrays with this code i get this answer. why do i get negative values?
+7,6,6,1.5322615,1544948,python numpy savetxt,python numpy savetxt can someone indicate what i am doing wrong here? the output is:
+7,6,7,1.5882102,22507707,Finding largest eigenvalue in sparse matrix,finding largest eigenvalue in sparse matrix i'm using numpy and scipy. i have a large sparse matrix and i want to find the largest eigenvalue of the sparse matrix. how can i do that?
+7,6,8,1.5894288,3520672,Can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)?,can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)? (couldn't upload the picture showing the integral as i'm a new user.)
+7,6,9,1.5999287,29359564,How to find indices of the leaf nodes X is mapped to in GBRT estimators (Python)?,how to find indices of the leaf nodes x is mapped to in gbrt estimators (python)? there's the function in random forests implemented in sklearn - is there an equivalent for gbrt? edited: gives:
+7,6,10,1.6142402,7391871,String Interpolation in Python,string interpolation in python i am trying to interpolate this string correctly: i want the the %20 to rendered as is and the %d to serve as place-holderes for the variables mid and cid. how do i do this?

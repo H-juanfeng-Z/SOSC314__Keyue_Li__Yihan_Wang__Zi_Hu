@@ -1,0 +1,101 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+10,0,1,1.2473965,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+10,0,2,1.3763744,113007,Writing to the windows logs in Python,writing to the windows logs in python is it possible to write to the windows logs in python?
+10,0,3,1.3938109,92928,time.sleep -- sleeps thread or process?,"time.sleep -- sleeps thread or process? in python for the *nix, does block the thread or the process?"
+10,0,4,1.5814431,7427898,How to start external program from Python script in the foreground?,how to start external program from python script in the foreground? or both start notepad in the background. how to start it in the foreground?
+10,0,5,1.6078446,36098619,Quagga routers with ospf emulated in mininext: Ping failing randomly,quagga routers with ospf emulated in mininext: ping failing randomly i am using mininext to run emulate quagga routers which are running ospf. but the pingall command fails randomly. any ideas?
+10,0,6,1.6708374,1491796,get the exit code for python program,"get the exit code for python program i'm running a python program on windowsxp, how can i obtain the exit code after my program ends ? thanks."
+10,0,7,1.6917926,1423345,Can I run a Python script as a service?,can i run a python script as a service? is it possible to run a python script as a background service on a webserver? i want to do this for socket communication.
+10,0,8,1.6926619,28008622,What is the build process for setuptools?,what is the build process for setuptools? execution of goes through two prominent stages: what does actually happen behind-the-scenes in the stages above?
+10,0,9,1.7059495,29487282,Linux: Is there a 'reboot' or something similiar after calling rmmod or insmod?,linux: is there a 'reboot' or something similiar after calling rmmod or insmod? do i have to reboot or commit changes i did by calling or ?
+10,0,10,1.7532506,10990895,Is my method of threading efficient?,is my method of threading efficient? basically i just want to know if i implemented threading correctly for concurrent socket threading. here's my approach:
+10,1,1,1.1280948,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+10,1,2,1.1941905,8983019,Unable to install gdata python library client,unable to install gdata python library client
+10,1,3,1.2753488,1983332,"i can't found '_weakref.py',where is '_weakref.py'","i can't found '_weakref.py',where is '_weakref.py'"
+10,1,4,1.3818511,31411357,Boilerpipe import error in python,boilerpipe import error in python i have successfully installed boilerpipe and jpype in python but getting error while importing boilerpipe how can i solve this issue? thanks in advance
+10,1,5,1.4355171,33698318,"Anaconda changes environment for python, but not ipython","anaconda changes environment for python, but not ipython in short: how do i set the environment for ipython with conda?"
+10,1,6,1.4497316,16192346,Python how to import urlib?,"python how to import urlib? i'm using python from the command line, with a fresh installation of mint linux 14. what must i do to make this work?"
+10,1,7,1.4596628,34737206,How to launch a Window's shortcut using Python,"how to launch a window's shortcut using python i want to launch a shortcut named located at . i have tryed using:- but it failed, it only launches exe files."
+10,1,8,1.4631213,22925096,django and mysql_config error,django and mysql_config error i tried to install mysql module with and i got this:
+10,1,9,1.4730136,22905129,"rpy2, R and ubuntu 12.04 - Invalid substring -fopenmp","rpy2, r and ubuntu 12.04 - invalid substring -fopenmp whats tbe delio with isntalling rpy2 on ubuntu 12.04?"
+10,1,10,1.4808236,10985157,"getting Ant build error: Cannot run program ""python""","getting ant build error: cannot run program ""python"" this is the build file: and the output:"
+10,2,1,1.0555993,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+10,2,2,1.4195112,25299624,QGraphicsRectItem move QGraphicsScene,"qgraphicsrectitem move qgraphicsscene this code draw a rectangle on the scene. when i move it, it does not move the cursor, and jumping somewhere. what am i doing wrong?"
+10,2,3,1.438348,37976477,How to use RoboBrowser to click a button,how to use robobrowser to click a button how can i click a button with robobrowser? this is the html code:
+10,2,4,1.4627932,34895668,Spyder shortcuts changing doesn't work,spyder shortcuts changing doesn't work i tried to change two shortcuts:
+10,2,5,1.5830097,20322465,Python Turtle Opacity?,"python turtle opacity? just wondering, is it possible to make a turtle draw/fill with semi-transparent ink? something like: running python 2.7"
+10,2,6,1.5862207,31194718,Drawn image is not visible in pygame,"drawn image is not visible in pygame i have the following code in pygame (irrelevant stuff removed): the text appears on the screen as intended, but not the image. what am i doing wrong?"
+10,2,7,1.598877,34157247,How to show ampersand (&) symbol in python?,how to show ampersand (&) symbol in python? if i do: i get button named: it ignores the symbol. how can i fix it?
+10,2,8,1.6019628,24785928,How to set Gtk.ScrolledWindow adjustment,how to set gtk.scrolledwindow adjustment how do i set the vertical adjustment for a gtk.scrolledwindow in python3? this is an example that demonstrates the problem.
+10,2,9,1.6224049,747781,wxPython: Calling an event manually,wxpython: calling an event manually how can i call a specific event manually from my own code?
+10,2,10,1.623542,18838994,Why won't my curses box draw?,why won't my curses box draw? i am toying with curses and i can't get a box to draw on the screen. i created a border which works but i want to draw a box in the border here is my code any advice?
+10,3,1,1.4032965,15675667,column matrix representation in python,column matrix representation in python how can i represent a column matrix and row matrix in python? and
+10,3,2,1.4985825,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+10,3,3,1.5010809,22878113,Gray rank algorithm implementation in python,gray rank algorithm implementation in python how can i implement the following algorithm in python: ( source )
+10,3,4,1.5062948,1970680,Integer overflow in numpy arrays,integer overflow in numpy arrays with this code i get this answer. why do i get negative values?
+10,3,5,1.560717,22507707,Finding largest eigenvalue in sparse matrix,finding largest eigenvalue in sparse matrix i'm using numpy and scipy. i have a large sparse matrix and i want to find the largest eigenvalue of the sparse matrix. how can i do that?
+10,3,6,1.5827644,29359564,How to find indices of the leaf nodes X is mapped to in GBRT estimators (Python)?,how to find indices of the leaf nodes x is mapped to in gbrt estimators (python)? there's the function in random forests implemented in sklearn - is there an equivalent for gbrt? edited: gives:
+10,3,7,1.5989096,3520672,Can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)?,can scipy calculate (double) integrals with complex-valued integrands (real and imaginary parts in integrand)? (couldn't upload the picture showing the integral as i'm a new user.)
+10,3,8,1.603034,7391871,String Interpolation in Python,string interpolation in python i am trying to interpolate this string correctly: i want the the %20 to rendered as is and the %d to serve as place-holderes for the variables mid and cid. how do i do this?
+10,3,9,1.6073843,21923120,How do I multiply a numpy array by a numpy matrix?,"how do i multiply a numpy array by a numpy matrix? i have a matrix : i have vector , numpy.array(73543, -36772, 36772) how do i multiply the array by the matrix correctly in python? thanks, chris"
+10,3,10,1.6132603,15341762,How to determine size (in bytes) of a PyTables array?,how to determine size (in bytes) of a pytables array? how can i determine the size (in bytes) of a pytables array?
+10,4,1,1.276831,697594,How to integrate BIRT with Python,how to integrate birt with python has anyone ever tried that?
+10,4,2,1.3504459,1913613,xml.dom.minidom python issue,xml.dom.minidom python issue gives the following error:
+10,4,3,1.405783,35817605,Web scraping through cloudflare sites,web scraping through cloudflare sites is it possible to scrape websites through cloudflare protection? how can i bypass cloudflare using beautifulsoup?
+10,4,4,1.4463428,1727429,Implement OpenID in Python,implement openid in python how should i implement openid in python using the openid api?
+10,4,5,1.4570068,25718961,How can I get permanent URL of file uploaded on rackspace using python pyrax,how can i get permanent url of file uploaded on rackspace using python pyrax i am able to to upload image successfully. my code is:
+10,4,6,1.460285,27901254,Python - SPARQLWrapper badformed (semantic web),"python - sparqlwrapper badformed (semantic web) i have this but no results back. on the query is ok, where is the error?"
+10,4,7,1.5243114,1111356,Is there anything like HTTP::Recorder for Python?,is there anything like http::recorder for python? i really like perl's http::recorder . is there something like it for python?
+10,4,8,1.5288953,32940708,How could I fetch the string in the brackets,how could i fetch the string in the brackets i tried but i got no luck
+10,4,9,1.5312366,21659375,How to use samba with pycurl?,how to use samba with pycurl? i have the following code: how can i use a similar code to work with samba protocol?
+10,4,10,1.5496753,7433232,Python QtWebKit save webpage to file,python qtwebkit save webpage to file what's the best and simplest way to save a webpage displayed with qwebview() to file?
+10,5,1,1.3536352,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+10,5,2,1.4346712,14260601,How to select radio buttons and submit a form,"how to select radio buttons and submit a form this is the html: this is the code i have, and it is not working:"
+10,5,3,1.440537,2577252,what is the 'extra' mean in this django code,"what is the 'extra' mean in this django code i don't know this mean, thanks"
+10,5,4,1.450989,38892192,what is the best pratice of nested dict for mongoengine ODM?,what is the best pratice of nested dict for mongoengine odm? i have some data like this in my mongodb: how to i modeling it with mongoengine odm?
+10,5,5,1.4615376,4170031,"How do you do a ""hidden"" field in Django's forms.Form models?","how do you do a ""hidden"" field in django's forms.form models? how do you make this hidden?"
+10,5,6,1.4710188,5761208,Is this iteration necessary?,is this iteration necessary? hi my usage of get_serving_url is serverside now i wonder if this can be done in template instead of iterating serverside?
+10,5,7,1.5044944,27578027,Adding columns with django ORM,adding columns with django orm how would i do the following in the django orm: the equivalent of:
+10,5,8,1.5316046,33437134,flask python update operation,flask python update operation i update collection in mongo db . but cant find matches. this is my code.
+10,5,9,1.5513135,39926533,Deleting a nested object,deleting a nested object how do i delete a specific translation given the following serializer structure:
+10,5,10,1.5766428,16694298,mongodb keyerror even though field exists,mongodb keyerror even though field exists i have a mongodb collection friends and i run the code i get: but if i do: i get the error:
+10,6,1,1.2951678,28302556,Split a string using Python,split a string using python my string is i want to split the string into: i tried this steps:
+10,6,2,1.3596396,10908877,Extracting a zipfile to memory?,extracting a zipfile to memory? how do i extract a zip to memory? my attempt (returning on ):
+10,6,3,1.3833764,23975202,Python: Convince Decimal to not use the E notation,python: convince decimal to not use the e notation how can i get rid of this rewriting?
+10,6,4,1.3971288,37055549,How to split the below string in python as below?,how to split the below string in python as below? string examples --> expected output
+10,6,5,1.4297519,13595674,How to write Python ElemenTree as XML File?,how to write python elementree as xml file? my code how can i write this as some ?
+10,6,6,1.4924344,6540502,Help parsing between <pre> tags using BeautifulSoup,help parsing between i have tried by: this gave me: thanks for the help!
+10,6,7,1.5064162,1554362,reading midi input,reading midi input is there a module to read midi input (live) with python?
+10,6,8,1.5071188,5513615,Add 'decimal-mark' thousands separators to a number,add 'decimal-mark' thousands separators to a number how do i format to in python? where the '.' is the decimal-mark thousands separator.
+10,6,9,1.5182264,37531032,Removing extra characters from python string,removing extra characters from python string information i want to extract: the locations al bayan and nepal in a list code to extract the area: area output: desired output:
+10,6,10,1.5195823,3823599,Regular Expressions,regular expressions how would i extract the word 'wrestle' from the following: using a regular expression? thanks
+10,7,1,1.1840225,1959744,Python list problem,python list problem python: i expect that this code should print but it prints
+10,7,2,1.1856349,4117038,anyone knows why my program is not giving result?,anyone knows why my program is not giving result?
+10,7,3,1.2205658,27599654,"what is the meaning of this python code: <L in struct.pack(""<L"",self.src)",what is the meaning of this python code: my problem is to understand the meaning of: in this python code:
+10,7,4,1.2454567,17887594,Python statement giving unexpected answer,"python statement giving unexpected answer prints , while prints . any guess why?"
+10,7,5,1.2630924,10113270,python string list to list ast.listeral_eval,python string list to list ast.listeral_eval how to fix?
+10,7,6,1.292977,4413912,Why is print not a function in python?,why is print not a function in python? why is a keyword in python and not a function?
+10,7,7,1.3505206,21221257,functools.partial and generators,functools.partial and generators i am trying do the following: what wrong there?
+10,7,8,1.3675789,32929910,Does anyone know to make this a single line statement? (python),does anyone know to make this a single line statement? (python)
+10,7,9,1.3811172,17593972,What is the meaning of print()[] in Python?,"what is the meaning of print()[] in python? while browsing codegolf, i found this : i don't understand what the [] means after print()... any clarification ?"
+10,7,10,1.3935114,22652762,Can anybody please explain me the meaning of this statement written in Python?,can anybody please explain me the meaning of this statement written in python? i am new to python. please simplify this code for me.
+10,8,1,1.2767295,28792202,Identity of class methods,"identity of class methods given the class: why does evaluate to , while this is ?"
+10,8,2,1.3081521,33629782,How to define __contains__ in a Python class,how to define __contains__ in a python class how to write to enable: and return or .
+10,8,3,1.3134302,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+10,8,4,1.3213774,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+10,8,5,1.3363268,3153112,Expose __main__,expose __main__ is this legal in python?. seems to work ... thanks output
+10,8,6,1.3448303,14645466,Is it a good idea to define properties in Python interfaces?,is it a good idea to define properties in python interfaces? is it a good practice to define properties in an interface like this?
+10,8,7,1.3670257,9125997,How to call subclass methods in a superclass in Python,how to call subclass methods in a superclass in python i want to know how to call subclass methods in the superclass.
+10,8,8,1.3685719,37416600,python - Lambda Replace,python - lambda replace what other approach can i use instead of 'lambda'
+10,8,9,1.4053408,17604316,Refer to own class in a static method,refer to own class in a static method is there a shorthand for referring to its own class in a static method? say i have this piece of code:
+10,8,10,1.4193441,6722162,"How do I properly subclass a ""dict""?","how do i properly subclass a ""dict""? how do i write the constructor so that it sets the key ' ' to ' '."
+10,9,1,1.193688,14554178,Python reversing nested dictionaries,python reversing nested dictionaries i want to take a nested dictionary and reverse the values for example what i have:
+10,9,2,1.2336601,32699740,Python Concatenate two dictionaries,"python concatenate two dictionaries i have two dictionaries, i would like to concatenate these to produce, how is this achieved?"
+10,9,3,1.2432177,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+10,9,4,1.3694962,4644025,Python how to sort this list?,"python how to sort this list? i want to sort by the first value, descending order."
+10,9,5,1.3805056,25333525,Fast dictionary population with list of keys,fast dictionary population with list of keys is there a way to perform this operation without the for-loops?
+10,9,6,1.3914411,12692641,Python OR'ing arrays together,python or'ing arrays together is there an easier way of doing: to get
+10,9,7,1.3953644,13169535,Another Nesting List comprehension?,"another nesting list comprehension? in python, suppose i want to turn this list: into: thanks"
+10,9,8,1.4171461,36139,How do I sort a list of strings in Python?,how do i sort a list of strings in python? what is the best way of creating an alphabetically sorted list in python?
+10,9,9,1.4401164,13844158,Sort week day texts,"sort week day texts i have list as list, i want to make it as . how to sort this?"
+10,9,10,1.4693235,3887336,python: append only specific elements from a list,python: append only specific elements from a list i have a list of a list: i have a list: how do i append to only and and such that will equal:

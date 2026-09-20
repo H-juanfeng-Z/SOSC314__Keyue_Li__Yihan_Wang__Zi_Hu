@@ -1,0 +1,91 @@
+K,cluster,rank,distance_to_centroid,question_id,title,clean_text
+9,0,1,1.3612357,2445823,"In Django, what is a one-to-one relationship?","in django, what is a one-to-one relationship? i've always been using foreignkeys."
+9,0,2,1.4363993,14260601,How to select radio buttons and submit a form,"how to select radio buttons and submit a form this is the html: this is the code i have, and it is not working:"
+9,0,3,1.4562128,2577252,what is the 'extra' mean in this django code,"what is the 'extra' mean in this django code i don't know this mean, thanks"
+9,0,4,1.4645976,38892192,what is the best pratice of nested dict for mongoengine ODM?,what is the best pratice of nested dict for mongoengine odm? i have some data like this in my mongodb: how to i modeling it with mongoengine odm?
+9,0,5,1.464766,5761208,Is this iteration necessary?,is this iteration necessary? hi my usage of get_serving_url is serverside now i wonder if this can be done in template instead of iterating serverside?
+9,0,6,1.4712867,4170031,"How do you do a ""hidden"" field in Django's forms.Form models?","how do you do a ""hidden"" field in django's forms.form models? how do you make this hidden?"
+9,0,7,1.5344201,27578027,Adding columns with django ORM,adding columns with django orm how would i do the following in the django orm: the equivalent of:
+9,0,8,1.5420936,33437134,flask python update operation,flask python update operation i update collection in mongo db . but cant find matches. this is my code.
+9,0,9,1.5577954,1727429,Implement OpenID in Python,implement openid in python how should i implement openid in python using the openid api?
+9,0,10,1.5649977,39926533,Deleting a nested object,deleting a nested object how do i delete a specific translation given the following serializer structure:
+9,1,1,1.2721153,30677288,Threading [Python/Threading],threading [python/threading] [edit] question has been completed.
+9,1,2,1.3914562,113007,Writing to the windows logs in Python,writing to the windows logs in python is it possible to write to the windows logs in python?
+9,1,3,1.4846795,92928,time.sleep -- sleeps thread or process?,"time.sleep -- sleeps thread or process? in python for the *nix, does block the thread or the process?"
+9,1,4,1.571093,1111356,Is there anything like HTTP::Recorder for Python?,is there anything like http::recorder for python? i really like perl's http::recorder . is there something like it for python?
+9,1,5,1.6374589,36098619,Quagga routers with ospf emulated in mininext: Ping failing randomly,quagga routers with ospf emulated in mininext: ping failing randomly i am using mininext to run emulate quagga routers which are running ospf. but the pingall command fails randomly. any ideas?
+9,1,6,1.6515874,7427898,How to start external program from Python script in the foreground?,how to start external program from python script in the foreground? or both start notepad in the background. how to start it in the foreground?
+9,1,7,1.6558448,1423345,Can I run a Python script as a service?,can i run a python script as a service? is it possible to run a python script as a background service on a webserver? i want to do this for socket communication.
+9,1,8,1.6575694,1189253,How do I resolve an SRV record in Python?,how do i resolve an srv record in python? something which doesn't rely on native libraries would be better.
+9,1,9,1.6880981,3077557,Python: Run WSGI server from inetd?,"python: run wsgi server from inetd? as the title suggests, is it possible to run a wsgi server from (x)inetd?"
+9,1,10,1.7188002,257956,Java equivalent to pyftpdlib?,java equivalent to pyftpdlib? is there a good java alternative to pyftpdlib? i am looking for an easy to setup and run embedded ftp server.
+9,2,1,1.3569767,32699740,Python Concatenate two dictionaries,"python concatenate two dictionaries i have two dictionaries, i would like to concatenate these to produce, how is this achieved?"
+9,2,2,1.3655695,38067726,Panda: How to pivot one column in rows into columns,"panda: how to pivot one column in rows into columns given this dataframe: feature is limited to ( , , ) i want to pivot the dataframe into this:"
+9,2,3,1.4036856,15675667,column matrix representation in python,column matrix representation in python how can i represent a column matrix and row matrix in python? and
+9,2,4,1.4506223,32245625,Pandas: consolidating columns in DataFrame,pandas: consolidating columns in dataframe using the dataframe below as an example: how can i get
+9,2,5,1.4661976,10908877,Extracting a zipfile to memory?,extracting a zipfile to memory? how do i extract a zip to memory? my attempt (returning on ):
+9,2,6,1.480974,13844158,Sort week day texts,"sort week day texts i have list as list, i want to make it as . how to sort this?"
+9,2,7,1.5035045,21615158,reshaping a data frame in pandas,reshaping a data frame in pandas is there a simple way in pandas to reshape the following data frame: to this format?:
+9,2,8,1.5036486,36784908,How to convert rows into list using pandas python?,how to convert rows into list using pandas python? this is my dataframe... and i need output like following format.
+9,2,9,1.5095897,5513615,Add 'decimal-mark' thousands separators to a number,add 'decimal-mark' thousands separators to a number how do i format to in python? where the '.' is the decimal-mark thousands separator.
+9,2,10,1.5104766,29094291,Python combine two dataframes,python combine two dataframes given two data frames: how do i get dataframe c:
+9,3,1,1.3871888,12692641,Python OR'ing arrays together,python or'ing arrays together is there an easier way of doing: to get
+9,3,2,1.4575198,22878113,Gray rank algorithm implementation in python,gray rank algorithm implementation in python how can i implement the following algorithm in python: ( source )
+9,3,3,1.4775825,1970680,Integer overflow in numpy arrays,integer overflow in numpy arrays with this code i get this answer. why do i get negative values?
+9,3,4,1.5020741,19738465,"Python satellite tracking with Orbitron, pyephem- positions not matching","python satellite tracking with orbitron, pyephem- positions not matching in reading tle and calculating the orbit of satellites, does pyephem regard the earth as the sphere or as the ellipse ?"
+9,3,5,1.5238097,1544948,python numpy savetxt,python numpy savetxt can someone indicate what i am doing wrong here? the output is:
+9,3,6,1.5403602,22507707,Finding largest eigenvalue in sparse matrix,finding largest eigenvalue in sparse matrix i'm using numpy and scipy. i have a large sparse matrix and i want to find the largest eigenvalue of the sparse matrix. how can i do that?
+9,3,7,1.541066,29359564,How to find indices of the leaf nodes X is mapped to in GBRT estimators (Python)?,how to find indices of the leaf nodes x is mapped to in gbrt estimators (python)? there's the function in random forests implemented in sklearn - is there an equivalent for gbrt? edited: gives:
+9,3,8,1.5827615,21923120,How do I multiply a numpy array by a numpy matrix?,"how do i multiply a numpy array by a numpy matrix? i have a matrix : i have vector , numpy.array(73543, -36772, 36772) how do i multiply the array by the matrix correctly in python? thanks, chris"
+9,3,9,1.6029114,7391871,String Interpolation in Python,string interpolation in python i am trying to interpolate this string correctly: i want the the %20 to rendered as is and the %d to serve as place-holderes for the variables mid and cid. how do i do this?
+9,3,10,1.6083504,15341762,How to determine size (in bytes) of a PyTables array?,how to determine size (in bytes) of a pytables array? how can i determine the size (in bytes) of a pytables array?
+9,4,1,1.1461565,1913613,xml.dom.minidom python issue,xml.dom.minidom python issue gives the following error:
+9,4,2,1.2414516,697594,How to integrate BIRT with Python,how to integrate birt with python has anyone ever tried that?
+9,4,3,1.3859917,21221257,functools.partial and generators,functools.partial and generators i am trying do the following: what wrong there?
+9,4,4,1.3866836,4117038,anyone knows why my program is not giving result?,anyone knows why my program is not giving result?
+9,4,5,1.3885988,32940708,How could I fetch the string in the brackets,how could i fetch the string in the brackets i tried but i got no luck
+9,4,6,1.4651601,25718961,How can I get permanent URL of file uploaded on rackspace using python pyrax,how can i get permanent url of file uploaded on rackspace using python pyrax i am able to to upload image successfully. my code is:
+9,4,7,1.4662374,27901254,Python - SPARQLWrapper badformed (semantic web),"python - sparqlwrapper badformed (semantic web) i have this but no results back. on the query is ok, where is the error?"
+9,4,8,1.4728372,13595674,How to write Python ElemenTree as XML File?,how to write python elementree as xml file? my code how can i write this as some ?
+9,4,9,1.4820434,34275053,Python 3. Extract data from json,python 3. extract data from json how to extract 41677? my json: my code:
+9,4,10,1.498451,36285654,Cleaning/parsing JSON with python,cleaning/parsing json with python can anyone help to clean below json i want to clean this json as below
+9,5,1,1.0708663,30907851,how to attatch scrollbar to dropdown list in tkinter?,how to attatch scrollbar to dropdown list in tkinter?
+9,5,2,1.4226706,25299624,QGraphicsRectItem move QGraphicsScene,"qgraphicsrectitem move qgraphicsscene this code draw a rectangle on the scene. when i move it, it does not move the cursor, and jumping somewhere. what am i doing wrong?"
+9,5,3,1.4244809,5306756,how to show Percentage in python,how to show percentage in python this is my code: and it show : but i want get what can i do.
+9,5,4,1.429428,34895668,Spyder shortcuts changing doesn't work,spyder shortcuts changing doesn't work i tried to change two shortcuts:
+9,5,5,1.4418699,37976477,How to use RoboBrowser to click a button,how to use robobrowser to click a button how can i click a button with robobrowser? this is the html code:
+9,5,6,1.5648657,34157247,How to show ampersand (&) symbol in python?,how to show ampersand (&) symbol in python? if i do: i get button named: it ignores the symbol. how can i fix it?
+9,5,7,1.5824392,20322465,Python Turtle Opacity?,"python turtle opacity? just wondering, is it possible to make a turtle draw/fill with semi-transparent ink? something like: running python 2.7"
+9,5,8,1.5916691,3548937,Wxwidgets and Pyqt,wxwidgets and pyqt is there a similar function pyondemandoutputwindow in pyqt? this function redirect the console output to a separate window. sorry for my english.
+9,5,9,1.5993949,5916187,Python Tkinter application doesn't quit properly,"python tkinter application doesn't quit properly why doesn't this tkinter program end properly when i press the ""quit"" button?"
+9,5,10,1.6092548,747781,wxPython: Calling an event manually,wxpython: calling an event manually how can i call a specific event manually from my own code?
+9,6,1,1.1241133,3730616,Error Importing Graphics Python,error importing graphics python i'm typing at the console and i get this error
+9,6,2,1.1962047,8983019,Unable to install gdata python library client,unable to install gdata python library client
+9,6,3,1.2742444,1983332,"i can't found '_weakref.py',where is '_weakref.py'","i can't found '_weakref.py',where is '_weakref.py'"
+9,6,4,1.3916545,31411357,Boilerpipe import error in python,boilerpipe import error in python i have successfully installed boilerpipe and jpype in python but getting error while importing boilerpipe how can i solve this issue? thanks in advance
+9,6,5,1.434753,33698318,"Anaconda changes environment for python, but not ipython","anaconda changes environment for python, but not ipython in short: how do i set the environment for ipython with conda?"
+9,6,6,1.4511672,16192346,Python how to import urlib?,"python how to import urlib? i'm using python from the command line, with a fresh installation of mint linux 14. what must i do to make this work?"
+9,6,7,1.4517589,34737206,How to launch a Window's shortcut using Python,"how to launch a window's shortcut using python i want to launch a shortcut named located at . i have tryed using:- but it failed, it only launches exe files."
+9,6,8,1.4719658,22925096,django and mysql_config error,django and mysql_config error i tried to install mysql module with and i got this:
+9,6,9,1.4735992,10985157,"getting Ant build error: Cannot run program ""python""","getting ant build error: cannot run program ""python"" this is the build file: and the output:"
+9,6,10,1.4776444,22905129,"rpy2, R and ubuntu 12.04 - Invalid substring -fopenmp","rpy2, r and ubuntu 12.04 - invalid substring -fopenmp whats tbe delio with isntalling rpy2 on ubuntu 12.04?"
+9,7,1,1.2147082,15606138,Remove punctuation from a list of list of strings in python,remove punctuation from a list of list of strings in python lets say i have a i want it to produce
+9,7,2,1.2526845,10113270,python string list to list ast.listeral_eval,python string list to list ast.listeral_eval how to fix?
+9,7,3,1.2673415,14554178,Python reversing nested dictionaries,python reversing nested dictionaries i want to take a nested dictionary and reverse the values for example what i have:
+9,7,4,1.2982655,6649096,Detect numbers in string,detect numbers in string there a cleaner way of detecting numbers in a string in python?
+9,7,5,1.2986795,1959744,Python list problem,python list problem python: i expect that this code should print but it prints
+9,7,6,1.34551,13169535,Another Nesting List comprehension?,"another nesting list comprehension? in python, suppose i want to turn this list: into: thanks"
+9,7,7,1.3724209,27599654,"what is the meaning of this python code: <L in struct.pack(""<L"",self.src)",what is the meaning of this python code: my problem is to understand the meaning of: in this python code:
+9,7,8,1.3759341,28302556,Split a string using Python,split a string using python my string is i want to split the string into: i tried this steps:
+9,7,9,1.379744,23975202,Python: Convince Decimal to not use the E notation,python: convince decimal to not use the e notation how can i get rid of this rewriting?
+9,7,10,1.4115292,32326771,How to get unigrams (words) from a list in python?,"how to get unigrams (words) from a list in python? input is list1=['water vapor','evaporation','carbon dioxide','sunlight','green plants'] output should be"
+9,8,1,1.2531976,28792202,Identity of class methods,"identity of class methods given the class: why does evaluate to , while this is ?"
+9,8,2,1.2997733,6194736,How do I translate this to Python?,how do i translate this to python? this is ruby. what's the equivalent in python?
+9,8,3,1.3143983,2137539,How to invoke a method that has been discovered through inspect.getmembers?,how to invoke a method that has been discovered through inspect.getmembers?
+9,8,4,1.3164514,33629782,How to define __contains__ in a Python class,how to define __contains__ in a python class how to write to enable: and return or .
+9,8,5,1.3191746,3153112,Expose __main__,expose __main__ is this legal in python?. seems to work ... thanks output
+9,8,6,1.3617322,37416600,python - Lambda Replace,python - lambda replace what other approach can i use instead of 'lambda'
+9,8,7,1.3821745,9125997,How to call subclass methods in a superclass in Python,how to call subclass methods in a superclass in python i want to know how to call subclass methods in the superclass.
+9,8,8,1.3945389,14645466,Is it a good idea to define properties in Python interfaces?,is it a good idea to define properties in python interfaces? is it a good practice to define properties in an interface like this?
+9,8,9,1.4086026,6722162,"How do I properly subclass a ""dict""?","how do i properly subclass a ""dict""? how do i write the constructor so that it sets the key ' ' to ' '."
+9,8,10,1.4277482,23281782,how to get functions stored inside of a property in Python?,"how to get functions stored inside of a property in python? suppose how would i get and , given ?"
