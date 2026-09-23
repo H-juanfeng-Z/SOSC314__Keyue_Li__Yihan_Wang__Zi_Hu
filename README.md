@@ -1,18 +1,18 @@
-# Question Characteristics and Response Time on Stack Overflow
+# Question Characteristics, Response Time, and Answer Quality on Stack Overflow
 
 ## Project Direction
 
-This project investigates how observable characteristics of Python questions on
-Stack Overflow are associated with response outcomes. The core questions are
-whether a question receives an answer and how quickly it receives its first
-answer. We use question-level text, code, tags, and posting characteristics as
-potential explanatory variables.
+This project investigates how the help-seeking intent and presentation of Python
+questions on Stack Overflow are associated with first-answer helpfulness.
+Technical topics provide context, while response occurrence and timing remain
+complementary outcomes and prediction benchmarks. We use question-level text,
+code, tags, and posting characteristics as potential explanatory variables.
 
 The project is observational: it examines associations in a historical archive
-and does not make causal claims. A later project stage may investigate answer
-adequacy or quality, but only after the group defines and evaluates a defensible
-proxy or labeling procedure. The current workflow does not treat voting scores
-as verified technical correctness.
+and does not make causal claims. Intent and helpfulness annotations are under
+development and require validation before substantive relationships can be
+established. The workflow does not treat voting scores, output-format validity,
+or agreement between prompts as verified technical correctness.
 
 ## Data
 
@@ -24,8 +24,9 @@ project copy contains records from 2008--2016 in three CSV files:
 - `Answers.csv` contains answer IDs, parent question IDs, creation times, bodies, and scores.
 - `Tags.csv` maps technical tags to question IDs.
 
-The raw and generated data files are intentionally not committed because of
-their size. To run the workflow, place the three CSV files in `data/raw_csv/`.
+Large raw files, model weights and full inference logs are not committed.
+Selected generated tables, assignment snapshots and figures are versioned for
+inspection. To run the initial workflow, place the three CSV files in `data/raw_csv/`.
 The expected `data/` subdirectories are created locally during analysis and are
 excluded from version control.
 
@@ -107,10 +108,16 @@ The question-characteristic variables are descriptive features rather than compl
 
 | Location | Purpose |
 | --- | --- |
-| `simple_exclusion.ipynb` | Preliminary screening script and exclusion-manifest creation. |
-| `scripts/` | Feature construction, descriptive analysis, and workflow instructions. |
-| `tables/` | Versioned CSV outputs used for initial descriptive analysis. |
-| `figures/` | Versioned exploratory figures generated from the question-level data. |
+| [scripts/simple_exclusion.ipynb](scripts/simple_exclusion.ipynb) | Preliminary screening script and exclusion-manifest creation. |
+| [scripts/](scripts/README.md) | Initial data workflow and functional code navigation. |
+| [scripts/response_prediction/](scripts/response_prediction/README.md) | MiniLM/CodeBERT comparison for response prediction. |
+| [scripts/helpfulness/](scripts/helpfulness/README.md) | First-answer sample preparation and helpfulness annotation. |
+| [scripts/intent_annotation/](scripts/intent_annotation/README.md) | Question-intent prompts, sampling and validation. |
+| [scripts/topic_modeling/](scripts/topic_modeling/README.md) | NMF, Doc2Vec/K-Means and verb-phrase LDA. |
+| [scripts/visualization/](scripts/visualization/README.md) | Intent diagnostic figure generation. |
+| [tables/](tables/) | Descriptive outputs, topic assignments and intent figure source counts. |
+| [figures/](figures/) | Versioned descriptive, model and annotation figures. |
+| [docs/experiments/](docs/experiments/README.md) | Experiment methods, input contracts, run instructions and migration guide. |
 | `docs/` | Project documentation, including the [AI-use record](docs/AI_USE.md). |
 | [docs/meetings/](docs/meetings/README.md) | Dated meeting records, including topic selection, oral preparation, and progress discussions. |
 | `Topic choice reasoning` | Rationale for rejecting earlier project topics. |

@@ -1,5 +1,16 @@
 # Reproducible data workflow
 
+## Functional script directories
+
+- [Response prediction](response_prediction/README.md): frozen encoder comparison; earlier numbered baseline scripts remain below.
+- [First-answer helpfulness](helpfulness/README.md): sample preparation, annotation and diagnostics.
+- [Question-intent annotation](intent_annotation/README.md): taxonomy, prompts and output audits.
+- [Topic modeling](topic_modeling/README.md): NMF, Doc2Vec/K-Means and verb-phrase LDA.
+- [Visualization](visualization/README.md): intent result figures.
+- [Experiment workflow](../docs/experiments/annotation_workflow.md): data contracts and run commands.
+
+These directories replace the former `experiments/week4/` code layout. Existing numbered preprocessing and response-model scripts retain their paths.
+
 The project separates screening decisions from Zi Hu's construction and
 visualization work.
 
@@ -15,7 +26,7 @@ contains the three raw CSV files:
 
 ```bash
 cd data/raw_csv
-python ../../simple_exclusion.ipynb
+python ../../scripts/simple_exclusion.ipynb
 cd ../..
 ```
 
