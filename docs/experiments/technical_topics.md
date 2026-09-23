@@ -1,5 +1,7 @@
 # Stack Overflow Question Classification
 
+Location guide: [programs and run instructions](../../scripts/topic_modeling/README.md), [result tables](../../tables/topic_modeling/), [figures](../../figures/topic_modeling/), and [example questions](nmf_example_questions.md). The methodological text below is retained from the original contribution.
+
 This project classifies Stack Overflow questions into **8 topic categories** using unsupervised topic modeling. We compare two modeling approaches (NMF vs. Doc2Vec + K-Means) under two text preprocessing strategies (baseline vs. natural language).
 
 ---
@@ -85,13 +87,13 @@ def clean_text(text):
 ### Method 1: NMF (Non-negative Matrix Factorization)
 
 **Scripts**:
-- `question_classification_NMF.py` — baseline preprocessing (keep code)
-- `question_classification_NMF_nature.py` — natural-language preprocessing (remove code)
+- [question classfication NMF.py](../../scripts/topic_modeling/question%20classfication%20NMF.py) — baseline preprocessing (keep code)
+- [question classification NMF nature.py](../../scripts/topic_modeling/question%20classification%20NMF%20nature.py) — natural-language preprocessing (remove code)
 
 ### Method 2: Doc2Vec + K-Means
 
 
 **Scripts**:
-- `question_classification_Doc2Vec_baseline.py` — baseline preprocessing (keep code)
-- `question_classification_Doc2Vec_nature.py` — natural-language preprocessing (remove code)
-- `question_Doc2Vec_nature_optimized.py` — worst-case tuned configuration (PV-DM, vector size 200, 50 epochs)
+- [question classification Doc2Vec baseline.py](../../scripts/topic_modeling/question%20classification%20Doc2Vec%20baseline.py) — baseline preprocessing (keep code)
+- [question classification Doc2Vec nature.py](../../scripts/topic_modeling/question%20classification%20Doc2Vec%20nature.py) — natural-language preprocessing (remove code)
+- [question Doc2Vec nature optimized.py](../../scripts/topic_modeling/question%20Doc2Vec%20nature%20optimized.py) — worst-case tuned configuration (PV-DM, vector size 200, 50 epochs)
