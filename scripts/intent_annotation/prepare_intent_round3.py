@@ -4,14 +4,14 @@ import argparse
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 parser = argparse.ArgumentParser()
-parser.add_argument('--pairs', type=Path, default=ROOT/'data/blinded_pairs.json')
+parser.add_argument('--pairs', type=Path, default=ROOT/'data/interim/helpfulness/blinded_pairs.json')
 parser.add_argument('--model-sample', type=Path, required=True)
-parser.add_argument('--out', type=Path, default=ROOT/'intent_round3')
+parser.add_argument('--out', type=Path, default=ROOT/'data/interim/intent_round3')
 args = parser.parse_args()
 OUT = args.out
-OUT.mkdir(exist_ok=True)
+OUT.mkdir(parents=True, exist_ok=True)
 old = json.loads(args.pairs.read_text(encoding='utf-8'))
 excluded = {c['question_id'] for c in old}
 cases = [{'case_id':c['pair_id'],'question_id':c['question_id'],'source':'original_development',
