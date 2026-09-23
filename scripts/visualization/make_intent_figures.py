@@ -6,9 +6,16 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'report_outputs'
-data = json.loads((OUT / 'figure_data.json').read_text(encoding='utf8'))
+import argparse
+
+ROOT = Path(__file__).resolve().parents[2]
+parser = argparse.ArgumentParser()
+parser.add_argument('--data', type=Path, default=ROOT/'tables/intent_annotation/figure_data.json')
+parser.add_argument('--out', type=Path, default=ROOT/'figures/intent_annotation')
+args = parser.parse_args()
+OUT = args.out
+OUT.mkdir(parents=True, exist_ok=True)
+data = json.loads(args.data.read_text(encoding='utf8'))
 metrics = data['metrics']
 categories = ['api_usage','discrepancy','errors','review','conceptual','api_change','learning']
 names = ['Implementation','Unexpected behavior','Explicit error','Review / comparison','Concept explanation','API / version change','Learning resources']
