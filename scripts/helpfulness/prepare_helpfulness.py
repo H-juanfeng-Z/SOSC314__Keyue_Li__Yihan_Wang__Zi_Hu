@@ -6,8 +6,8 @@ import json
 import duckdb
 import argparse
 
-ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT / 'inputs/processed'
+ROOT = Path(__file__).resolve().parents[2]
+SOURCE = ROOT / 'data/processed'
 
 class TextParser(HTMLParser):
     def __init__(self):
@@ -28,7 +28,7 @@ def readable(value):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--processed-dir', type=Path, default=SOURCE)
-    parser.add_argument('--out', type=Path, default=ROOT/'data')
+    parser.add_argument('--out', type=Path, default=ROOT/'data/interim/helpfulness')
     args = parser.parse_args()
     source = args.processed_dir
     out = args.out; out.mkdir(parents=True, exist_ok=True)
