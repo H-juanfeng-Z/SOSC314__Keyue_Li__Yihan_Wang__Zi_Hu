@@ -1,6 +1,7 @@
 # Experiment documentation
 
 - [Annotation and encoder workflow](annotation_workflow.md)
+- [Annotation measurement diagnostics](annotation_diagnostics.md): intent stability, answer-content tests, prompt factorial, and reproduction limits.
 - [Technical-topic methods](technical_topics.md)
 - [NMF example questions](nmf_example_questions.md)
 - [Code navigation](../../scripts/README.md)

@@ -8,6 +8,7 @@
 - [Topic modeling](topic_modeling/README.md): NMF, Doc2Vec/K-Means and verb-phrase LDA.
 - [Visualization](visualization/README.md): intent result figures.
 - [Experiment workflow](../docs/experiments/annotation_workflow.md): data contracts and run commands.
+- [Annotation diagnostics](../docs/experiments/annotation_diagnostics.md): follow-up runners, decision exports, paired analysis and figures.
 
 These directories replace the former `experiments/week4/` code layout. Existing numbered preprocessing and response-model scripts retain their paths.
 
