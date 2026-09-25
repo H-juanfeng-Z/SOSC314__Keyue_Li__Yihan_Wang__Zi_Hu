@@ -46,3 +46,21 @@ policy.
   
 ## Week 4
 - Reproduing A&S LDA model (Keyue Li): Kimi K3 was used to assist with generating and debugging. Related commits: '5981726'
+
+## Annotation follow-up (September 22–25, 2026)
+
+- Experimental programs (Zi Hu): OpenAI Codex assisted with generating and
+  debugging the helpfulness diagnostics and question-intent stability programs.
+  Related commits: `aa97012`, `a425aae`.
+- Automated annotation (Zi Hu): locally deployed Qwen2.5-Coder-7B-Instruct and
+  Qwen2.5-Coder-14B-Instruct produced experimental judgments, not human labels.
+  Prompt definitions are preserved in the corresponding programs; exported
+  decisions and summary results are recorded in `0f236e8`. Original prompt/input
+  and completion logs are retained privately. Synthetic diagnostic cases are
+  AI-generated checks, not independently established ground truth.
+- Results and presentation (Zi Hu): OpenAI Codex assisted with diagnostic prompt
+  revisions, exploratory interpretation, summary-code preparation, plotting and
+  experiment documentation. Related commits: `0f236e8`, `420fbba`, `eca112d`,
+  `6ccbd15`. Figures are computed from recorded results, not generated images.
+  Automated schema tests and repeatability checks do not establish semantic
+  annotation accuracy. No independent human validation is claimed for this stage.
