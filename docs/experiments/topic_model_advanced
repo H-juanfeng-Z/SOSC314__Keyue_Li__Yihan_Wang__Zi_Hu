@@ -1,0 +1,245 @@
+Main topics (K=8):
+  Topic 0: list, print, string, python, function, number, value, input, like, want, range, return, code, len, dictionary
+  Topic 1: py line, lib, py, line, packages, file, python2, site packages, lib python2, site, usr, traceback, error, recent, traceback recent
+  Topic 2: models, model, django, charfield, models model, class, max_length, models charfield, charfield max_length, foreignkey, true, models foreignkey, objects, field, user
+  Topic 3: self, def, class, __init__, __init__ self, def __init__, self self, return, object, method, print, import, parent, object def, button
+  Topic 4: dataframe, pandas, df, column, columns, pd, data, row, 00, csv, index, 12, 10, 01, rows
+  Topic 5: np, array, numpy, plt, plot, matplotlib, import, import numpy, numpy np, image, np array, numpy array, axis, data, shape
+  Topic 6: python, file, script, os, files, run, using, path, import, command, use, open, module, directory, running
+  Topic 7: url, request, html, page, post, data, response, requests, app, django, server, form, content, json, api
+
+################################################################################
+# SUBDIVIDING MAIN TOPIC 3 into K=2
+################################################################################
+Sub-corpus size: 2257
+
+================================================================================
+Sub-topic 0 | top words: self, def, class, return, print, object, python, __init__, __init__ self, method, def __init__, self self
+================================================================================
+ 1. [1.000] Python : can't solve AttributeError - object has no attribute xxx
+ 2. [1.000] python: problems with accessing variables while using multiprocessing
+ 3. [1.000] Do each instance variable need a new property get/set method?
+ 4. [1.000] How to call functions/methods inside objects in python
+ 5. [1.000] Django: How Form or Field class render the widget? What's the process?
+ 6. [1.000] Passing an Python Class Attribute Given a String
+ 7. [1.000] Why do my nested python class instances become tuples?
+ 8. [1.000] Usage of property() contruct in python
+ 9. [1.000] Using descriptors in unhashable classes - python
+10. [1.000] Python: How to use method with decorator properly
+11. [1.000] Unable to locate object referenced in object method without redundant import
+12. [1.000] creating class object that normally looks like a float
+13. [1.000] How to append objects to the list that is an instance variable?
+14. [1.000] Python throws an Attribute error
+15. [1.000] Python: object has no attribute
+16. [1.000] Cython: have sequence of Extension Types as attribute of another Extension Type with access to cdef methods
+17. [1.000] attibutes of subclassed classes in registry of subclassed classes
+18. [1.000] Is it possible to have a python class attribute be callable without ()
+19. [1.000] Method assignment and objects
+20. [1.000] Proper way to terminate object creation inside of __init__
+
+================================================================================
+Sub-topic 1 | top words: text, button, tkinter, label, root, frame, tk, grid, pack, window, self, row
+================================================================================
+ 1. [1.000] Tkinter: Getting an image above buttons in grid layout
+ 2. [1.000] label layout using grid in tkinter
+ 3. [1.000] Tkinter: 'int' object does not support item assignment
+ 4. [1.000] Executable using tkinter and multiprocessing creates multiple windows
+ 5. [1.000] Write a text file using Python
+ 6. [1.000] tkinter - How to get frames and widgets to fill window?
+ 7. [1.000] Python Tkinter application doesn't quit properly
+ 8. [1.000] Checkbox not showing up python
+ 9. [1.000] Using a button counter in Python tkinter
+10. [1.000] window label is not printing : Python
+11. [1.000] Create an Entry box if a specific item on Optionmenu is selected
+12. [1.000] Making a dataframe global so that i can access it anywhere in the class
+13. [1.000] Python - If I remove Lambda then app is undefined?
+14. [1.000] How do I Run an exe from python using a Tkinter button
+15. [1.000] Class Population Counter. How to put the program all into one
+16. [1.000] my login code broke in some way
+17. [1.000] How do you keep a widget in view while scrolling?
+18. [1.000] printing out something to there gui with Tkinter
+19. [1.000] tkinter: how to not display the empty root window when creating it
+20. [1.000] Create multiple rectangular borders within single entry widget in Tkinter
+
+################################################################################
+# SUBDIVIDING MAIN TOPIC 5 into K=2
+################################################################################
+Sub-corpus size: 1841
+
+================================================================================
+Sub-topic 0 | top words: array, numpy, np, python, data, matrix, like, function, using, numpy array, image, print
+================================================================================
+ 1. [1.000] Python : reading the output of a function with variable return type
+ 2. [1.000] Wrapping C function in Cython and NumPy
+ 3. [1.000] Fast way to compute if statements on arrays in python?
+ 4. [1.000] Efficient density function computation
+ 5. [1.000] Reduce memory complexity in a bootstrap algorithm
+ 6. [1.000] Overflow error when mixing numpy arrays and regular python 2.7 arrays
+ 7. [1.000] Remove nan rows in a scipy sparse matrix
+ 8. [1.000] A row of zeroes is added to an array instead of the row I want
+ 9. [1.000] How to pass a Numpy array into a cffi function and how to get one back out?
+10. [1.000] Construct two dimensional numpy array from indices and values of a one dimensional array
+11. [1.000] Variable amount of dimensions in slice
+12. [1.000] Multiplying two 2D numpy arrays to a 3D array
+13. [1.000] accumulate numpy array for just one column
+14. [1.000] python arrays, huge memory consumption
+15. [1.000] More efficient way of suming over a matrix in numpy/regular python
+16. [1.000] Write a method that accesses to a parametric dimension numpy array
+17. [1.000] Create a zipfile directly from numpy array without an intermediary file
+18. [1.000] Fastest way to compute upper-triangular matrix of geometric series (Python)
+19. [1.000] Assigning numpy array elements through predefined array
+20. [1.000] 2D numpy array does not give an error when indexing with strings containing digits
+
+================================================================================
+Sub-topic 1 | top words: plt, plot, matplotlib, import, ax, figure, fig, pyplot, import matplotlib, matplotlib pyplot, axis, color
+================================================================================
+ 1. [1.000] Is plotting in IPython notebooks buggy?
+ 2. [1.000] Scatter Plot 3D with labels and spheres
+ 3. [1.000] How can I make a simple 3D line with Matplotlib?
+ 4. [1.000] render pandas generated plot to matplotlib canvas for streaming
+ 5. [1.000] How to plot figures in subplots (Matplotlib)
+ 6. [1.000] What matplotlib object should I send/receive through class method?
+ 7. [1.000] Get grid points from matplotlib
+ 8. [1.000] Legend is outside the frame
+ 9. [1.000] Matplotlib line plot: coloring regions of high curvature
+10. [1.000] Matplotlib, multiple line plots axis annotation
+11. [1.000] Prevent matplotlib to sort axis
+12. [1.000] fig.add_subplot() *transform* doesn't work?
+13. [1.000] matplotlib change size of subplots
+14. [1.000] Upright mu in plot label: retaining original tick fonts
+15. [1.000] matplotlib figure inset whitespace
+16. [1.000] Colored LaTeX labels in plots
+17. [1.000] matplotlib: override underscore in string when using LaTeX in text box
+18. [1.000] Equal axis labels and ranges for all subplots
+19. [1.000] Matplotlib: move graph to the right
+20. [1.000] Draw a step histogram without closing the polygon with the bottom line
+
+################################################################################
+# SUBDIVIDING MAIN TOPIC 6 into K=2
+################################################################################
+Sub-corpus size: 5225
+
+================================================================================
+Sub-topic 0 | top words: python, using, run, use, py, script, module, like, way, install, command, error
+================================================================================
+ 1. [1.000] How to install python binding of a C++ library
+ 2. [1.000] How to auto download missing Python modules in Sublime Text 3
+ 3. [1.000] Standard way to create debian packages for distributing Python programs?
+ 4. [1.000] Sharing a python script with module requirements?
+ 5. [1.000] Numpy Installation: How do I fix the broken toolchain without Bash and limited permissions?
+ 6. [1.000] How to update pandas when python is installed as part of ArcGIS10.4, or another solution
+ 7. [1.000] What's the pythonic way to package a web app with a generation step?
+ 8. [1.000] installing/using cx_freeze
+ 9. [1.000] Install custom python package in virtualenv
+10. [1.000] Installing django-haystack
+11. [1.000] Optimizing Push Task Queues
+12. [1.000] Python, GEOS and Shapely on Windows 64
+13. [1.000] Twisted distribute callRemote across servers
+14. [1.000] package install for ipython Notebook
+15. [1.000] cannot use PUDB python debugger after CANOPY installation
+16. [1.000] PyCDDB and CDDB.py and python audio tools
+17. [1.000] Running django migrations on windows for remote mssql db with native windows db drivers
+18. [1.000] pip setup and setting PYTHONPATH
+19. [1.000] Vpython in Wing IDE
+20. [1.000] Building Qscintilla2 python bindings on Windows7 with MinGW (PyQt4.11, Qt4.8.6)
+
+================================================================================
+Sub-topic 1 | top words: file, os, print, open, path, files, import, line, txt, read, write, text
+================================================================================
+ 1. [1.000] How delete functions on python?
+ 2. [1.000] How to create nested dictionary from fs with names of nodes from the file content?
+ 3. [1.000] Dividing a large file into several smaller, stochastic writing to multiple files
+ 4. [1.000] Directory Name + File Name to Text File
+ 5. [1.000] Python os.makedirs to recreate path
+ 6. [1.000] Pyinstaller throwing error No such file or directory
+ 7. [1.000] Python - Duplicate File Finder using defaultdict
+ 8. [1.000] Extracting data from a text file to an output file
+ 9. [1.000] Censor Words from a File Using a CensorFile - Python
+10. [1.000] How can I scan through a directory in python?
+11. [1.000] Variable scope and Try Catch in python
+12. [1.000] os.listdir not reading all files
+13. [1.000] How should this Python function be called
+14. [1.000] How do I use the .split method in python?
+15. [1.000] Open files in directory in for loop Python
+16. [1.000] Python 2.7.2. How to append specific lines from multiple files into one file.
+17. [1.000] Python - Open All Text Files in All Subdirectories Unless Text File Is In Specified Directory
+18. [1.000] Reading File into Python Dictionary and then Writing to File
+19. [1.000] Select 50 items from list at random to write to file
+20. [1.000] python search and write to file
+
+################################################################################
+# SUBDIVIDING MAIN TOPIC 7 into K=3
+################################################################################
+Sub-corpus size: 2535
+
+================================================================================
+Sub-topic 0 | top words: python, data, server, request, app, url, json, using, api, response, user, code
+================================================================================
+ 1. [1.000] Get data with $resource from Flask API in AngularjJS
+ 2. [1.000] Failing to authorize connection to own GAE endpoints API with service account
+ 3. [1.000] Python Delete Request for a rest api (on gae)
+ 4. [1.000] Flask not using curl auth
+ 5. [1.000] Getting 'Missing required field: member' when trying to add a member to a google group via API
+ 6. [1.000] Unicode in Flask-Restful API and JSON issue
+ 7. [1.000] Headers not sending correctly with python 2.6.6 and httplib
+ 8. [1.000] How to connect a client to a server through an HTTP proxy in Python?
+ 9. [1.000] Apple store receipt validation through Twisted server
+10. [1.000] Socket server not ending/receiving more than 2 messages python 3
+11. [1.000] How can I get the Python Task Queue and Channel API to send messages and respond to requests during a long-running proce
+12. [1.000] AJAX and Python Error - No 'Access-Control-Allow-Origin' header is present on the requested resource
+13. [1.000] Google App Engine URL Fetch Doesn't Work on Production
+14. [1.000] What is Google API Discovery?
+15. [1.000] Return response code python HTTP header
+16. [1.000] json.Dumps - C# equivalent?
+17. [1.000] quopri decoding on app engine blobstore upload
+18. [1.000] Python tcp socket, how to get data from an async server
+19. [1.000] Restful API - passing cookie to subsequent POST requests
+20. [1.000] Why does my app send one email then no more?
+
+================================================================================
+Sub-topic 1 | top words: beautifulsoup, soup, text, url, html, import, page, print, div, tag, link, python
+================================================================================
+ 1. [1.000] Scraping Pantip Forum using BeautifulSoup
+ 2. [1.000] Beautiful soup body tags damaged
+ 3. [1.000] beautifulsoup - loop through url offset
+ 4. [1.000] Scrape just the text, within an html element that has a class, using beautiful soup
+ 5. [1.000] problems scraping web page using python
+ 6. [1.000] how to filter iframe tag using python beautifulsoup4?
+ 7. [1.000] Beautiful Soup findAll doen't find them all
+ 8. [1.000] Using SoupStrainer to parse selectively
+ 9. [1.000] Unable to scrape quote of the day from forbes
+10. [1.000] beautifulsoup could not find class
+11. [1.000] Bypassing Loop AttributeError: 'NoneType' object has no attribute 'findAll'
+12. [1.000] Unable to iterate over the "tr" element of a table using beautiful soup
+13. [1.000] Converting html to excel in Python
+14. [1.000] Replace "\n" in element string with <br> tag in Beautifulsoup
+15. [1.000] Unicode extraction
+16. [1.000] Activating link without a browser
+17. [1.000] Python parsing HTML with BeautifulSoup
+18. [1.000] Python Beautiful Soup scape page containing Java Script
+19. [1.000] regex or way to get urls for images only
+20. [1.000] Scraperwiki: how to save data into one cell in table
+
+================================================================================
+Sub-topic 2 | top words: django, views, request, py, form, html, urls, template, return, view, post, def
+================================================================================
+ 1. [1.000] Django Page not found using complete url
+ 2. [1.000] django - login not submitting to server from dropdown
+ 3. [1.000] 403 template displaying instead of 404
+ 4. [1.000] Why is Django loading the same page, but with different URL?
+ 5. [1.000] django: "'str' object has no attribute 'regex'
+ 6. [1.000] why isn't this django url redirecting?
+ 7. [1.000] ViewDoesNotExist at / . Django weird error
+ 8. [1.000] Get different views to display different content
+ 9. [1.000] "admin" Subdirectory Triggering (unintentially) Django Admin Pages
+10. [1.000] ImportError at /login No module named login
+11. [1.000] Django reverse error: NoReverseMatch
+12. [1.000] Django work flow redirect from one view to another and display page with url parameter
+13. [1.000] Not been able to process simple form in Django?
+14. [1.000] Django Framework- page not found
+15. [1.000] Django 404 - URLs.py
+16. [1.000] I do not understand this Django error
+17. [1.000] Trouble regarding user registration form in Django
+18. [1.000] The view didn't return an HttpResponse object. It returned None instead. Request Method: POST
+19. [1.000] Django: is not a registered namespace
+20. [1.000] Django Template Doesn't Exist doesn't check top-level .html?
