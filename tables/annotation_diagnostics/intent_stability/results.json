@@ -1,0 +1,5427 @@
+{
+  "utc": "2026-09-25T12:54:21.219566+00:00",
+  "protocol": "Complete primary arms only; paired real questions; exclude invalid/uncertain explicitly; question-level bootstrap 2000 draws seed314. No accuracy or causal claims. No held-out cases used. Shared vs isolated is a prompt-package comparison, not an isolated wording effect.",
+  "input_sha256": {
+    "tables\\annotation_diagnostics\\decisions\\results_ssd\\7b\\intent\\calls.jsonl": "ab6db5573a6867cc843d96a34fe49c685bdf4cf61f45bcbd6570233a7fff40ae",
+    "tables\\annotation_diagnostics\\decisions\\results_ssd\\7b\\boundary\\calls.jsonl": "76a13e52a7cc1101bb8c529f373837eb08dcb39a51b9bcf9736a58b5b53df304",
+    "tables\\annotation_diagnostics\\decisions\\results_ssd\\14b\\intent\\calls.jsonl": "c039f5c73aa42b2b798ca3efd976809fde5cc0a33eceb4fac07c484166e1f1d0",
+    "tables\\annotation_diagnostics\\decisions\\results_ssd\\14b\\boundary\\calls.jsonl": "f4033677b9a269846b44a879176e776c11452792345560bb68362426ca75143b"
+  },
+  "models": {
+    "7b": {
+      "all_call_statuses": {
+        "valid": 27658,
+        "invalid": 306,
+        "invalid_json": 8
+      },
+      "duplicate_keys": 0,
+      "paired_comparisons": {
+        "full-shared_json-greedy__full-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.2695652173913046,
+          "mean_yes_b": 0.8434782608695652,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.4260869565217391,
+            "ci95_percentile": [
+              -1.626086956521739,
+              -1.2260869565217392
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.19130434782608696,
+          "mean_jaccard_nonempty_union": 0.3593137254901961,
+          "both_empty_sets": 13,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 24,
+              "yes_no": 38,
+              "no_yes": 0,
+              "no_no": 53,
+              "agreement": 0.6695652173913044,
+              "positive_agreement": 0.5581395348837209
+            },
+            "discrepancy": {
+              "yes_yes": 15,
+              "yes_no": 36,
+              "no_yes": 0,
+              "no_no": 64,
+              "agreement": 0.6869565217391305,
+              "positive_agreement": 0.45454545454545453
+            },
+            "errors": {
+              "yes_yes": 23,
+              "yes_no": 8,
+              "no_yes": 0,
+              "no_no": 84,
+              "agreement": 0.9304347826086956,
+              "positive_agreement": 0.8518518518518519
+            },
+            "review": {
+              "yes_yes": 22,
+              "yes_no": 21,
+              "no_yes": 0,
+              "no_no": 72,
+              "agreement": 0.8173913043478261,
+              "positive_agreement": 0.676923076923077
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 40,
+              "no_yes": 0,
+              "no_no": 66,
+              "agreement": 0.6521739130434783,
+              "positive_agreement": 0.3103448275862069
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 4,
+              "yes_no": 20,
+              "no_yes": 0,
+              "no_no": 91,
+              "agreement": 0.8260869565217391,
+              "positive_agreement": 0.2857142857142857
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.3217391304347825,
+          "mean_yes_b": 0.9391304347826087,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.382608695652174,
+            "ci95_percentile": [
+              -1.5826086956521739,
+              -1.173913043478261
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.2,
+          "mean_jaccard_nonempty_union": 0.3684640522875817,
+          "both_empty_sets": 13,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 32,
+              "yes_no": 28,
+              "no_yes": 1,
+              "no_no": 54,
+              "agreement": 0.7478260869565218,
+              "positive_agreement": 0.6881720430107527
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 33,
+              "no_yes": 0,
+              "no_no": 68,
+              "agreement": 0.7130434782608696,
+              "positive_agreement": 0.45901639344262296
+            },
+            "errors": {
+              "yes_yes": 18,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 90,
+              "agreement": 0.9391304347826087,
+              "positive_agreement": 0.8372093023255814
+            },
+            "review": {
+              "yes_yes": 24,
+              "yes_no": 25,
+              "no_yes": 1,
+              "no_no": 65,
+              "agreement": 0.7739130434782608,
+              "positive_agreement": 0.6486486486486487
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 48,
+              "no_yes": 0,
+              "no_no": 58,
+              "agreement": 0.5826086956521739,
+              "positive_agreement": 0.2727272727272727
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 8,
+              "yes_no": 20,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.8260869565217391,
+              "positive_agreement": 0.4444444444444444
+            }
+          }
+        },
+        "title-shared_json-greedy__title-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 110,
+          "excluded_invalid_uncertain_or_missing": 10,
+          "mean_yes_a": 0.9181818181818182,
+          "mean_yes_b": 0.34545454545454546,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.5727272727272728,
+            "ci95_percentile": [
+              -0.7090909090909091,
+              -0.42727272727272725
+            ],
+            "n_questions": 110
+          },
+          "exact_label_set_agreement": 0.509090909090909,
+          "mean_jaccard_nonempty_union": 0.31495098039215685,
+          "both_empty_sets": 42,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 15,
+              "yes_no": 12,
+              "no_yes": 2,
+              "no_no": 81,
+              "agreement": 0.8727272727272727,
+              "positive_agreement": 0.6818181818181818
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 14,
+              "no_yes": 0,
+              "no_no": 94,
+              "agreement": 0.8727272727272727,
+              "positive_agreement": 0.2222222222222222
+            },
+            "errors": {
+              "yes_yes": 2,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 105,
+              "agreement": 0.9727272727272728,
+              "positive_agreement": 0.5714285714285714
+            },
+            "review": {
+              "yes_yes": 9,
+              "yes_no": 9,
+              "no_yes": 1,
+              "no_no": 91,
+              "agreement": 0.9090909090909091,
+              "positive_agreement": 0.6428571428571429
+            },
+            "conceptual": {
+              "yes_yes": 7,
+              "yes_no": 19,
+              "no_yes": 0,
+              "no_no": 84,
+              "agreement": 0.8272727272727273,
+              "positive_agreement": 0.42424242424242425
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 110,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 0.9181818181818182,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-greedy__prose-shared_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.2782608695652176,
+          "mean_yes_b": 2.3217391304347825,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.043478260869565216,
+            "ci95_percentile": [
+              -0.14782608695652175,
+              0.21739130434782608
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.6,
+          "mean_jaccard_nonempty_union": 0.7783653846153846,
+          "both_empty_sets": 11,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 54,
+              "yes_no": 8,
+              "no_yes": 6,
+              "no_no": 47,
+              "agreement": 0.8782608695652174,
+              "positive_agreement": 0.8852459016393442
+            },
+            "discrepancy": {
+              "yes_yes": 44,
+              "yes_no": 9,
+              "no_yes": 3,
+              "no_no": 59,
+              "agreement": 0.8956521739130435,
+              "positive_agreement": 0.88
+            },
+            "errors": {
+              "yes_yes": 23,
+              "yes_no": 10,
+              "no_yes": 2,
+              "no_no": 80,
+              "agreement": 0.8956521739130435,
+              "positive_agreement": 0.7931034482758621
+            },
+            "review": {
+              "yes_yes": 40,
+              "yes_no": 2,
+              "no_yes": 9,
+              "no_no": 64,
+              "agreement": 0.9043478260869565,
+              "positive_agreement": 0.8791208791208791
+            },
+            "conceptual": {
+              "yes_yes": 48,
+              "yes_no": 1,
+              "no_yes": 9,
+              "no_no": 57,
+              "agreement": 0.9130434782608695,
+              "positive_agreement": 0.9056603773584906
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 21,
+              "yes_no": 1,
+              "no_yes": 7,
+              "no_no": 86,
+              "agreement": 0.9304347826086956,
+              "positive_agreement": 0.84
+            }
+          }
+        },
+        "full-shared_json-greedy__title-shared_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 108,
+          "excluded_invalid_uncertain_or_missing": 12,
+          "mean_yes_a": 2.2314814814814814,
+          "mean_yes_b": 0.9537037037037037,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.2777777777777777,
+            "ci95_percentile": [
+              -1.5740740740740742,
+              -0.9814814814814815
+            ],
+            "n_questions": 108
+          },
+          "exact_label_set_agreement": 0.18518518518518517,
+          "mean_jaccard_nonempty_union": 0.32483333333333336,
+          "both_empty_sets": 8,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 23,
+              "yes_no": 34,
+              "no_yes": 4,
+              "no_no": 47,
+              "agreement": 0.6481481481481481,
+              "positive_agreement": 0.5476190476190477
+            },
+            "discrepancy": {
+              "yes_yes": 17,
+              "yes_no": 29,
+              "no_yes": 0,
+              "no_no": 62,
+              "agreement": 0.7314814814814815,
+              "positive_agreement": 0.5396825396825397
+            },
+            "errors": {
+              "yes_yes": 6,
+              "yes_no": 22,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 0.7962962962962963,
+              "positive_agreement": 0.35294117647058826
+            },
+            "review": {
+              "yes_yes": 12,
+              "yes_no": 27,
+              "no_yes": 6,
+              "no_no": 63,
+              "agreement": 0.6944444444444444,
+              "positive_agreement": 0.42105263157894735
+            },
+            "conceptual": {
+              "yes_yes": 19,
+              "yes_no": 28,
+              "no_yes": 7,
+              "no_no": 54,
+              "agreement": 0.6759259259259259,
+              "positive_agreement": 0.5205479452054794
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 107,
+              "agreement": 0.9907407407407407,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 20,
+              "no_yes": 6,
+              "no_no": 79,
+              "agreement": 0.7592592592592593,
+              "positive_agreement": 0.1875
+            }
+          }
+        },
+        "full-isolated_json-greedy__prose-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 118,
+          "excluded_invalid_uncertain_or_missing": 2,
+          "mean_yes_a": 0.8389830508474576,
+          "mean_yes_b": 0.9322033898305084,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.09322033898305085,
+            "ci95_percentile": [
+              -0.0423728813559322,
+              0.2288135593220339
+            ],
+            "n_questions": 118
+          },
+          "exact_label_set_agreement": 0.6864406779661016,
+          "mean_jaccard_nonempty_union": 0.6371308016877637,
+          "both_empty_sets": 39,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 24,
+              "yes_no": 0,
+              "no_yes": 10,
+              "no_no": 84,
+              "agreement": 0.9152542372881356,
+              "positive_agreement": 0.8275862068965517
+            },
+            "discrepancy": {
+              "yes_yes": 11,
+              "yes_no": 4,
+              "no_yes": 3,
+              "no_no": 100,
+              "agreement": 0.940677966101695,
+              "positive_agreement": 0.7586206896551724
+            },
+            "errors": {
+              "yes_yes": 15,
+              "yes_no": 10,
+              "no_yes": 4,
+              "no_no": 89,
+              "agreement": 0.8813559322033898,
+              "positive_agreement": 0.6818181818181818
+            },
+            "review": {
+              "yes_yes": 19,
+              "yes_no": 3,
+              "no_yes": 6,
+              "no_no": 90,
+              "agreement": 0.923728813559322,
+              "positive_agreement": 0.8085106382978723
+            },
+            "conceptual": {
+              "yes_yes": 7,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 108,
+              "agreement": 0.9745762711864406,
+              "positive_agreement": 0.8235294117647058
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 117,
+              "agreement": 0.9915254237288136,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 5,
+              "no_no": 109,
+              "agreement": 0.9576271186440678,
+              "positive_agreement": 0.6153846153846154
+            }
+          }
+        },
+        "full-isolated_json-greedy__title-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 116,
+          "excluded_invalid_uncertain_or_missing": 4,
+          "mean_yes_a": 0.8362068965517241,
+          "mean_yes_b": 0.3706896551724138,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.46551724137931033,
+            "ci95_percentile": [
+              -0.6120689655172413,
+              -0.3103448275862069
+            ],
+            "n_questions": 116
+          },
+          "exact_label_set_agreement": 0.5,
+          "mean_jaccard_nonempty_union": 0.28153153153153154,
+          "both_empty_sets": 42,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 9,
+              "yes_no": 15,
+              "no_yes": 9,
+              "no_no": 83,
+              "agreement": 0.7931034482758621,
+              "positive_agreement": 0.42857142857142855
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 13,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 0.8879310344827587,
+              "positive_agreement": 0.23529411764705882
+            },
+            "errors": {
+              "yes_yes": 5,
+              "yes_no": 19,
+              "no_yes": 0,
+              "no_no": 92,
+              "agreement": 0.8362068965517241,
+              "positive_agreement": 0.3448275862068966
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 14,
+              "no_yes": 3,
+              "no_no": 91,
+              "agreement": 0.853448275862069,
+              "positive_agreement": 0.48484848484848486
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 3,
+              "no_yes": 2,
+              "no_no": 106,
+              "agreement": 0.9568965517241379,
+              "positive_agreement": 0.6666666666666666
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 0.9655172413793104,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample314__full-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.1913043478260867,
+          "mean_yes_b": 0.808695652173913,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.382608695652174,
+            "ci95_percentile": [
+              -1.5739130434782609,
+              -1.191304347826087
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.20869565217391303,
+          "mean_jaccard_nonempty_union": 0.3503236245954693,
+          "both_empty_sets": 12,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 25,
+              "yes_no": 36,
+              "no_yes": 0,
+              "no_no": 54,
+              "agreement": 0.6869565217391305,
+              "positive_agreement": 0.5813953488372093
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 36,
+              "no_yes": 0,
+              "no_no": 65,
+              "agreement": 0.6869565217391305,
+              "positive_agreement": 0.4375
+            },
+            "errors": {
+              "yes_yes": 23,
+              "yes_no": 7,
+              "no_yes": 1,
+              "no_no": 84,
+              "agreement": 0.9304347826086956,
+              "positive_agreement": 0.8518518518518519
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 24,
+              "no_yes": 0,
+              "no_no": 73,
+              "agreement": 0.7913043478260869,
+              "positive_agreement": 0.6
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 37,
+              "no_yes": 0,
+              "no_no": 69,
+              "agreement": 0.6782608695652174,
+              "positive_agreement": 0.32727272727272727
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 113,
+              "agreement": 0.9826086956521739,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 18,
+              "no_yes": 0,
+              "no_no": 94,
+              "agreement": 0.8434782608695652,
+              "positive_agreement": 0.25
+            }
+          }
+        },
+        "prose-shared_json-sample314__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 2.254385964912281,
+          "mean_yes_b": 0.8859649122807017,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.368421052631579,
+            "ci95_percentile": [
+              -1.5526315789473684,
+              -1.1842105263157894
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.18421052631578946,
+          "mean_jaccard_nonempty_union": 0.35080906148867314,
+          "both_empty_sets": 11,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 31,
+              "yes_no": 33,
+              "no_yes": 1,
+              "no_no": 49,
+              "agreement": 0.7017543859649122,
+              "positive_agreement": 0.6458333333333334
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 30,
+              "no_yes": 0,
+              "no_no": 70,
+              "agreement": 0.7368421052631579,
+              "positive_agreement": 0.4827586206896552
+            },
+            "errors": {
+              "yes_yes": 15,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 89,
+              "agreement": 0.9122807017543859,
+              "positive_agreement": 0.75
+            },
+            "review": {
+              "yes_yes": 22,
+              "yes_no": 23,
+              "no_yes": 2,
+              "no_no": 67,
+              "agreement": 0.7807017543859649,
+              "positive_agreement": 0.6376811594202898
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 47,
+              "no_yes": 0,
+              "no_no": 58,
+              "agreement": 0.5877192982456141,
+              "positive_agreement": 0.27692307692307694
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 113,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 6,
+              "yes_no": 16,
+              "no_yes": 0,
+              "no_no": 92,
+              "agreement": 0.8596491228070176,
+              "positive_agreement": 0.42857142857142855
+            }
+          }
+        },
+        "title-shared_json-sample314__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 95,
+          "excluded_invalid_uncertain_or_missing": 25,
+          "mean_yes_a": 0.9368421052631579,
+          "mean_yes_b": 0.37894736842105264,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.5578947368421052,
+            "ci95_percentile": [
+              -0.7263157894736842,
+              -0.4
+            ],
+            "n_questions": 95
+          },
+          "exact_label_set_agreement": 0.5578947368421052,
+          "mean_jaccard_nonempty_union": 0.3696969696969697,
+          "both_empty_sets": 40,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 16,
+              "yes_no": 8,
+              "no_yes": 1,
+              "no_no": 70,
+              "agreement": 0.9052631578947369,
+              "positive_agreement": 0.7804878048780488
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 13,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 0.8631578947368421,
+              "positive_agreement": 0.23529411764705882
+            },
+            "errors": {
+              "yes_yes": 2,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 91,
+              "agreement": 0.9789473684210527,
+              "positive_agreement": 0.6666666666666666
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 83,
+              "agreement": 0.9578947368421052,
+              "positive_agreement": 0.8
+            },
+            "conceptual": {
+              "yes_yes": 6,
+              "yes_no": 19,
+              "no_yes": 0,
+              "no_no": 70,
+              "agreement": 0.8,
+              "positive_agreement": 0.3870967741935484
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 95,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 85,
+              "agreement": 0.8947368421052632,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample314__prose-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.234782608695652,
+          "mean_yes_b": 2.252173913043478,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.017391304347826087,
+            "ci95_percentile": [
+              -0.14782608695652175,
+              0.1826086956521739
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.6173913043478261,
+          "mean_jaccard_nonempty_union": 0.7858255451713395,
+          "both_empty_sets": 8,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 59,
+              "yes_no": 4,
+              "no_yes": 5,
+              "no_no": 47,
+              "agreement": 0.9217391304347826,
+              "positive_agreement": 0.9291338582677166
+            },
+            "discrepancy": {
+              "yes_yes": 43,
+              "yes_no": 9,
+              "no_yes": 2,
+              "no_no": 61,
+              "agreement": 0.9043478260869565,
+              "positive_agreement": 0.8865979381443299
+            },
+            "errors": {
+              "yes_yes": 24,
+              "yes_no": 9,
+              "no_yes": 2,
+              "no_no": 80,
+              "agreement": 0.9043478260869565,
+              "positive_agreement": 0.8135593220338984
+            },
+            "review": {
+              "yes_yes": 37,
+              "yes_no": 5,
+              "no_yes": 8,
+              "no_no": 65,
+              "agreement": 0.8869565217391304,
+              "positive_agreement": 0.8505747126436781
+            },
+            "conceptual": {
+              "yes_yes": 46,
+              "yes_no": 1,
+              "no_yes": 10,
+              "no_no": 58,
+              "agreement": 0.9043478260869565,
+              "positive_agreement": 0.8932038834951457
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 18,
+              "yes_no": 1,
+              "no_yes": 4,
+              "no_no": 92,
+              "agreement": 0.9565217391304348,
+              "positive_agreement": 0.8780487804878049
+            }
+          }
+        },
+        "full-shared_json-sample314__title-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 94,
+          "excluded_invalid_uncertain_or_missing": 26,
+          "mean_yes_a": 2.202127659574468,
+          "mean_yes_b": 0.9574468085106383,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.2446808510638299,
+            "ci95_percentile": [
+              -1.5638297872340425,
+              -0.9468085106382979
+            ],
+            "n_questions": 94
+          },
+          "exact_label_set_agreement": 0.20212765957446807,
+          "mean_jaccard_nonempty_union": 0.3464705882352941,
+          "both_empty_sets": 9,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 19,
+              "yes_no": 30,
+              "no_yes": 5,
+              "no_no": 40,
+              "agreement": 0.6276595744680851,
+              "positive_agreement": 0.5205479452054794
+            },
+            "discrepancy": {
+              "yes_yes": 15,
+              "yes_no": 26,
+              "no_yes": 0,
+              "no_no": 53,
+              "agreement": 0.723404255319149,
+              "positive_agreement": 0.5357142857142857
+            },
+            "errors": {
+              "yes_yes": 5,
+              "yes_no": 19,
+              "no_yes": 0,
+              "no_no": 70,
+              "agreement": 0.7978723404255319,
+              "positive_agreement": 0.3448275862068966
+            },
+            "review": {
+              "yes_yes": 10,
+              "yes_no": 24,
+              "no_yes": 1,
+              "no_no": 59,
+              "agreement": 0.7340425531914894,
+              "positive_agreement": 0.4444444444444444
+            },
+            "conceptual": {
+              "yes_yes": 20,
+              "yes_no": 19,
+              "no_yes": 5,
+              "no_no": 50,
+              "agreement": 0.7446808510638298,
+              "positive_agreement": 0.625
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 92,
+              "agreement": 0.9787234042553191,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 15,
+              "no_yes": 7,
+              "no_no": 69,
+              "agreement": 0.7659574468085106,
+              "positive_agreement": 0.21428571428571427
+            }
+          }
+        },
+        "full-isolated_json-sample314__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 116,
+          "excluded_invalid_uncertain_or_missing": 4,
+          "mean_yes_a": 0.7844827586206896,
+          "mean_yes_b": 0.8620689655172413,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.07758620689655173,
+            "ci95_percentile": [
+              -0.05172413793103448,
+              0.19827586206896552
+            ],
+            "n_questions": 116
+          },
+          "exact_label_set_agreement": 0.6896551724137931,
+          "mean_jaccard_nonempty_union": 0.6049382716049383,
+          "both_empty_sets": 35,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 24,
+              "yes_no": 1,
+              "no_yes": 8,
+              "no_no": 83,
+              "agreement": 0.9224137931034483,
+              "positive_agreement": 0.8421052631578947
+            },
+            "discrepancy": {
+              "yes_yes": 10,
+              "yes_no": 3,
+              "no_yes": 4,
+              "no_no": 99,
+              "agreement": 0.9396551724137931,
+              "positive_agreement": 0.7407407407407407
+            },
+            "errors": {
+              "yes_yes": 12,
+              "yes_no": 11,
+              "no_yes": 3,
+              "no_no": 90,
+              "agreement": 0.8793103448275862,
+              "positive_agreement": 0.631578947368421
+            },
+            "review": {
+              "yes_yes": 16,
+              "yes_no": 2,
+              "no_yes": 7,
+              "no_no": 91,
+              "agreement": 0.9224137931034483,
+              "positive_agreement": 0.7804878048780488
+            },
+            "conceptual": {
+              "yes_yes": 8,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 107,
+              "agreement": 0.9913793103448276,
+              "positive_agreement": 0.9411764705882353
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 115,
+              "agreement": 0.9913793103448276,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 4,
+              "no_no": 109,
+              "agreement": 0.9655172413793104,
+              "positive_agreement": 0.6
+            }
+          }
+        },
+        "full-isolated_json-sample314__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 111,
+          "excluded_invalid_uncertain_or_missing": 9,
+          "mean_yes_a": 0.7747747747747747,
+          "mean_yes_b": 0.3963963963963964,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.3783783783783784,
+            "ci95_percentile": [
+              -0.5315315315315315,
+              -0.22522522522522523
+            ],
+            "n_questions": 111
+          },
+          "exact_label_set_agreement": 0.5135135135135135,
+          "mean_jaccard_nonempty_union": 0.2880952380952381,
+          "both_empty_sets": 41,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 13,
+              "no_yes": 9,
+              "no_no": 78,
+              "agreement": 0.8018018018018018,
+              "positive_agreement": 0.5
+            },
+            "discrepancy": {
+              "yes_yes": 1,
+              "yes_no": 12,
+              "no_yes": 1,
+              "no_no": 97,
+              "agreement": 0.8828828828828829,
+              "positive_agreement": 0.13333333333333333
+            },
+            "errors": {
+              "yes_yes": 3,
+              "yes_no": 19,
+              "no_yes": 1,
+              "no_no": 88,
+              "agreement": 0.8198198198198198,
+              "positive_agreement": 0.23076923076923078
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 8,
+              "no_yes": 3,
+              "no_no": 92,
+              "agreement": 0.9009009009009009,
+              "positive_agreement": 0.5925925925925926
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 3,
+              "no_yes": 2,
+              "no_no": 101,
+              "agreement": 0.954954954954955,
+              "positive_agreement": 0.6666666666666666
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 108,
+              "agreement": 0.972972972972973,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample2718__full-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.243478260869565,
+          "mean_yes_b": 0.8782608695652174,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.3652173913043477,
+            "ci95_percentile": [
+              -1.5565217391304347,
+              -1.173913043478261
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.23478260869565218,
+          "mean_jaccard_nonempty_union": 0.3853333333333333,
+          "both_empty_sets": 15,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 24,
+              "yes_no": 35,
+              "no_yes": 0,
+              "no_no": 56,
+              "agreement": 0.6956521739130435,
+              "positive_agreement": 0.5783132530120482
+            },
+            "discrepancy": {
+              "yes_yes": 18,
+              "yes_no": 34,
+              "no_yes": 0,
+              "no_no": 63,
+              "agreement": 0.7043478260869566,
+              "positive_agreement": 0.5142857142857142
+            },
+            "errors": {
+              "yes_yes": 25,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 0.9130434782608695,
+              "positive_agreement": 0.8333333333333334
+            },
+            "review": {
+              "yes_yes": 21,
+              "yes_no": 22,
+              "no_yes": 0,
+              "no_no": 72,
+              "agreement": 0.808695652173913,
+              "positive_agreement": 0.65625
+            },
+            "conceptual": {
+              "yes_yes": 10,
+              "yes_no": 39,
+              "no_yes": 0,
+              "no_no": 66,
+              "agreement": 0.6608695652173913,
+              "positive_agreement": 0.3389830508474576
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 16,
+              "no_yes": 0,
+              "no_no": 96,
+              "agreement": 0.8608695652173913,
+              "positive_agreement": 0.2727272727272727
+            }
+          }
+        },
+        "prose-shared_json-sample2718__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 113,
+          "excluded_invalid_uncertain_or_missing": 7,
+          "mean_yes_a": 2.256637168141593,
+          "mean_yes_b": 0.9026548672566371,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.3539823008849559,
+            "ci95_percentile": [
+              -1.5663716814159292,
+              -1.1415929203539823
+            ],
+            "n_questions": 113
+          },
+          "exact_label_set_agreement": 0.24778761061946902,
+          "mean_jaccard_nonempty_union": 0.3868333333333333,
+          "both_empty_sets": 13,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 31,
+              "yes_no": 28,
+              "no_yes": 0,
+              "no_no": 54,
+              "agreement": 0.7522123893805309,
+              "positive_agreement": 0.6888888888888889
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 31,
+              "no_yes": 0,
+              "no_no": 68,
+              "agreement": 0.7256637168141593,
+              "positive_agreement": 0.4745762711864407
+            },
+            "errors": {
+              "yes_yes": 17,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 89,
+              "agreement": 0.9380530973451328,
+              "positive_agreement": 0.8292682926829268
+            },
+            "review": {
+              "yes_yes": 23,
+              "yes_no": 27,
+              "no_yes": 2,
+              "no_no": 61,
+              "agreement": 0.7433628318584071,
+              "positive_agreement": 0.6133333333333333
+            },
+            "conceptual": {
+              "yes_yes": 10,
+              "yes_no": 41,
+              "no_yes": 0,
+              "no_no": 62,
+              "agreement": 0.6371681415929203,
+              "positive_agreement": 0.32786885245901637
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 4,
+              "yes_no": 21,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.8141592920353983,
+              "positive_agreement": 0.27586206896551724
+            }
+          }
+        },
+        "title-shared_json-sample2718__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 102,
+          "excluded_invalid_uncertain_or_missing": 18,
+          "mean_yes_a": 1.0392156862745099,
+          "mean_yes_b": 0.39215686274509803,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.6470588235294118,
+            "ci95_percentile": [
+              -0.8235294117647058,
+              -0.4803921568627451
+            ],
+            "n_questions": 102
+          },
+          "exact_label_set_agreement": 0.5294117647058824,
+          "mean_jaccard_nonempty_union": 0.3815104166666667,
+          "both_empty_sets": 38,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 17,
+              "yes_no": 12,
+              "no_yes": 1,
+              "no_no": 72,
+              "agreement": 0.8725490196078431,
+              "positive_agreement": 0.723404255319149
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 12,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.8823529411764706,
+              "positive_agreement": 0.25
+            },
+            "errors": {
+              "yes_yes": 4,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 95,
+              "agreement": 0.9705882352941176,
+              "positive_agreement": 0.7272727272727273
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 85,
+              "agreement": 0.9117647058823529,
+              "positive_agreement": 0.64
+            },
+            "conceptual": {
+              "yes_yes": 8,
+              "yes_no": 19,
+              "no_yes": 0,
+              "no_no": 75,
+              "agreement": 0.8137254901960784,
+              "positive_agreement": 0.45714285714285713
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 102,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 12,
+              "no_yes": 0,
+              "no_no": 90,
+              "agreement": 0.8823529411764706,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample2718__prose-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 113,
+          "excluded_invalid_uncertain_or_missing": 7,
+          "mean_yes_a": 2.274336283185841,
+          "mean_yes_b": 2.2831858407079646,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.008849557522123894,
+            "ci95_percentile": [
+              -0.17699115044247787,
+              0.20353982300884957
+            ],
+            "n_questions": 113
+          },
+          "exact_label_set_agreement": 0.5309734513274337,
+          "mean_jaccard_nonempty_union": 0.7315705128205128,
+          "both_empty_sets": 9,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 51,
+              "yes_no": 8,
+              "no_yes": 9,
+              "no_no": 45,
+              "agreement": 0.8495575221238938,
+              "positive_agreement": 0.8571428571428571
+            },
+            "discrepancy": {
+              "yes_yes": 42,
+              "yes_no": 10,
+              "no_yes": 2,
+              "no_no": 59,
+              "agreement": 0.8938053097345132,
+              "positive_agreement": 0.875
+            },
+            "errors": {
+              "yes_yes": 23,
+              "yes_no": 11,
+              "no_yes": 1,
+              "no_no": 78,
+              "agreement": 0.8938053097345132,
+              "positive_agreement": 0.7931034482758621
+            },
+            "review": {
+              "yes_yes": 40,
+              "yes_no": 3,
+              "no_yes": 11,
+              "no_no": 59,
+              "agreement": 0.8761061946902655,
+              "positive_agreement": 0.851063829787234
+            },
+            "conceptual": {
+              "yes_yes": 45,
+              "yes_no": 4,
+              "no_yes": 7,
+              "no_no": 57,
+              "agreement": 0.9026548672566371,
+              "positive_agreement": 0.8910891089108911
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 19,
+              "yes_no": 0,
+              "no_yes": 7,
+              "no_no": 87,
+              "agreement": 0.9380530973451328,
+              "positive_agreement": 0.8444444444444444
+            }
+          }
+        },
+        "full-shared_json-sample2718__title-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 100,
+          "excluded_invalid_uncertain_or_missing": 20,
+          "mean_yes_a": 2.2,
+          "mean_yes_b": 1.04,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -1.16,
+            "ci95_percentile": [
+              -1.45,
+              -0.84
+            ],
+            "n_questions": 100
+          },
+          "exact_label_set_agreement": 0.19,
+          "mean_jaccard_nonempty_union": 0.33791208791208793,
+          "both_empty_sets": 9,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 23,
+              "yes_no": 28,
+              "no_yes": 5,
+              "no_no": 44,
+              "agreement": 0.67,
+              "positive_agreement": 0.5822784810126582
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 31,
+              "no_yes": 0,
+              "no_no": 55,
+              "agreement": 0.69,
+              "positive_agreement": 0.4745762711864407
+            },
+            "errors": {
+              "yes_yes": 8,
+              "yes_no": 22,
+              "no_yes": 0,
+              "no_no": 70,
+              "agreement": 0.78,
+              "positive_agreement": 0.42105263157894735
+            },
+            "review": {
+              "yes_yes": 13,
+              "yes_no": 23,
+              "no_yes": 4,
+              "no_no": 60,
+              "agreement": 0.73,
+              "positive_agreement": 0.49056603773584906
+            },
+            "conceptual": {
+              "yes_yes": 18,
+              "yes_no": 22,
+              "no_yes": 8,
+              "no_no": 52,
+              "agreement": 0.7,
+              "positive_agreement": 0.5454545454545454
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 99,
+              "agreement": 0.99,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 4,
+              "yes_no": 13,
+              "no_yes": 7,
+              "no_no": 76,
+              "agreement": 0.8,
+              "positive_agreement": 0.2857142857142857
+            }
+          }
+        },
+        "full-isolated_json-sample2718__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 119,
+          "excluded_invalid_uncertain_or_missing": 1,
+          "mean_yes_a": 0.8823529411764706,
+          "mean_yes_b": 0.9327731092436975,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.05042016806722689,
+            "ci95_percentile": [
+              -0.09243697478991597,
+              0.19327731092436976
+            ],
+            "n_questions": 119
+          },
+          "exact_label_set_agreement": 0.6470588235294118,
+          "mean_jaccard_nonempty_union": 0.5952380952380952,
+          "both_empty_sets": 35,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 25,
+              "yes_no": 1,
+              "no_yes": 9,
+              "no_no": 84,
+              "agreement": 0.9159663865546218,
+              "positive_agreement": 0.8333333333333334
+            },
+            "discrepancy": {
+              "yes_yes": 12,
+              "yes_no": 6,
+              "no_yes": 2,
+              "no_no": 99,
+              "agreement": 0.9327731092436975,
+              "positive_agreement": 0.75
+            },
+            "errors": {
+              "yes_yes": 14,
+              "yes_no": 12,
+              "no_yes": 5,
+              "no_no": 88,
+              "agreement": 0.8571428571428571,
+              "positive_agreement": 0.6222222222222222
+            },
+            "review": {
+              "yes_yes": 19,
+              "yes_no": 3,
+              "no_yes": 7,
+              "no_no": 90,
+              "agreement": 0.9159663865546218,
+              "positive_agreement": 0.7916666666666666
+            },
+            "conceptual": {
+              "yes_yes": 8,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 107,
+              "agreement": 0.9663865546218487,
+              "positive_agreement": 0.8
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 118,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 4,
+              "no_no": 112,
+              "agreement": 0.9663865546218487,
+              "positive_agreement": 0.6
+            }
+          }
+        },
+        "full-isolated_json-sample2718__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 117,
+          "excluded_invalid_uncertain_or_missing": 3,
+          "mean_yes_a": 0.8717948717948718,
+          "mean_yes_b": 0.39316239316239315,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.47863247863247865,
+            "ci95_percentile": [
+              -0.6410256410256411,
+              -0.3247863247863248
+            ],
+            "n_questions": 117
+          },
+          "exact_label_set_agreement": 0.452991452991453,
+          "mean_jaccard_nonempty_union": 0.26371308016877637,
+          "both_empty_sets": 38,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 14,
+              "no_yes": 8,
+              "no_no": 84,
+              "agreement": 0.811965811965812,
+              "positive_agreement": 0.5
+            },
+            "discrepancy": {
+              "yes_yes": 1,
+              "yes_no": 16,
+              "no_yes": 1,
+              "no_no": 99,
+              "agreement": 0.8547008547008547,
+              "positive_agreement": 0.10526315789473684
+            },
+            "errors": {
+              "yes_yes": 4,
+              "yes_no": 21,
+              "no_yes": 1,
+              "no_no": 91,
+              "agreement": 0.811965811965812,
+              "positive_agreement": 0.26666666666666666
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 13,
+              "no_yes": 2,
+              "no_no": 94,
+              "agreement": 0.8717948717948718,
+              "positive_agreement": 0.5161290322580645
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 5,
+              "no_yes": 5,
+              "no_no": 102,
+              "agreement": 0.9145299145299145,
+              "positive_agreement": 0.5
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 117,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 113,
+              "agreement": 0.9658119658119658,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-greedy__full-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 117,
+          "excluded_invalid_uncertain_or_missing": 3,
+          "mean_yes_a": 2.282051282051282,
+          "mean_yes_b": 2.230769230769231,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.05128205128205128,
+            "ci95_percentile": [
+              -0.17094017094017094,
+              0.06837606837606838
+            ],
+            "n_questions": 117
+          },
+          "exact_label_set_agreement": 0.6153846153846154,
+          "mean_jaccard_nonempty_union": 0.7833333333333334,
+          "both_empty_sets": 8,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 58,
+              "yes_no": 5,
+              "no_yes": 6,
+              "no_no": 48,
+              "agreement": 0.905982905982906,
+              "positive_agreement": 0.9133858267716536
+            },
+            "discrepancy": {
+              "yes_yes": 49,
+              "yes_no": 4,
+              "no_yes": 3,
+              "no_no": 61,
+              "agreement": 0.9401709401709402,
+              "positive_agreement": 0.9333333333333333
+            },
+            "errors": {
+              "yes_yes": 30,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 81,
+              "agreement": 0.9487179487179487,
+              "positive_agreement": 0.9090909090909091
+            },
+            "review": {
+              "yes_yes": 37,
+              "yes_no": 6,
+              "no_yes": 6,
+              "no_no": 68,
+              "agreement": 0.8974358974358975,
+              "positive_agreement": 0.8604651162790697
+            },
+            "conceptual": {
+              "yes_yes": 45,
+              "yes_no": 5,
+              "no_yes": 3,
+              "no_no": 64,
+              "agreement": 0.9316239316239316,
+              "positive_agreement": 0.9183673469387755
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 17,
+              "yes_no": 7,
+              "no_yes": 3,
+              "no_no": 90,
+              "agreement": 0.9145299145299145,
+              "positive_agreement": 0.7727272727272727
+            }
+          }
+        },
+        "full-shared_json-greedy__full-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 2.245614035087719,
+          "mean_yes_b": 2.254385964912281,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.008771929824561403,
+            "ci95_percentile": [
+              -0.11403508771929824,
+              0.13157894736842105
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.5964912280701754,
+          "mean_jaccard_nonempty_union": 0.7854166666666667,
+          "both_empty_sets": 10,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 55,
+              "yes_no": 5,
+              "no_yes": 4,
+              "no_no": 50,
+              "agreement": 0.9210526315789473,
+              "positive_agreement": 0.9243697478991597
+            },
+            "discrepancy": {
+              "yes_yes": 50,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 60,
+              "agreement": 0.9649122807017544,
+              "positive_agreement": 0.9615384615384616
+            },
+            "errors": {
+              "yes_yes": 31,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 79,
+              "agreement": 0.9649122807017544,
+              "positive_agreement": 0.9393939393939394
+            },
+            "review": {
+              "yes_yes": 37,
+              "yes_no": 4,
+              "no_yes": 6,
+              "no_no": 67,
+              "agreement": 0.9122807017543859,
+              "positive_agreement": 0.8809523809523809
+            },
+            "conceptual": {
+              "yes_yes": 40,
+              "yes_no": 8,
+              "no_yes": 9,
+              "no_no": 57,
+              "agreement": 0.8508771929824561,
+              "positive_agreement": 0.8247422680412371
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 113,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 15,
+              "yes_no": 7,
+              "no_yes": 4,
+              "no_no": 88,
+              "agreement": 0.9035087719298246,
+              "positive_agreement": 0.7317073170731707
+            }
+          }
+        },
+        "full-isolated_json-greedy__full-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 117,
+          "excluded_invalid_uncertain_or_missing": 3,
+          "mean_yes_a": 0.8205128205128205,
+          "mean_yes_b": 0.7948717948717948,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.02564102564102564,
+            "ci95_percentile": [
+              -0.10256410256410256,
+              0.05128205128205128
+            ],
+            "n_questions": 117
+          },
+          "exact_label_set_agreement": 0.8461538461538461,
+          "mean_jaccard_nonempty_union": 0.8078703703703703,
+          "both_empty_sets": 45,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 22,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 91,
+              "agreement": 0.9658119658119658,
+              "positive_agreement": 0.9166666666666666
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 101,
+              "agreement": 0.9743589743589743,
+              "positive_agreement": 0.896551724137931
+            },
+            "errors": {
+              "yes_yes": 21,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 90,
+              "agreement": 0.9487179487179487,
+              "positive_agreement": 0.875
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 96,
+              "agreement": 0.9743589743589743,
+              "positive_agreement": 0.9230769230769231
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 108,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 117,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 112,
+              "agreement": 0.9743589743589743,
+              "positive_agreement": 0.5714285714285714
+            }
+          }
+        },
+        "full-isolated_json-greedy__full-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 118,
+          "excluded_invalid_uncertain_or_missing": 2,
+          "mean_yes_a": 0.8389830508474576,
+          "mean_yes_b": 0.8728813559322034,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.03389830508474576,
+            "ci95_percentile": [
+              -0.05084745762711865,
+              0.11864406779661017
+            ],
+            "n_questions": 118
+          },
+          "exact_label_set_agreement": 0.8220338983050848,
+          "mean_jaccard_nonempty_union": 0.7972972972972973,
+          "both_empty_sets": 44,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 22,
+              "yes_no": 2,
+              "no_yes": 4,
+              "no_no": 90,
+              "agreement": 0.9491525423728814,
+              "positive_agreement": 0.88
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 2,
+              "no_yes": 4,
+              "no_no": 99,
+              "agreement": 0.9491525423728814,
+              "positive_agreement": 0.8125
+            },
+            "errors": {
+              "yes_yes": 23,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 91,
+              "agreement": 0.9661016949152542,
+              "positive_agreement": 0.92
+            },
+            "review": {
+              "yes_yes": 20,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 94,
+              "agreement": 0.9661016949152542,
+              "positive_agreement": 0.9090909090909091
+            },
+            "conceptual": {
+              "yes_yes": 9,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 109,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 118,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 113,
+              "agreement": 0.9830508474576272,
+              "positive_agreement": 0.75
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 2.3217391304347825,
+          "mean_yes_b": 2.252173913043478,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.06956521739130435,
+            "ci95_percentile": [
+              -0.1826086956521739,
+              0.043478260869565216
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.6782608695652174,
+          "mean_jaccard_nonempty_union": 0.8504854368932039,
+          "both_empty_sets": 12,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 58,
+              "yes_no": 2,
+              "no_yes": 6,
+              "no_no": 49,
+              "agreement": 0.9304347826086956,
+              "positive_agreement": 0.9354838709677419
+            },
+            "discrepancy": {
+              "yes_yes": 44,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 67,
+              "agreement": 0.9652173913043478,
+              "positive_agreement": 0.9565217391304348
+            },
+            "errors": {
+              "yes_yes": 25,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 89,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.9803921568627451
+            },
+            "review": {
+              "yes_yes": 42,
+              "yes_no": 7,
+              "no_yes": 3,
+              "no_no": 63,
+              "agreement": 0.9130434782608695,
+              "positive_agreement": 0.8936170212765957
+            },
+            "conceptual": {
+              "yes_yes": 52,
+              "yes_no": 5,
+              "no_yes": 4,
+              "no_no": 54,
+              "agreement": 0.9217391304347826,
+              "positive_agreement": 0.9203539823008849
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 20,
+              "yes_no": 8,
+              "no_yes": 2,
+              "no_no": 85,
+              "agreement": 0.9130434782608695,
+              "positive_agreement": 0.8
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 113,
+          "excluded_invalid_uncertain_or_missing": 7,
+          "mean_yes_a": 2.2920353982300883,
+          "mean_yes_b": 2.256637168141593,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.035398230088495575,
+            "ci95_percentile": [
+              -0.13274336283185842,
+              0.061946902654867256
+            ],
+            "n_questions": 113
+          },
+          "exact_label_set_agreement": 0.6814159292035398,
+          "mean_jaccard_nonempty_union": 0.8394389438943894,
+          "both_empty_sets": 12,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 53,
+              "yes_no": 5,
+              "no_yes": 6,
+              "no_no": 49,
+              "agreement": 0.9026548672566371,
+              "positive_agreement": 0.905982905982906
+            },
+            "discrepancy": {
+              "yes_yes": 43,
+              "yes_no": 4,
+              "no_yes": 1,
+              "no_no": 65,
+              "agreement": 0.9557522123893806,
+              "positive_agreement": 0.945054945054945
+            },
+            "errors": {
+              "yes_yes": 25,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 44,
+              "yes_no": 3,
+              "no_yes": 6,
+              "no_no": 60,
+              "agreement": 0.9203539823008849,
+              "positive_agreement": 0.9072164948453608
+            },
+            "conceptual": {
+              "yes_yes": 50,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 57,
+              "agreement": 0.9469026548672567,
+              "positive_agreement": 0.9433962264150944
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 21,
+              "yes_no": 5,
+              "no_yes": 4,
+              "no_no": 83,
+              "agreement": 0.9203539823008849,
+              "positive_agreement": 0.8235294117647058
+            }
+          }
+        },
+        "prose-isolated_json-greedy__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 119,
+          "excluded_invalid_uncertain_or_missing": 1,
+          "mean_yes_a": 0.9327731092436975,
+          "mean_yes_b": 0.8823529411764706,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.05042016806722689,
+            "ci95_percentile": [
+              -0.13445378151260504,
+              0.03361344537815126
+            ],
+            "n_questions": 119
+          },
+          "exact_label_set_agreement": 0.8151260504201681,
+          "mean_jaccard_nonempty_union": 0.8004385964912281,
+          "both_empty_sets": 43,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 32,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 84,
+              "agreement": 0.9747899159663865,
+              "positive_agreement": 0.9552238805970149
+            },
+            "discrepancy": {
+              "yes_yes": 11,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 102,
+              "agreement": 0.9495798319327731,
+              "positive_agreement": 0.7857142857142857
+            },
+            "errors": {
+              "yes_yes": 16,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 99,
+              "agreement": 0.9663865546218487,
+              "positive_agreement": 0.8888888888888888
+            },
+            "review": {
+              "yes_yes": 21,
+              "yes_no": 4,
+              "no_yes": 3,
+              "no_no": 91,
+              "agreement": 0.9411764705882353,
+              "positive_agreement": 0.8571428571428571
+            },
+            "conceptual": {
+              "yes_yes": 8,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 109,
+              "agreement": 0.9831932773109243,
+              "positive_agreement": 0.8888888888888888
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 118,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 7,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 110,
+              "agreement": 0.9831932773109243,
+              "positive_agreement": 0.875
+            }
+          }
+        },
+        "prose-isolated_json-greedy__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 119,
+          "excluded_invalid_uncertain_or_missing": 1,
+          "mean_yes_a": 0.9243697478991597,
+          "mean_yes_b": 0.9327731092436975,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.008403361344537815,
+            "ci95_percentile": [
+              -0.058823529411764705,
+              0.07563025210084033
+            ],
+            "n_questions": 119
+          },
+          "exact_label_set_agreement": 0.8571428571428571,
+          "mean_jaccard_nonempty_union": 0.8411111111111111,
+          "both_empty_sets": 44,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 31,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 82,
+              "agreement": 0.9495798319327731,
+              "positive_agreement": 0.9117647058823529
+            },
+            "discrepancy": {
+              "yes_yes": 12,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 103,
+              "agreement": 0.9663865546218487,
+              "positive_agreement": 0.8571428571428571
+            },
+            "errors": {
+              "yes_yes": 18,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 98,
+              "agreement": 0.9747899159663865,
+              "positive_agreement": 0.9230769230769231
+            },
+            "review": {
+              "yes_yes": 25,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 93,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.9803921568627451
+            },
+            "conceptual": {
+              "yes_yes": 8,
+              "yes_no": 0,
+              "no_yes": 2,
+              "no_no": 109,
+              "agreement": 0.9831932773109243,
+              "positive_agreement": 0.8888888888888888
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 118,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 7,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.9333333333333333
+            }
+          }
+        },
+        "title-shared_json-greedy__title-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 94,
+          "excluded_invalid_uncertain_or_missing": 26,
+          "mean_yes_a": 0.9574468085106383,
+          "mean_yes_b": 0.925531914893617,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.031914893617021274,
+            "ci95_percentile": [
+              -0.13829787234042554,
+              0.06382978723404255
+            ],
+            "n_questions": 94
+          },
+          "exact_label_set_agreement": 0.7127659574468085,
+          "mean_jaccard_nonempty_union": 0.7155172413793104,
+          "both_empty_sets": 36,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 21,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 67,
+              "agreement": 0.9361702127659575,
+              "positive_agreement": 0.875
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 0.9787234042553191,
+              "positive_agreement": 0.9285714285714286
+            },
+            "errors": {
+              "yes_yes": 4,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.9787234042553191,
+              "positive_agreement": 0.8
+            },
+            "review": {
+              "yes_yes": 11,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 0.9574468085106383,
+              "positive_agreement": 0.8461538461538461
+            },
+            "conceptual": {
+              "yes_yes": 19,
+              "yes_no": 2,
+              "no_yes": 6,
+              "no_no": 67,
+              "agreement": 0.9148936170212766,
+              "positive_agreement": 0.8260869565217391
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 94,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 6,
+              "yes_no": 3,
+              "no_yes": 4,
+              "no_no": 81,
+              "agreement": 0.925531914893617,
+              "positive_agreement": 0.631578947368421
+            }
+          }
+        },
+        "title-shared_json-greedy__title-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 99,
+          "excluded_invalid_uncertain_or_missing": 21,
+          "mean_yes_a": 0.9797979797979798,
+          "mean_yes_b": 1.0404040404040404,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.06060606060606061,
+            "ci95_percentile": [
+              -0.06060606060606061,
+              0.1919191919191919
+            ],
+            "n_questions": 99
+          },
+          "exact_label_set_agreement": 0.7777777777777778,
+          "mean_jaccard_nonempty_union": 0.7799479166666666,
+          "both_empty_sets": 35,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 25,
+              "yes_no": 1,
+              "no_yes": 4,
+              "no_no": 69,
+              "agreement": 0.9494949494949495,
+              "positive_agreement": 0.9090909090909091
+            },
+            "discrepancy": {
+              "yes_yes": 12,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 83,
+              "agreement": 0.9595959595959596,
+              "positive_agreement": 0.8571428571428571
+            },
+            "errors": {
+              "yes_yes": 6,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 93,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 13,
+              "yes_no": 4,
+              "no_yes": 4,
+              "no_no": 78,
+              "agreement": 0.9191919191919192,
+              "positive_agreement": 0.7647058823529411
+            },
+            "conceptual": {
+              "yes_yes": 21,
+              "yes_no": 2,
+              "no_yes": 6,
+              "no_no": 70,
+              "agreement": 0.9191919191919192,
+              "positive_agreement": 0.84
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 99,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 9,
+              "yes_no": 0,
+              "no_yes": 3,
+              "no_no": 87,
+              "agreement": 0.9696969696969697,
+              "positive_agreement": 0.8571428571428571
+            }
+          }
+        },
+        "title-isolated_json-greedy__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 0.37719298245614036,
+          "mean_yes_b": 0.38596491228070173,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.008771929824561403,
+            "ci95_percentile": [
+              -0.03508771929824561,
+              0.05263157894736842
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.9385964912280702,
+          "mean_jaccard_nonempty_union": 0.8414634146341463,
+          "both_empty_sets": 73,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 17,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 93,
+              "agreement": 0.9649122807017544,
+              "positive_agreement": 0.8947368421052632
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "errors": {
+              "yes_yes": 4,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 109,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.8888888888888888
+            },
+            "review": {
+              "yes_yes": 10,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 102,
+              "agreement": 0.9824561403508771,
+              "positive_agreement": 0.9090909090909091
+            },
+            "conceptual": {
+              "yes_yes": 7,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 107,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "title-isolated_json-greedy__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 116,
+          "excluded_invalid_uncertain_or_missing": 4,
+          "mean_yes_a": 0.3620689655172414,
+          "mean_yes_b": 0.39655172413793105,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.034482758620689655,
+            "ci95_percentile": [
+              -0.008620689655172414,
+              0.07758620689655173
+            ],
+            "n_questions": 116
+          },
+          "exact_label_set_agreement": 0.9482758620689655,
+          "mean_jaccard_nonempty_union": 0.8690476190476191,
+          "both_empty_sets": 74,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 18,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 97,
+              "agreement": 0.9913793103448276,
+              "positive_agreement": 0.972972972972973
+            },
+            "discrepancy": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "errors": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 9,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 105,
+              "agreement": 0.9827586206896551,
+              "positive_agreement": 0.9
+            },
+            "conceptual": {
+              "yes_yes": 7,
+              "yes_no": 0,
+              "no_yes": 3,
+              "no_no": 106,
+              "agreement": 0.9741379310344828,
+              "positive_agreement": 0.8235294117647058
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        }
+      },
+      "downstream_feasibility": {
+        "boundary__full-shared_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 16,
+          "overall_distribution": {
+            "substantial": 14,
+            "partial": 1,
+            "unhelpful": 1
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 7,
+              "no|partial": 1,
+              "yes|substantial": 7,
+              "yes|unhelpful": 1
+            },
+            "discrepancy": {
+              "yes|substantial": 9,
+              "yes|partial": 1,
+              "no|substantial": 5,
+              "no|unhelpful": 1
+            },
+            "errors": {
+              "yes|substantial": 7,
+              "yes|partial": 1,
+              "no|substantial": 7,
+              "no|unhelpful": 1
+            },
+            "review": {
+              "no|substantial": 10,
+              "no|partial": 1,
+              "yes|substantial": 4,
+              "yes|unhelpful": 1
+            },
+            "conceptual": {
+              "no|substantial": 7,
+              "no|partial": 1,
+              "yes|substantial": 7,
+              "yes|unhelpful": 1
+            },
+            "api_change": {
+              "no|substantial": 14,
+              "no|partial": 1,
+              "no|unhelpful": 1
+            },
+            "learning": {
+              "no|substantial": 12,
+              "no|partial": 1,
+              "yes|substantial": 2,
+              "yes|unhelpful": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary__full-isolated_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 15,
+          "overall_distribution": {
+            "substantial": 13,
+            "partial": 1,
+            "unhelpful": 1
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 11,
+              "no|partial": 1,
+              "yes|substantial": 2,
+              "yes|unhelpful": 1
+            },
+            "discrepancy": {
+              "no|substantial": 10,
+              "yes|partial": 1,
+              "yes|substantial": 3,
+              "no|unhelpful": 1
+            },
+            "errors": {
+              "yes|substantial": 4,
+              "yes|partial": 1,
+              "no|substantial": 9,
+              "no|unhelpful": 1
+            },
+            "review": {
+              "no|substantial": 12,
+              "no|partial": 1,
+              "yes|substantial": 1,
+              "yes|unhelpful": 1
+            },
+            "conceptual": {
+              "no|substantial": 10,
+              "no|partial": 1,
+              "yes|substantial": 3,
+              "no|unhelpful": 1
+            },
+            "api_change": {
+              "no|substantial": 13,
+              "no|partial": 1,
+              "no|unhelpful": 1
+            },
+            "learning": {
+              "no|substantial": 13,
+              "no|partial": 1,
+              "yes|unhelpful": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary_json__full-shared_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 17,
+          "overall_distribution": {
+            "substantial": 15,
+            "partial": 2
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 7,
+              "no|partial": 1,
+              "yes|substantial": 8,
+              "yes|partial": 1
+            },
+            "discrepancy": {
+              "yes|substantial": 10,
+              "yes|partial": 1,
+              "no|substantial": 5,
+              "no|partial": 1
+            },
+            "errors": {
+              "yes|substantial": 8,
+              "yes|partial": 1,
+              "no|substantial": 7,
+              "no|partial": 1
+            },
+            "review": {
+              "no|substantial": 10,
+              "no|partial": 1,
+              "yes|substantial": 5,
+              "yes|partial": 1
+            },
+            "conceptual": {
+              "no|substantial": 7,
+              "no|partial": 1,
+              "yes|substantial": 8,
+              "yes|partial": 1
+            },
+            "api_change": {
+              "no|substantial": 15,
+              "no|partial": 2
+            },
+            "learning": {
+              "no|substantial": 13,
+              "no|partial": 1,
+              "yes|substantial": 2,
+              "yes|partial": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary_json__full-isolated_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 16,
+          "overall_distribution": {
+            "substantial": 14,
+            "partial": 2
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 11,
+              "no|partial": 1,
+              "yes|substantial": 3,
+              "yes|partial": 1
+            },
+            "discrepancy": {
+              "no|substantial": 11,
+              "yes|partial": 1,
+              "yes|substantial": 3,
+              "no|partial": 1
+            },
+            "errors": {
+              "yes|substantial": 5,
+              "yes|partial": 1,
+              "no|substantial": 9,
+              "no|partial": 1
+            },
+            "review": {
+              "no|substantial": 13,
+              "no|partial": 1,
+              "yes|substantial": 1,
+              "yes|partial": 1
+            },
+            "conceptual": {
+              "no|substantial": 11,
+              "no|partial": 2,
+              "yes|substantial": 3
+            },
+            "api_change": {
+              "no|substantial": 14,
+              "no|partial": 2
+            },
+            "learning": {
+              "no|substantial": 14,
+              "no|partial": 1,
+              "yes|partial": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        }
+      }
+    },
+    "14b": {
+      "all_call_statuses": {
+        "valid": 18544,
+        "invalid": 102,
+        "invalid_json": 2
+      },
+      "duplicate_keys": 0,
+      "paired_comparisons": {
+        "full-shared_json-greedy__full-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 119,
+          "excluded_invalid_uncertain_or_missing": 1,
+          "mean_yes_a": 1.2857142857142858,
+          "mean_yes_b": 1.2605042016806722,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.025210084033613446,
+            "ci95_percentile": [
+              -0.15966386554621848,
+              0.10084033613445378
+            ],
+            "n_questions": 119
+          },
+          "exact_label_set_agreement": 0.5882352941176471,
+          "mean_jaccard_nonempty_union": 0.6633986928104576,
+          "both_empty_sets": 17,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 18,
+              "yes_no": 2,
+              "no_yes": 25,
+              "no_no": 74,
+              "agreement": 0.773109243697479,
+              "positive_agreement": 0.5714285714285714
+            },
+            "discrepancy": {
+              "yes_yes": 47,
+              "yes_no": 8,
+              "no_yes": 0,
+              "no_no": 64,
+              "agreement": 0.9327731092436975,
+              "positive_agreement": 0.9215686274509803
+            },
+            "errors": {
+              "yes_yes": 32,
+              "yes_no": 5,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.957983193277311,
+              "positive_agreement": 0.927536231884058
+            },
+            "review": {
+              "yes_yes": 16,
+              "yes_no": 3,
+              "no_yes": 2,
+              "no_no": 98,
+              "agreement": 0.957983193277311,
+              "positive_agreement": 0.8648648648648649
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 104,
+              "agreement": 0.9159663865546218,
+              "positive_agreement": 0.5
+            },
+            "api_change": {
+              "yes_yes": 3,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 115,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.8571428571428571
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.8
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 110,
+          "excluded_invalid_uncertain_or_missing": 10,
+          "mean_yes_a": 1.009090909090909,
+          "mean_yes_b": 0.9181818181818182,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.09090909090909091,
+            "ci95_percentile": [
+              -0.22727272727272727,
+              0.03636363636363636
+            ],
+            "n_questions": 110
+          },
+          "exact_label_set_agreement": 0.6,
+          "mean_jaccard_nonempty_union": 0.596743295019157,
+          "both_empty_sets": 23,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 0,
+              "no_yes": 23,
+              "no_no": 76,
+              "agreement": 0.7909090909090909,
+              "positive_agreement": 0.4888888888888889
+            },
+            "discrepancy": {
+              "yes_yes": 33,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 68,
+              "agreement": 0.9181818181818182,
+              "positive_agreement": 0.88
+            },
+            "errors": {
+              "yes_yes": 11,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 92,
+              "agreement": 0.9363636363636364,
+              "positive_agreement": 0.7586206896551724
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 89,
+              "agreement": 0.9454545454545454,
+              "positive_agreement": 0.8333333333333334
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 97,
+              "agreement": 0.9181818181818182,
+              "positive_agreement": 0.47058823529411764
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 107,
+              "agreement": 0.9818181818181818,
+              "positive_agreement": 0.5
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 106,
+              "agreement": 0.9818181818181818,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "title-shared_json-greedy__title-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 79,
+          "excluded_invalid_uncertain_or_missing": 41,
+          "mean_yes_a": 0.3037974683544304,
+          "mean_yes_b": 0.379746835443038,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.0759493670886076,
+            "ci95_percentile": [
+              -0.02531645569620253,
+              0.17721518987341772
+            ],
+            "n_questions": 79
+          },
+          "exact_label_set_agreement": 0.7721518987341772,
+          "mean_jaccard_nonempty_union": 0.45161290322580644,
+          "both_empty_sets": 48,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 11,
+              "no_no": 64,
+              "agreement": 0.8607594936708861,
+              "positive_agreement": 0.42105263157894735
+            },
+            "discrepancy": {
+              "yes_yes": 4,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 72,
+              "agreement": 0.9620253164556962,
+              "positive_agreement": 0.7272727272727273
+            },
+            "errors": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 78,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 5,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 72,
+              "agreement": 0.9746835443037974,
+              "positive_agreement": 0.8333333333333334
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 73,
+              "agreement": 0.9746835443037974,
+              "positive_agreement": 0.8
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "full-shared_json-greedy__prose-shared_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 113,
+          "excluded_invalid_uncertain_or_missing": 7,
+          "mean_yes_a": 1.2300884955752212,
+          "mean_yes_b": 1.0265486725663717,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.20353982300884957,
+            "ci95_percentile": [
+              -0.3185840707964602,
+              -0.08849557522123894
+            ],
+            "n_questions": 113
+          },
+          "exact_label_set_agreement": 0.6902654867256637,
+          "mean_jaccard_nonempty_union": 0.746078431372549,
+          "both_empty_sets": 28,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 96,
+              "agreement": 0.9469026548672567,
+              "positive_agreement": 0.7857142857142857
+            },
+            "discrepancy": {
+              "yes_yes": 42,
+              "yes_no": 9,
+              "no_yes": 1,
+              "no_no": 61,
+              "agreement": 0.911504424778761,
+              "positive_agreement": 0.8936170212765957
+            },
+            "errors": {
+              "yes_yes": 20,
+              "yes_no": 12,
+              "no_yes": 0,
+              "no_no": 81,
+              "agreement": 0.8938053097345132,
+              "positive_agreement": 0.7692307692307693
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 2,
+              "no_yes": 3,
+              "no_no": 90,
+              "agreement": 0.9557522123893806,
+              "positive_agreement": 0.8780487804878049
+            },
+            "conceptual": {
+              "yes_yes": 11,
+              "yes_no": 4,
+              "no_yes": 2,
+              "no_no": 96,
+              "agreement": 0.9469026548672567,
+              "positive_agreement": 0.7857142857142857
+            },
+            "api_change": {
+              "yes_yes": 2,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 109,
+              "agreement": 0.9823008849557522,
+              "positive_agreement": 0.6666666666666666
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 2,
+              "no_no": 109,
+              "agreement": 0.9823008849557522,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "full-shared_json-greedy__title-shared_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 92,
+          "excluded_invalid_uncertain_or_missing": 28,
+          "mean_yes_a": 1.1956521739130435,
+          "mean_yes_b": 0.43478260869565216,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.7608695652173914,
+            "ci95_percentile": [
+              -0.967391304347826,
+              -0.5760869565217391
+            ],
+            "n_questions": 92
+          },
+          "exact_label_set_agreement": 0.4673913043478261,
+          "mean_jaccard_nonempty_union": 0.3185483870967742,
+          "both_empty_sets": 30,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 4,
+              "yes_no": 10,
+              "no_yes": 2,
+              "no_no": 76,
+              "agreement": 0.8695652173913043,
+              "positive_agreement": 0.4
+            },
+            "discrepancy": {
+              "yes_yes": 14,
+              "yes_no": 25,
+              "no_yes": 0,
+              "no_no": 53,
+              "agreement": 0.7282608695652174,
+              "positive_agreement": 0.5283018867924528
+            },
+            "errors": {
+              "yes_yes": 7,
+              "yes_no": 20,
+              "no_yes": 0,
+              "no_no": 65,
+              "agreement": 0.782608695652174,
+              "positive_agreement": 0.4117647058823529
+            },
+            "review": {
+              "yes_yes": 6,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 76,
+              "agreement": 0.8913043478260869,
+              "positive_agreement": 0.5454545454545454
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 4,
+              "no_yes": 2,
+              "no_no": 81,
+              "agreement": 0.9347826086956522,
+              "positive_agreement": 0.625
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 89,
+              "agreement": 0.967391304347826,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 90,
+              "agreement": 0.9782608695652174,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-isolated_json-greedy__prose-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 1.2347826086956522,
+          "mean_yes_b": 0.9130434782608695,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.3217391304347826,
+            "ci95_percentile": [
+              -0.4434782608695652,
+              -0.20869565217391303
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.7304347826086957,
+          "mean_jaccard_nonempty_union": 0.7615248226950354,
+          "both_empty_sets": 21,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 35,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.9478260869565217,
+              "positive_agreement": 0.9210526315789473
+            },
+            "discrepancy": {
+              "yes_yes": 33,
+              "yes_no": 13,
+              "no_yes": 0,
+              "no_no": 69,
+              "agreement": 0.8869565217391304,
+              "positive_agreement": 0.8354430379746836
+            },
+            "errors": {
+              "yes_yes": 11,
+              "yes_no": 17,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.8521739130434782,
+              "positive_agreement": 0.5641025641025641
+            },
+            "review": {
+              "yes_yes": 16,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 97,
+              "agreement": 0.9826086956521739,
+              "positive_agreement": 0.9411764705882353
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 110,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.8888888888888888
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 111,
+              "agreement": 0.9739130434782609,
+              "positive_agreement": 0.4
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 112,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.8
+            }
+          }
+        },
+        "full-isolated_json-greedy__title-isolated_json-greedy": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 105,
+          "excluded_invalid_uncertain_or_missing": 15,
+          "mean_yes_a": 1.2095238095238094,
+          "mean_yes_b": 0.3142857142857143,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.8952380952380953,
+            "ci95_percentile": [
+              -1.0571428571428572,
+              -0.7333333333333333
+            ],
+            "n_questions": 105
+          },
+          "exact_label_set_agreement": 0.3142857142857143,
+          "mean_jaccard_nonempty_union": 0.22286821705426357,
+          "both_empty_sets": 19,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 13,
+              "yes_no": 27,
+              "no_yes": 2,
+              "no_no": 63,
+              "agreement": 0.7238095238095238,
+              "positive_agreement": 0.4727272727272727
+            },
+            "discrepancy": {
+              "yes_yes": 6,
+              "yes_no": 31,
+              "no_yes": 0,
+              "no_no": 68,
+              "agreement": 0.7047619047619048,
+              "positive_agreement": 0.27906976744186046
+            },
+            "errors": {
+              "yes_yes": 1,
+              "yes_no": 22,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.7904761904761904,
+              "positive_agreement": 0.08333333333333333
+            },
+            "review": {
+              "yes_yes": 7,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.9047619047619048,
+              "positive_agreement": 0.5833333333333334
+            },
+            "conceptual": {
+              "yes_yes": 3,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 99,
+              "agreement": 0.9714285714285714,
+              "positive_agreement": 0.6666666666666666
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 102,
+              "agreement": 0.9714285714285714,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 0.9809523809523809,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample314__full-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 117,
+          "excluded_invalid_uncertain_or_missing": 3,
+          "mean_yes_a": 1.3333333333333333,
+          "mean_yes_b": 1.2136752136752136,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.11965811965811966,
+            "ci95_percentile": [
+              -0.2564102564102564,
+              0.008547008547008548
+            ],
+            "n_questions": 117
+          },
+          "exact_label_set_agreement": 0.5811965811965812,
+          "mean_jaccard_nonempty_union": 0.6542904290429042,
+          "both_empty_sets": 16,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 22,
+              "yes_no": 0,
+              "no_yes": 22,
+              "no_no": 73,
+              "agreement": 0.811965811965812,
+              "positive_agreement": 0.6666666666666666
+            },
+            "discrepancy": {
+              "yes_yes": 42,
+              "yes_no": 13,
+              "no_yes": 0,
+              "no_no": 62,
+              "agreement": 0.8888888888888888,
+              "positive_agreement": 0.865979381443299
+            },
+            "errors": {
+              "yes_yes": 29,
+              "yes_no": 6,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.9487179487179487,
+              "positive_agreement": 0.90625
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 96,
+              "agreement": 0.9487179487179487,
+              "positive_agreement": 0.8333333333333334
+            },
+            "conceptual": {
+              "yes_yes": 7,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 0.9401709401709402,
+              "positive_agreement": 0.6666666666666666
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 113,
+              "agreement": 0.9743589743589743,
+              "positive_agreement": 0.4
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 0.9743589743589743,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "prose-shared_json-sample314__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 108,
+          "excluded_invalid_uncertain_or_missing": 12,
+          "mean_yes_a": 1.0648148148148149,
+          "mean_yes_b": 0.9444444444444444,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.12037037037037036,
+            "ci95_percentile": [
+              -0.2777777777777778,
+              0.027777777777777776
+            ],
+            "n_questions": 108
+          },
+          "exact_label_set_agreement": 0.5740740740740741,
+          "mean_jaccard_nonempty_union": 0.5814606741573034,
+          "both_empty_sets": 19,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 14,
+              "yes_no": 1,
+              "no_yes": 22,
+              "no_no": 71,
+              "agreement": 0.7870370370370371,
+              "positive_agreement": 0.5490196078431373
+            },
+            "discrepancy": {
+              "yes_yes": 29,
+              "yes_no": 10,
+              "no_yes": 0,
+              "no_no": 69,
+              "agreement": 0.9074074074074074,
+              "positive_agreement": 0.8529411764705882
+            },
+            "errors": {
+              "yes_yes": 10,
+              "yes_no": 8,
+              "no_yes": 0,
+              "no_no": 90,
+              "agreement": 0.9259259259259259,
+              "positive_agreement": 0.7142857142857143
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 89,
+              "agreement": 0.9629629629629629,
+              "positive_agreement": 0.8823529411764706
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 11,
+              "no_yes": 0,
+              "no_no": 92,
+              "agreement": 0.8981481481481481,
+              "positive_agreement": 0.47619047619047616
+            },
+            "api_change": {
+              "yes_yes": 2,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 0.9722222222222222,
+              "positive_agreement": 0.5714285714285714
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 0.9814814814814815,
+              "positive_agreement": 0.75
+            }
+          }
+        },
+        "title-shared_json-sample314__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 82,
+          "excluded_invalid_uncertain_or_missing": 38,
+          "mean_yes_a": 0.36585365853658536,
+          "mean_yes_b": 0.3902439024390244,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.024390243902439025,
+            "ci95_percentile": [
+              -0.08536585365853659,
+              0.13414634146341464
+            ],
+            "n_questions": 82
+          },
+          "exact_label_set_agreement": 0.7317073170731707,
+          "mean_jaccard_nonempty_union": 0.4411764705882353,
+          "both_empty_sets": 48,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 11,
+              "no_no": 67,
+              "agreement": 0.8658536585365854,
+              "positive_agreement": 0.42105263157894735
+            },
+            "discrepancy": {
+              "yes_yes": 3,
+              "yes_no": 6,
+              "no_yes": 0,
+              "no_no": 73,
+              "agreement": 0.926829268292683,
+              "positive_agreement": 0.5
+            },
+            "errors": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 6,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.975609756097561,
+              "positive_agreement": 0.8571428571428571
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 75,
+              "agreement": 0.9634146341463414,
+              "positive_agreement": 0.7272727272727273
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "full-shared_json-sample314__prose-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 111,
+          "excluded_invalid_uncertain_or_missing": 9,
+          "mean_yes_a": 1.2612612612612613,
+          "mean_yes_b": 1.0810810810810811,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.18018018018018017,
+            "ci95_percentile": [
+              -0.2972972972972973,
+              -0.07207207207207207
+            ],
+            "n_questions": 111
+          },
+          "exact_label_set_agreement": 0.7027027027027027,
+          "mean_jaccard_nonempty_union": 0.7480842911877394,
+          "both_empty_sets": 24,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 12,
+              "yes_no": 5,
+              "no_yes": 3,
+              "no_no": 91,
+              "agreement": 0.9279279279279279,
+              "positive_agreement": 0.75
+            },
+            "discrepancy": {
+              "yes_yes": 41,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 61,
+              "agreement": 0.918918918918919,
+              "positive_agreement": 0.9010989010989011
+            },
+            "errors": {
+              "yes_yes": 19,
+              "yes_no": 10,
+              "no_yes": 1,
+              "no_no": 81,
+              "agreement": 0.9009009009009009,
+              "positive_agreement": 0.7755102040816326
+            },
+            "review": {
+              "yes_yes": 17,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 90,
+              "agreement": 0.963963963963964,
+              "positive_agreement": 0.8947368421052632
+            },
+            "conceptual": {
+              "yes_yes": 13,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 94,
+              "agreement": 0.963963963963964,
+              "positive_agreement": 0.8666666666666667
+            },
+            "api_change": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 106,
+              "agreement": 0.990990990990991,
+              "positive_agreement": 0.8888888888888888
+            },
+            "learning": {
+              "yes_yes": 5,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 105,
+              "agreement": 0.990990990990991,
+              "positive_agreement": 0.9090909090909091
+            }
+          }
+        },
+        "full-shared_json-sample314__title-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 91,
+          "excluded_invalid_uncertain_or_missing": 29,
+          "mean_yes_a": 1.2417582417582418,
+          "mean_yes_b": 0.43956043956043955,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.8021978021978022,
+            "ci95_percentile": [
+              -1.0,
+              -0.6043956043956044
+            ],
+            "n_questions": 91
+          },
+          "exact_label_set_agreement": 0.42857142857142855,
+          "mean_jaccard_nonempty_union": 0.297979797979798,
+          "both_empty_sets": 25,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 4,
+              "yes_no": 14,
+              "no_yes": 1,
+              "no_no": 72,
+              "agreement": 0.8351648351648352,
+              "positive_agreement": 0.34782608695652173
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 26,
+              "no_yes": 1,
+              "no_no": 51,
+              "agreement": 0.7032967032967034,
+              "positive_agreement": 0.49056603773584906
+            },
+            "errors": {
+              "yes_yes": 7,
+              "yes_no": 17,
+              "no_yes": 0,
+              "no_no": 67,
+              "agreement": 0.8131868131868132,
+              "positive_agreement": 0.45161290322580644
+            },
+            "review": {
+              "yes_yes": 6,
+              "yes_no": 10,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.8791208791208791,
+              "positive_agreement": 0.5217391304347826
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 4,
+              "no_yes": 2,
+              "no_no": 80,
+              "agreement": 0.9340659340659341,
+              "positive_agreement": 0.625
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.967032967032967,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.9560439560439561,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-isolated_json-sample314__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 1.191304347826087,
+          "mean_yes_b": 0.9217391304347826,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.26956521739130435,
+            "ci95_percentile": [
+              -0.391304347826087,
+              -0.1565217391304348
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.7130434782608696,
+          "mean_jaccard_nonempty_union": 0.7350877192982456,
+          "both_empty_sets": 20,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 37,
+              "yes_no": 6,
+              "no_yes": 3,
+              "no_no": 69,
+              "agreement": 0.9217391304347826,
+              "positive_agreement": 0.891566265060241
+            },
+            "discrepancy": {
+              "yes_yes": 29,
+              "yes_no": 12,
+              "no_yes": 0,
+              "no_no": 74,
+              "agreement": 0.8956521739130435,
+              "positive_agreement": 0.8285714285714286
+            },
+            "errors": {
+              "yes_yes": 10,
+              "yes_no": 16,
+              "no_yes": 0,
+              "no_no": 89,
+              "agreement": 0.8608695652173913,
+              "positive_agreement": 0.5555555555555556
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 0,
+              "no_yes": 2,
+              "no_no": 98,
+              "agreement": 0.9826086956521739,
+              "positive_agreement": 0.9375
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 107,
+              "agreement": 0.9739130434782609,
+              "positive_agreement": 0.7692307692307693
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 113,
+              "agreement": 0.991304347826087,
+              "positive_agreement": 0.6666666666666666
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            }
+          }
+        },
+        "full-isolated_json-sample314__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 107,
+          "excluded_invalid_uncertain_or_missing": 13,
+          "mean_yes_a": 1.205607476635514,
+          "mean_yes_b": 0.35514018691588783,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.8504672897196262,
+            "ci95_percentile": [
+              -1.0186915887850467,
+              -0.6915887850467289
+            ],
+            "n_questions": 107
+          },
+          "exact_label_set_agreement": 0.32710280373831774,
+          "mean_jaccard_nonempty_union": 0.23946360153256704,
+          "both_empty_sets": 20,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 13,
+              "yes_no": 30,
+              "no_yes": 3,
+              "no_no": 61,
+              "agreement": 0.6915887850467289,
+              "positive_agreement": 0.4406779661016949
+            },
+            "discrepancy": {
+              "yes_yes": 5,
+              "yes_no": 30,
+              "no_yes": 0,
+              "no_no": 72,
+              "agreement": 0.719626168224299,
+              "positive_agreement": 0.25
+            },
+            "errors": {
+              "yes_yes": 3,
+              "yes_no": 20,
+              "no_yes": 0,
+              "no_no": 84,
+              "agreement": 0.8130841121495327,
+              "positive_agreement": 0.23076923076923078
+            },
+            "review": {
+              "yes_yes": 8,
+              "yes_no": 8,
+              "no_yes": 1,
+              "no_no": 90,
+              "agreement": 0.9158878504672897,
+              "positive_agreement": 0.64
+            },
+            "conceptual": {
+              "yes_yes": 2,
+              "yes_no": 6,
+              "no_yes": 3,
+              "no_no": 96,
+              "agreement": 0.9158878504672897,
+              "positive_agreement": 0.3076923076923077
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 106,
+              "agreement": 0.9906542056074766,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 104,
+              "agreement": 0.9719626168224299,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-sample2718__full-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 1.3070175438596492,
+          "mean_yes_b": 1.2280701754385965,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.07894736842105263,
+            "ci95_percentile": [
+              -0.21052631578947367,
+              0.043859649122807015
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.5701754385964912,
+          "mean_jaccard_nonempty_union": 0.6632302405498282,
+          "both_empty_sets": 17,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 17,
+              "yes_no": 3,
+              "no_yes": 21,
+              "no_no": 73,
+              "agreement": 0.7894736842105263,
+              "positive_agreement": 0.5862068965517241
+            },
+            "discrepancy": {
+              "yes_yes": 42,
+              "yes_no": 9,
+              "no_yes": 1,
+              "no_no": 62,
+              "agreement": 0.9122807017543859,
+              "positive_agreement": 0.8936170212765957
+            },
+            "errors": {
+              "yes_yes": 31,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 0.9736842105263158,
+              "positive_agreement": 0.9538461538461539
+            },
+            "review": {
+              "yes_yes": 17,
+              "yes_no": 3,
+              "no_yes": 3,
+              "no_no": 91,
+              "agreement": 0.9473684210526315,
+              "positive_agreement": 0.85
+            },
+            "conceptual": {
+              "yes_yes": 6,
+              "yes_no": 8,
+              "no_yes": 0,
+              "no_no": 100,
+              "agreement": 0.9298245614035088,
+              "positive_agreement": 0.6
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 110,
+              "agreement": 0.9736842105263158,
+              "positive_agreement": 0.4
+            },
+            "learning": {
+              "yes_yes": 1,
+              "yes_no": 5,
+              "no_yes": 0,
+              "no_no": 108,
+              "agreement": 0.956140350877193,
+              "positive_agreement": 0.2857142857142857
+            }
+          }
+        },
+        "prose-shared_json-sample2718__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 104,
+          "excluded_invalid_uncertain_or_missing": 16,
+          "mean_yes_a": 1.0192307692307692,
+          "mean_yes_b": 0.9711538461538461,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.04807692307692308,
+            "ci95_percentile": [
+              -0.20192307692307693,
+              0.09615384615384616
+            ],
+            "n_questions": 104
+          },
+          "exact_label_set_agreement": 0.5288461538461539,
+          "mean_jaccard_nonempty_union": 0.5513565891472868,
+          "both_empty_sets": 18,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 0,
+              "no_yes": 27,
+              "no_no": 66,
+              "agreement": 0.7403846153846154,
+              "positive_agreement": 0.4489795918367347
+            },
+            "discrepancy": {
+              "yes_yes": 31,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 66,
+              "agreement": 0.9326923076923077,
+              "positive_agreement": 0.8985507246376812
+            },
+            "errors": {
+              "yes_yes": 9,
+              "yes_no": 7,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.9326923076923077,
+              "positive_agreement": 0.72
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 4,
+              "no_yes": 3,
+              "no_no": 82,
+              "agreement": 0.9326923076923077,
+              "positive_agreement": 0.8108108108108109
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 9,
+              "no_yes": 0,
+              "no_no": 91,
+              "agreement": 0.9134615384615384,
+              "positive_agreement": 0.47058823529411764
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 0.9711538461538461,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 1,
+              "yes_no": 5,
+              "no_yes": 0,
+              "no_no": 98,
+              "agreement": 0.9519230769230769,
+              "positive_agreement": 0.2857142857142857
+            }
+          }
+        },
+        "title-shared_json-sample2718__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 80,
+          "excluded_invalid_uncertain_or_missing": 40,
+          "mean_yes_a": 0.2625,
+          "mean_yes_b": 0.375,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.1125,
+            "ci95_percentile": [
+              0.0,
+              0.2125
+            ],
+            "n_questions": 80
+          },
+          "exact_label_set_agreement": 0.7375,
+          "mean_jaccard_nonempty_union": 0.3709677419354839,
+          "both_empty_sets": 49,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 14,
+              "no_no": 63,
+              "agreement": 0.825,
+              "positive_agreement": 0.3
+            },
+            "discrepancy": {
+              "yes_yes": 3,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 73,
+              "agreement": 0.95,
+              "positive_agreement": 0.6
+            },
+            "errors": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 78,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 4,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.975,
+              "positive_agreement": 0.8
+            },
+            "conceptual": {
+              "yes_yes": 3,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 76,
+              "agreement": 0.9875,
+              "positive_agreement": 0.8571428571428571
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "full-shared_json-sample2718__prose-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 107,
+          "excluded_invalid_uncertain_or_missing": 13,
+          "mean_yes_a": 1.2710280373831775,
+          "mean_yes_b": 1.0373831775700935,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.2336448598130841,
+            "ci95_percentile": [
+              -0.3364485981308411,
+              -0.14018691588785046
+            ],
+            "n_questions": 107
+          },
+          "exact_label_set_agreement": 0.7476635514018691,
+          "mean_jaccard_nonempty_union": 0.8058943089430893,
+          "both_empty_sets": 25,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 12,
+              "yes_no": 6,
+              "no_yes": 0,
+              "no_no": 89,
+              "agreement": 0.9439252336448598,
+              "positive_agreement": 0.8
+            },
+            "discrepancy": {
+              "yes_yes": 39,
+              "yes_no": 8,
+              "no_yes": 0,
+              "no_no": 60,
+              "agreement": 0.9252336448598131,
+              "positive_agreement": 0.9069767441860465
+            },
+            "errors": {
+              "yes_yes": 18,
+              "yes_no": 11,
+              "no_yes": 1,
+              "no_no": 77,
+              "agreement": 0.8878504672897196,
+              "positive_agreement": 0.75
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 86,
+              "agreement": 0.9719626168224299,
+              "positive_agreement": 0.9230769230769231
+            },
+            "conceptual": {
+              "yes_yes": 13,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 93,
+              "agreement": 0.9906542056074766,
+              "positive_agreement": 0.9629629629629629
+            },
+            "api_change": {
+              "yes_yes": 2,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 104,
+              "agreement": 0.9906542056074766,
+              "positive_agreement": 0.8
+            },
+            "learning": {
+              "yes_yes": 6,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            }
+          }
+        },
+        "full-shared_json-sample2718__title-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 91,
+          "excluded_invalid_uncertain_or_missing": 29,
+          "mean_yes_a": 1.2087912087912087,
+          "mean_yes_b": 0.4065934065934066,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.8021978021978022,
+            "ci95_percentile": [
+              -0.989010989010989,
+              -0.6263736263736264
+            ],
+            "n_questions": 91
+          },
+          "exact_label_set_agreement": 0.3956043956043956,
+          "mean_jaccard_nonempty_union": 0.28308823529411764,
+          "both_empty_sets": 23,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 4,
+              "yes_no": 12,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.8571428571428571,
+              "positive_agreement": 0.38095238095238093
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 23,
+              "no_yes": 1,
+              "no_no": 54,
+              "agreement": 0.7362637362637363,
+              "positive_agreement": 0.52
+            },
+            "errors": {
+              "yes_yes": 7,
+              "yes_no": 17,
+              "no_yes": 0,
+              "no_no": 67,
+              "agreement": 0.8131868131868132,
+              "positive_agreement": 0.45161290322580644
+            },
+            "review": {
+              "yes_yes": 6,
+              "yes_no": 11,
+              "no_yes": 0,
+              "no_no": 74,
+              "agreement": 0.8791208791208791,
+              "positive_agreement": 0.5217391304347826
+            },
+            "conceptual": {
+              "yes_yes": 3,
+              "yes_no": 7,
+              "no_yes": 2,
+              "no_no": 79,
+              "agreement": 0.9010989010989011,
+              "positive_agreement": 0.4
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 88,
+              "agreement": 0.967032967032967,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 4,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.9560439560439561,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-isolated_json-sample2718__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 112,
+          "excluded_invalid_uncertain_or_missing": 8,
+          "mean_yes_a": 1.1785714285714286,
+          "mean_yes_b": 0.9285714285714286,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.25,
+            "ci95_percentile": [
+              -0.375,
+              -0.13392857142857142
+            ],
+            "n_questions": 112
+          },
+          "exact_label_set_agreement": 0.7142857142857143,
+          "mean_jaccard_nonempty_union": 0.7264492753623187,
+          "both_empty_sets": 20,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 35,
+              "yes_no": 1,
+              "no_yes": 4,
+              "no_no": 72,
+              "agreement": 0.9553571428571429,
+              "positive_agreement": 0.9333333333333333
+            },
+            "discrepancy": {
+              "yes_yes": 30,
+              "yes_no": 12,
+              "no_yes": 0,
+              "no_no": 70,
+              "agreement": 0.8928571428571429,
+              "positive_agreement": 0.8333333333333334
+            },
+            "errors": {
+              "yes_yes": 9,
+              "yes_no": 18,
+              "no_yes": 0,
+              "no_no": 85,
+              "agreement": 0.8392857142857143,
+              "positive_agreement": 0.5
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 92,
+              "agreement": 0.9821428571428571,
+              "positive_agreement": 0.9473684210526315
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 106,
+              "agreement": 0.9821428571428571,
+              "positive_agreement": 0.8
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 110,
+              "agreement": 0.9910714285714286,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "full-isolated_json-sample2718__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 100,
+          "excluded_invalid_uncertain_or_missing": 20,
+          "mean_yes_a": 1.16,
+          "mean_yes_b": 0.35,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.81,
+            "ci95_percentile": [
+              -0.97,
+              -0.65
+            ],
+            "n_questions": 100
+          },
+          "exact_label_set_agreement": 0.34,
+          "mean_jaccard_nonempty_union": 0.25316455696202533,
+          "both_empty_sets": 21,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 15,
+              "yes_no": 20,
+              "no_yes": 3,
+              "no_no": 62,
+              "agreement": 0.77,
+              "positive_agreement": 0.5660377358490566
+            },
+            "discrepancy": {
+              "yes_yes": 5,
+              "yes_no": 28,
+              "no_yes": 0,
+              "no_no": 67,
+              "agreement": 0.72,
+              "positive_agreement": 0.2631578947368421
+            },
+            "errors": {
+              "yes_yes": 2,
+              "yes_no": 21,
+              "no_yes": 0,
+              "no_no": 77,
+              "agreement": 0.79,
+              "positive_agreement": 0.16
+            },
+            "review": {
+              "yes_yes": 7,
+              "yes_no": 11,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.89,
+              "positive_agreement": 0.56
+            },
+            "conceptual": {
+              "yes_yes": 2,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 94,
+              "agreement": 0.96,
+              "positive_agreement": 0.5
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 99,
+              "agreement": 0.99,
+              "positive_agreement": 0.0
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 99,
+              "agreement": 0.99,
+              "positive_agreement": 0.0
+            }
+          }
+        },
+        "full-shared_json-greedy__full-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 118,
+          "excluded_invalid_uncertain_or_missing": 2,
+          "mean_yes_a": 1.271186440677966,
+          "mean_yes_b": 1.3305084745762712,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.059322033898305086,
+            "ci95_percentile": [
+              -0.00847457627118644,
+              0.1271186440677966
+            ],
+            "n_questions": 118
+          },
+          "exact_label_set_agreement": 0.8559322033898306,
+          "mean_jaccard_nonempty_union": 0.8736263736263736,
+          "both_empty_sets": 27,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 18,
+              "yes_no": 2,
+              "no_yes": 4,
+              "no_no": 94,
+              "agreement": 0.9491525423728814,
+              "positive_agreement": 0.8571428571428571
+            },
+            "discrepancy": {
+              "yes_yes": 53,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 62,
+              "agreement": 0.9745762711864406,
+              "positive_agreement": 0.9724770642201835
+            },
+            "errors": {
+              "yes_yes": 35,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.9915254237288136,
+              "positive_agreement": 0.9859154929577465
+            },
+            "review": {
+              "yes_yes": 19,
+              "yes_no": 0,
+              "no_yes": 2,
+              "no_no": 97,
+              "agreement": 0.9830508474576272,
+              "positive_agreement": 0.95
+            },
+            "conceptual": {
+              "yes_yes": 13,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 103,
+              "agreement": 0.9830508474576272,
+              "positive_agreement": 0.9285714285714286
+            },
+            "api_change": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 3,
+              "no_no": 112,
+              "agreement": 0.9745762711864406,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "full-shared_json-greedy__full-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 115,
+          "excluded_invalid_uncertain_or_missing": 5,
+          "mean_yes_a": 1.2695652173913043,
+          "mean_yes_b": 1.3043478260869565,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.034782608695652174,
+            "ci95_percentile": [
+              -0.05217391304347826,
+              0.12173913043478261
+            ],
+            "n_questions": 115
+          },
+          "exact_label_set_agreement": 0.7739130434782608,
+          "mean_jaccard_nonempty_union": 0.8370786516853933,
+          "both_empty_sets": 26,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 16,
+              "yes_no": 3,
+              "no_yes": 4,
+              "no_no": 92,
+              "agreement": 0.9391304347826087,
+              "positive_agreement": 0.8205128205128205
+            },
+            "discrepancy": {
+              "yes_yes": 49,
+              "yes_no": 3,
+              "no_yes": 2,
+              "no_no": 61,
+              "agreement": 0.9565217391304348,
+              "positive_agreement": 0.9514563106796117
+            },
+            "errors": {
+              "yes_yes": 32,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 79,
+              "agreement": 0.9652173913043478,
+              "positive_agreement": 0.9411764705882353
+            },
+            "review": {
+              "yes_yes": 19,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 93,
+              "agreement": 0.9739130434782609,
+              "positive_agreement": 0.926829268292683
+            },
+            "conceptual": {
+              "yes_yes": 12,
+              "yes_no": 2,
+              "no_yes": 2,
+              "no_no": 99,
+              "agreement": 0.9652173913043478,
+              "positive_agreement": 0.8571428571428571
+            },
+            "api_change": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 1,
+              "no_yes": 4,
+              "no_no": 108,
+              "agreement": 0.9565217391304348,
+              "positive_agreement": 0.4444444444444444
+            }
+          }
+        },
+        "full-isolated_json-greedy__full-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 119,
+          "excluded_invalid_uncertain_or_missing": 1,
+          "mean_yes_a": 1.2605042016806722,
+          "mean_yes_b": 1.226890756302521,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.03361344537815126,
+            "ci95_percentile": [
+              -0.12605042016806722,
+              0.05042016806722689
+            ],
+            "n_questions": 119
+          },
+          "exact_label_set_agreement": 0.8235294117647058,
+          "mean_jaccard_nonempty_union": 0.8583333333333333,
+          "both_empty_sets": 19,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 41,
+              "yes_no": 2,
+              "no_yes": 4,
+              "no_no": 72,
+              "agreement": 0.9495798319327731,
+              "positive_agreement": 0.9318181818181818
+            },
+            "discrepancy": {
+              "yes_yes": 42,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 71,
+              "agreement": 0.9495798319327731,
+              "positive_agreement": 0.9333333333333333
+            },
+            "errors": {
+              "yes_yes": 30,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.9831932773109243,
+              "positive_agreement": 0.967741935483871
+            },
+            "review": {
+              "yes_yes": 15,
+              "yes_no": 3,
+              "no_yes": 1,
+              "no_no": 100,
+              "agreement": 0.9663865546218487,
+              "positive_agreement": 0.8823529411764706
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 1,
+              "no_yes": 4,
+              "no_no": 110,
+              "agreement": 0.957983193277311,
+              "positive_agreement": 0.6153846153846154
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 116,
+              "agreement": 0.9831932773109243,
+              "positive_agreement": 0.5
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 116,
+              "agreement": 0.9915966386554622,
+              "positive_agreement": 0.8
+            }
+          }
+        },
+        "full-isolated_json-greedy__full-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 117,
+          "excluded_invalid_uncertain_or_missing": 3,
+          "mean_yes_a": 1.2478632478632479,
+          "mean_yes_b": 1.2136752136752136,
+          "delta_b_minus_a_bootstrap": {
+            "mean": -0.03418803418803419,
+            "ci95_percentile": [
+              -0.10256410256410256,
+              0.03418803418803419
+            ],
+            "n_questions": 117
+          },
+          "exact_label_set_agreement": 0.8461538461538461,
+          "mean_jaccard_nonempty_union": 0.8883161512027492,
+          "both_empty_sets": 20,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 37,
+              "yes_no": 5,
+              "no_yes": 1,
+              "no_no": 74,
+              "agreement": 0.9487179487179487,
+              "positive_agreement": 0.925
+            },
+            "discrepancy": {
+              "yes_yes": 44,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 71,
+              "agreement": 0.9829059829059829,
+              "positive_agreement": 0.9777777777777777
+            },
+            "errors": {
+              "yes_yes": 30,
+              "yes_no": 0,
+              "no_yes": 2,
+              "no_no": 85,
+              "agreement": 0.9829059829059829,
+              "positive_agreement": 0.967741935483871
+            },
+            "review": {
+              "yes_yes": 17,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 96,
+              "agreement": 0.9658119658119658,
+              "positive_agreement": 0.8947368421052632
+            },
+            "conceptual": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 111,
+              "agreement": 0.9914529914529915,
+              "positive_agreement": 0.9090909090909091
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 114,
+              "agreement": 0.9829059829059829,
+              "positive_agreement": 0.5
+            },
+            "learning": {
+              "yes_yes": 1,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 115,
+              "agreement": 0.9914529914529915,
+              "positive_agreement": 0.6666666666666666
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 110,
+          "excluded_invalid_uncertain_or_missing": 10,
+          "mean_yes_a": 1.009090909090909,
+          "mean_yes_b": 1.0636363636363637,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.05454545454545454,
+            "ci95_percentile": [
+              -0.01818181818181818,
+              0.13636363636363635
+            ],
+            "n_questions": 110
+          },
+          "exact_label_set_agreement": 0.8636363636363636,
+          "mean_jaccard_nonempty_union": 0.8713991769547325,
+          "both_empty_sets": 29,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 0,
+              "no_yes": 3,
+              "no_no": 96,
+              "agreement": 0.9727272727272728,
+              "positive_agreement": 0.88
+            },
+            "discrepancy": {
+              "yes_yes": 41,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 68,
+              "agreement": 0.990909090909091,
+              "positive_agreement": 0.9879518072289156
+            },
+            "errors": {
+              "yes_yes": 18,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 89,
+              "agreement": 0.9727272727272728,
+              "positive_agreement": 0.9230769230769231
+            },
+            "review": {
+              "yes_yes": 18,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 90,
+              "agreement": 0.9818181818181818,
+              "positive_agreement": 0.9473684210526315
+            },
+            "conceptual": {
+              "yes_yes": 12,
+              "yes_no": 0,
+              "no_yes": 4,
+              "no_no": 94,
+              "agreement": 0.9636363636363636,
+              "positive_agreement": 0.8571428571428571
+            },
+            "api_change": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 106,
+              "agreement": 0.990909090909091,
+              "positive_agreement": 0.8571428571428571
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 105,
+              "agreement": 0.9818181818181818,
+              "positive_agreement": 0.75
+            }
+          }
+        },
+        "prose-shared_json-greedy__prose-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 108,
+          "excluded_invalid_uncertain_or_missing": 12,
+          "mean_yes_a": 1.0462962962962963,
+          "mean_yes_b": 1.0462962962962963,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.0,
+            "ci95_percentile": [
+              -0.06481481481481481,
+              0.06481481481481481
+            ],
+            "n_questions": 108
+          },
+          "exact_label_set_agreement": 0.8888888888888888,
+          "mean_jaccard_nonempty_union": 0.8945147679324895,
+          "both_empty_sets": 29,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 11,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 96,
+              "agreement": 0.9907407407407407,
+              "positive_agreement": 0.9565217391304348
+            },
+            "discrepancy": {
+              "yes_yes": 40,
+              "yes_no": 2,
+              "no_yes": 0,
+              "no_no": 66,
+              "agreement": 0.9814814814814815,
+              "positive_agreement": 0.975609756097561
+            },
+            "errors": {
+              "yes_yes": 18,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 88,
+              "agreement": 0.9814814814814815,
+              "positive_agreement": 0.9473684210526315
+            },
+            "review": {
+              "yes_yes": 20,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 87,
+              "agreement": 0.9907407407407407,
+              "positive_agreement": 0.975609756097561
+            },
+            "conceptual": {
+              "yes_yes": 12,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 94,
+              "agreement": 0.9814814814814815,
+              "positive_agreement": 0.9230769230769231
+            },
+            "api_change": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 105,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 1,
+              "no_yes": 3,
+              "no_no": 101,
+              "agreement": 0.9629629629629629,
+              "positive_agreement": 0.6
+            }
+          }
+        },
+        "prose-isolated_json-greedy__prose-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 0.9035087719298246,
+          "mean_yes_b": 0.9122807017543859,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.008771929824561403,
+            "ci95_percentile": [
+              -0.06140350877192982,
+              0.07894736842105263
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.8771929824561403,
+          "mean_jaccard_nonempty_union": 0.8720238095238095,
+          "both_empty_sets": 30,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 33,
+              "yes_no": 3,
+              "no_yes": 6,
+              "no_no": 72,
+              "agreement": 0.9210526315789473,
+              "positive_agreement": 0.88
+            },
+            "discrepancy": {
+              "yes_yes": 29,
+              "yes_no": 3,
+              "no_yes": 0,
+              "no_no": 82,
+              "agreement": 0.9736842105263158,
+              "positive_agreement": 0.9508196721311475
+            },
+            "errors": {
+              "yes_yes": 9,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 104,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.9473684210526315
+            },
+            "review": {
+              "yes_yes": 16,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 97,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.9696969696969697
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 109,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.8888888888888888
+            },
+            "api_change": {
+              "yes_yes": 2,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "learning": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            }
+          }
+        },
+        "prose-isolated_json-greedy__prose-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 114,
+          "excluded_invalid_uncertain_or_missing": 6,
+          "mean_yes_a": 0.9035087719298246,
+          "mean_yes_b": 0.9298245614035088,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.02631578947368421,
+            "ci95_percentile": [
+              -0.05263157894736842,
+              0.09649122807017543
+            ],
+            "n_questions": 114
+          },
+          "exact_label_set_agreement": 0.8421052631578947,
+          "mean_jaccard_nonempty_union": 0.8246124031007752,
+          "both_empty_sets": 28,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 33,
+              "yes_no": 3,
+              "no_yes": 7,
+              "no_no": 71,
+              "agreement": 0.9122807017543859,
+              "positive_agreement": 0.868421052631579
+            },
+            "discrepancy": {
+              "yes_yes": 30,
+              "yes_no": 2,
+              "no_yes": 1,
+              "no_no": 81,
+              "agreement": 0.9736842105263158,
+              "positive_agreement": 0.9523809523809523
+            },
+            "errors": {
+              "yes_yes": 9,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 104,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.9473684210526315
+            },
+            "review": {
+              "yes_yes": 16,
+              "yes_no": 0,
+              "no_yes": 3,
+              "no_no": 95,
+              "agreement": 0.9736842105263158,
+              "positive_agreement": 0.9142857142857143
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 110,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 1,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 112,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.6666666666666666
+            },
+            "learning": {
+              "yes_yes": 2,
+              "yes_no": 1,
+              "no_yes": 0,
+              "no_no": 111,
+              "agreement": 0.9912280701754386,
+              "positive_agreement": 0.8
+            }
+          }
+        },
+        "title-shared_json-greedy__title-shared_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 86,
+          "excluded_invalid_uncertain_or_missing": 34,
+          "mean_yes_a": 0.4069767441860465,
+          "mean_yes_b": 0.4418604651162791,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.03488372093023256,
+            "ci95_percentile": [
+              0.0,
+              0.08139534883720931
+            ],
+            "n_questions": 86
+          },
+          "exact_label_set_agreement": 0.9651162790697675,
+          "mean_jaccard_nonempty_union": 0.9285714285714286,
+          "both_empty_sets": 58,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 81,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "discrepancy": {
+              "yes_yes": 12,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 73,
+              "agreement": 0.9883720930232558,
+              "positive_agreement": 0.96
+            },
+            "errors": {
+              "yes_yes": 7,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 79,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 80,
+              "agreement": 0.9883720930232558,
+              "positive_agreement": 0.9090909090909091
+            },
+            "conceptual": {
+              "yes_yes": 6,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 79,
+              "agreement": 0.9883720930232558,
+              "positive_agreement": 0.9230769230769231
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 86,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 86,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "title-shared_json-greedy__title-shared_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 85,
+          "excluded_invalid_uncertain_or_missing": 35,
+          "mean_yes_a": 0.4,
+          "mean_yes_b": 0.4,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.0,
+            "ci95_percentile": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 85
+          },
+          "exact_label_set_agreement": 1.0,
+          "mean_jaccard_nonempty_union": 1.0,
+          "both_empty_sets": 59,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "discrepancy": {
+              "yes_yes": 13,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 72,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "errors": {
+              "yes_yes": 7,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 78,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 80,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 81,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 85,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 85,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "title-isolated_json-greedy__title-isolated_json-sample314": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 103,
+          "excluded_invalid_uncertain_or_missing": 17,
+          "mean_yes_a": 0.3106796116504854,
+          "mean_yes_b": 0.3300970873786408,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.019417475728155338,
+            "ci95_percentile": [
+              -0.02912621359223301,
+              0.06796116504854369
+            ],
+            "n_questions": 103
+          },
+          "exact_label_set_agreement": 0.941747572815534,
+          "mean_jaccard_nonempty_union": 0.8064516129032258,
+          "both_empty_sets": 72,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 13,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 87,
+              "agreement": 0.970873786407767,
+              "positive_agreement": 0.896551724137931
+            },
+            "discrepancy": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 98,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "errors": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 102,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 7,
+              "yes_no": 1,
+              "no_yes": 2,
+              "no_no": 93,
+              "agreement": 0.970873786407767,
+              "positive_agreement": 0.8235294117647058
+            },
+            "conceptual": {
+              "yes_yes": 4,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 99,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 103,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        },
+        "title-isolated_json-greedy__title-isolated_json-sample2718": {
+          "joint_observed_questions": 120,
+          "joint_valid_binary_questions": 101,
+          "excluded_invalid_uncertain_or_missing": 19,
+          "mean_yes_a": 0.297029702970297,
+          "mean_yes_b": 0.3465346534653465,
+          "delta_b_minus_a_bootstrap": {
+            "mean": 0.04950495049504951,
+            "ci95_percentile": [
+              0.0,
+              0.10891089108910891
+            ],
+            "n_questions": 101
+          },
+          "exact_label_set_agreement": 0.9306930693069307,
+          "mean_jaccard_nonempty_union": 0.78125,
+          "both_empty_sets": 69,
+          "per_category": {
+            "api_usage": {
+              "yes_yes": 14,
+              "yes_no": 0,
+              "no_yes": 4,
+              "no_no": 83,
+              "agreement": 0.9603960396039604,
+              "positive_agreement": 0.875
+            },
+            "discrepancy": {
+              "yes_yes": 5,
+              "yes_no": 0,
+              "no_yes": 1,
+              "no_no": 95,
+              "agreement": 0.9900990099009901,
+              "positive_agreement": 0.9090909090909091
+            },
+            "errors": {
+              "yes_yes": 1,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 100,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "review": {
+              "yes_yes": 6,
+              "yes_no": 1,
+              "no_yes": 1,
+              "no_no": 93,
+              "agreement": 0.9801980198019802,
+              "positive_agreement": 0.8571428571428571
+            },
+            "conceptual": {
+              "yes_yes": 3,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 98,
+              "agreement": 1.0,
+              "positive_agreement": 1.0
+            },
+            "api_change": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 1.0,
+              "positive_agreement": null
+            },
+            "learning": {
+              "yes_yes": 0,
+              "yes_no": 0,
+              "no_yes": 0,
+              "no_no": 101,
+              "agreement": 1.0,
+              "positive_agreement": null
+            }
+          }
+        }
+      },
+      "downstream_feasibility": {
+        "boundary__full-shared_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 20,
+          "overall_distribution": {
+            "substantial": 20
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 15,
+              "yes|substantial": 5
+            },
+            "discrepancy": {
+              "yes|substantial": 14,
+              "no|substantial": 6
+            },
+            "errors": {
+              "yes|substantial": 9,
+              "no|substantial": 11
+            },
+            "review": {
+              "no|substantial": 19,
+              "yes|substantial": 1
+            },
+            "conceptual": {
+              "no|substantial": 16,
+              "yes|substantial": 4
+            },
+            "api_change": {
+              "no|substantial": 19,
+              "yes|substantial": 1
+            },
+            "learning": {
+              "no|substantial": 19,
+              "yes|substantial": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary__full-isolated_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 20,
+          "overall_distribution": {
+            "substantial": 20
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 13,
+              "yes|substantial": 7
+            },
+            "discrepancy": {
+              "yes|substantial": 12,
+              "no|substantial": 8
+            },
+            "errors": {
+              "yes|substantial": 6,
+              "no|substantial": 14
+            },
+            "review": {
+              "no|substantial": 18,
+              "yes|substantial": 2
+            },
+            "conceptual": {
+              "no|substantial": 17,
+              "yes|substantial": 3
+            },
+            "api_change": {
+              "no|substantial": 19,
+              "yes|substantial": 1
+            },
+            "learning": {
+              "no|substantial": 19,
+              "yes|substantial": 1
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary_json__full-shared_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 20,
+          "overall_distribution": {
+            "substantial": 18,
+            "partial": 2
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 15,
+              "yes|partial": 2,
+              "yes|substantial": 3
+            },
+            "discrepancy": {
+              "yes|substantial": 13,
+              "no|substantial": 5,
+              "yes|partial": 1,
+              "no|partial": 1
+            },
+            "errors": {
+              "yes|substantial": 9,
+              "no|substantial": 9,
+              "no|partial": 2
+            },
+            "review": {
+              "no|substantial": 17,
+              "yes|substantial": 1,
+              "no|partial": 2
+            },
+            "conceptual": {
+              "no|substantial": 14,
+              "yes|substantial": 4,
+              "no|partial": 2
+            },
+            "api_change": {
+              "no|substantial": 18,
+              "yes|partial": 1,
+              "no|partial": 1
+            },
+            "learning": {
+              "no|substantial": 17,
+              "yes|substantial": 1,
+              "no|partial": 2
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        },
+        "boundary_json__full-isolated_json-greedy": {
+          "matched_original_questions": 20,
+          "valid_binary_complete_questions": 20,
+          "overall_distribution": {
+            "substantial": 18,
+            "partial": 2
+          },
+          "contingency_counts": {
+            "api_usage": {
+              "no|substantial": 13,
+              "yes|substantial": 5,
+              "yes|partial": 2
+            },
+            "discrepancy": {
+              "yes|substantial": 12,
+              "no|substantial": 6,
+              "no|partial": 2
+            },
+            "errors": {
+              "yes|substantial": 6,
+              "no|substantial": 12,
+              "no|partial": 2
+            },
+            "review": {
+              "no|substantial": 17,
+              "yes|substantial": 1,
+              "no|partial": 1,
+              "yes|partial": 1
+            },
+            "conceptual": {
+              "no|substantial": 15,
+              "yes|substantial": 3,
+              "no|partial": 2
+            },
+            "api_change": {
+              "no|substantial": 18,
+              "yes|partial": 1,
+              "no|partial": 1
+            },
+            "learning": {
+              "no|substantial": 17,
+              "yes|substantial": 1,
+              "no|partial": 2
+            }
+          },
+          "inference": "Feasibility only: 20 development pairs maximum, sparse cells and potential ceiling. No significance tests or regression fit."
+        }
+      }
+    }
+  }
+}

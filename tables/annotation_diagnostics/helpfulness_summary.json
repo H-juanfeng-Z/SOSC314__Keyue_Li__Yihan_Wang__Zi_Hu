@@ -1,0 +1,382 @@
+{
+  "interpretation": "Development sensitivity, not annotation accuracy. Invalid outputs excluded from rating counts and reported separately. Conditions have different eligible samples.",
+  "content_sensitivity": {
+    "calls": 160,
+    "statuses": {
+      "valid": 159,
+      "invalid": 1
+    },
+    "export_sha256": "c06e6dc370d6a1e1d26c628e067578d4262dbd4bdf5eb67782c155afd6bbae64",
+    "cells": {
+      "boundary/code_only": {
+        "calls": 20,
+        "valid": 19,
+        "overall": {
+          "unhelpful": 7,
+          "substantial": 12
+        },
+        "numeric_dimension_pairs": 19,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/original": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "substantial": 20
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/prefix_half": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "substantial": 14,
+          "partial": 5,
+          "unhelpful": 1
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/prose_only": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "substantial": 12,
+          "unhelpful": 3,
+          "partial": 5
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/code_only": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "unhelpful": 7,
+          "substantial": 12,
+          "partial": 1
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/original": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "substantial": 18,
+          "partial": 2
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/prefix_half": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "partial": 13,
+          "substantial": 7
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/prose_only": {
+        "calls": 20,
+        "valid": 20,
+        "overall": {
+          "substantial": 8,
+          "unhelpful": 3,
+          "partial": 9
+        },
+        "numeric_dimension_pairs": 20,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      }
+    }
+  },
+  "code_grounding": {
+    "calls": 104,
+    "statuses": {
+      "valid": 103,
+      "invalid": 1
+    },
+    "export_sha256": "fe488d218eed1fbfa23a61dd68d67bac6845a442b99ee1d2feaf4a0701eeafc3",
+    "cells": {
+      "boundary/code_only": {
+        "calls": 13,
+        "valid": 12,
+        "overall": {
+          "substantial": 12
+        },
+        "numeric_dimension_pairs": 12,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 5,
+          "substantial": 6,
+          "partial": 2
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 12,
+          "partial": 1
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "boundary_json/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 6,
+          "partial": 4,
+          "substantial": 3
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      }
+    }
+  },
+  "rubric_factorial": {
+    "calls": 208,
+    "statuses": {
+      "valid": 208
+    },
+    "export_sha256": "ae478f837a2087ce8e4240d295fa6d0080bb055bd3cc64c1935b819ca418f581",
+    "cells": {
+      "baseline/code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 12,
+          "partial": 1
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "baseline/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "baseline/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 1
+      },
+      "baseline/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 6,
+          "partial": 4,
+          "substantial": 3
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 4
+      },
+      "combined/code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "partial": 2,
+          "substantial": 11
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 1,
+        "marker_citations": 0
+      },
+      "combined/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "combined/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "partial": 2,
+          "substantial": 11
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 2,
+        "marker_citations": 1
+      },
+      "combined/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 8,
+          "substantial": 2,
+          "partial": 3
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 2
+      },
+      "dimensions/code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "partial": 2,
+          "substantial": 11
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 1,
+        "marker_citations": 0
+      },
+      "dimensions/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "dimensions/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "partial": 3,
+          "substantial": 10
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 3,
+        "marker_citations": 1
+      },
+      "dimensions/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 6,
+          "substantial": 4,
+          "partial": 3
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 4
+      },
+      "evidence/code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "partial": 4,
+          "substantial": 9
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "evidence/foreign_code_only": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 0
+      },
+      "evidence/original": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "substantial": 13
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 1
+      },
+      "evidence/swapped_code": {
+        "calls": 13,
+        "valid": 13,
+        "overall": {
+          "unhelpful": 8,
+          "partial": 4,
+          "substantial": 1
+        },
+        "numeric_dimension_pairs": 13,
+        "dimensions_different": 0,
+        "marker_citations": 1
+      }
+    }
+  }
+}
