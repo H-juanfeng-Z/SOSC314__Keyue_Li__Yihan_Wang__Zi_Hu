@@ -4,6 +4,7 @@
 - [Technical-topic methods](technical_topics.md)
 - [NMF example questions](nmf_example_questions.md)
 - [Code navigation](../../scripts/README.md)
+- [NMF_example_questions_advanced](topic_model_advanced)
 
 ## Location migration
 
@@ -22,5 +23,6 @@ Programs are organized by function rather than reporting week. Experiment logic 
 | Technical-topic result folders | `tables/topic_modeling/` |
 | Technical-topic figures | `figures/topic_modeling/` |
 | Week 4 and technical-topic READMEs and example questions | `docs/experiments/` |
+
 
 Historical meeting and AI-use records are not rewritten. Early numbered scripts retain their paths. Local raw data, model weights, server experiments and untracked report materials were not migrated or uploaded.
