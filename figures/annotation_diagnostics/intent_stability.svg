@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660"><rect width="100%" height="100%" fill="white"/>
+<text x="40" y="48" font-family="sans-serif" font-size="28" fill="#233044">Question-intent labels: sensitivity to prompts and input</text>
+<text x="40" y="82" font-family="sans-serif" font-size="19" fill="#233044">Exact seven-label set agreement on jointly valid binary real questions</text>
+<text x="40" y="130" font-family="sans-serif" font-size="20" fill="#233044">Prompt package: shared vs isolated</text>
+<text x="40" y="157" font-family="sans-serif" font-size="17" fill="#437ab5">7B</text>
+<rect x="110" y="143" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="143" width="124.34782608695653" height="20" fill="#437ab5"/>
+<text x="785" y="157" font-family="sans-serif" font-size="17" fill="#233044">19.1%   n=115; excluded=5</text>
+<text x="40" y="186" font-family="sans-serif" font-size="17" fill="#dd8845">14B</text>
+<rect x="110" y="172" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="172" width="382.3529411764706" height="20" fill="#dd8845"/>
+<text x="785" y="186" font-family="sans-serif" font-size="17" fill="#233044">58.8%   n=119; excluded=1</text>
+<text x="40" y="240" font-family="sans-serif" font-size="20" fill="#233044">Input: full vs prose (shared)</text>
+<text x="40" y="267" font-family="sans-serif" font-size="17" fill="#437ab5">7B</text>
+<rect x="110" y="253" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="253" width="390.0" height="20" fill="#437ab5"/>
+<text x="785" y="267" font-family="sans-serif" font-size="17" fill="#233044">60.0%   n=115; excluded=5</text>
+<text x="40" y="296" font-family="sans-serif" font-size="17" fill="#dd8845">14B</text>
+<rect x="110" y="282" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="282" width="448.6725663716814" height="20" fill="#dd8845"/>
+<text x="785" y="296" font-family="sans-serif" font-size="17" fill="#233044">69.0%   n=113; excluded=7</text>
+<text x="40" y="350" font-family="sans-serif" font-size="20" fill="#233044">Input: full vs title (isolated)</text>
+<text x="40" y="377" font-family="sans-serif" font-size="17" fill="#437ab5">7B</text>
+<rect x="110" y="363" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="363" width="325.0" height="20" fill="#437ab5"/>
+<text x="785" y="377" font-family="sans-serif" font-size="17" fill="#233044">50.0%   n=116; excluded=4</text>
+<text x="40" y="406" font-family="sans-serif" font-size="17" fill="#dd8845">14B</text>
+<rect x="110" y="392" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="392" width="204.28571428571428" height="20" fill="#dd8845"/>
+<text x="785" y="406" font-family="sans-serif" font-size="17" fill="#233044">31.4%   n=105; excluded=15</text>
+<text x="40" y="460" font-family="sans-serif" font-size="20" fill="#233044">Decoding: greedy vs sample314</text>
+<text x="40" y="487" font-family="sans-serif" font-size="17" fill="#437ab5">7B</text>
+<rect x="110" y="473" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="473" width="550.0" height="20" fill="#437ab5"/>
+<text x="785" y="487" font-family="sans-serif" font-size="17" fill="#233044">84.6%   n=117; excluded=3</text>
+<text x="40" y="516" font-family="sans-serif" font-size="17" fill="#dd8845">14B</text>
+<rect x="110" y="502" width="650" height="20" fill="#edf0f3"/>
+<rect x="110" y="502" width="535.2941176470588" height="20" fill="#dd8845"/>
+<text x="785" y="516" font-family="sans-serif" font-size="17" fill="#233044">82.4%   n=119; excluded=1</text>
+<text x="110" y="571" font-family="sans-serif" font-size="16" fill="#233044">0%</text>
+<text x="723" y="571" font-family="sans-serif" font-size="16" fill="#233044">100%</text>
+<text x="40" y="608" font-family="sans-serif" font-size="17" fill="#233044">Development diagnostics only: agreement is not accuracy. Denominators differ by comparison.</text>
+<text x="40" y="636" font-family="sans-serif" font-size="17" fill="#233044">Qwen2.5-Coder; full means processed text, not raw HTML. No held-out cases used.</text>
+</svg>
