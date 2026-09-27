@@ -27,3 +27,6 @@ Programs are organized by function rather than reporting week. Experiment logic 
 
 
 Historical meeting and AI-use records are not rewritten. Early numbered scripts retain their paths. Local raw data, model weights, server experiments and untracked report materials were not migrated or uploaded.
+# Completed measurement comparisons
+
+See [intent and first-answer helpfulness measurement](request_first_measurement.md) for the development, scope-calibration and request-first experiments, exported results, CPU reproduction and GPU requirements.

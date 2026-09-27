@@ -137,3 +137,6 @@ deliverables rather than duplicated in this long-lived project overview.
 Generative-AI use connected to project code is documented in
 [docs/AI_USE.md](docs/AI_USE.md). The record is designed to be updated as the
 project develops.
+# Measurement follow-up
+
+Completed intent and first-answer helpfulness diagnostics, reproducible result summaries and the report figure are documented in [the measurement guide](docs/experiments/request_first_measurement.md). Technical-topic labels and intent labels represent different concepts; their integration remains a subsequent analysis step.

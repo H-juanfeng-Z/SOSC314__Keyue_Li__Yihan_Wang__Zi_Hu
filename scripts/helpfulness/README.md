@@ -11,3 +11,6 @@ python scripts/helpfulness/summarize_round2.py --root data/interim/helpfulness
 Preparation requires the existing `questions_clean.parquet` and `answers_clean.parquet`, not just the question-response feature table. See the project experiment instructions for their schema. Supply local model weights. Preparation uses DuckDB; inference uses PyTorch, transformers and safetensors. Summarization also uses NumPy and scikit-learn.
 
 The summary script retains historical result names `results/helpfulness_{15b,3b,7b}` and optional `results/encoder_60000` below the supplied root. The two-prompt pilot evaluates first-answer helpfulness; output validation is not correctness. No raw data or model weights are bundled.
+# Additional measurement workflows
+
+The [measurement experiment guide](../../docs/experiments/request_first_measurement.md) documents `run_measurement.py`, `run_scope_calibration.py`, `run_bridge.py`, preparation, tests and CPU summaries. These are development diagnostics, not human-validated accuracy measurements.
