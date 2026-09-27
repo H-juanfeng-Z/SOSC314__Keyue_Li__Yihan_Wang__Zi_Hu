@@ -1,0 +1,234 @@
+[
+  {
+    "audit_id": "NEW-36178209__api_change",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-20609128__api_change",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-23570913__api_change",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-39541106__api_change",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-38295021__api_change",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-2131417__api_usage",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-14527531__api_usage",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-19545847__api_usage",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-37006174__api_usage",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-9763393__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-17348743__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-31206857__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-30918227__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-26687186__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-30533083__api_usage",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-39541106__conceptual",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-39543196__conceptual",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "W4-016__conceptual",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "W4-014__conceptual",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-3399361__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-25532041__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-11573844__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-008__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-37920197__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-26687186__conceptual",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-3703509__discrepancy",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-9763393__discrepancy",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "W4-008__discrepancy",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-6269234__discrepancy",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-35722689__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-020__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-013__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-28856908__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-37006174__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-11573844__discrepancy",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-12951208__errors",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-3703509__errors",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-27360218__errors",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-30588792__errors",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-28500723__errors",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-9827023__errors",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-007__errors",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-015__errors",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-008__errors",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "W4-011__learning",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-3703509__learning",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "W4-010__learning",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-9763393__learning",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-39541106__learning",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-9060654__review",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-28500723__review",
+    "selection_group": "agreement_no"
+  },
+  {
+    "audit_id": "NEW-3399361__review",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "NEW-7511294__review",
+    "selection_group": "agreement_yes"
+  },
+  {
+    "audit_id": "W4-019__review",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-8023874__review",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-7604636__review",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-20821957__review",
+    "selection_group": "disagreement"
+  },
+  {
+    "audit_id": "NEW-11110253__review",
+    "selection_group": "disagreement"
+  }
+]
