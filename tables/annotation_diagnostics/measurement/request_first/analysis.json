@@ -1,0 +1,388 @@
+{
+  "records": 6630,
+  "inference_calls": 6606,
+  "generation_calls": 6585,
+  "statuses": {
+    "valid": 6574,
+    "context_skipped": 21,
+    "upstream_invalid": 24,
+    "invalid_json": 3,
+    "invalid": 8
+  },
+  "input_tokens": 5795381,
+  "output_tokens": 441911,
+  "interpretation": "Measurement association feasibility only; no human accuracy, no causal inference, shared-model bias possible.",
+  "samples": {
+    "primary": {
+      "observed_pairs": 200,
+      "intent_transitions": {
+        "api_change": {
+          "no -> no": 188,
+          "no -> yes": 3,
+          "yes -> no": 5,
+          "yes -> yes": 2
+        },
+        "api_usage": {
+          "yes -> yes": 151,
+          "no -> yes": 35,
+          "yes -> no": 2,
+          "no -> no": 10
+        },
+        "conceptual": {
+          "no -> no": 137,
+          "yes -> yes": 33,
+          "yes -> no": 18,
+          "no -> yes": 10
+        },
+        "discrepancy": {
+          "no -> no": 52,
+          "yes -> yes": 131,
+          "yes -> no": 4,
+          "no -> yes": 11
+        },
+        "errors": {
+          "no -> no": 81,
+          "yes -> yes": 90,
+          "yes -> no": 13,
+          "no -> yes": 13
+        },
+        "learning": {
+          "no -> no": 184,
+          "yes -> no": 6,
+          "yes -> yes": 5,
+          "no -> yes": 2
+        },
+        "review": {
+          "no -> no": 57,
+          "yes -> yes": 110,
+          "yes -> no": 23,
+          "no -> yes": 8
+        }
+      },
+      "helpfulness_transitions": {
+        "substantial -> substantial": 124,
+        "partial -> partial": 52,
+        "partial -> unhelpful": 3,
+        "substantial -> partial": 12,
+        "partial -> substantial": 2,
+        "unhelpful -> partial": 1,
+        "unhelpful -> unhelpful": 2
+      },
+      "missing_or_invalid_pairs": {
+        "intent/api_change": 2,
+        "intent/api_usage": 2,
+        "intent/conceptual": 2,
+        "intent/discrepancy": 2,
+        "intent/errors": 3,
+        "intent/learning": 3,
+        "intent/review": 2,
+        "helpfulness": 4
+      },
+      "cross_tabs": {
+        "direct/api_change": {
+          "no|substantial": 131,
+          "no|partial": 56,
+          "yes|substantial": 6,
+          "yes|partial": 1,
+          "no|unhelpful": 3
+        },
+        "direct/api_usage": {
+          "yes|substantial": 104,
+          "yes|partial": 45,
+          "no|substantial": 33,
+          "no|partial": 12,
+          "no|unhelpful": 1,
+          "yes|unhelpful": 2
+        },
+        "direct/conceptual": {
+          "no|substantial": 103,
+          "no|partial": 42,
+          "yes|substantial": 34,
+          "yes|partial": 15,
+          "no|unhelpful": 2,
+          "yes|unhelpful": 1
+        },
+        "direct/discrepancy": {
+          "no|substantial": 38,
+          "yes|partial": 34,
+          "yes|substantial": 99,
+          "no|partial": 23,
+          "yes|unhelpful": 2,
+          "no|unhelpful": 1
+        },
+        "direct/errors": {
+          "no|substantial": 64,
+          "yes|partial": 29,
+          "yes|substantial": 73,
+          "no|partial": 28,
+          "no|unhelpful": 2,
+          "yes|unhelpful": 1
+        },
+        "direct/learning": {
+          "no|substantial": 131,
+          "no|partial": 52,
+          "yes|substantial": 6,
+          "yes|partial": 5,
+          "no|unhelpful": 3
+        },
+        "direct/review": {
+          "no|substantial": 51,
+          "yes|partial": 45,
+          "yes|substantial": 86,
+          "no|partial": 12,
+          "no|unhelpful": 2,
+          "yes|unhelpful": 1
+        },
+        "question_first/api_change": {
+          "no|substantial": 123,
+          "no|partial": 64,
+          "yes|substantial": 4,
+          "no|unhelpful": 5,
+          "yes|partial": 1
+        },
+        "question_first/api_usage": {
+          "yes|substantial": 118,
+          "yes|partial": 62,
+          "no|substantial": 9,
+          "no|partial": 3,
+          "yes|unhelpful": 5
+        },
+        "question_first/conceptual": {
+          "no|substantial": 99,
+          "no|partial": 52,
+          "yes|substantial": 28,
+          "yes|partial": 13,
+          "no|unhelpful": 4,
+          "yes|unhelpful": 1
+        },
+        "question_first/discrepancy": {
+          "no|substantial": 35,
+          "yes|partial": 48,
+          "yes|substantial": 92,
+          "no|partial": 17,
+          "no|unhelpful": 4,
+          "yes|unhelpful": 1
+        },
+        "question_first/errors": {
+          "no|substantial": 59,
+          "yes|partial": 34,
+          "yes|substantial": 67,
+          "no|partial": 31,
+          "no|unhelpful": 4,
+          "yes|unhelpful": 1
+        },
+        "question_first/learning": {
+          "no|substantial": 125,
+          "no|partial": 60,
+          "yes|partial": 5,
+          "no|unhelpful": 5,
+          "yes|substantial": 2
+        },
+        "question_first/review": {
+          "no|substantial": 57,
+          "yes|partial": 43,
+          "yes|substantial": 70,
+          "no|partial": 22,
+          "yes|unhelpful": 4,
+          "no|unhelpful": 1
+        }
+      },
+      "dimension_counts": {
+        "direct": {
+          "valid": 197,
+          "numeric_pairs": 197,
+          "equal": 197
+        },
+        "question_first": {
+          "valid": 197,
+          "numeric_pairs": 197,
+          "equal": 196
+        }
+      }
+    },
+    "extension": {
+      "observed_pairs": 190,
+      "intent_transitions": {
+        "api_change": {
+          "no -> no": 182,
+          "no -> yes": 2,
+          "yes -> yes": 4,
+          "yes -> no": 1
+        },
+        "api_usage": {
+          "yes -> yes": 144,
+          "no -> yes": 38,
+          "no -> no": 7
+        },
+        "conceptual": {
+          "no -> no": 137,
+          "yes -> yes": 31,
+          "no -> yes": 8,
+          "yes -> no": 13
+        },
+        "discrepancy": {
+          "yes -> yes": 101,
+          "no -> no": 63,
+          "no -> yes": 9,
+          "yes -> no": 13
+        },
+        "errors": {
+          "yes -> yes": 67,
+          "no -> no": 89,
+          "no -> yes": 12,
+          "yes -> no": 21
+        },
+        "learning": {
+          "no -> no": 177,
+          "yes -> yes": 3,
+          "yes -> no": 7,
+          "no -> yes": 2
+        },
+        "review": {
+          "yes -> yes": 103,
+          "no -> no": 50,
+          "no -> yes": 16,
+          "yes -> no": 20
+        }
+      },
+      "helpfulness_transitions": {
+        "partial -> partial": 54,
+        "substantial -> substantial": 111,
+        "partial -> substantial": 6,
+        "partial -> unhelpful": 1,
+        "substantial -> partial": 9,
+        "unhelpful -> unhelpful": 2,
+        "unhelpful -> partial": 2
+      },
+      "missing_or_invalid_pairs": {
+        "helpfulness": 5,
+        "intent/api_change": 1,
+        "intent/api_usage": 1,
+        "intent/conceptual": 1,
+        "intent/discrepancy": 4,
+        "intent/errors": 1,
+        "intent/learning": 1,
+        "intent/review": 1
+      },
+      "cross_tabs": {
+        "direct/api_change": {
+          "no|partial": 60,
+          "no|substantial": 117,
+          "no|unhelpful": 4,
+          "yes|partial": 1,
+          "yes|substantial": 4
+        },
+        "direct/api_usage": {
+          "yes|partial": 41,
+          "no|partial": 20,
+          "yes|substantial": 96,
+          "no|substantial": 25,
+          "yes|unhelpful": 4
+        },
+        "direct/conceptual": {
+          "no|partial": 46,
+          "no|substantial": 95,
+          "yes|substantial": 26,
+          "yes|partial": 15,
+          "yes|unhelpful": 2,
+          "no|unhelpful": 2
+        },
+        "direct/discrepancy": {
+          "yes|partial": 36,
+          "yes|substantial": 76,
+          "no|substantial": 44,
+          "no|partial": 24,
+          "yes|unhelpful": 2,
+          "no|unhelpful": 2
+        },
+        "direct/errors": {
+          "yes|partial": 25,
+          "no|partial": 36,
+          "yes|substantial": 61,
+          "no|substantial": 60,
+          "no|unhelpful": 3,
+          "yes|unhelpful": 1
+        },
+        "direct/learning": {
+          "no|partial": 56,
+          "no|substantial": 117,
+          "yes|partial": 5,
+          "no|unhelpful": 3,
+          "yes|substantial": 4,
+          "yes|unhelpful": 1
+        },
+        "direct/review": {
+          "yes|partial": 35,
+          "no|partial": 26,
+          "yes|substantial": 82,
+          "no|substantial": 39,
+          "yes|unhelpful": 4
+        },
+        "question_first/api_change": {
+          "no|partial": 62,
+          "no|substantial": 116,
+          "no|unhelpful": 3,
+          "yes|substantial": 3,
+          "yes|partial": 3
+        },
+        "question_first/api_usage": {
+          "yes|partial": 61,
+          "yes|substantial": 116,
+          "no|substantial": 3,
+          "yes|unhelpful": 3,
+          "no|partial": 4
+        },
+        "question_first/conceptual": {
+          "no|partial": 50,
+          "no|substantial": 97,
+          "yes|substantial": 22,
+          "yes|partial": 15,
+          "no|unhelpful": 2,
+          "yes|unhelpful": 1
+        },
+        "question_first/discrepancy": {
+          "yes|partial": 37,
+          "yes|substantial": 72,
+          "no|substantial": 46,
+          "no|partial": 28,
+          "yes|unhelpful": 2,
+          "no|unhelpful": 1
+        },
+        "question_first/errors": {
+          "yes|partial": 25,
+          "no|partial": 40,
+          "yes|substantial": 51,
+          "no|substantial": 68,
+          "yes|unhelpful": 2,
+          "no|unhelpful": 1
+        },
+        "question_first/learning": {
+          "no|partial": 61,
+          "no|substantial": 118,
+          "no|unhelpful": 3,
+          "yes|partial": 4,
+          "yes|substantial": 1
+        },
+        "question_first/review": {
+          "yes|partial": 42,
+          "no|partial": 23,
+          "yes|substantial": 73,
+          "no|substantial": 46,
+          "yes|unhelpful": 3
+        }
+      },
+      "dimension_counts": {
+        "direct": {
+          "valid": 186,
+          "numeric_pairs": 186,
+          "equal": 183
+        },
+        "question_first": {
+          "valid": 187,
+          "numeric_pairs": 187,
+          "equal": 186
+        }
+      }
+    }
+  }
+}

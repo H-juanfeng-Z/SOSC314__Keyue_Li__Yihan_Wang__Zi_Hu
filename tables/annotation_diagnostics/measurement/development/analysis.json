@@ -1,0 +1,206 @@
+{
+  "calls": 356,
+  "statuses": {
+    "intent_audit/valid": 116,
+    "helpfulness_development/valid": 240
+  },
+  "interpretation": "Same-model blinded reannotation and stratified development sensitivity; not accuracy or population prevalence.",
+  "helpfulness_cells": {
+    "baseline": {
+      "valid": 120,
+      "overall": {
+        "partial": 35,
+        "substantial": 77,
+        "unhelpful": 8
+      },
+      "dimensions_equal": 120,
+      "stratified_counts": {
+        "year_band/2008-2011": {
+          "partial": 13,
+          "substantial": 23,
+          "unhelpful": 4
+        },
+        "code_band/code": {
+          "partial": 7,
+          "substantial": 51,
+          "unhelpful": 2
+        },
+        "score_band/1-5": {
+          "partial": 9,
+          "substantial": 20,
+          "unhelpful": 1
+        },
+        "score_band/6+": {
+          "substantial": 27,
+          "unhelpful": 1,
+          "partial": 2
+        },
+        "score_band/negative": {
+          "substantial": 13,
+          "partial": 12,
+          "unhelpful": 5
+        },
+        "score_band/zero": {
+          "substantial": 17,
+          "partial": 12,
+          "unhelpful": 1
+        },
+        "code_band/no_code": {
+          "partial": 28,
+          "unhelpful": 6,
+          "substantial": 26
+        },
+        "year_band/2012-2014": {
+          "substantial": 26,
+          "partial": 11,
+          "unhelpful": 3
+        },
+        "year_band/2015-2016": {
+          "substantial": 28,
+          "partial": 11,
+          "unhelpful": 1
+        }
+      }
+    },
+    "evidence": {
+      "valid": 120,
+      "overall": {
+        "partial": 45,
+        "substantial": 68,
+        "unhelpful": 7
+      },
+      "dimensions_equal": 119,
+      "stratified_counts": {
+        "year_band/2008-2011": {
+          "partial": 17,
+          "substantial": 19,
+          "unhelpful": 4
+        },
+        "code_band/code": {
+          "partial": 10,
+          "substantial": 48,
+          "unhelpful": 2
+        },
+        "score_band/1-5": {
+          "partial": 11,
+          "substantial": 19
+        },
+        "score_band/6+": {
+          "substantial": 24,
+          "unhelpful": 1,
+          "partial": 5
+        },
+        "score_band/negative": {
+          "partial": 15,
+          "substantial": 10,
+          "unhelpful": 5
+        },
+        "score_band/zero": {
+          "substantial": 15,
+          "partial": 14,
+          "unhelpful": 1
+        },
+        "code_band/no_code": {
+          "partial": 35,
+          "unhelpful": 5,
+          "substantial": 20
+        },
+        "year_band/2012-2014": {
+          "substantial": 26,
+          "partial": 12,
+          "unhelpful": 2
+        },
+        "year_band/2015-2016": {
+          "substantial": 23,
+          "partial": 16,
+          "unhelpful": 1
+        }
+      }
+    }
+  },
+  "helpfulness_paired": {
+    "transitions": {
+      "partial -> partial": 35,
+      "substantial -> substantial": 68,
+      "substantial -> partial": 9,
+      "unhelpful -> unhelpful": 7,
+      "unhelpful -> partial": 1
+    },
+    "excluded": {}
+  },
+  "intent_review": {
+    "api_change/agreement_no": {
+      "no -> no": 2
+    },
+    "api_change/agreement_yes": {
+      "yes -> yes": 2
+    },
+    "api_change/disagreement": {
+      "yes -> yes": 1
+    },
+    "api_usage/agreement_no": {
+      "no -> no": 2
+    },
+    "api_usage/agreement_yes": {
+      "no -> no": 1,
+      "yes -> yes": 1
+    },
+    "api_usage/disagreement": {
+      "no -> yes": 1,
+      "yes -> yes": 1,
+      "no -> no": 4
+    },
+    "conceptual/agreement_no": {
+      "no -> no": 2
+    },
+    "conceptual/agreement_yes": {
+      "yes -> yes": 2
+    },
+    "conceptual/disagreement": {
+      "yes -> yes": 4,
+      "no -> no": 2
+    },
+    "discrepancy/agreement_no": {
+      "no -> no": 2
+    },
+    "discrepancy/agreement_yes": {
+      "yes -> yes": 2
+    },
+    "discrepancy/disagreement": {
+      "yes -> yes": 6
+    },
+    "errors/agreement_no": {
+      "no -> no": 2
+    },
+    "errors/agreement_yes": {
+      "yes -> yes": 2
+    },
+    "errors/disagreement": {
+      "yes -> yes": 2,
+      "no -> no": 2,
+      "yes -> no": 1
+    },
+    "learning/agreement_no": {
+      "no -> no": 2
+    },
+    "learning/agreement_yes": {
+      "no -> yes": 1,
+      "yes -> yes": 1
+    },
+    "learning/disagreement": {
+      "yes -> yes": 1
+    },
+    "review/agreement_no": {
+      "no -> no": 2
+    },
+    "review/agreement_yes": {
+      "yes -> yes": 2
+    },
+    "review/disagreement": {
+      "no -> yes": 1,
+      "no -> no": 2,
+      "yes -> yes": 2
+    }
+  },
+  "oversized": []
+}

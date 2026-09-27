@@ -1,0 +1,25 @@
+{
+  "records": 356,
+  "comparisons": {
+    "intent_audit": {
+      "transitions": {
+        "no -> no": 18,
+        "yes -> yes": 29,
+        "no -> yes": 8,
+        "yes -> no": 3
+      },
+      "excluded": 0
+    },
+    "helpfulness_development": {
+      "transitions": {
+        "partial -> partial": 41,
+        "substantial -> substantial": 61,
+        "partial -> substantial": 3,
+        "unhelpful -> unhelpful": 7,
+        "substantial -> partial": 7,
+        "partial -> unhelpful": 1
+      },
+      "excluded": 0
+    }
+  }
+}

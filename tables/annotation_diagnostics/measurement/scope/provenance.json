@@ -1,0 +1,11 @@
+{
+  "source_sha256": "7d75ce0ca85e754ca91c5ca482b4e8ccad3c0bab5ce6fcb06712de7e7d6a4bba",
+  "records": 356,
+  "model": "Qwen2.5-Coder-14B-Instruct",
+  "torch": "2.2.0+cu121",
+  "transformers": "4.53.0",
+  "seed": 314,
+  "decoding": "greedy float16",
+  "export": "No raw prompt, completion, rationale or server paths. Token counts retained. Use frozen inputs for GPU reruns.",
+  "generation_calls": 356
+}

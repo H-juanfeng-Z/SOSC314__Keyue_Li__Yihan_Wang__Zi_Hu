@@ -1,0 +1,31 @@
+{
+  "calls": 356,
+  "planned": 356,
+  "counts": {
+    "intent_audit/valid": 116,
+    "helpfulness_development/valid": 240
+  },
+  "ratings": {
+    "intent_audit/evidence_first": {
+      "no": 28,
+      "yes": 30
+    },
+    "intent_audit/boundary_check": {
+      "no": 26,
+      "yes": 32
+    },
+    "helpfulness_development/baseline": {
+      "partial": 35,
+      "substantial": 77,
+      "unhelpful": 8
+    },
+    "helpfulness_development/evidence": {
+      "partial": 45,
+      "substantial": 68,
+      "unhelpful": 7
+    }
+  },
+  "elapsed_seconds": 1939.8852605819702,
+  "completed": true,
+  "ended_unix": 1790393364.6657095
+}

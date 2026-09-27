@@ -1,0 +1,25 @@
+{
+  "complete_pairs": 390,
+  "primary_complete": true,
+  "logical_records": 6630,
+  "statuses": {
+    "request/valid": 387,
+    "intent/valid": 5420,
+    "helpfulness/valid": 767,
+    "request/context_skipped": 2,
+    "intent/context_skipped": 15,
+    "intent/upstream_invalid": 21,
+    "helpfulness/context_skipped": 4,
+    "helpfulness/upstream_invalid": 3,
+    "intent/invalid_json": 3,
+    "request/invalid": 1,
+    "helpfulness/invalid": 6,
+    "intent/invalid": 1
+  },
+  "elapsed_seconds": 28831.121883392334,
+  "target_hours": 8.0,
+  "completed": true,
+  "stop_reason": "target_reached",
+  "ended_unix": 1790473021.948156,
+  "target_met": true
+}
