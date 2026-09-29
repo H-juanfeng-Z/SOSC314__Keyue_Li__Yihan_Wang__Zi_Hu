@@ -1,0 +1,100 @@
+Id,title,dominant_topic,topic_prob,lda_type,gold,correct
+557460,Django - having middleware communicate with views/templates,0,0.3666666657898897,implement,implement,True
+2348317,How to write a pager for Python iterators?,0,0.3666666682144473,implement,implement,True
+4643491,tail -f does not seem to work in the shell when file is being populated through file.write(),0,0.2750001314270806,implement,do_not_work,False
+863234,Python Module by Path,0,0.2750000188282751,implement,implement,True
+624345,How can I customize the output from pygments?,0,0.3666666300331412,implement,way_of_using,False
+5235761,How to find information from the last 24 hours,0,0.5250000006698109,implement,way_of_using,False
+3642621,Take first successful match from a batch of regexes,0,0.5250000001665626,implement,implement,True
+5627578,python: library behavior on failed import,0,0.6999962075122458,implement,how_why,False
+5467468,Python lxml (objectify): Xpath troubles,0,0.5249711902655404,implement,do_not_work,False
+5238464,Django not creating apps in the correct directory,0,0.5499999999972333,implement,do_not_work,False
+5183533,How to make List from Numpy Matrix in Python,1,0.3666666644093616,implement,way_of_using,False
+2737487,numpy arange with multiple intervals,1,0.4967563271320888,implement,way_of_using,False
+104420,How do I generate all permutations of a list?,1,0.2750002431153824,implement,way_of_using,False
+1504794,Python as a Windows Watchdog,1,0.275000012367887,implement,implement,True
+4575545,"How can I setup a consistent python/django/virtualenv environment on my localhost, using my production settings?",1,0.3666590906953114,implement,implement,True
+2871836,"Combining entries, filtering of Python dictionaries",1,0.6999969575600424,implement,implement,True
+101742,How do you access an authenticated Google App Engine service from a (non-web) python client?,1,0.7749859868543598,implement,way_of_using,False
+5488159,Django - Admin - How to override change_list template for Model Proxy?,1,0.5249978066634104,implement,way_of_using,False
+3042304,How to determine what user and group a Python script is running as?,1,0.5249761096184367,implement,way_of_using,False
+1549722,Difference between defining a member in __init__ to defining it in the class body in python?,1,0.5249959983936883,implement,how_why,False
+5532902,Python reversing a string using recursion,2,0.2750000745441352,implement,implement,True
+3148231,Possible to retrieve steam server list in python?,2,0.2750000837394852,implement,way_of_using,False
+1660474,PyQt and MVC-pattern,2,0.2750000579248282,implement,implement,True
+2505251,Splitting a list in python,2,0.2750000840076908,implement,way_of_using,False
+1301346,What is the meaning of single and double underscore before an object name?,2,0.3666667644596812,implement,how_why,False
+3989302,Copy from a file until a certain marker string is found,2,0.5249592781321295,implement,implement,True
+5941420,Vectorize over the rows of an array,2,0.6999692125420361,implement,way_of_using,False
+3336457,Continuing code execution after a pygtk.main() in python,2,0.5249771202695371,implement,way_of_using,False
+2269827,How to convert an int to a hex string?,2,0.5250000284802415,implement,way_of_using,False
+4000072,Suitable kind of database to track a high volume of changes,2,0.5249594564404026,implement,learning,False
+1871685,In python is there a way to check if a function is a &quot;generator function&quot; before calling it?,3,0.275000013038935,how_why,way_of_using,False
+5393986,Why was PyPI called the cheese shop?,3,0.2750000092991512,how_why,how_why,True
+1689505,Python: ulimit and nice for subprocess.call / subprocess.Popen?,3,0.2750000699743267,how_why,way_of_using,False
+5456157,Exit code when python script has unhandled exception,3,0.3666666744825921,how_why,way_of_using,False
+6363397,How to tell if one regular expression matches a subset of another regular expression?,3,0.2750000491303463,how_why,way_of_using,False
+1648214,Is there a rails.vim equivalent for Django?,3,0.5250005713922138,how_why,learning,False
+2087492,Can a Python package depend on a specific version control revision of another Python package?,3,0.54999999996023,how_why,way_of_using,False
+2911886,"Django, how to create form for add/edit object with m2m links?",3,0.5249999974220855,how_why,implement,False
+6219063,Repeating function over certain amount of time,3,0.5249999719655346,how_why,implement,False
+2114853,explorer right click context menu with python?,3,0.5250000274252963,how_why,implement,False
+4899851,Python: how to do basic data manipulation like in R?,4,0.2750000075128406,way_of_using,way_of_using,True
+4399969,C# equivalent of Python&#39;s id()?,4,0.3666666834861027,way_of_using,way_of_using,True
+684109,can you distinguish between a test &amp; a variable setting?,4,0.3666666231613091,way_of_using,way_of_using,True
+5833905,Django History for Custom Dashboard,4,0.4981486376508095,way_of_using,implement,False
+2705816,is the sender of google-app-engine allow my own gmail,4,0.3666667705117496,way_of_using,way_of_using,True
+5728248,Ignore Text between XML tag,4,0.5249636415885148,way_of_using,do_not_work,False
+164460,Programmatically launching standalone Adobe flashplayer on Linux/X11,4,0.5249999972472292,way_of_using,way_of_using,True
+5282290,submitting webforms python,4,0.7749857752127359,way_of_using,do_not_work,False
+1025029,How to use Win32 API with Python?,4,0.7749808921248146,way_of_using,way_of_using,True
+3124922,How to order by aggregate with conditions on fields of a relation,4,0.6999999999652095,way_of_using,way_of_using,True
+2982959,Getting logging.debug() to work on Google App Engine/Python,5,0.2750000032124015,way_of_using,do_not_work,False
+3644917,Setuptools not found,5,0.2750000301752559,way_of_using,do_not_work,False
+4936543,python: how to encrypt a file?,5,0.2750004112626764,way_of_using,way_of_using,True
+679806,What are the viable database abstraction layers for Python,5,0.2750006170211863,way_of_using,learning,False
+155029,SQLAlchemy and kinterbasdb in separate apps under mod_wsgi,5,0.3666666690949232,way_of_using,implement,False
+5350454,How can i detect that something is plugged in to the audio jack on linux with python?,5,0.6999671861418394,way_of_using,way_of_using,True
+4402685,Switch between FCGI and CGI with Python and Flup,5,0.7749854071080777,way_of_using,way_of_using,True
+3853921,using scp in a python script on opensolaris,5,0.5249753605849309,way_of_using,way_of_using,True
+1541722,A .net wrapper for Google App Engine?,5,0.5499999999885946,way_of_using,learning,False
+5769128,Soap Client using Suds,5,0.5249754277079441,way_of_using,do_not_work,False
+6368452,How do you render the front page of a plone site in python?,6,0.3666673528357143,how_why,do_not_work,False
+2664812,How can I use Perl&#39;s s/// in an expression?,6,0.2750000106640315,how_why,way_of_using,False
+2811174,Python file input string: how to handle escaped unicode characters?,6,0.2750000508120678,how_why,way_of_using,False
+3674631,Get warning for python string literals not prefixed with &#39;u&#39;,6,0.3666671233594863,how_why,way_of_using,False
+3405177,Python modules for visualization of C++ code,6,0.3666667872758486,how_why,learning,False
+6385038,CheckMenuItem problem in pygtk trayicon program,6,0.6999651547247681,how_why,do_not_work,False
+484338,Problem with encoding in Django templates,6,0.5249738613540063,how_why,do_not_work,False
+1309991,How to set smtplib sending timeout in python 2.4?,6,0.5249738835044612,how_why,do_not_work,False
+3362600,How to send email attachments?,6,0.5249739066974985,how_why,way_of_using,False
+1940710,Syntax quirks or why is that valid python,6,0.6999999999982349,how_why,how_why,True
+4539704,"Can I do a reduce on a list comprehension into two lists, based on two values?",7,0.275000012462907,do_not_work,implement,False
+1691076,Activate virtualenv via os.system(),7,0.275000367831382,do_not_work,way_of_using,False
+4559438,searching a tuple list with wildcards?,7,0.3666666690044826,do_not_work,implement,False
+1387315,Globbing the processing of an object&#39;s attributes in Python?,7,0.3666666603666446,do_not_work,implement,False
+3998908,How do I perform a random event in Python by picking a random variable?,7,0.3666669512573176,do_not_work,way_of_using,False
+914106,Python script embedded in Windows Registry,7,0.5249999938795811,do_not_work,implement,False
+2166577,Casting from a list of lists of strings to list of lists of ints in Python,7,0.5249998946893567,do_not_work,way_of_using,False
+2260235,How to clear the Entry widget after a button is pressed in Tkinter?,7,0.5249659024465904,do_not_work,do_not_work,True
+463215,UnicodeEncodeError with BeautifulSoup 3.1.0.1 and Python 2.5.2,7,0.5249658684034936,do_not_work,do_not_work,True
+3853480,Django 1.2 : strange logging behavior,7,0.5249999912789071,do_not_work,do_not_work,True
+1947030,How does the Python conditional operator workaround work?,8,0.275000028991604,learning,how_why,False
+2236886,Passing arguments to the generic views Django queryset,8,0.2750002670862209,learning,way_of_using,False
+1926019,Python programming general questions,8,0.275000097401803,learning,learning,True
+4364136,How to set the width of a Button in tkinter?,8,0.4007851961076954,learning,way_of_using,False
+1030114,Calling an external program from python,8,0.2750000006287881,learning,way_of_using,False
+2191695,How to use listen on basic.return in python client of AMQP,8,0.5249667598575093,learning,way_of_using,False
+120926,Why does Python pep-8 strongly recommend spaces over tabs for indentation?,8,0.6999556656747415,learning,how_why,False
+2400840,Python: Finding differences between elements of a list,8,0.5249999971959941,learning,way_of_using,False
+4840851,Errors editing python with Vim,8,0.7749827567970453,learning,do_not_work,False
+2147148,twisted http client,8,0.5250000023929595,learning,learning,True
+5985832,Get the name of a list item,9,0.275000000805511,way_of_using,way_of_using,True
+4802157,How to make 3D plots in Python?,9,0.3666666675842059,way_of_using,way_of_using,True
+4970676,I am getting a syntax error on line 42(4th last line) and I cant fix it can someone please help?,9,0.3666667279143198,way_of_using,do_not_work,False
+5134250,Login with python - megaupload,9,0.4975065012657023,way_of_using,do_not_work,False
+796197,IronPython - Convert int to byte array,9,0.2750000075365502,way_of_using,way_of_using,True
+2014012,Python: How do you format a string % number with str.format(),9,0.5499817756225399,way_of_using,way_of_using,True
+4697885,How to use dynamic url in two handlers in Google App Engine?,9,0.5249930435028013,way_of_using,way_of_using,True
+1736348,Python binary diff,9,0.5249891955856203,way_of_using,way_of_using,True
+5928959,Python : Login to facebook to get user id... How to do it without a browser with python?,9,0.6999889344779202,way_of_using,way_of_using,True
