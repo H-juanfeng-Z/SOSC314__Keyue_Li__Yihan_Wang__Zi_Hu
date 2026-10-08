@@ -1,0 +1,113 @@
+{
+  "method": "Fresh isolated unpack of the exact release inputs; CPU only; no new model calls.",
+  "checks": [
+    {
+      "experiment": "measurement_expansion_20260930",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/analysis.json": true
+      }
+    },
+    {
+      "experiment": "semantic_diagnostics_20261005",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/newserver_20261007/analysis.json": true
+      }
+    },
+    {
+      "experiment": "rubric_check_20261007",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/analysis.json": true
+      }
+    },
+    {
+      "experiment": "evidence_dependence_20261007",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/analysis.json": true
+      }
+    },
+    {
+      "experiment": "association_sensitivity_20261007",
+      "script": "experiment.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/analysis.json": true
+      }
+    },
+    {
+      "experiment": "association_sensitivity_20261007",
+      "script": "threshold_check.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/threshold_analysis.json": true
+      }
+    },
+    {
+      "experiment": "answer_trajectory_20261007",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/analysis.json": true
+      }
+    },
+    {
+      "experiment": "integrated_20261008",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "analysis.json": true
+      }
+    },
+    {
+      "experiment": "explicit_evidence_20261008",
+      "script": "analyze.py",
+      "returncode": 0,
+      "archived_comparisons": {}
+    },
+    {
+      "experiment": "final_trajectory_20261008",
+      "script": "batch.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/cohorts.json": true,
+        "results/authors.json": true,
+        "results/intent_groups.json": true,
+        "results/cross_model.json": true,
+        "results/question_level.json": true
+      }
+    },
+    {
+      "experiment": "final_trajectory_20261008",
+      "script": "verify.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/verification.json": true
+      }
+    },
+    {
+      "experiment": "gpt_case_review_20261008",
+      "script": "analyze_review.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "case_results.json": true,
+        "review_comparison.json": true
+      }
+    },
+    {
+      "experiment": "post_review_20261008",
+      "script": "preserve_context.py",
+      "returncode": 0,
+      "archived_comparisons": {
+        "results/context_candidate_checks.json": true
+      }
+    }
+  ],
+  "limits": "Runtime/path fields are excluded from comparisons. Explicit-evidence summary and candidate tests do not prove semantic accuracy."
+}
