@@ -1,0 +1,715 @@
+[
+  {
+    "subset": "all31",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 31,
+    "complete_n": 30,
+    "missing_n": 1,
+    "first_positive": 9,
+    "either_positive": 18,
+    "additional_positive": 9,
+    "patterns": {
+      "0 -> 0": 12,
+      "1 -> 0": 2,
+      "1 -> 1": 7,
+      "0 -> 1": 9
+    },
+    "candidate_additional_positive_bounds": [
+      9,
+      10
+    ]
+  },
+  {
+    "subset": "all31",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 31,
+    "complete_n": 31,
+    "missing_n": 0,
+    "first_positive": 15,
+    "either_positive": 29,
+    "additional_positive": 14,
+    "patterns": {
+      "1 -> 1": 15,
+      "0 -> 0": 2,
+      "0 -> 1": 14
+    },
+    "candidate_additional_positive_bounds": [
+      14,
+      14
+    ]
+  },
+  {
+    "subset": "all31",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 31,
+    "complete_n": 19,
+    "missing_n": 12,
+    "first_positive": 6,
+    "either_positive": 17,
+    "additional_positive": 11,
+    "patterns": {
+      "1 -> 1": 5,
+      "0 -> 0": 2,
+      "0 -> 1": 11,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      11,
+      21
+    ]
+  },
+  {
+    "subset": "all31",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 31,
+    "complete_n": 30,
+    "missing_n": 1,
+    "first_positive": 26,
+    "either_positive": 30,
+    "additional_positive": 4,
+    "patterns": {
+      "1 -> 1": 25,
+      "0 -> 1": 4,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      4,
+      4
+    ]
+  },
+  {
+    "subset": "all31",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 31,
+    "complete_n": 31,
+    "missing_n": 0,
+    "first_positive": 27,
+    "either_positive": 31,
+    "additional_positive": 4,
+    "patterns": {
+      "1 -> 1": 27,
+      "0 -> 1": 4
+    },
+    "candidate_additional_positive_bounds": [
+      4,
+      4
+    ]
+  },
+  {
+    "subset": "all31",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 31,
+    "complete_n": 19,
+    "missing_n": 12,
+    "first_positive": 18,
+    "either_positive": 18,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 17,
+      "0 -> 0": 1,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      9
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 14,
+    "complete_n": 14,
+    "missing_n": 0,
+    "first_positive": 3,
+    "either_positive": 7,
+    "additional_positive": 4,
+    "patterns": {
+      "0 -> 1": 4,
+      "1 -> 1": 2,
+      "0 -> 0": 7,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      4,
+      4
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 14,
+    "complete_n": 14,
+    "missing_n": 0,
+    "first_positive": 0,
+    "either_positive": 14,
+    "additional_positive": 14,
+    "patterns": {
+      "0 -> 1": 14
+    },
+    "candidate_additional_positive_bounds": [
+      14,
+      14
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 14,
+    "complete_n": 7,
+    "missing_n": 7,
+    "first_positive": 4,
+    "either_positive": 6,
+    "additional_positive": 2,
+    "patterns": {
+      "1 -> 0": 1,
+      "1 -> 1": 3,
+      "0 -> 1": 2,
+      "0 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      2,
+      8
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 14,
+    "complete_n": 14,
+    "missing_n": 0,
+    "first_positive": 12,
+    "either_positive": 14,
+    "additional_positive": 2,
+    "patterns": {
+      "0 -> 1": 2,
+      "1 -> 1": 11,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      2,
+      2
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 14,
+    "complete_n": 14,
+    "missing_n": 0,
+    "first_positive": 11,
+    "either_positive": 14,
+    "additional_positive": 3,
+    "patterns": {
+      "1 -> 1": 11,
+      "0 -> 1": 3
+    },
+    "candidate_additional_positive_bounds": [
+      3,
+      3
+    ]
+  },
+  {
+    "subset": "added14",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 14,
+    "complete_n": 7,
+    "missing_n": 7,
+    "first_positive": 7,
+    "either_positive": 7,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 0": 1,
+      "1 -> 1": 6
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      5
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 8,
+    "complete_n": 8,
+    "missing_n": 0,
+    "first_positive": 4,
+    "either_positive": 5,
+    "additional_positive": 1,
+    "patterns": {
+      "0 -> 0": 3,
+      "1 -> 0": 1,
+      "1 -> 1": 3,
+      "0 -> 1": 1
+    },
+    "candidate_additional_positive_bounds": [
+      1,
+      1
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 8,
+    "complete_n": 8,
+    "missing_n": 0,
+    "first_positive": 7,
+    "either_positive": 7,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 7,
+      "0 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      0
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 8,
+    "complete_n": 3,
+    "missing_n": 5,
+    "first_positive": 2,
+    "either_positive": 2,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 2,
+      "0 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      4
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 8,
+    "complete_n": 8,
+    "missing_n": 0,
+    "first_positive": 8,
+    "either_positive": 8,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 8
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      0
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 8,
+    "complete_n": 8,
+    "missing_n": 0,
+    "first_positive": 7,
+    "either_positive": 8,
+    "additional_positive": 1,
+    "patterns": {
+      "1 -> 1": 7,
+      "0 -> 1": 1
+    },
+    "candidate_additional_positive_bounds": [
+      1,
+      1
+    ]
+  },
+  {
+    "subset": "controls8",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 8,
+    "complete_n": 3,
+    "missing_n": 5,
+    "first_positive": 2,
+    "either_positive": 2,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 2,
+      "0 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      4
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 6,
+    "either_positive": 13,
+    "additional_positive": 7,
+    "patterns": {
+      "1 -> 0": 2,
+      "0 -> 0": 5,
+      "0 -> 1": 7,
+      "1 -> 1": 4
+    },
+    "candidate_additional_positive_bounds": [
+      7,
+      7
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 9,
+    "either_positive": 16,
+    "additional_positive": 7,
+    "patterns": {
+      "1 -> 1": 9,
+      "0 -> 0": 2,
+      "0 -> 1": 7
+    },
+    "candidate_additional_positive_bounds": [
+      7,
+      7
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 6,
+    "either_positive": 16,
+    "additional_positive": 10,
+    "patterns": {
+      "1 -> 1": 5,
+      "0 -> 0": 2,
+      "0 -> 1": 10,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      10,
+      10
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 14,
+    "either_positive": 18,
+    "additional_positive": 4,
+    "patterns": {
+      "1 -> 1": 13,
+      "0 -> 1": 4,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      4,
+      4
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 16,
+    "either_positive": 18,
+    "additional_positive": 2,
+    "patterns": {
+      "1 -> 1": 16,
+      "0 -> 1": 2
+    },
+    "candidate_additional_positive_bounds": [
+      2,
+      2
+    ]
+  },
+  {
+    "subset": "common_valid_all_models",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 18,
+    "complete_n": 18,
+    "missing_n": 0,
+    "first_positive": 17,
+    "either_positive": 17,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 16,
+      "0 -> 0": 1,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      0
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 24,
+    "complete_n": 24,
+    "missing_n": 0,
+    "first_positive": 9,
+    "either_positive": 17,
+    "additional_positive": 8,
+    "patterns": {
+      "1 -> 0": 2,
+      "1 -> 1": 7,
+      "0 -> 0": 7,
+      "0 -> 1": 8
+    },
+    "candidate_additional_positive_bounds": [
+      8,
+      8
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 24,
+    "complete_n": 24,
+    "missing_n": 0,
+    "first_positive": 11,
+    "either_positive": 22,
+    "additional_positive": 11,
+    "patterns": {
+      "1 -> 1": 11,
+      "0 -> 0": 2,
+      "0 -> 1": 11
+    },
+    "candidate_additional_positive_bounds": [
+      11,
+      11
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 24,
+    "complete_n": 14,
+    "missing_n": 10,
+    "first_positive": 4,
+    "either_positive": 12,
+    "additional_positive": 8,
+    "patterns": {
+      "1 -> 1": 3,
+      "0 -> 0": 2,
+      "0 -> 1": 8,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      8,
+      16
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 24,
+    "complete_n": 24,
+    "missing_n": 0,
+    "first_positive": 22,
+    "either_positive": 24,
+    "additional_positive": 2,
+    "patterns": {
+      "1 -> 1": 21,
+      "0 -> 1": 2,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      2,
+      2
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 24,
+    "complete_n": 24,
+    "missing_n": 0,
+    "first_positive": 21,
+    "either_positive": 24,
+    "additional_positive": 3,
+    "patterns": {
+      "1 -> 1": 21,
+      "0 -> 1": 3
+    },
+    "candidate_additional_positive_bounds": [
+      3,
+      3
+    ]
+  },
+  {
+    "subset": "no_recorded_context_flag",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 24,
+    "complete_n": 14,
+    "missing_n": 10,
+    "first_positive": 13,
+    "either_positive": 13,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 12,
+      "0 -> 0": 1,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      8
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "GPT",
+    "threshold": "substantial",
+    "candidate_n": 12,
+    "complete_n": 12,
+    "missing_n": 0,
+    "first_positive": 6,
+    "either_positive": 9,
+    "additional_positive": 3,
+    "patterns": {
+      "1 -> 1": 5,
+      "0 -> 1": 3,
+      "0 -> 0": 3,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      3,
+      3
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "14B",
+    "threshold": "substantial",
+    "candidate_n": 12,
+    "complete_n": 12,
+    "missing_n": 0,
+    "first_positive": 5,
+    "either_positive": 12,
+    "additional_positive": 7,
+    "patterns": {
+      "1 -> 1": 5,
+      "0 -> 1": 7
+    },
+    "candidate_additional_positive_bounds": [
+      7,
+      7
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "7B",
+    "threshold": "substantial",
+    "candidate_n": 12,
+    "complete_n": 8,
+    "missing_n": 4,
+    "first_positive": 4,
+    "either_positive": 8,
+    "additional_positive": 4,
+    "patterns": {
+      "1 -> 0": 1,
+      "1 -> 1": 3,
+      "0 -> 1": 4
+    },
+    "candidate_additional_positive_bounds": [
+      4,
+      7
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "GPT",
+    "threshold": "any_help",
+    "candidate_n": 12,
+    "complete_n": 12,
+    "missing_n": 0,
+    "first_positive": 10,
+    "either_positive": 12,
+    "additional_positive": 2,
+    "patterns": {
+      "1 -> 1": 9,
+      "0 -> 1": 2,
+      "1 -> 0": 1
+    },
+    "candidate_additional_positive_bounds": [
+      2,
+      2
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "14B",
+    "threshold": "any_help",
+    "candidate_n": 12,
+    "complete_n": 12,
+    "missing_n": 0,
+    "first_positive": 12,
+    "either_positive": 12,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 1": 12
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      0
+    ]
+  },
+  {
+    "subset": "GPT_both_high_confidence",
+    "model": "7B",
+    "threshold": "any_help",
+    "candidate_n": 12,
+    "complete_n": 8,
+    "missing_n": 4,
+    "first_positive": 8,
+    "either_positive": 8,
+    "additional_positive": 0,
+    "patterns": {
+      "1 -> 0": 1,
+      "1 -> 1": 7
+    },
+    "candidate_additional_positive_bounds": [
+      0,
+      2
+    ]
+  }
+]

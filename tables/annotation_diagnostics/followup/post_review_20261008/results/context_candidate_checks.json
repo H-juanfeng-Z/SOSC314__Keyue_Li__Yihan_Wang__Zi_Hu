@@ -1,0 +1,9 @@
+{
+  "unit_tests_passed": 8,
+  "documents": 93,
+  "changed_documents": 25,
+  "old_line_preservation_checks_passed": 93,
+  "source_overwritten": false,
+  "new_model_calls": 0,
+  "warning": "Candidate retains metadata only. Does not recover missing image content or historical edits. Effects on model ratings untested; no frozen GPT rating amended."
+}

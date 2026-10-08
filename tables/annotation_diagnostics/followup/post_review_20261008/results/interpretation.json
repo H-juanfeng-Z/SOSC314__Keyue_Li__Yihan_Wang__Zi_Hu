@@ -1,0 +1,18 @@
+{
+  "verification": "All36 cells independently checked: complete+missing=candidate; either-positive minus first-positive=additional-positive; transition counts sum to complete cases.",
+  "common18": {
+    "substantial_additional": {"GPT":7,"14B":7,"7B":10},
+    "any_help_additional": {"GPT":4,"14B":2,"7B":0},
+    "GPT_14B_substantial_intersection": ["R008","R023","R026"],
+    "interpretation": "Equal aggregate7 counts conceal only3 shared cases. Outcome definitions change the question, not merely classifier accuracy."
+  },
+  "source_inspection": [
+    {"case_id":"R001","finding":"Five href targets were present in stored HTML but absent from readable text, including linked plot files. The EDIT marker was preserved. Linked contents remain uninspected."},
+    {"case_id":"R027","finding":"Stored HTML itself contains only two short paragraphs; no input file layout or image to recover in this snapshot."},
+    {"case_id":"R029","finding":"Stored HTML already has adjacent print statements on a single line and no screenshot image/link. Do not attribute these missing details to the readable conversion; upstream history remains unknown."}
+  ],
+  "next_design": "Before scale-up, use frozen rubric with a controlled original-versus-reference-preserving input comparison on the reviewed31 cases. Keep changed and unchanged inputs separate, detect long-input skips, do not treat a rating increase as improvement, and do not alter frozen GPT judgments without an amendment. This rerun has NOT yet been launched.",
+  "presentation_scope": "Exploratory relation between question intent and answer assistance; multi-answer trajectories are a secondary sensitivity analysis, not a new competing main project. Retain partial/substantial/uncertain distinctions and acknowledge missing context. Do not publish a validated rescue rate.",
+  "github_uploaded":false,
+  "reserved80_used":false
+}

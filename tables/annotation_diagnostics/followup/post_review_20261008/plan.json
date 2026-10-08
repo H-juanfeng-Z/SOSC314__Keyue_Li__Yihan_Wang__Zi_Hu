@@ -1,0 +1,12 @@
+{
+  "purpose": "Resolve measurement and input-fidelity issues before scaling or final presentation.",
+  "inputs": "Frozen GPT31/62 review and existing 390-question,715-answer development trajectories; no reserved data.",
+  "experiments": [
+    "Paired threshold sensitivity: substantial versus any usable help across GPT,14B,7B on identical reviewed cases; invalid/uncertain are missing, not negatives.",
+    "Review sensitivity to recorded context flags and confidence; exclusions are post-hoc descriptive and not corrections or accuracy estimates.",
+    "Raw HTML to model-input fidelity audit for all390 questions and715 answers, with reviewed-case raw HTML saved separately. Count absent href/image metadata and table structure, not semantic error rates.",
+    "Inspect cases with apparent absent screenshots or flattened code before designing any corrected-input rerun."
+  ],
+  "constraints": ["No changes to original ratings or datasets", "No GitHub uploads", "No new LLM labels treated as gold", "No external images downloaded or post code executed", "No population inference from targeted review", "No runtime padding or unnecessary GPU use"],
+  "stop_condition": "Report material input loss or incompatible outcome definitions before large-scale labeling."
+}

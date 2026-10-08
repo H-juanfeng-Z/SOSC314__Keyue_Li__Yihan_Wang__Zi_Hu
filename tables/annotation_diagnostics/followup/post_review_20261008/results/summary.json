@@ -1,0 +1,96 @@
+{
+  "threshold_cells": 36,
+  "input_audit": {
+    "question": {
+      "n": 390,
+      "reproduced_n": 390,
+      "href_not_visible_n": {
+        "documents": 52,
+        "instances": 77
+      },
+      "image_source_not_visible_n": {
+        "documents": 11,
+        "instances": 14
+      },
+      "alt_not_visible_n": {
+        "documents": 10,
+        "instances": 13
+      },
+      "table_n": {
+        "documents": 0,
+        "instances": 0
+      }
+    },
+    "answer": {
+      "n": 715,
+      "reproduced_n": 715,
+      "href_not_visible_n": {
+        "documents": 222,
+        "instances": 356
+      },
+      "image_source_not_visible_n": {
+        "documents": 21,
+        "instances": 25
+      },
+      "alt_not_visible_n": {
+        "documents": 21,
+        "instances": 25
+      },
+      "table_n": {
+        "documents": 0,
+        "instances": 0
+      }
+    }
+  },
+  "reviewed_question_ids": [
+    30365069,
+    24460725,
+    38181710,
+    6382705,
+    1364173,
+    706101,
+    18944345,
+    12336239,
+    9174799,
+    29069405,
+    5406326,
+    1484963,
+    31082449,
+    38696101,
+    6878642,
+    37353403,
+    10003207,
+    18813912,
+    20648592,
+    31380578,
+    36952763,
+    40063242,
+    4464809,
+    19684697,
+    19370236,
+    3844556,
+    5256845,
+    7435275,
+    22582146,
+    34832212,
+    16763491
+  ],
+  "context_flag_exclusions": [
+    "R001",
+    "R012",
+    "R020",
+    "R021",
+    "R024",
+    "R027",
+    "R029"
+  ],
+  "limits": [
+    "Missing HTML attributes are not automatically material semantic losses.",
+    "Archived HTML may itself already lack original content.",
+    "No external linked content retrieved; no inference of image contents.",
+    "Post-hoc exclusions are descriptive, not corrected estimates.",
+    "Threshold changes define different outcomes, not improved accuracy.",
+    "No GPT labels extrapolated to full cohort; no model labels overwritten."
+  ],
+  "completed": true
+}
