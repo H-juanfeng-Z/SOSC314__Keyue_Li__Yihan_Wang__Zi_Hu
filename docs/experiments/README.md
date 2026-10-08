@@ -5,6 +5,7 @@
 - [Technical-topic methods](technical_topics.md)
 - [NMF example questions](nmf_example_questions.md)
 - [Code navigation](../../scripts/README.md)
+- [Measurement sensitivity and answer trajectories](measurement_followup.md): frozen-data replay, exploratory associations, GPT case review and input-fidelity checks.
 - [NMF_example_questions_advanced](topic_model_advanced)
 
 ## Location migration

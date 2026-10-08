@@ -14,3 +14,5 @@ The summary script retains historical result names `results/helpfulness_{15b,3b,
 # Additional measurement workflows
 
 The [measurement experiment guide](../../docs/experiments/request_first_measurement.md) documents `run_measurement.py`, `run_scope_calibration.py`, `run_bridge.py`, preparation, tests and CPU summaries. These are development diagnostics, not human-validated accuracy measurements.
+
+The [follow-up programs](followup/README.md) add measurement sensitivity, exploratory association analyses, multi-answer trajectories and GPT review with a frozen-data CPU replay entry point.

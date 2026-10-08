@@ -140,3 +140,5 @@ project develops.
 # Measurement follow-up
 
 Completed intent and first-answer helpfulness diagnostics, reproducible result summaries and the report figure are documented in [the measurement guide](docs/experiments/request_first_measurement.md). Technical-topic labels and intent labels represent different concepts; their integration remains a subsequent analysis step.
+
+Subsequent [measurement sensitivity and answer-trajectory analyses](docs/experiments/measurement_followup.md) include frozen inputs, CPU reproduction commands, cross-model diagnostics, GPT case review and an input-fidelity audit. These analyses test measurement limitations; automated judgments are not verified answer correctness or human gold labels.
