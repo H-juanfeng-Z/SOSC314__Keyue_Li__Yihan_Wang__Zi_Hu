@@ -1,0 +1,6 @@
+{"time": 1791432554.381599, "stage": "integrity_complete", "questions": 390, "answers": 715}
+{"time": 1791432555.0770085, "stage": "cohort_model_complete", "model": "14B", "cells": 18}
+{"time": 1791432555.362026, "stage": "cohort_model_complete", "model": "7B", "cells": 36}
+{"time": 1791432555.3641675, "stage": "cohorts_complete"}
+{"time": 1791432555.3779693, "stage": "author_intent_sensitivity_complete"}
+{"time": 1791432555.3801699, "stage": "finished", "elapsed_seconds": 1.0654501914978027}

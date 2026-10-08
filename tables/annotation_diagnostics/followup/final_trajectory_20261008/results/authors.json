@@ -1,0 +1,386 @@
+[
+  {
+    "k": 2,
+    "complete_n": 183,
+    "all_authors_known_n": 176,
+    "unknown_author_questions": 7,
+    "known_any_positive": 166,
+    "known_other_positive": 162,
+    "no_other_answer_in_prefix": 0,
+    "rescues_by_earliest_provider": {
+      "False": 12,
+      "True": 2
+    },
+    "examples": [
+      {
+        "question_id": 3844556,
+        "labels": [
+          "unhelpful",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          3844566
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 189.0
+      },
+      {
+        "question_id": 36952763,
+        "labels": [
+          "unhelpful",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          36956440
+        ],
+        "earliest_provider": "True",
+        "delay_seconds": 22492.0
+      },
+      {
+        "question_id": 40063242,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          40063308
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 380.0
+      },
+      {
+        "question_id": 37353403,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          37355427
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 8037.0
+      },
+      {
+        "question_id": 4464809,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          4464838
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 254.0
+      },
+      {
+        "question_id": 19370236,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          19370367
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 739.0
+      },
+      {
+        "question_id": 20648592,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          20648776
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 1506.0
+      },
+      {
+        "question_id": 6878642,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          6893852
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 196073.0
+      },
+      {
+        "question_id": 31082449,
+        "labels": [
+          "unhelpful",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          31137470
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 310745.0
+      },
+      {
+        "question_id": 5256845,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          5256942
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 835.0
+      },
+      {
+        "question_id": 16763491,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          16763602
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 937.0
+      },
+      {
+        "question_id": 19684697,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          19694041
+        ],
+        "earliest_provider": "True",
+        "delay_seconds": 25759.0
+      },
+      {
+        "question_id": 12336239,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          13905835
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 8534370.0
+      },
+      {
+        "question_id": 38696101,
+        "labels": [
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          38697308
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 3852.0
+      }
+    ]
+  },
+  {
+    "k": 3,
+    "complete_n": 80,
+    "all_authors_known_n": 79,
+    "unknown_author_questions": 1,
+    "known_any_positive": 76,
+    "known_other_positive": 76,
+    "no_other_answer_in_prefix": 0,
+    "rescues_by_earliest_provider": {
+      "False": 11
+    },
+    "examples": [
+      {
+        "question_id": 3844556,
+        "labels": [
+          "unhelpful",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          3844566
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 189.0
+      },
+      {
+        "question_id": 37353403,
+        "labels": [
+          "partial",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          37355427
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 8037.0
+      },
+      {
+        "question_id": 4464809,
+        "labels": [
+          "partial",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          4464838
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 254.0
+      },
+      {
+        "question_id": 1364173,
+        "labels": [
+          "unhelpful",
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          1364409
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 3291.0
+      },
+      {
+        "question_id": 4161460,
+        "labels": [
+          "partial",
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          4163921
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 25823.0
+      },
+      {
+        "question_id": 5943418,
+        "labels": [
+          "partial",
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          16009279
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 61026891.0
+      },
+      {
+        "question_id": 19370236,
+        "labels": [
+          "partial",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          19370367
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 739.0
+      },
+      {
+        "question_id": 35697367,
+        "labels": [
+          "partial",
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          35840937
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 603344.0
+      },
+      {
+        "question_id": 7435275,
+        "labels": [
+          "partial",
+          "partial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          7435946
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 3705.0
+      },
+      {
+        "question_id": 16763491,
+        "labels": [
+          "partial",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          16763602
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 937.0
+      },
+      {
+        "question_id": 12336239,
+        "labels": [
+          "partial",
+          "substantial",
+          "partial"
+        ],
+        "first_positive_answer_ids": [
+          13905835
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 8534370.0
+      }
+    ]
+  },
+  {
+    "k": 5,
+    "complete_n": 17,
+    "all_authors_known_n": 16,
+    "unknown_author_questions": 1,
+    "known_any_positive": 15,
+    "known_other_positive": 15,
+    "no_other_answer_in_prefix": 0,
+    "rescues_by_earliest_provider": {
+      "False": 2
+    },
+    "examples": [
+      {
+        "question_id": 4161460,
+        "labels": [
+          "partial",
+          "partial",
+          "substantial",
+          "substantial",
+          "substantial"
+        ],
+        "first_positive_answer_ids": [
+          4163921
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 25823.0
+      },
+      {
+        "question_id": 5833441,
+        "labels": [
+          "partial",
+          "partial",
+          "partial",
+          "substantial",
+          "partial"
+        ],
+        "first_positive_answer_ids": [
+          5833555
+        ],
+        "earliest_provider": "False",
+        "delay_seconds": 684.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "k": 2,
+    "hours": 24,
+    "n": 183,
+    "observed_positive_by_window": 164,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 2,
+    "hours": 168,
+    "n": 183,
+    "observed_positive_by_window": 171,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 2,
+    "hours": 720,
+    "n": 183,
+    "observed_positive_by_window": 171,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 3,
+    "hours": 24,
+    "n": 80,
+    "observed_positive_by_window": 72,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 3,
+    "hours": 168,
+    "n": 80,
+    "observed_positive_by_window": 75,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 3,
+    "hours": 720,
+    "n": 80,
+    "observed_positive_by_window": 75,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 5,
+    "hours": 24,
+    "n": 17,
+    "observed_positive_by_window": 16,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 5,
+    "hours": 168,
+    "n": 17,
+    "observed_positive_by_window": 16,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  },
+  {
+    "k": 5,
+    "hours": 720,
+    "n": 17,
+    "observed_positive_by_window": 16,
+    "warning": "Absence within window is not failure; no validated archive cutoff. Only selected questions and saved first k answers."
+  }
+]

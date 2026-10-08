@@ -1,0 +1,22 @@
+{
+  "purpose": "Move from first-answer scoring to observed answer trajectories and self/other distinctions.",
+  "sample": "All390 existing development questions, first5 observed answers by timestamp and ID; not population representative or full discussions.",
+  "rating": "Fixed no-example Qwen rubric; author, votes, rank and timing hidden; answers independently judged with question, not earlier answers.",
+  "outcomes": [
+    "first answer versus any observed answer substantial",
+    "later improvement among questions with at least2 observed answers and valid first rating",
+    "self/other/unknown descriptive groups",
+    "descriptive delay to first observed substantial answer; no survival model without archive-censoring metadata"
+  ],
+  "missing": "Never code invalid/skipped as unhelpful. Report complete and partial observed trajectories separately.",
+  "limitations": [
+    "Answer text and question text may be edited snapshots",
+    "More answers create more opportunities for any-help success",
+    "No causal interpretation or verified correctness",
+    "No comment data, no complementary-answer synthesis",
+    "Five-answer cap and snapshot observation window",
+    "Self-answer unknown if either author ID missing"
+  ],
+  "features": "Simple observed presentation counts exported for later intent-adjusted association; not quality labels.",
+  "budget": "One GPU, four threads,3h cap. Preserve partial outputs, no automatic resume or Github upload."
+}

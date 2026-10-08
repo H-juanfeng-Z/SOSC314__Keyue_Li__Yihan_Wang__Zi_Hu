@@ -1,0 +1,426 @@
+{
+  "median_readable_tokens": 122.0,
+  "comparisons": [
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 10,
+      "absent_n": 2,
+      "present_substantial": 8,
+      "absent_substantial": 2,
+      "difference": null
+    },
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 1,
+      "absent_n": 11,
+      "present_substantial": 1,
+      "absent_substantial": 9,
+      "difference": null
+    },
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 7,
+      "absent_n": 5,
+      "present_substantial": 5,
+      "absent_substantial": 5,
+      "difference": null
+    },
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 10,
+      "absent_n": 2,
+      "present_substantial": 9,
+      "absent_substantial": 2,
+      "difference": null
+    },
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 1,
+      "absent_n": 11,
+      "present_substantial": 1,
+      "absent_substantial": 10,
+      "difference": null
+    },
+    {
+      "intent": "api_change",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 7,
+      "absent_n": 5,
+      "present_substantial": 6,
+      "absent_substantial": 5,
+      "difference": null
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 236,
+      "absent_n": 56,
+      "present_substantial": 172,
+      "absent_substantial": 28,
+      "difference": 0.22881355932203384
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 56,
+      "absent_n": 236,
+      "present_substantial": 38,
+      "absent_substantial": 162,
+      "difference": -0.007869249394673039
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 151,
+      "absent_n": 141,
+      "present_substantial": 99,
+      "absent_substantial": 101,
+      "difference": -0.06068291766474099
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 236,
+      "absent_n": 56,
+      "present_substantial": 214,
+      "absent_substantial": 42,
+      "difference": 0.15677966101694918
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 56,
+      "absent_n": 236,
+      "present_substantial": 50,
+      "absent_substantial": 206,
+      "difference": 0.01997578692493951
+    },
+    {
+      "intent": "api_usage",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 151,
+      "absent_n": 141,
+      "present_substantial": 133,
+      "absent_substantial": 123,
+      "difference": 0.008454276454839982
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 79,
+      "absent_n": 14,
+      "present_substantial": 55,
+      "absent_substantial": 5,
+      "difference": 0.3390596745027125
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 21,
+      "absent_n": 72,
+      "present_substantial": 16,
+      "absent_substantial": 44,
+      "difference": 0.1507936507936507
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 60,
+      "absent_n": 33,
+      "present_substantial": 39,
+      "absent_substantial": 21,
+      "difference": 0.013636363636363669
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 79,
+      "absent_n": 14,
+      "present_substantial": 70,
+      "absent_substantial": 11,
+      "difference": 0.10036166365280286
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 21,
+      "absent_n": 72,
+      "present_substantial": 20,
+      "absent_substantial": 61,
+      "difference": 0.10515873015873012
+    },
+    {
+      "intent": "conceptual",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 60,
+      "absent_n": 33,
+      "present_substantial": 54,
+      "absent_substantial": 27,
+      "difference": 0.08181818181818179
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 222,
+      "absent_n": 27,
+      "present_substantial": 159,
+      "absent_substantial": 16,
+      "difference": 0.12362362362362367
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 45,
+      "absent_n": 204,
+      "present_substantial": 34,
+      "absent_substantial": 141,
+      "difference": 0.06437908496732025
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 146,
+      "absent_n": 103,
+      "present_substantial": 96,
+      "absent_substantial": 79,
+      "difference": -0.10945604468679349
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 222,
+      "absent_n": 27,
+      "present_substantial": 206,
+      "absent_substantial": 19,
+      "difference": 0.22422422422422417
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 45,
+      "absent_n": 204,
+      "present_substantial": 43,
+      "absent_substantial": 182,
+      "difference": 0.06339869281045751
+    },
+    {
+      "intent": "discrepancy",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 146,
+      "absent_n": 103,
+      "present_substantial": 131,
+      "absent_substantial": 94,
+      "difference": -0.015361085250698236
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 176,
+      "absent_n": 14,
+      "present_substantial": 124,
+      "absent_substantial": 10,
+      "difference": -0.009740259740259716
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 35,
+      "absent_n": 155,
+      "present_substantial": 26,
+      "absent_substantial": 108,
+      "difference": 0.04608294930875578
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 116,
+      "absent_n": 74,
+      "present_substantial": 77,
+      "absent_substantial": 57,
+      "difference": -0.10647716682199437
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 176,
+      "absent_n": 14,
+      "present_substantial": 164,
+      "absent_substantial": 11,
+      "difference": 0.14610389610389607
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 35,
+      "absent_n": 155,
+      "present_substantial": 33,
+      "absent_substantial": 142,
+      "difference": 0.026728110599078314
+    },
+    {
+      "intent": "errors",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 116,
+      "absent_n": 74,
+      "present_substantial": 104,
+      "absent_substantial": 71,
+      "difference": -0.06290773532152838
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 17,
+      "absent_n": 4,
+      "present_substantial": 10,
+      "absent_substantial": 0,
+      "difference": null
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 5,
+      "absent_n": 16,
+      "present_substantial": 2,
+      "absent_substantial": 8,
+      "difference": null
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 16,
+      "absent_n": 5,
+      "present_substantial": 9,
+      "absent_substantial": 1,
+      "difference": null
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 17,
+      "absent_n": 4,
+      "present_substantial": 15,
+      "absent_substantial": 2,
+      "difference": null
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 5,
+      "absent_n": 16,
+      "present_substantial": 4,
+      "absent_substantial": 13,
+      "difference": null
+    },
+    {
+      "intent": "learning",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 16,
+      "absent_n": 5,
+      "present_substantial": 15,
+      "absent_substantial": 2,
+      "difference": null
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_control",
+      "feature": "code_present",
+      "present_n": 202,
+      "absent_n": 51,
+      "present_substantial": 147,
+      "absent_substantial": 21,
+      "difference": 0.3159580663948748
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_control",
+      "feature": "link_present",
+      "present_n": 56,
+      "absent_n": 197,
+      "present_substantial": 37,
+      "absent_substantial": 131,
+      "difference": -0.004260333575054398
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_control",
+      "feature": "longer_than_median",
+      "present_n": 148,
+      "absent_n": 105,
+      "present_substantial": 94,
+      "absent_substantial": 74,
+      "difference": -0.06962676962676972
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_no_examples",
+      "feature": "code_present",
+      "present_n": 202,
+      "absent_n": 51,
+      "present_substantial": 184,
+      "absent_substantial": 38,
+      "difference": 0.16579304989322463
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_no_examples",
+      "feature": "link_present",
+      "present_n": 56,
+      "absent_n": 197,
+      "present_substantial": 51,
+      "absent_substantial": 171,
+      "difference": 0.04269398114575773
+    },
+    {
+      "intent": "review",
+      "helpfulness": "joint_no_examples",
+      "feature": "longer_than_median",
+      "present_n": 148,
+      "absent_n": 105,
+      "present_substantial": 129,
+      "absent_substantial": 93,
+      "difference": -0.014092664092664076
+    }
+  ],
+  "limits": "Descriptive pooled development data; overlapping intent strata; no year/topic adjustment; edited snapshots may postdate answers; whitespace token count not linguistic word count; no significance claims."
+}

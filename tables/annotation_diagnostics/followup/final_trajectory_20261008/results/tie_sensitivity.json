@@ -1,0 +1,20 @@
+[
+  {
+    "k": 2,
+    "original_n": 183,
+    "no_ties_n": 183,
+    "no_ties_rescue": 14
+  },
+  {
+    "k": 3,
+    "original_n": 80,
+    "no_ties_n": 80,
+    "no_ties_rescue": 11
+  },
+  {
+    "k": 5,
+    "original_n": 17,
+    "no_ties_n": 17,
+    "no_ties_rescue": 2
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "independent_counts": [
+    {
+      "k": 2,
+      "n": 183,
+      "first": 159,
+      "any": 173,
+      "boundary_ties": 0,
+      "second_answer_providers": {
+        "False": 12,
+        "True": 2
+      },
+      "matched": true
+    },
+    {
+      "k": 3,
+      "n": 80,
+      "first": 66,
+      "any": 77,
+      "boundary_ties": 0,
+      "second_answer_providers": {},
+      "matched": true
+    },
+    {
+      "k": 5,
+      "n": 17,
+      "first": 14,
+      "any": 16,
+      "boundary_ties": 0,
+      "second_answer_providers": {},
+      "matched": true
+    }
+  ],
+  "limits": "Independent implementation of count audit, NOT independent semantic validation."
+}

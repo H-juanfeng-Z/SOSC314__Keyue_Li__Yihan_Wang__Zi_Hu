@@ -1,0 +1,39 @@
+[
+  {
+    "k": 2,
+    "valid14": 183,
+    "valid7": 69,
+    "common_n": 69,
+    "rescue_transitions": {
+      "0 -> 0": 53,
+      "0 -> 1": 9,
+      "1 -> 0": 5,
+      "1 -> 1": 2
+    },
+    "coverage_limit": "Common-valid results may be selected by7B formatting failures."
+  },
+  {
+    "k": 3,
+    "valid14": 80,
+    "valid7": 25,
+    "common_n": 25,
+    "rescue_transitions": {
+      "0 -> 0": 14,
+      "1 -> 0": 2,
+      "0 -> 1": 4,
+      "1 -> 1": 5
+    },
+    "coverage_limit": "Common-valid results may be selected by7B formatting failures."
+  },
+  {
+    "k": 5,
+    "valid14": 17,
+    "valid7": 2,
+    "common_n": 2,
+    "rescue_transitions": {
+      "0 -> 0": 1,
+      "1 -> 1": 1
+    },
+    "coverage_limit": "Common-valid results may be selected by7B formatting failures."
+  }
+]

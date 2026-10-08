@@ -1,0 +1,1139 @@
+[
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 186,
+    "complete_n": 183,
+    "excluded_invalid_n": 3,
+    "first_positive": 159,
+    "by_rank_positive": [
+      159,
+      173
+    ],
+    "rescue_n": 14,
+    "first_negative_n": 24,
+    "increment": 0.07650273224043716,
+    "increment_bootstrap95": [
+      0.04371584699453552,
+      0.12021857923497267
+    ],
+    "conditional_rescue_rate": 0.5833333333333334,
+    "conditional_rescue_bootstrap95": [
+      0.375,
+      0.7916666666666666
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9408602150537635,
+      0.946236559139785
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 100,
+    "complete_n": 98,
+    "excluded_invalid_n": 2,
+    "first_positive": 89,
+    "by_rank_positive": [
+      89,
+      94
+    ],
+    "rescue_n": 5,
+    "first_negative_n": 9,
+    "increment": 0.05102040816326531,
+    "increment_bootstrap95": [
+      0.01020408163265306,
+      0.10204081632653061
+    ],
+    "conditional_rescue_rate": 0.5555555555555556,
+    "conditional_rescue_bootstrap95": [
+      0.2222222222222222,
+      0.8888888888888888
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.96,
+      0.96
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 86,
+    "complete_n": 85,
+    "excluded_invalid_n": 1,
+    "first_positive": 70,
+    "by_rank_positive": [
+      70,
+      79
+    ],
+    "rescue_n": 9,
+    "first_negative_n": 15,
+    "increment": 0.10588235294117647,
+    "increment_bootstrap95": [
+      0.047058823529411764,
+      0.17647058823529413
+    ],
+    "conditional_rescue_rate": 0.6,
+    "conditional_rescue_bootstrap95": [
+      0.3333333333333333,
+      0.8666666666666667
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9186046511627907,
+      0.9302325581395349
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 186,
+    "complete_n": 183,
+    "excluded_invalid_n": 3,
+    "first_positive": 179,
+    "by_rank_positive": [
+      179,
+      183
+    ],
+    "rescue_n": 4,
+    "first_negative_n": 4,
+    "increment": 0.02185792349726776,
+    "increment_bootstrap95": [
+      0.00546448087431694,
+      0.04371584699453552
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9946236559139785,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 100,
+    "complete_n": 98,
+    "excluded_invalid_n": 2,
+    "first_positive": 96,
+    "by_rank_positive": [
+      96,
+      98
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 2,
+    "increment": 0.02040816326530612,
+    "increment_bootstrap95": [
+      0.0,
+      0.05102040816326531
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      1.0,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 86,
+    "complete_n": 85,
+    "excluded_invalid_n": 1,
+    "first_positive": 83,
+    "by_rank_positive": [
+      83,
+      85
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 2,
+    "increment": 0.023529411764705882,
+    "increment_bootstrap95": [
+      0.0,
+      0.058823529411764705
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9883720930232558,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 82,
+    "complete_n": 80,
+    "excluded_invalid_n": 2,
+    "first_positive": 66,
+    "by_rank_positive": [
+      66,
+      72,
+      77
+    ],
+    "rescue_n": 11,
+    "first_negative_n": 14,
+    "increment": 0.1375,
+    "increment_bootstrap95": [
+      0.0625,
+      0.2125
+    ],
+    "conditional_rescue_rate": 0.7857142857142857,
+    "conditional_rescue_bootstrap95": [
+      0.5714285714285714,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9512195121951219,
+      0.9634146341463414
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 41,
+    "complete_n": 40,
+    "excluded_invalid_n": 1,
+    "first_positive": 35,
+    "by_rank_positive": [
+      35,
+      37,
+      38
+    ],
+    "rescue_n": 3,
+    "first_negative_n": 5,
+    "increment": 0.075,
+    "increment_bootstrap95": [
+      0.0,
+      0.175
+    ],
+    "conditional_rescue_rate": 0.6,
+    "conditional_rescue_bootstrap95": [
+      0.2,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9512195121951219,
+      0.9512195121951219
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 41,
+    "complete_n": 40,
+    "excluded_invalid_n": 1,
+    "first_positive": 31,
+    "by_rank_positive": [
+      31,
+      35,
+      39
+    ],
+    "rescue_n": 8,
+    "first_negative_n": 9,
+    "increment": 0.2,
+    "increment_bootstrap95": [
+      0.075,
+      0.325
+    ],
+    "conditional_rescue_rate": 0.8888888888888888,
+    "conditional_rescue_bootstrap95": [
+      0.6666666666666666,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9512195121951219,
+      0.975609756097561
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 82,
+    "complete_n": 80,
+    "excluded_invalid_n": 2,
+    "first_positive": 78,
+    "by_rank_positive": [
+      78,
+      80,
+      80
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 2,
+    "increment": 0.025,
+    "increment_bootstrap95": [
+      0.0,
+      0.0625
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9878048780487805,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 41,
+    "complete_n": 40,
+    "excluded_invalid_n": 1,
+    "first_positive": 38,
+    "by_rank_positive": [
+      38,
+      40,
+      40
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 2,
+    "increment": 0.05,
+    "increment_bootstrap95": [
+      0.0,
+      0.125
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      1.0,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 41,
+    "complete_n": 40,
+    "excluded_invalid_n": 1,
+    "first_positive": 40,
+    "by_rank_positive": [
+      40,
+      40,
+      40
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.975609756097561,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 18,
+    "complete_n": 17,
+    "excluded_invalid_n": 1,
+    "first_positive": 14,
+    "by_rank_positive": [
+      14,
+      14,
+      15,
+      16,
+      16
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 3,
+    "increment": 0.11764705882352941,
+    "increment_bootstrap95": [
+      0.0,
+      0.29411764705882354
+    ],
+    "conditional_rescue_rate": 0.6666666666666666,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.8888888888888888,
+      0.9444444444444444
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 11,
+    "complete_n": 11,
+    "excluded_invalid_n": 0,
+    "first_positive": 10,
+    "by_rank_positive": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 1,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": 0.0,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9090909090909091,
+      0.9090909090909091
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 7,
+    "complete_n": 6,
+    "excluded_invalid_n": 1,
+    "first_positive": 4,
+    "by_rank_positive": [
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "rescue_n": 2,
+    "first_negative_n": 2,
+    "increment": 0.3333333333333333,
+    "increment_bootstrap95": [
+      0.0,
+      0.6666666666666666
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.8571428571428571,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 18,
+    "complete_n": 17,
+    "excluded_invalid_n": 1,
+    "first_positive": 17,
+    "by_rank_positive": [
+      17,
+      17,
+      17,
+      17,
+      17
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.9444444444444444,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 11,
+    "complete_n": 11,
+    "excluded_invalid_n": 0,
+    "first_positive": 11,
+    "by_rank_positive": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      1.0,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "14B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 7,
+    "complete_n": 6,
+    "excluded_invalid_n": 1,
+    "first_positive": 6,
+    "by_rank_positive": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.8571428571428571,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 186,
+    "complete_n": 69,
+    "excluded_invalid_n": 117,
+    "first_positive": 46,
+    "by_rank_positive": [
+      46,
+      57
+    ],
+    "rescue_n": 11,
+    "first_negative_n": 23,
+    "increment": 0.15942028985507245,
+    "increment_bootstrap95": [
+      0.07246376811594203,
+      0.2463768115942029
+    ],
+    "conditional_rescue_rate": 0.4782608695652174,
+    "conditional_rescue_bootstrap95": [
+      0.2608695652173913,
+      0.6521739130434783
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.6182795698924731,
+      0.9354838709677419
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 100,
+    "complete_n": 38,
+    "excluded_invalid_n": 62,
+    "first_positive": 28,
+    "by_rank_positive": [
+      28,
+      32
+    ],
+    "rescue_n": 4,
+    "first_negative_n": 10,
+    "increment": 0.10526315789473684,
+    "increment_bootstrap95": [
+      0.02631578947368421,
+      0.21052631578947367
+    ],
+    "conditional_rescue_rate": 0.4,
+    "conditional_rescue_bootstrap95": [
+      0.1,
+      0.7
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.68,
+      0.94
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 86,
+    "complete_n": 31,
+    "excluded_invalid_n": 55,
+    "first_positive": 18,
+    "by_rank_positive": [
+      18,
+      25
+    ],
+    "rescue_n": 7,
+    "first_negative_n": 13,
+    "increment": 0.22580645161290322,
+    "increment_bootstrap95": [
+      0.0967741935483871,
+      0.3870967741935484
+    ],
+    "conditional_rescue_rate": 0.5384615384615384,
+    "conditional_rescue_bootstrap95": [
+      0.23076923076923078,
+      0.7692307692307693
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.5465116279069767,
+      0.9302325581395349
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 186,
+    "complete_n": 69,
+    "excluded_invalid_n": 117,
+    "first_positive": 68,
+    "by_rank_positive": [
+      68,
+      68
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 1,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": 0.0,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7741935483870968,
+      0.9946236559139785
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 100,
+    "complete_n": 38,
+    "excluded_invalid_n": 62,
+    "first_positive": 37,
+    "by_rank_positive": [
+      37,
+      37
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 1,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": 0.0,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.81,
+      0.99
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 2,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 86,
+    "complete_n": 31,
+    "excluded_invalid_n": 55,
+    "first_positive": 31,
+    "by_rank_positive": [
+      31,
+      31
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.7325581395348837,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 82,
+    "complete_n": 25,
+    "excluded_invalid_n": 57,
+    "first_positive": 13,
+    "by_rank_positive": [
+      13,
+      18,
+      22
+    ],
+    "rescue_n": 9,
+    "first_negative_n": 12,
+    "increment": 0.36,
+    "increment_bootstrap95": [
+      0.16,
+      0.56
+    ],
+    "conditional_rescue_rate": 0.75,
+    "conditional_rescue_bootstrap95": [
+      0.5,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7682926829268293,
+      0.9634146341463414
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 41,
+    "complete_n": 15,
+    "excluded_invalid_n": 26,
+    "first_positive": 9,
+    "by_rank_positive": [
+      9,
+      10,
+      13
+    ],
+    "rescue_n": 4,
+    "first_negative_n": 6,
+    "increment": 0.26666666666666666,
+    "increment_bootstrap95": [
+      0.06666666666666667,
+      0.4666666666666667
+    ],
+    "conditional_rescue_rate": 0.6666666666666666,
+    "conditional_rescue_bootstrap95": [
+      0.3333333333333333,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7560975609756098,
+      0.9512195121951219
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 41,
+    "complete_n": 10,
+    "excluded_invalid_n": 31,
+    "first_positive": 4,
+    "by_rank_positive": [
+      4,
+      8,
+      9
+    ],
+    "rescue_n": 5,
+    "first_negative_n": 6,
+    "increment": 0.5,
+    "increment_bootstrap95": [
+      0.2,
+      0.8
+    ],
+    "conditional_rescue_rate": 0.8333333333333334,
+    "conditional_rescue_bootstrap95": [
+      0.5,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7804878048780488,
+      0.975609756097561
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 82,
+    "complete_n": 25,
+    "excluded_invalid_n": 57,
+    "first_positive": 24,
+    "by_rank_positive": [
+      24,
+      24,
+      25
+    ],
+    "rescue_n": 1,
+    "first_negative_n": 1,
+    "increment": 0.04,
+    "increment_bootstrap95": [
+      0.0,
+      0.12
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.8902439024390244,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 41,
+    "complete_n": 15,
+    "excluded_invalid_n": 26,
+    "first_positive": 14,
+    "by_rank_positive": [
+      14,
+      14,
+      15
+    ],
+    "rescue_n": 1,
+    "first_negative_n": 1,
+    "increment": 0.06666666666666667,
+    "increment_bootstrap95": [
+      0.0,
+      0.2
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9024390243902439,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 3,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 41,
+    "complete_n": 10,
+    "excluded_invalid_n": 31,
+    "first_positive": 10,
+    "by_rank_positive": [
+      10,
+      10,
+      10
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.8780487804878049,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 18,
+    "complete_n": 2,
+    "excluded_invalid_n": 16,
+    "first_positive": 0,
+    "by_rank_positive": [
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "rescue_n": 1,
+    "first_negative_n": 2,
+    "increment": 0.5,
+    "increment_bootstrap95": [
+      0.0,
+      1.0
+    ],
+    "conditional_rescue_rate": 0.5,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7222222222222222,
+      0.9444444444444444
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "primary",
+    "candidate_n": 11,
+    "complete_n": 1,
+    "excluded_invalid_n": 10,
+    "first_positive": 0,
+    "by_rank_positive": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 1,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": 0.0,
+    "conditional_rescue_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7272727272727273,
+      0.9090909090909091
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "substantial",
+    "phase": "extension",
+    "candidate_n": 7,
+    "complete_n": 1,
+    "excluded_invalid_n": 6,
+    "first_positive": 0,
+    "by_rank_positive": [
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "rescue_n": 1,
+    "first_negative_n": 1,
+    "increment": 1.0,
+    "increment_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "conditional_rescue_rate": 1.0,
+    "conditional_rescue_bootstrap95": [
+      1.0,
+      1.0
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.7142857142857143,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "pooled",
+    "candidate_n": 18,
+    "complete_n": 2,
+    "excluded_invalid_n": 16,
+    "first_positive": 2,
+    "by_rank_positive": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.8888888888888888,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "primary",
+    "candidate_n": 11,
+    "complete_n": 1,
+    "excluded_invalid_n": 10,
+    "first_positive": 1,
+    "by_rank_positive": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.9090909090909091,
+      1.0
+    ],
+    "tie_questions": 0
+  },
+  {
+    "model": "7B",
+    "k": 5,
+    "threshold": "any_help",
+    "phase": "extension",
+    "candidate_n": 7,
+    "complete_n": 1,
+    "excluded_invalid_n": 6,
+    "first_positive": 1,
+    "by_rank_positive": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "rescue_n": 0,
+    "first_negative_n": 0,
+    "increment": 0.0,
+    "increment_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "conditional_rescue_rate": null,
+    "conditional_rescue_bootstrap95": null,
+    "all_candidate_any_positive_bounds": [
+      0.8571428571428571,
+      1.0
+    ],
+    "tie_questions": 0
+  }
+]

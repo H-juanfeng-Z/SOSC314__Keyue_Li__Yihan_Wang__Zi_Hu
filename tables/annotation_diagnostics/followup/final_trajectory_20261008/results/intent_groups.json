@@ -1,0 +1,968 @@
+[
+  {
+    "k": 2,
+    "category": "api_usage",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 136,
+        "first_positive": 117,
+        "any_positive": 128,
+        "rescue": 11,
+        "first_negative": 19
+      },
+      "no": {
+        "n": 47,
+        "first_positive": 42,
+        "any_positive": 45,
+        "rescue": 3,
+        "first_negative": 5
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "api_usage",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 171,
+        "first_positive": 149,
+        "any_positive": 162,
+        "rescue": 13,
+        "first_negative": 22
+      },
+      "no": {
+        "n": 12,
+        "first_positive": 10,
+        "any_positive": 11,
+        "rescue": 1,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "discrepancy",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 108,
+        "first_positive": 100,
+        "any_positive": 104,
+        "rescue": 4,
+        "first_negative": 8
+      },
+      "no": {
+        "n": 75,
+        "first_positive": 59,
+        "any_positive": 69,
+        "rescue": 10,
+        "first_negative": 16
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "discrepancy",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 111,
+        "first_positive": 103,
+        "any_positive": 107,
+        "rescue": 4,
+        "first_negative": 8
+      },
+      "no": {
+        "n": 72,
+        "first_positive": 56,
+        "any_positive": 66,
+        "rescue": 10,
+        "first_negative": 16
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "errors",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 80,
+        "first_positive": 77,
+        "any_positive": 80,
+        "rescue": 3,
+        "first_negative": 3
+      },
+      "no": {
+        "n": 103,
+        "first_positive": 82,
+        "any_positive": 93,
+        "rescue": 11,
+        "first_negative": 21
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "errors",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 79,
+        "first_positive": 72,
+        "any_positive": 78,
+        "rescue": 6,
+        "first_negative": 7
+      },
+      "no": {
+        "n": 103,
+        "first_positive": 86,
+        "any_positive": 94,
+        "rescue": 8,
+        "first_negative": 17
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "review",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 119,
+        "first_positive": 99,
+        "any_positive": 110,
+        "rescue": 11,
+        "first_negative": 20
+      },
+      "no": {
+        "n": 64,
+        "first_positive": 60,
+        "any_positive": 63,
+        "rescue": 3,
+        "first_negative": 4
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "review",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 113,
+        "first_positive": 93,
+        "any_positive": 104,
+        "rescue": 11,
+        "first_negative": 20
+      },
+      "no": {
+        "n": 70,
+        "first_positive": 66,
+        "any_positive": 69,
+        "rescue": 3,
+        "first_negative": 4
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "conceptual",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 38,
+        "first_positive": 31,
+        "any_positive": 35,
+        "rescue": 4,
+        "first_negative": 7
+      },
+      "no": {
+        "n": 145,
+        "first_positive": 128,
+        "any_positive": 138,
+        "rescue": 10,
+        "first_negative": 17
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "conceptual",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 34,
+        "first_positive": 30,
+        "any_positive": 31,
+        "rescue": 1,
+        "first_negative": 4
+      },
+      "no": {
+        "n": 149,
+        "first_positive": 129,
+        "any_positive": 142,
+        "rescue": 13,
+        "first_negative": 20
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "api_change",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 8,
+        "first_positive": 7,
+        "any_positive": 8,
+        "rescue": 1,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 175,
+        "first_positive": 152,
+        "any_positive": 165,
+        "rescue": 13,
+        "first_negative": 23
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "api_change",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 6,
+        "first_positive": 4,
+        "any_positive": 6,
+        "rescue": 2,
+        "first_negative": 2
+      },
+      "no": {
+        "n": 177,
+        "first_positive": 155,
+        "any_positive": 167,
+        "rescue": 12,
+        "first_negative": 22
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "learning",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 9,
+        "first_positive": 6,
+        "any_positive": 7,
+        "rescue": 1,
+        "first_negative": 3
+      },
+      "no": {
+        "n": 174,
+        "first_positive": 153,
+        "any_positive": 166,
+        "rescue": 13,
+        "first_negative": 21
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 2,
+    "category": "learning",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 8,
+        "first_positive": 7,
+        "any_positive": 7,
+        "rescue": 0,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 175,
+        "first_positive": 152,
+        "any_positive": 166,
+        "rescue": 14,
+        "first_negative": 23
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "api_usage",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 55,
+        "first_positive": 46,
+        "any_positive": 53,
+        "rescue": 7,
+        "first_negative": 9
+      },
+      "no": {
+        "n": 25,
+        "first_positive": 20,
+        "any_positive": 24,
+        "rescue": 4,
+        "first_negative": 5
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "api_usage",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 75,
+        "first_positive": 63,
+        "any_positive": 73,
+        "rescue": 10,
+        "first_negative": 12
+      },
+      "no": {
+        "n": 5,
+        "first_positive": 3,
+        "any_positive": 4,
+        "rescue": 1,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "discrepancy",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 45,
+        "first_positive": 40,
+        "any_positive": 45,
+        "rescue": 5,
+        "first_negative": 5
+      },
+      "no": {
+        "n": 35,
+        "first_positive": 26,
+        "any_positive": 32,
+        "rescue": 6,
+        "first_negative": 9
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "discrepancy",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 45,
+        "first_positive": 40,
+        "any_positive": 44,
+        "rescue": 4,
+        "first_negative": 5
+      },
+      "no": {
+        "n": 35,
+        "first_positive": 26,
+        "any_positive": 33,
+        "rescue": 7,
+        "first_negative": 9
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "errors",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 27,
+        "first_positive": 27,
+        "any_positive": 27,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 53,
+        "first_positive": 39,
+        "any_positive": 50,
+        "rescue": 11,
+        "first_negative": 14
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "errors",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 30,
+        "first_positive": 26,
+        "any_positive": 30,
+        "rescue": 4,
+        "first_negative": 4
+      },
+      "no": {
+        "n": 50,
+        "first_positive": 40,
+        "any_positive": 47,
+        "rescue": 7,
+        "first_negative": 10
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "review",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 51,
+        "first_positive": 39,
+        "any_positive": 48,
+        "rescue": 9,
+        "first_negative": 12
+      },
+      "no": {
+        "n": 29,
+        "first_positive": 27,
+        "any_positive": 29,
+        "rescue": 2,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "review",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 54,
+        "first_positive": 42,
+        "any_positive": 51,
+        "rescue": 9,
+        "first_negative": 12
+      },
+      "no": {
+        "n": 26,
+        "first_positive": 24,
+        "any_positive": 26,
+        "rescue": 2,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "conceptual",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 16,
+        "first_positive": 12,
+        "any_positive": 16,
+        "rescue": 4,
+        "first_negative": 4
+      },
+      "no": {
+        "n": 64,
+        "first_positive": 54,
+        "any_positive": 61,
+        "rescue": 7,
+        "first_negative": 10
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "conceptual",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 15,
+        "first_positive": 12,
+        "any_positive": 14,
+        "rescue": 2,
+        "first_negative": 3
+      },
+      "no": {
+        "n": 65,
+        "first_positive": 54,
+        "any_positive": 63,
+        "rescue": 9,
+        "first_negative": 11
+      }
+    },
+    "suppress_between_group_estimate": false,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "api_change",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 1,
+        "first_positive": 1,
+        "any_positive": 1,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 79,
+        "first_positive": 65,
+        "any_positive": 76,
+        "rescue": 11,
+        "first_negative": 14
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "api_change",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 2,
+        "first_positive": 1,
+        "any_positive": 2,
+        "rescue": 1,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 78,
+        "first_positive": 65,
+        "any_positive": 75,
+        "rescue": 10,
+        "first_negative": 13
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "learning",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 5,
+        "first_positive": 3,
+        "any_positive": 3,
+        "rescue": 0,
+        "first_negative": 2
+      },
+      "no": {
+        "n": 75,
+        "first_positive": 63,
+        "any_positive": 74,
+        "rescue": 11,
+        "first_negative": 12
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 3,
+    "category": "learning",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 3,
+        "first_positive": 2,
+        "any_positive": 2,
+        "rescue": 0,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 77,
+        "first_positive": 64,
+        "any_positive": 75,
+        "rescue": 11,
+        "first_negative": 13
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "api_usage",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 10,
+        "first_positive": 8,
+        "any_positive": 10,
+        "rescue": 2,
+        "first_negative": 2
+      },
+      "no": {
+        "n": 7,
+        "first_positive": 6,
+        "any_positive": 6,
+        "rescue": 0,
+        "first_negative": 1
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "api_usage",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 15,
+        "first_positive": 13,
+        "any_positive": 15,
+        "rescue": 2,
+        "first_negative": 2
+      },
+      "no": {
+        "n": 2,
+        "first_positive": 1,
+        "any_positive": 1,
+        "rescue": 0,
+        "first_negative": 1
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "discrepancy",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 6,
+        "first_positive": 6,
+        "any_positive": 6,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 11,
+        "first_positive": 8,
+        "any_positive": 10,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "discrepancy",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 8,
+        "first_positive": 8,
+        "any_positive": 8,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 9,
+        "first_positive": 6,
+        "any_positive": 8,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "errors",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 4,
+        "first_positive": 4,
+        "any_positive": 4,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 13,
+        "first_positive": 10,
+        "any_positive": 12,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "errors",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 4,
+        "first_positive": 4,
+        "any_positive": 4,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 13,
+        "first_positive": 10,
+        "any_positive": 12,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "review",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 12,
+        "first_positive": 9,
+        "any_positive": 11,
+        "rescue": 2,
+        "first_negative": 3
+      },
+      "no": {
+        "n": 5,
+        "first_positive": 5,
+        "any_positive": 5,
+        "rescue": 0,
+        "first_negative": 0
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "review",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 14,
+        "first_positive": 11,
+        "any_positive": 13,
+        "rescue": 2,
+        "first_negative": 3
+      },
+      "no": {
+        "n": 3,
+        "first_positive": 3,
+        "any_positive": 3,
+        "rescue": 0,
+        "first_negative": 0
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "conceptual",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 3,
+        "first_positive": 2,
+        "any_positive": 3,
+        "rescue": 1,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 14,
+        "first_positive": 12,
+        "any_positive": 13,
+        "rescue": 1,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "conceptual",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 3,
+        "first_positive": 2,
+        "any_positive": 2,
+        "rescue": 0,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 14,
+        "first_positive": 12,
+        "any_positive": 14,
+        "rescue": 2,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "api_change",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 0,
+        "first_positive": 0,
+        "any_positive": 0,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 17,
+        "first_positive": 14,
+        "any_positive": 16,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "api_change",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 0,
+        "first_positive": 0,
+        "any_positive": 0,
+        "rescue": 0,
+        "first_negative": 0
+      },
+      "no": {
+        "n": 17,
+        "first_positive": 14,
+        "any_positive": 16,
+        "rescue": 2,
+        "first_negative": 3
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "learning",
+    "arm": "direct",
+    "groups": {
+      "yes": {
+        "n": 1,
+        "first_positive": 0,
+        "any_positive": 1,
+        "rescue": 1,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 16,
+        "first_positive": 14,
+        "any_positive": 15,
+        "rescue": 1,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  },
+  {
+    "k": 5,
+    "category": "learning",
+    "arm": "question_first",
+    "groups": {
+      "yes": {
+        "n": 1,
+        "first_positive": 0,
+        "any_positive": 1,
+        "rescue": 1,
+        "first_negative": 1
+      },
+      "no": {
+        "n": 16,
+        "first_positive": 14,
+        "any_positive": 15,
+        "rescue": 1,
+        "first_negative": 2
+      }
+    },
+    "suppress_between_group_estimate": true,
+    "first_negative_small": true
+  }
+]

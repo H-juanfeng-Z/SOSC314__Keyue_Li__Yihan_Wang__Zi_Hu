@@ -1,0 +1,38 @@
+{
+  "completed": true,
+  "elapsed_seconds": 1.0654501914978027,
+  "cohort_cells": 36,
+  "intent_cells": 42,
+  "main": {
+    "model": "14B",
+    "k": 2,
+    "threshold": "substantial",
+    "phase": "pooled",
+    "candidate_n": 186,
+    "complete_n": 183,
+    "excluded_invalid_n": 3,
+    "first_positive": 159,
+    "by_rank_positive": [
+      159,
+      173
+    ],
+    "rescue_n": 14,
+    "first_negative_n": 24,
+    "increment": 0.07650273224043716,
+    "increment_bootstrap95": [
+      0.04371584699453552,
+      0.12021857923497267
+    ],
+    "conditional_rescue_rate": 0.5833333333333334,
+    "conditional_rescue_bootstrap95": [
+      0.375,
+      0.7916666666666666
+    ],
+    "all_candidate_any_positive_bounds": [
+      0.9408602150537635,
+      0.946236559139785
+    ],
+    "tie_questions": 0
+  },
+  "next_decision": "Do not claim validated quality or causal effects. Use fixed-prefix main result; discuss sparse intent rescue groups and independent semantic validation before further expansion."
+}
