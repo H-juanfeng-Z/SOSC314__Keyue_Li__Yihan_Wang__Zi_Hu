@@ -1,0 +1,20 @@
+{
+  "question": "Does the observed association between expressed intent and first-answer helpfulness persist under alternative measurement pipelines?",
+  "design": "Seven nonexclusive intent indicators; direct vs question-first intent x original-example vs no-example helpfulness. Within each category and phase all four estimates use the same eligible pairs.",
+  "outcome": "substantial versus partial/unhelpful; uncertain, invalid and missing excluded explicitly, never recoded zero.",
+  "sample": "Previously selected answered development questions only; primary and extension reported separately, pooled descriptive only. No reserved80.",
+  "inference": "1000 paired question-level bootstrap resamples, seed314. Intervals conditional on observed sample and model labels, not annotation uncertainty. No causal or population claims; no multiple-testing significance claims.",
+  "rare_groups": "Below10 yes or10 no report counts but suppress difference/interval.",
+  "limitations": [
+    "Shared LLM measurement bias",
+    "Intent labels may overlap",
+    "Sample selection and restriction to answered questions",
+    "No verified answer correctness",
+    "No confounder adjustment; time/topic/author differences may explain associations"
+  ],
+  "next": "Use effect stability to prioritize label review and freeze measurement, not to select the most favorable effect.",
+  "source_sha256": {
+    "bridge": "fa8fbbd5e29400ac5969a79d1de52f6dcb8775aec6d0b970a8038d06b683abe2",
+    "expansion": "3b665e5d4773a20b807c88b6ae2c2cfbf3729b3b6579482db44e413928cde851"
+  }
+}

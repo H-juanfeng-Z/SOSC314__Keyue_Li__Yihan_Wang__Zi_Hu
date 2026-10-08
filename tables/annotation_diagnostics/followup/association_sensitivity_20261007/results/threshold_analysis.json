@@ -1,0 +1,3533 @@
+{
+  "comparisons": [
+    {
+      "phase": "primary",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            },
+            "no": {
+              "n": 189,
+              "positive": 186,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 6,
+              "negative": 1
+            },
+            "no": {
+              "n": 189,
+              "positive": 130,
+              "negative": 59
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            },
+            "no": {
+              "n": 189,
+              "positive": 186,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            },
+            "no": {
+              "n": 189,
+              "positive": 171,
+              "negative": 18
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0
+            },
+            "no": {
+              "n": 191,
+              "positive": 188,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 191,
+              "positive": 132,
+              "negative": 59
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0
+            },
+            "no": {
+              "n": 191,
+              "positive": 188,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 191,
+              "positive": 174,
+              "negative": 17
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 151,
+              "positive": 149,
+              "negative": 2
+            },
+            "no": {
+              "n": 45,
+              "positive": 44,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.008977189109639516,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 151,
+              "positive": 104,
+              "negative": 47
+            },
+            "no": {
+              "n": 45,
+              "positive": 32,
+              "negative": 13
+            }
+          },
+          "risk_difference": -0.022369389256806538,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 151,
+              "positive": 150,
+              "negative": 1
+            },
+            "no": {
+              "n": 45,
+              "positive": 43,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.03782192788815297,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 151,
+              "positive": 138,
+              "negative": 13
+            },
+            "no": {
+              "n": 45,
+              "positive": 40,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.025018395879323085,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 184,
+              "positive": 181,
+              "negative": 3
+            },
+            "no": {
+              "n": 12,
+              "positive": 12,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.016304347826086918,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 184,
+              "positive": 127,
+              "negative": 57
+            },
+            "no": {
+              "n": 12,
+              "positive": 9,
+              "negative": 3
+            }
+          },
+          "risk_difference": -0.05978260869565222,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 184,
+              "positive": 181,
+              "negative": 3
+            },
+            "no": {
+              "n": 12,
+              "positive": 12,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.016304347826086918,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 184,
+              "positive": 168,
+              "negative": 16
+            },
+            "no": {
+              "n": 12,
+              "positive": 10,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.07971014492753614,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 50,
+              "positive": 49,
+              "negative": 1
+            },
+            "no": {
+              "n": 146,
+              "positive": 144,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.006301369863013662,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 50,
+              "positive": 34,
+              "negative": 16
+            },
+            "no": {
+              "n": 146,
+              "positive": 102,
+              "negative": 44
+            }
+          },
+          "risk_difference": -0.018630136986301338,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 50,
+              "positive": 49,
+              "negative": 1
+            },
+            "no": {
+              "n": 146,
+              "positive": 144,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.006301369863013662,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 50,
+              "positive": 45,
+              "negative": 5
+            },
+            "no": {
+              "n": 146,
+              "positive": 133,
+              "negative": 13
+            }
+          },
+          "risk_difference": -0.010958904109588996,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 42,
+              "positive": 42,
+              "negative": 0
+            },
+            "no": {
+              "n": 154,
+              "positive": 151,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.01948051948051943,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 42,
+              "positive": 31,
+              "negative": 11
+            },
+            "no": {
+              "n": 154,
+              "positive": 105,
+              "negative": 49
+            }
+          },
+          "risk_difference": 0.05627705627705637,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 42,
+              "positive": 42,
+              "negative": 0
+            },
+            "no": {
+              "n": 154,
+              "positive": 151,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.01948051948051943,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 42,
+              "positive": 38,
+              "negative": 4
+            },
+            "no": {
+              "n": 154,
+              "positive": 140,
+              "negative": 14
+            }
+          },
+          "risk_difference": -0.0043290043290042934,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 134,
+              "positive": 132,
+              "negative": 2
+            },
+            "no": {
+              "n": 62,
+              "positive": 61,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.0012036591237361005,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 134,
+              "positive": 98,
+              "negative": 36
+            },
+            "no": {
+              "n": 62,
+              "positive": 38,
+              "negative": 24
+            }
+          },
+          "risk_difference": 0.11844005777563793,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 134,
+              "positive": 132,
+              "negative": 2
+            },
+            "no": {
+              "n": 62,
+              "positive": 61,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.0012036591237361005,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 134,
+              "positive": 127,
+              "negative": 7
+            },
+            "no": {
+              "n": 62,
+              "positive": 51,
+              "negative": 11
+            }
+          },
+          "risk_difference": 0.12518054886856034,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 139,
+              "negative": 2
+            },
+            "no": {
+              "n": 55,
+              "positive": 54,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.0039974210186976,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 102,
+              "negative": 39
+            },
+            "no": {
+              "n": 55,
+              "positive": 34,
+              "negative": 21
+            }
+          },
+          "risk_difference": 0.10522243713733082,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 139,
+              "negative": 2
+            },
+            "no": {
+              "n": 55,
+              "positive": 54,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.0039974210186976,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 133,
+              "negative": 8
+            },
+            "no": {
+              "n": 55,
+              "positive": 45,
+              "negative": 10
+            }
+          },
+          "risk_difference": 0.12508059316569953,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 195,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 101,
+              "negative": 1
+            },
+            "no": {
+              "n": 93,
+              "positive": 91,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011701454775458586,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 72,
+              "negative": 30
+            },
+            "no": {
+              "n": 93,
+              "positive": 63,
+              "negative": 30
+            }
+          },
+          "risk_difference": 0.028462998102466885,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 195,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 101,
+              "negative": 1
+            },
+            "no": {
+              "n": 93,
+              "positive": 91,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011701454775458586,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 97,
+              "negative": 5
+            },
+            "no": {
+              "n": 93,
+              "positive": 80,
+              "negative": 13
+            }
+          },
+          "risk_difference": 0.09076533839342182,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 195,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 101,
+              "negative": 1
+            },
+            "no": {
+              "n": 93,
+              "positive": 91,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011701454775458586,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 73,
+              "negative": 29
+            },
+            "no": {
+              "n": 93,
+              "positive": 62,
+              "negative": 31
+            }
+          },
+          "risk_difference": 0.0490196078431373,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 195,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 101,
+              "negative": 1
+            },
+            "no": {
+              "n": 93,
+              "positive": 91,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011701454775458586,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 102,
+              "positive": 96,
+              "negative": 6
+            },
+            "no": {
+              "n": 93,
+              "positive": 81,
+              "negative": 12
+            }
+          },
+          "risk_difference": 0.0702087286527514,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 11,
+              "negative": 0
+            },
+            "no": {
+              "n": 185,
+              "positive": 182,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.01621621621621616,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 6,
+              "negative": 5
+            },
+            "no": {
+              "n": 185,
+              "positive": 130,
+              "negative": 55
+            }
+          },
+          "risk_difference": -0.15724815724815733,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 11,
+              "negative": 0
+            },
+            "no": {
+              "n": 185,
+              "positive": 182,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.01621621621621616,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 10,
+              "negative": 1
+            },
+            "no": {
+              "n": 185,
+              "positive": 168,
+              "negative": 17
+            }
+          },
+          "risk_difference": 0.0009828009828009021,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            },
+            "no": {
+              "n": 189,
+              "positive": 186,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 3,
+              "negative": 4
+            },
+            "no": {
+              "n": 189,
+              "positive": 133,
+              "negative": 56
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            },
+            "no": {
+              "n": 189,
+              "positive": 186,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 7,
+              "positive": 6,
+              "negative": 1
+            },
+            "no": {
+              "n": 189,
+              "positive": 172,
+              "negative": 17
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 131,
+              "positive": 130,
+              "negative": 1
+            },
+            "no": {
+              "n": 65,
+              "positive": 63,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.023135642982971216,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 131,
+              "positive": 85,
+              "negative": 46
+            },
+            "no": {
+              "n": 65,
+              "positive": 51,
+              "negative": 14
+            }
+          },
+          "risk_difference": -0.13576042278332356,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 131,
+              "positive": 129,
+              "negative": 2
+            },
+            "no": {
+              "n": 65,
+              "positive": 64,
+              "negative": 1
+            }
+          },
+          "risk_difference": 0.00011743981209622056,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 131,
+              "positive": 119,
+              "negative": 12
+            },
+            "no": {
+              "n": 65,
+              "positive": 59,
+              "negative": 6
+            }
+          },
+          "risk_difference": 0.0007046388725777675,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "primary",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 117,
+              "positive": 116,
+              "negative": 1
+            },
+            "no": {
+              "n": 79,
+              "positive": 77,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.01676944714919404,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 117,
+              "positive": 75,
+              "negative": 42
+            },
+            "no": {
+              "n": 79,
+              "positive": 61,
+              "negative": 18
+            }
+          },
+          "risk_difference": -0.13112625770853614,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "primary",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 196,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 117,
+              "positive": 115,
+              "negative": 2
+            },
+            "no": {
+              "n": 79,
+              "positive": 78,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.004435789245915922,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 117,
+              "positive": 106,
+              "negative": 11
+            },
+            "no": {
+              "n": 79,
+              "positive": 72,
+              "negative": 7
+            }
+          },
+          "risk_difference": -0.005409499080385127,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0
+            },
+            "no": {
+              "n": 181,
+              "positive": 177,
+              "negative": 4
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 181,
+              "positive": 117,
+              "negative": 64
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 181,
+              "positive": 180,
+              "negative": 1
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 181,
+              "positive": 151,
+              "negative": 30
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 6,
+              "positive": 6,
+              "negative": 0
+            },
+            "no": {
+              "n": 180,
+              "positive": 176,
+              "negative": 4
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 6,
+              "positive": 4,
+              "negative": 2
+            },
+            "no": {
+              "n": 180,
+              "positive": 117,
+              "negative": 63
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 6,
+              "positive": 5,
+              "negative": 1
+            },
+            "no": {
+              "n": 180,
+              "positive": 179,
+              "negative": 1
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 6,
+              "positive": 4,
+              "negative": 2
+            },
+            "no": {
+              "n": 180,
+              "positive": 151,
+              "negative": 29
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 137,
+              "negative": 4
+            },
+            "no": {
+              "n": 45,
+              "positive": 45,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.028368794326241176,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 96,
+              "negative": 45
+            },
+            "no": {
+              "n": 45,
+              "positive": 25,
+              "negative": 20
+            }
+          },
+          "risk_difference": 0.12529550827423164,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 139,
+              "negative": 2
+            },
+            "no": {
+              "n": 45,
+              "positive": 45,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.014184397163120588,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 141,
+              "positive": 118,
+              "negative": 23
+            },
+            "no": {
+              "n": 45,
+              "positive": 37,
+              "negative": 8
+            }
+          },
+          "risk_difference": 0.014657210401891274,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 179,
+              "positive": 175,
+              "negative": 4
+            },
+            "no": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 179,
+              "positive": 116,
+              "negative": 63
+            },
+            "no": {
+              "n": 7,
+              "positive": 5,
+              "negative": 2
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 179,
+              "positive": 177,
+              "negative": 2
+            },
+            "no": {
+              "n": 7,
+              "positive": 7,
+              "negative": 0
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 179,
+              "positive": 149,
+              "negative": 30
+            },
+            "no": {
+              "n": 7,
+              "positive": 6,
+              "negative": 1
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 43,
+              "positive": 41,
+              "negative": 2
+            },
+            "no": {
+              "n": 143,
+              "positive": 141,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.03252561392096276,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 43,
+              "positive": 26,
+              "negative": 17
+            },
+            "no": {
+              "n": 143,
+              "positive": 95,
+              "negative": 48
+            }
+          },
+          "risk_difference": -0.05968450154496674,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 43,
+              "positive": 42,
+              "negative": 1
+            },
+            "no": {
+              "n": 143,
+              "positive": 142,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.016262806960481435,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 43,
+              "positive": 36,
+              "negative": 7
+            },
+            "no": {
+              "n": 143,
+              "positive": 119,
+              "negative": 24
+            }
+          },
+          "risk_difference": 0.0050414701577492504,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 38,
+              "positive": 37,
+              "negative": 1
+            },
+            "no": {
+              "n": 148,
+              "positive": 145,
+              "negative": 3
+            }
+          },
+          "risk_difference": -0.006045519203413896,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 38,
+              "positive": 23,
+              "negative": 15
+            },
+            "no": {
+              "n": 148,
+              "positive": 98,
+              "negative": 50
+            }
+          },
+          "risk_difference": -0.056899004267425335,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 38,
+              "positive": 38,
+              "negative": 0
+            },
+            "no": {
+              "n": 148,
+              "positive": 146,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.013513513513513487,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 38,
+              "positive": 34,
+              "negative": 4
+            },
+            "no": {
+              "n": 148,
+              "positive": 121,
+              "negative": 27
+            }
+          },
+          "risk_difference": 0.07716927453769562,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 183,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 113,
+              "positive": 111,
+              "negative": 2
+            },
+            "no": {
+              "n": 70,
+              "positive": 68,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.010872313527180766,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 113,
+              "positive": 75,
+              "negative": 38
+            },
+            "no": {
+              "n": 70,
+              "positive": 44,
+              "negative": 26
+            }
+          },
+          "risk_difference": 0.03514538558786351,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 183,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 113,
+              "positive": 111,
+              "negative": 2
+            },
+            "no": {
+              "n": 70,
+              "positive": 70,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.017699115044247815,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 113,
+              "positive": 96,
+              "negative": 17
+            },
+            "no": {
+              "n": 70,
+              "positive": 57,
+              "negative": 13
+            }
+          },
+          "risk_difference": 0.035271807838179514,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 183,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 109,
+              "positive": 108,
+              "negative": 1
+            },
+            "no": {
+              "n": 74,
+              "positive": 71,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.03136622861393512,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 109,
+              "positive": 72,
+              "negative": 37
+            },
+            "no": {
+              "n": 74,
+              "positive": 47,
+              "negative": 27
+            }
+          },
+          "risk_difference": 0.02541532358046128,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 183,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 109,
+              "positive": 107,
+              "negative": 2
+            },
+            "no": {
+              "n": 74,
+              "positive": 74,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.01834862385321101,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 109,
+              "positive": 93,
+              "negative": 16
+            },
+            "no": {
+              "n": 74,
+              "positive": 60,
+              "negative": 14
+            }
+          },
+          "risk_difference": 0.04240019836350106,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 87,
+              "positive": 86,
+              "negative": 1
+            },
+            "no": {
+              "n": 99,
+              "positive": 96,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.018808777429467072,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 87,
+              "positive": 61,
+              "negative": 26
+            },
+            "no": {
+              "n": 99,
+              "positive": 60,
+              "negative": 39
+            }
+          },
+          "risk_difference": 0.09508881922675028,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 87,
+              "positive": 85,
+              "negative": 2
+            },
+            "no": {
+              "n": 99,
+              "positive": 99,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.02298850574712641,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 87,
+              "positive": 77,
+              "negative": 10
+            },
+            "no": {
+              "n": 99,
+              "positive": 78,
+              "negative": 21
+            }
+          },
+          "risk_difference": 0.09717868338558,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 78,
+              "positive": 77,
+              "negative": 1
+            },
+            "no": {
+              "n": 108,
+              "positive": 105,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.014957264957265015,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 78,
+              "positive": 49,
+              "negative": 29
+            },
+            "no": {
+              "n": 108,
+              "positive": 72,
+              "negative": 36
+            }
+          },
+          "risk_difference": -0.038461538461538436,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 78,
+              "positive": 76,
+              "negative": 2
+            },
+            "no": {
+              "n": 108,
+              "positive": 108,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.02564102564102566,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 78,
+              "positive": 65,
+              "negative": 13
+            },
+            "no": {
+              "n": 108,
+              "positive": 90,
+              "negative": 18
+            }
+          },
+          "risk_difference": 0.0,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 10,
+              "positive": 9,
+              "negative": 1
+            },
+            "no": {
+              "n": 176,
+              "positive": 173,
+              "negative": 3
+            }
+          },
+          "risk_difference": -0.08295454545454539,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 10,
+              "positive": 4,
+              "negative": 6
+            },
+            "no": {
+              "n": 176,
+              "positive": 117,
+              "negative": 59
+            }
+          },
+          "risk_difference": -0.26477272727272727,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 10,
+              "positive": 10,
+              "negative": 0
+            },
+            "no": {
+              "n": 176,
+              "positive": 174,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011363636363636354,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 10,
+              "positive": 7,
+              "negative": 3
+            },
+            "no": {
+              "n": 176,
+              "positive": 148,
+              "negative": 28
+            }
+          },
+          "risk_difference": -0.14090909090909098,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 4,
+              "negative": 1
+            },
+            "no": {
+              "n": 181,
+              "positive": 178,
+              "negative": 3
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 0,
+              "negative": 5
+            },
+            "no": {
+              "n": 181,
+              "positive": 121,
+              "negative": 60
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 5,
+              "negative": 0
+            },
+            "no": {
+              "n": 181,
+              "positive": 179,
+              "negative": 2
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 5,
+              "positive": 3,
+              "negative": 2
+            },
+            "no": {
+              "n": 181,
+              "positive": 152,
+              "negative": 29
+            }
+          },
+          "risk_difference": null,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 121,
+              "positive": 117,
+              "negative": 4
+            },
+            "no": {
+              "n": 65,
+              "positive": 65,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.03305785123966942,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 121,
+              "positive": 82,
+              "negative": 39
+            },
+            "no": {
+              "n": 65,
+              "positive": 39,
+              "negative": 26
+            }
+          },
+          "risk_difference": 0.07768595041322313,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 121,
+              "positive": 119,
+              "negative": 2
+            },
+            "no": {
+              "n": 65,
+              "positive": 65,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.016528925619834656,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 121,
+              "positive": 102,
+              "negative": 19
+            },
+            "no": {
+              "n": 65,
+              "positive": 53,
+              "negative": 12
+            }
+          },
+          "risk_difference": 0.02759059122695484,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "extension",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 119,
+              "positive": 115,
+              "negative": 4
+            },
+            "no": {
+              "n": 67,
+              "positive": 67,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.03361344537815125,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 119,
+              "positive": 76,
+              "negative": 43
+            },
+            "no": {
+              "n": 67,
+              "positive": 45,
+              "negative": 22
+            }
+          },
+          "risk_difference": -0.03298632885990227,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "extension",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 186,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 119,
+              "positive": 117,
+              "negative": 2
+            },
+            "no": {
+              "n": 67,
+              "positive": 67,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.01680672268907568,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 119,
+              "positive": 99,
+              "negative": 20
+            },
+            "no": {
+              "n": 67,
+              "positive": 56,
+              "negative": 11
+            }
+          },
+          "risk_difference": -0.0038881224131442904,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 12,
+              "negative": 0
+            },
+            "no": {
+              "n": 370,
+              "positive": 363,
+              "negative": 7
+            }
+          },
+          "risk_difference": 0.018918918918918948,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 10,
+              "negative": 2
+            },
+            "no": {
+              "n": 370,
+              "positive": 247,
+              "negative": 123
+            }
+          },
+          "risk_difference": 0.16576576576576585,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_change",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 11,
+              "negative": 1
+            },
+            "no": {
+              "n": 370,
+              "positive": 366,
+              "negative": 4
+            }
+          },
+          "risk_difference": -0.07252252252252256,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 11,
+              "negative": 1
+            },
+            "no": {
+              "n": 370,
+              "positive": 322,
+              "negative": 48
+            }
+          },
+          "risk_difference": 0.04639639639639637,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 11,
+              "negative": 0
+            },
+            "no": {
+              "n": 371,
+              "positive": 364,
+              "negative": 7
+            }
+          },
+          "risk_difference": 0.018867924528301883,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 8,
+              "negative": 3
+            },
+            "no": {
+              "n": 371,
+              "positive": 249,
+              "negative": 122
+            }
+          },
+          "risk_difference": 0.056113697623131564,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_change",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 10,
+              "negative": 1
+            },
+            "no": {
+              "n": 371,
+              "positive": 367,
+              "negative": 4
+            }
+          },
+          "risk_difference": -0.08012741975006132,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 11,
+              "positive": 8,
+              "negative": 3
+            },
+            "no": {
+              "n": 371,
+              "positive": 325,
+              "negative": 46
+            }
+          },
+          "risk_difference": -0.14873805439843168,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 292,
+              "positive": 286,
+              "negative": 6
+            },
+            "no": {
+              "n": 90,
+              "positive": 89,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.009436834094368352,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 292,
+              "positive": 200,
+              "negative": 92
+            },
+            "no": {
+              "n": 90,
+              "positive": 57,
+              "negative": 33
+            }
+          },
+          "risk_difference": 0.05159817351598173,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "api_usage",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 292,
+              "positive": 289,
+              "negative": 3
+            },
+            "no": {
+              "n": 90,
+              "positive": 88,
+              "negative": 2
+            }
+          },
+          "risk_difference": 0.011948249619482487,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 292,
+              "positive": 256,
+              "negative": 36
+            },
+            "no": {
+              "n": 90,
+              "positive": 77,
+              "negative": 13
+            }
+          },
+          "risk_difference": 0.021156773211567725,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 363,
+              "positive": 356,
+              "negative": 7
+            },
+            "no": {
+              "n": 19,
+              "positive": 19,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.019283746556473802,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 363,
+              "positive": 243,
+              "negative": 120
+            },
+            "no": {
+              "n": 19,
+              "positive": 14,
+              "negative": 5
+            }
+          },
+          "risk_difference": -0.06742061765985208,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "api_usage",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 363,
+              "positive": 358,
+              "negative": 5
+            },
+            "no": {
+              "n": 19,
+              "positive": 19,
+              "negative": 0
+            }
+          },
+          "risk_difference": -0.01377410468319562,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 363,
+              "positive": 317,
+              "negative": 46
+            },
+            "no": {
+              "n": 19,
+              "positive": 16,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.031172973756705913,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 93,
+              "positive": 90,
+              "negative": 3
+            },
+            "no": {
+              "n": 289,
+              "positive": 285,
+              "negative": 4
+            }
+          },
+          "risk_difference": -0.018417234066302024,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 93,
+              "positive": 60,
+              "negative": 33
+            },
+            "no": {
+              "n": 289,
+              "positive": 197,
+              "negative": 92
+            }
+          },
+          "risk_difference": -0.03649960933139862,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "conceptual",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 93,
+              "positive": 91,
+              "negative": 2
+            },
+            "no": {
+              "n": 289,
+              "positive": 286,
+              "negative": 3
+            }
+          },
+          "risk_difference": -0.011124753506715712,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 93,
+              "positive": 81,
+              "negative": 12
+            },
+            "no": {
+              "n": 289,
+              "positive": 252,
+              "negative": 37
+            }
+          },
+          "risk_difference": -0.0010045764036165084,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 80,
+              "positive": 79,
+              "negative": 1
+            },
+            "no": {
+              "n": 302,
+              "positive": 296,
+              "negative": 6
+            }
+          },
+          "risk_difference": 0.007367549668874207,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 80,
+              "positive": 54,
+              "negative": 26
+            },
+            "no": {
+              "n": 302,
+              "positive": 203,
+              "negative": 99
+            }
+          },
+          "risk_difference": 0.0028145695364238943,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "conceptual",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 80,
+              "positive": 80,
+              "negative": 0
+            },
+            "no": {
+              "n": 302,
+              "positive": 297,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.01655629139072845,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 80,
+              "positive": 72,
+              "negative": 8
+            },
+            "no": {
+              "n": 302,
+              "positive": 261,
+              "negative": 41
+            }
+          },
+          "risk_difference": 0.03576158940397356,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 379,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 247,
+              "positive": 243,
+              "negative": 4
+            },
+            "no": {
+              "n": 132,
+              "positive": 129,
+              "negative": 3
+            }
+          },
+          "risk_difference": 0.006532940743466997,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 247,
+              "positive": 173,
+              "negative": 74
+            },
+            "no": {
+              "n": 132,
+              "positive": 82,
+              "negative": 50
+            }
+          },
+          "risk_difference": 0.07919273708747387,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "discrepancy",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 379,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 247,
+              "positive": 243,
+              "negative": 4
+            },
+            "no": {
+              "n": 132,
+              "positive": 131,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.00861857440804814,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 247,
+              "positive": 223,
+              "negative": 24
+            },
+            "no": {
+              "n": 132,
+              "positive": 108,
+              "negative": 24
+            }
+          },
+          "risk_difference": 0.08465218991534773,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 379,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 250,
+              "positive": 247,
+              "negative": 3
+            },
+            "no": {
+              "n": 129,
+              "positive": 125,
+              "negative": 4
+            }
+          },
+          "risk_difference": 0.01900775193798454,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 250,
+              "positive": 174,
+              "negative": 76
+            },
+            "no": {
+              "n": 129,
+              "positive": 81,
+              "negative": 48
+            }
+          },
+          "risk_difference": 0.0680930232558139,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "discrepancy",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 379,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 250,
+              "positive": 246,
+              "negative": 4
+            },
+            "no": {
+              "n": 129,
+              "positive": 128,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.008248062015503876,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 250,
+              "positive": 226,
+              "negative": 24
+            },
+            "no": {
+              "n": 129,
+              "positive": 105,
+              "negative": 24
+            }
+          },
+          "risk_difference": 0.090046511627907,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 381,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 189,
+              "positive": 187,
+              "negative": 2
+            },
+            "no": {
+              "n": 192,
+              "positive": 187,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.015459656084656048,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 189,
+              "positive": 133,
+              "negative": 56
+            },
+            "no": {
+              "n": 192,
+              "positive": 123,
+              "negative": 69
+            }
+          },
+          "risk_difference": 0.06307870370370372,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "errors",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 381,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 189,
+              "positive": 186,
+              "negative": 3
+            },
+            "no": {
+              "n": 192,
+              "positive": 190,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.005456349206349298,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 189,
+              "positive": 174,
+              "negative": 15
+            },
+            "no": {
+              "n": 192,
+              "positive": 158,
+              "negative": 34
+            }
+          },
+          "risk_difference": 0.09771825396825395,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 381,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 180,
+              "positive": 178,
+              "negative": 2
+            },
+            "no": {
+              "n": 201,
+              "positive": 196,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.01376451077943619,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 180,
+              "positive": 122,
+              "negative": 58
+            },
+            "no": {
+              "n": 201,
+              "positive": 134,
+              "negative": 67
+            }
+          },
+          "risk_difference": 0.011111111111111183,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "errors",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 381,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 180,
+              "positive": 177,
+              "negative": 3
+            },
+            "no": {
+              "n": 201,
+              "positive": 199,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.006716417910447858,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 180,
+              "positive": 161,
+              "negative": 19
+            },
+            "no": {
+              "n": 201,
+              "positive": 171,
+              "negative": 30
+            }
+          },
+          "risk_difference": 0.043698175787728055,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 21,
+              "positive": 20,
+              "negative": 1
+            },
+            "no": {
+              "n": 361,
+              "positive": 355,
+              "negative": 6
+            }
+          },
+          "risk_difference": -0.03099854900408927,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 21,
+              "positive": 10,
+              "negative": 11
+            },
+            "no": {
+              "n": 361,
+              "positive": 247,
+              "negative": 114
+            }
+          },
+          "risk_difference": -0.20802005012531333,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "learning",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 21,
+              "positive": 21,
+              "negative": 0
+            },
+            "no": {
+              "n": 361,
+              "positive": 356,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.013850415512465353,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 21,
+              "positive": 17,
+              "negative": 4
+            },
+            "no": {
+              "n": 361,
+              "positive": 316,
+              "negative": 45
+            }
+          },
+          "risk_difference": -0.06582245086400207,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 11,
+              "negative": 1
+            },
+            "no": {
+              "n": 370,
+              "positive": 364,
+              "negative": 6
+            }
+          },
+          "risk_difference": -0.06711711711711721,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 3,
+              "negative": 9
+            },
+            "no": {
+              "n": 370,
+              "positive": 254,
+              "negative": 116
+            }
+          },
+          "risk_difference": -0.43648648648648647,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "learning",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 12,
+              "negative": 0
+            },
+            "no": {
+              "n": 370,
+              "positive": 365,
+              "negative": 5
+            }
+          },
+          "risk_difference": 0.013513513513513487,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 12,
+              "positive": 9,
+              "negative": 3
+            },
+            "no": {
+              "n": 370,
+              "positive": 324,
+              "negative": 46
+            }
+          },
+          "risk_difference": -0.12567567567567572,
+          "sparse_outcome_warning": true
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 252,
+              "positive": 247,
+              "negative": 5
+            },
+            "no": {
+              "n": 130,
+              "positive": 128,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.004456654456654552,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 252,
+              "positive": 167,
+              "negative": 85
+            },
+            "no": {
+              "n": 130,
+              "positive": 90,
+              "negative": 40
+            }
+          },
+          "risk_difference": -0.029609279609279615,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "review",
+      "intent": "direct",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 252,
+              "positive": 248,
+              "negative": 4
+            },
+            "no": {
+              "n": 130,
+              "positive": 129,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.008180708180708263,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 252,
+              "positive": 221,
+              "negative": 31
+            },
+            "no": {
+              "n": 130,
+              "positive": 112,
+              "negative": 18
+            }
+          },
+          "risk_difference": 0.01544566544566539,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": true
+    },
+    {
+      "phase": "pooled",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_control",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 236,
+              "positive": 231,
+              "negative": 5
+            },
+            "no": {
+              "n": 146,
+              "positive": 144,
+              "negative": 2
+            }
+          },
+          "risk_difference": -0.0074878105409798,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 236,
+              "positive": 151,
+              "negative": 85
+            },
+            "no": {
+              "n": 146,
+              "positive": 106,
+              "negative": 40
+            }
+          },
+          "risk_difference": -0.08619688878569776,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    },
+    {
+      "phase": "pooled",
+      "category": "review",
+      "intent": "question_first",
+      "help": "joint_no_examples",
+      "n": 382,
+      "thresholds": {
+        "any_help": {
+          "counts": {
+            "yes": {
+              "n": 236,
+              "positive": 232,
+              "negative": 4
+            },
+            "no": {
+              "n": 146,
+              "positive": 145,
+              "negative": 1
+            }
+          },
+          "risk_difference": -0.010099837473879658,
+          "sparse_outcome_warning": true
+        },
+        "substantial": {
+          "counts": {
+            "yes": {
+              "n": 236,
+              "positive": 205,
+              "negative": 31
+            },
+            "no": {
+              "n": 146,
+              "positive": 128,
+              "negative": 18
+            }
+          },
+          "risk_difference": -0.008068260970513053,
+          "sparse_outcome_warning": false
+        }
+      },
+      "direction_reverses": false
+    }
+  ],
+  "interpretation": "Descriptive threshold sensitivity on identical complete cases. Any-help negatives may be too rare for useful modeling. No significance tests, no accuracy or causal claims."
+}
