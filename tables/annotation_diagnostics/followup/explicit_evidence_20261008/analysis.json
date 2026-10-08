@@ -1,0 +1,452 @@
+{
+  "stages": {
+    "features14": {
+      "planned": 612,
+      "records": 612,
+      "missing": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "statuses": {
+        "valid": 610,
+        "invalid": 2
+      },
+      "input_hash_matches": true,
+      "groups": {
+        "presentation_actual_expected/baseline/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "2": 93,
+            "None": 2,
+            "0": 1
+          }
+        },
+        "presentation_actual_expected/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 95,
+          "labels": {
+            "0": 55,
+            "2": 33,
+            "1": 7
+          }
+        },
+        "presentation_constraints/baseline/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 33,
+            "2": 54,
+            "1": 9
+          }
+        },
+        "presentation_constraints/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 95,
+          "labels": {
+            "0": 50,
+            "2": 39,
+            "1": 6
+          }
+        },
+        "presentation_environment/baseline/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 35,
+            "1": 34,
+            "2": 27
+          }
+        },
+        "presentation_environment/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 46,
+            "1": 39,
+            "2": 11
+          }
+        },
+        "presentation_constraints/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 2,
+            "2": 2,
+            "0": 2
+          },
+          "designed_expected_matches": 6,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_constraints/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 2,
+            "0": 3,
+            "2": 1
+          },
+          "designed_expected_matches": 5,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_environment/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "0": 2,
+            "2": 2,
+            "1": 2
+          },
+          "designed_expected_matches": 6,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_environment/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "0": 4,
+            "2": 2
+          },
+          "designed_expected_matches": 4,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_actual_expected/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "2": 4,
+            "1": 1,
+            "None": 1
+          },
+          "designed_expected_matches": 3,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_actual_expected/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 1,
+            "0": 2,
+            "2": 3
+          },
+          "designed_expected_matches": 4,
+          "invalid_not_counted_correct": 0
+        }
+      },
+      "paired_transitions": {
+        "presentation_actual_expected/natural": {
+          "2 -> 0": 52,
+          "2 -> 2": 33,
+          "2 -> 1": 7,
+          "None -> 0": 2,
+          "0 -> 0": 1
+        },
+        "presentation_constraints/natural": {
+          "0 -> 0": 33,
+          "2 -> 2": 39,
+          "2 -> 0": 12,
+          "1 -> 0": 5,
+          "1 -> 1": 4,
+          "2 -> 1": 2
+        },
+        "presentation_environment/natural": {
+          "0 -> 0": 35,
+          "1 -> 0": 10,
+          "1 -> 1": 24,
+          "2 -> 1": 15,
+          "2 -> 2": 11,
+          "2 -> 0": 1
+        },
+        "presentation_constraints/synthetic": {
+          "1 -> 1": 2,
+          "2 -> 0": 1,
+          "2 -> 2": 1,
+          "0 -> 0": 2
+        },
+        "presentation_environment/synthetic": {
+          "0 -> 0": 2,
+          "2 -> 2": 2,
+          "1 -> 0": 2
+        },
+        "presentation_actual_expected/synthetic": {
+          "2 -> 1": 1,
+          "1 -> 0": 1,
+          "2 -> 2": 3,
+          "None -> 0": 1
+        }
+      },
+      "failure_breakdown": {
+        "explicit_boundary": {
+          "invalid": 2,
+          "over_three": 2,
+          "nonexistent_or_nonstr_ID": 0
+        }
+      },
+      "archived_control": {
+        "cases": 288,
+        "identical_messages": 288,
+        "same_raw": 288,
+        "same_status": 288
+      }
+    },
+    "features7": {
+      "planned": 612,
+      "records": 612,
+      "missing": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "statuses": {
+        "valid": 607,
+        "invalid": 4,
+        "invalid_json": 1
+      },
+      "input_hash_matches": true,
+      "groups": {
+        "presentation_actual_expected/baseline/natural": {
+          "attempted": 96,
+          "valid": 94,
+          "labels": {
+            "0": 19,
+            "2": 61,
+            "1": 14
+          }
+        },
+        "presentation_actual_expected/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 94,
+          "labels": {
+            "0": 70,
+            "2": 23,
+            "1": 1
+          }
+        },
+        "presentation_constraints/baseline/natural": {
+          "attempted": 96,
+          "valid": 95,
+          "labels": {
+            "0": 75,
+            "2": 17,
+            "None": 3
+          }
+        },
+        "presentation_constraints/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 90,
+            "2": 6
+          }
+        },
+        "presentation_environment/baseline/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 79,
+            "1": 7,
+            "2": 6,
+            "None": 4
+          }
+        },
+        "presentation_environment/explicit_boundary/natural": {
+          "attempted": 96,
+          "valid": 96,
+          "labels": {
+            "0": 90,
+            "2": 2,
+            "1": 4
+          }
+        },
+        "presentation_constraints/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 2,
+            "0": 3,
+            "2": 1
+          },
+          "designed_expected_matches": 5,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_constraints/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 2,
+            "0": 3,
+            "2": 1
+          },
+          "designed_expected_matches": 5,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_environment/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "None": 2,
+            "2": 2,
+            "0": 2
+          },
+          "designed_expected_matches": 2,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_environment/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "0": 4,
+            "2": 2
+          },
+          "designed_expected_matches": 4,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_actual_expected/baseline/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 5,
+            "None": 1
+          },
+          "designed_expected_matches": 2,
+          "invalid_not_counted_correct": 0
+        },
+        "presentation_actual_expected/explicit_boundary/synthetic": {
+          "attempted": 6,
+          "valid": 6,
+          "labels": {
+            "1": 4,
+            "0": 2
+          },
+          "designed_expected_matches": 2,
+          "invalid_not_counted_correct": 0
+        }
+      },
+      "paired_transitions": {
+        "presentation_actual_expected/natural": {
+          "0 -> 0": 19,
+          "2 -> 0": 38,
+          "2 -> 2": 22,
+          "1 -> 0": 12,
+          "1 -> 1": 1,
+          "1 -> 2": 1
+        },
+        "presentation_constraints/natural": {
+          "0 -> 0": 75,
+          "2 -> 0": 11,
+          "2 -> 2": 6,
+          "None -> 0": 3
+        },
+        "presentation_environment/natural": {
+          "0 -> 0": 79,
+          "1 -> 0": 4,
+          "2 -> 2": 2,
+          "None -> 0": 4,
+          "2 -> 1": 1,
+          "2 -> 0": 3,
+          "1 -> 1": 3
+        },
+        "presentation_constraints/synthetic": {
+          "1 -> 1": 2,
+          "0 -> 0": 3,
+          "2 -> 2": 1
+        },
+        "presentation_environment/synthetic": {
+          "None -> 0": 2,
+          "2 -> 2": 2,
+          "0 -> 0": 2
+        },
+        "presentation_actual_expected/synthetic": {
+          "1 -> 1": 4,
+          "1 -> 0": 1,
+          "None -> 0": 1
+        }
+      },
+      "failure_breakdown": {
+        "baseline": {
+          "invalid": 3,
+          "over_three": 1,
+          "nonexistent_or_nonstr_ID": 2
+        },
+        "explicit_boundary": {
+          "invalid": 1,
+          "over_three": 0,
+          "nonexistent_or_nonstr_ID": 1,
+          "invalid_json": 1
+        }
+      },
+      "archived_control": {
+        "cases": 288,
+        "identical_messages": 288,
+        "same_raw": 288,
+        "same_status": 288
+      }
+    },
+    "format7": {
+      "planned": 192,
+      "records": 192,
+      "missing": 0,
+      "extra": 0,
+      "duplicates": 0,
+      "statuses": {
+        "valid": 142,
+        "invalid": 49,
+        "invalid_json": 1
+      },
+      "input_hash_matches": true,
+      "groups": {
+        "trajectory/baseline/natural": {
+          "attempted": 96,
+          "valid": 60,
+          "labels": {
+            "partial": 18,
+            "substantial": 40,
+            "unhelpful": 2
+          }
+        },
+        "trajectory/format_reminder/natural": {
+          "attempted": 96,
+          "valid": 82,
+          "labels": {
+            "partial": 24,
+            "substantial": 56,
+            "unhelpful": 2
+          }
+        }
+      },
+      "paired_transitions": {
+        "trajectory/natural": {
+          "partial -> partial": 17,
+          "substantial -> substantial": 35,
+          "unhelpful -> unhelpful": 2,
+          "substantial -> partial": 4,
+          "partial -> substantial": 1
+        }
+      },
+      "failure_breakdown": {
+        "baseline": {
+          "invalid": 35,
+          "over_three": 34,
+          "nonexistent_or_nonstr_ID": 1,
+          "invalid_json": 1
+        },
+        "format_reminder": {
+          "invalid": 14,
+          "over_three": 13,
+          "nonexistent_or_nonstr_ID": 1
+        }
+      },
+      "archived_control": {
+        "cases": 96,
+        "identical_messages": 96,
+        "same_raw": 96,
+        "same_status": 96
+      }
+    }
+  },
+  "limits": [
+    "All natural cases reused development data",
+    "Synthetic expectations are authored diagnostic criteria, not independent gold labels",
+    "Same-family agreement is not accuracy",
+    "Explicit-boundary wording changes several instructions, not a single-factor causal study",
+    "Invalid outputs remain invalid; no posthoc relaxation",
+    "No new regression using unvalidated features"
+  ]
+}

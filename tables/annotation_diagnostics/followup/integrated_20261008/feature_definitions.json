@@ -1,0 +1,8 @@
+{
+  "goal": "0=no stated desired task/outcome; 1=broad goal without concrete target; 2=explicit task or outcome. Do not require code for conceptual questions.",
+  "input_output": "0=no described input/output or example; 1=only input or only output described; 2=both input and desired output described. Not applicable conceptually is still absence, not low quality.",
+  "prior_attempt": "0=no prior attempt reported; 1=an attempt mentioned without what was tried; 2=concrete prior code/action/approach provided. Code counts only if presented as an attempt, not merely desired output.",
+  "environment": "0=no library/tool/runtime named; 1=library/tool/runtime identified without version; 2=version or explicitly specified platform/configuration supplied. Do not infer unstated versions.",
+  "actual_expected": "0=no explicit difference between observed and desired behavior; 1=states a mismatch but only one side is clear; 2=both observed and desired behavior described. An implementation goal alone is not an observed mismatch.",
+  "constraints": "0=no explicit constraints; 1=broad requirement such as fast/simple; 2=specific restriction, quantitative target, or compatibility requirement."
+}

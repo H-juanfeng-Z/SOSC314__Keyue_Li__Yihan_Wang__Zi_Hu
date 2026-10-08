@@ -1,0 +1,14 @@
+{
+  "completed_calls": 192,
+  "planned": 192,
+  "statuses": {
+    "trajectory/baseline/valid": 60,
+    "trajectory/format_reminder/valid": 82,
+    "trajectory/baseline/invalid": 35,
+    "trajectory/format_reminder/invalid": 14,
+    "trajectory/baseline/invalid_json": 1
+  },
+  "elapsed_seconds": 505.0063862800598,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

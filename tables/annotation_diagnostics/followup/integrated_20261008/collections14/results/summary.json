@@ -1,0 +1,15 @@
+{
+  "completed_calls": 268,
+  "planned": 268,
+  "statuses": {
+    "collection/first2/valid": 183,
+    "collection/first5/valid": 80,
+    "collection/first2/invalid": 2,
+    "collection/first2/context_skipped": 1,
+    "collection/first5/context_skipped": 1,
+    "collection/first5/invalid": 1
+  },
+  "elapsed_seconds": 1569.3341615200043,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

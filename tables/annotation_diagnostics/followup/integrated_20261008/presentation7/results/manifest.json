@@ -1,0 +1,22 @@
+{
+  "planned": 2340,
+  "seed": 314,
+  "torch": "2.5.1+cu124",
+  "transformers": "4.57.6",
+  "max_input": 7500,
+  "max_output": 256,
+  "do_sample": false,
+  "input_sha256": "e1b57636a2c7142b43f4b39adec6ec89977188efdc0af8a2f0cc013d293238a7",
+  "scripts_sha256": {
+    "prepare.py": "6fe5506d8a6cc37c49ced0fe90370ff648a00b5e46a5a761e7f44b3d557fc82c",
+    "run.py": "55e1b02e416c603d964a19e15a13b94f1ede95805674301c71a07c614093a792",
+    "analyze.py": "1474517d5fb8c3cdc3592d33223ec7246141deada7c60f68d0f516c62f39da87",
+    "run_helpfulness_grounding.py": "4641e92f95fbcbba7bcf35815cf457d235a06e4f902559ba85c233f8a60b0e18",
+    "request_protocol.py": "8580e48c90306381d0411d2395a004cf846f615f5443e865f6c61e1300df8537",
+    "make_references.py": "2e3890c288ce11bf0dd1766ee4f5579ef8e2c57fd622ff179b2e19c42ea2d6b6",
+    "launch.py": "09a35251479fa34337a20c645859a3db4bf2d6a8c15f7f080cb64ec26ab94661",
+    "resume_remaining.py": "20957111168984a89c92c77e213caab03090e8bd69024270d5149b49d26678f1"
+  },
+  "source_manifest_sha256": "81e47a92d52c84754f9850576865e73effa9032e5533b1c18081e4a19ed149e9",
+  "model_name": "Qwen2.5-Coder-7B-Instruct"
+}

@@ -1,0 +1,13 @@
+{
+  "completed_calls": 715,
+  "planned": 715,
+  "statuses": {
+    "trajectory/no_examples/valid": 426,
+    "trajectory/no_examples/invalid": 274,
+    "trajectory/no_examples/invalid_json": 8,
+    "trajectory/no_examples/context_skipped": 7
+  },
+  "elapsed_seconds": 1938.8543422222137,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

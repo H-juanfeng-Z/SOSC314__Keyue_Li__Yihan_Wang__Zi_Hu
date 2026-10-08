@@ -1,0 +1,23 @@
+[
+  {
+    "name": "features14",
+    "model": "14B",
+    "gpu": 0,
+    "planned": 612,
+    "sha256": "d717f6303f632f831983c6877f4c02285368e1f02e42ce9d84835bf02c25d3bc"
+  },
+  {
+    "name": "features7",
+    "model": "7B",
+    "gpu": 5,
+    "planned": 612,
+    "sha256": "d717f6303f632f831983c6877f4c02285368e1f02e42ce9d84835bf02c25d3bc"
+  },
+  {
+    "name": "format7",
+    "model": "7B",
+    "gpu": 5,
+    "planned": 192,
+    "sha256": "8891c82aac5a3c29bf05195a723d4db66a1338306f0566339473b9666ba6dd73"
+  }
+]

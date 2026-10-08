@@ -1,0 +1,32 @@
+[
+  {
+    "name": "presentation14",
+    "model": "14B",
+    "planned": 2340,
+    "sha256": "e1b57636a2c7142b43f4b39adec6ec89977188efdc0af8a2f0cc013d293238a7"
+  },
+  {
+    "name": "collections14",
+    "model": "14B",
+    "planned": 268,
+    "sha256": "308eeaf3946693bd81500e5e40e6efaa570538fb18ebc2e3a048d607bd225189"
+  },
+  {
+    "name": "intent7",
+    "model": "7B",
+    "planned": 2730,
+    "sha256": "9a04b46650aae633def3a8e35f1f2ad4eba331dcfb3cf171d0c4b9da7ba1f47b"
+  },
+  {
+    "name": "answers7",
+    "model": "7B",
+    "planned": 715,
+    "sha256": "d7230de8715dfda6403e79b3aa110e1d9ca088b2f82e6850ba55d8bb3001d07f"
+  },
+  {
+    "name": "presentation7",
+    "model": "7B",
+    "planned": 2340,
+    "sha256": "e1b57636a2c7142b43f4b39adec6ec89977188efdc0af8a2f0cc013d293238a7"
+  }
+]

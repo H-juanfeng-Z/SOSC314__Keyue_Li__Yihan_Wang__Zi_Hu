@@ -1,0 +1,292 @@
+{
+  "stages": {
+    "presentation14": {
+      "planned": 2340,
+      "records": 2340,
+      "unique_ids": 2340,
+      "missing_tasks": 0,
+      "statuses": {
+        "valid": 2310,
+        "invalid": 18,
+        "context_skipped": 12
+      },
+      "positive_without_citation": [],
+      "by_suite": {
+        "presentation_actual_expected": {
+          "2": 379,
+          "0": 3,
+          "None": 2
+        },
+        "presentation_constraints": {
+          "2": 221,
+          "0": 127,
+          "1": 39
+        },
+        "presentation_environment": {
+          "2": 120,
+          "0": 141,
+          "1": 125
+        },
+        "presentation_goal": {
+          "2": 383,
+          "1": 4
+        },
+        "presentation_input_output": {
+          "2": 230,
+          "1": 58,
+          "0": 94
+        },
+        "presentation_prior_attempt": {
+          "2": 278,
+          "0": 88,
+          "1": 18
+        }
+      }
+    },
+    "collections14": {
+      "planned": 268,
+      "records": 268,
+      "unique_ids": 268,
+      "missing_tasks": 0,
+      "statuses": {
+        "valid": 263,
+        "invalid": 3,
+        "context_skipped": 2
+      },
+      "positive_without_citation": [],
+      "by_suite": {
+        "collection": {
+          "substantial": 250,
+          "partial": 11,
+          "unhelpful": 2
+        }
+      }
+    },
+    "intent7": {
+      "planned": 2730,
+      "records": 2730,
+      "unique_ids": 2730,
+      "missing_tasks": 0,
+      "statuses": {
+        "valid": 2713,
+        "context_skipped": 14,
+        "invalid_json": 2,
+        "invalid": 1
+      },
+      "positive_without_citation": [],
+      "by_suite": {
+        "intent_api_change": {
+          "no": 371,
+          "yes": 17
+        },
+        "intent_api_usage": {
+          "yes": 251,
+          "no": 137
+        },
+        "intent_conceptual": {
+          "no": 191,
+          "yes": 196,
+          "uncertain": 1
+        },
+        "intent_discrepancy": {
+          "yes": 257,
+          "no": 131
+        },
+        "intent_errors": {
+          "no": 210,
+          "yes": 176
+        },
+        "intent_learning": {
+          "no": 351,
+          "yes": 36
+        },
+        "intent_review": {
+          "no": 154,
+          "yes": 234
+        }
+      }
+    },
+    "answers7": {
+      "planned": 715,
+      "records": 715,
+      "unique_ids": 715,
+      "missing_tasks": 0,
+      "statuses": {
+        "valid": 426,
+        "invalid": 274,
+        "invalid_json": 8,
+        "context_skipped": 7
+      },
+      "positive_without_citation": [],
+      "by_suite": {
+        "trajectory": {
+          "substantial": 308,
+          "unhelpful": 18,
+          "partial": 100
+        }
+      }
+    },
+    "presentation7": {
+      "planned": 2340,
+      "records": 2340,
+      "unique_ids": 2340,
+      "missing_tasks": 0,
+      "statuses": {
+        "valid": 2236,
+        "invalid": 86,
+        "invalid_json": 6,
+        "context_skipped": 12
+      },
+      "positive_without_citation": [],
+      "by_suite": {
+        "presentation_actual_expected": {
+          "2": 262,
+          "1": 50,
+          "0": 66
+        },
+        "presentation_constraints": {
+          "0": 313,
+          "2": 63,
+          "None": 7,
+          "1": 3
+        },
+        "presentation_environment": {
+          "1": 18,
+          "0": 309,
+          "2": 42,
+          "None": 18
+        },
+        "presentation_goal": {
+          "2": 352,
+          "0": 29
+        },
+        "presentation_input_output": {
+          "0": 227,
+          "2": 124
+        },
+        "presentation_prior_attempt": {
+          "1": 9,
+          "0": 160,
+          "2": 123,
+          "None": 61
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "14B_to_7B_intent": {
+      "paired_valid": 2711,
+      "transitions": {
+        "no -> no": 1316,
+        "yes -> yes": 894,
+        "yes -> no": 229,
+        "no -> yes": 271,
+        "no -> uncertain": 1
+      }
+    },
+    "14B_to_7B_answers": {
+      "paired_valid": 426,
+      "transitions": {
+        "substantial -> substantial": 296,
+        "unhelpful -> unhelpful": 5,
+        "partial -> partial": 48,
+        "substantial -> partial": 46,
+        "substantial -> unhelpful": 6,
+        "partial -> substantial": 11,
+        "partial -> unhelpful": 7,
+        "unhelpful -> partial": 6,
+        "unhelpful -> substantial": 1
+      }
+    },
+    "presentation_actual_expected_14B_to_7B": {
+      "paired_valid": 374,
+      "transitions": {
+        "2 -> 2": 258,
+        "2 -> 1": 50,
+        "2 -> 0": 61,
+        "0 -> 0": 3,
+        "None -> 0": 2
+      }
+    },
+    "presentation_constraints_14B_to_7B": {
+      "paired_valid": 385,
+      "transitions": {
+        "2 -> 0": 156,
+        "2 -> 2": 59,
+        "0 -> 0": 119,
+        "0 -> None": 6,
+        "1 -> 0": 37,
+        "0 -> 2": 2,
+        "1 -> 2": 2,
+        "2 -> 1": 3,
+        "2 -> None": 1
+      }
+    },
+    "presentation_environment_14B_to_7B": {
+      "paired_valid": 385,
+      "transitions": {
+        "2 -> 1": 8,
+        "0 -> 0": 125,
+        "1 -> 0": 108,
+        "2 -> 2": 35,
+        "2 -> 0": 74,
+        "0 -> None": 15,
+        "1 -> 1": 9,
+        "2 -> None": 2,
+        "1 -> 2": 7,
+        "0 -> 1": 1,
+        "1 -> None": 1
+      }
+    },
+    "presentation_goal_14B_to_7B": {
+      "paired_valid": 380,
+      "transitions": {
+        "2 -> 2": 348,
+        "2 -> 0": 28,
+        "1 -> 2": 3,
+        "1 -> 0": 1
+      }
+    },
+    "presentation_input_output_14B_to_7B": {
+      "paired_valid": 348,
+      "transitions": {
+        "1 -> 0": 49,
+        "0 -> 0": 89,
+        "2 -> 0": 86,
+        "2 -> 2": 114,
+        "1 -> 2": 7,
+        "0 -> 2": 3
+      }
+    },
+    "presentation_prior_attempt_14B_to_7B": {
+      "paired_valid": 350,
+      "transitions": {
+        "2 -> 1": 7,
+        "0 -> 0": 40,
+        "2 -> 2": 115,
+        "2 -> 0": 105,
+        "0 -> None": 42,
+        "1 -> 0": 13,
+        "1 -> 2": 2,
+        "2 -> None": 18,
+        "0 -> 2": 5,
+        "1 -> 1": 2,
+        "1 -> None": 1
+      }
+    },
+    "collection_vs_individual": {
+      "paired_complete": 260,
+      "counts": {
+        "first2/single_any=True -> collection=substantial": 168,
+        "first5/single_any=True -> collection=substantial": 77,
+        "first2/single_any=False -> collection=partial": 7,
+        "first5/single_any=False -> collection=substantial": 1,
+        "first2/single_any=False -> collection=unhelpful": 2,
+        "first2/single_any=True -> collection=partial": 3,
+        "first5/single_any=False -> collection=partial": 1,
+        "first2/single_any=False -> collection=substantial": 1
+      }
+    }
+  },
+  "limitations": "All reused development cases; shared-family agreement is not accuracy. Collections have greater token length and may be skipped; do not pool missing as negative. Features are not question quality."
+}

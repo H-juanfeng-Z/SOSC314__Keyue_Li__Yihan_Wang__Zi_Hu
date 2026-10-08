@@ -1,0 +1,30 @@
+{
+  "completed_calls": 2340,
+  "planned": 2340,
+  "statuses": {
+    "presentation_actual_expected/explicit/valid": 378,
+    "presentation_constraints/explicit/valid": 386,
+    "presentation_environment/explicit/valid": 387,
+    "presentation_goal/explicit/valid": 381,
+    "presentation_input_output/explicit/invalid": 35,
+    "presentation_prior_attempt/explicit/invalid": 33,
+    "presentation_input_output/explicit/valid": 351,
+    "presentation_prior_attempt/explicit/valid": 353,
+    "presentation_goal/explicit/invalid": 5,
+    "presentation_actual_expected/explicit/invalid": 10,
+    "presentation_prior_attempt/explicit/invalid_json": 2,
+    "presentation_input_output/explicit/invalid_json": 2,
+    "presentation_actual_expected/explicit/context_skipped": 2,
+    "presentation_constraints/explicit/context_skipped": 2,
+    "presentation_environment/explicit/context_skipped": 2,
+    "presentation_goal/explicit/context_skipped": 2,
+    "presentation_input_output/explicit/context_skipped": 2,
+    "presentation_prior_attempt/explicit/context_skipped": 2,
+    "presentation_constraints/explicit/invalid": 2,
+    "presentation_environment/explicit/invalid": 1,
+    "presentation_goal/explicit/invalid_json": 2
+  },
+  "elapsed_seconds": 2934.8577620983124,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

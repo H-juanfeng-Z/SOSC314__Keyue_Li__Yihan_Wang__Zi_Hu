@@ -1,0 +1,54 @@
+{
+  "question_pool": 390,
+  "new_questions": 0,
+  "reserved_used": false,
+  "stages": [
+    {
+      "name": "presentation14",
+      "model": "14B",
+      "planned": 2340,
+      "sha256": "e1b57636a2c7142b43f4b39adec6ec89977188efdc0af8a2f0cc013d293238a7"
+    },
+    {
+      "name": "collections14",
+      "model": "14B",
+      "planned": 268,
+      "sha256": "308eeaf3946693bd81500e5e40e6efaa570538fb18ebc2e3a048d607bd225189"
+    },
+    {
+      "name": "intent7",
+      "model": "7B",
+      "planned": 2730,
+      "sha256": "9a04b46650aae633def3a8e35f1f2ad4eba331dcfb3cf171d0c4b9da7ba1f47b"
+    },
+    {
+      "name": "answers7",
+      "model": "7B",
+      "planned": 715,
+      "sha256": "d7230de8715dfda6403e79b3aa110e1d9ca088b2f82e6850ba55d8bb3001d07f"
+    },
+    {
+      "name": "presentation7",
+      "model": "7B",
+      "planned": 2340,
+      "sha256": "e1b57636a2c7142b43f4b39adec6ec89977188efdc0af8a2f0cc013d293238a7"
+    }
+  ],
+  "budget": "14-hour whole-batch cap; each stage at most3h with2.75h soft cutoff. Intended8-12h useful workload estimate, not guaranteed runtime. Never idle to pad duration; do not auto-expand tasks.",
+  "purpose": [
+    "Observable presentation measures by intent",
+    "Complementary assistance in first2/first5 answer sets vs single-answer maximum",
+    "Cross-size measurement robustness, same model family not independent ground truth",
+    "Prepare linked table for subsequent association analysis"
+  ],
+  "limits": [
+    "Reused development sample",
+    "Up to5 answers; not full dialogue",
+    "Collections exceeding7500 input tokens skipped, not truncated",
+    "Scores and author identities hidden",
+    "Features are presence/detail indicators, not a quality ranking",
+    "Two sizes of one model family may share bias",
+    "No causal interpretation; edited snapshots and selection remain limitations"
+  ],
+  "analysis": "Stage-specific validity and semantic checks; join question IDs; compare feature and intent decisions across sizes, individual-answer ratings across sizes, collection vs any single substantial rating. Invalid and skipped outputs remain missing. No selection by favorable association."
+}

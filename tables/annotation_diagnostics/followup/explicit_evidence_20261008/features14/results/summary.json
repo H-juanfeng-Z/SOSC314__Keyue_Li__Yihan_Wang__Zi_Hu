@@ -1,0 +1,17 @@
+{
+  "completed_calls": 612,
+  "planned": 612,
+  "statuses": {
+    "presentation_actual_expected/baseline/valid": 102,
+    "presentation_actual_expected/explicit_boundary/valid": 101,
+    "presentation_constraints/baseline/valid": 102,
+    "presentation_constraints/explicit_boundary/valid": 101,
+    "presentation_environment/baseline/valid": 102,
+    "presentation_environment/explicit_boundary/valid": 102,
+    "presentation_actual_expected/explicit_boundary/invalid": 1,
+    "presentation_constraints/explicit_boundary/invalid": 1
+  },
+  "elapsed_seconds": 1703.5877285003662,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

@@ -1,0 +1,25 @@
+{
+  "completed_calls": 2730,
+  "planned": 2730,
+  "statuses": {
+    "intent_api_change/direct/valid": 388,
+    "intent_api_usage/direct/valid": 388,
+    "intent_conceptual/direct/valid": 388,
+    "intent_discrepancy/direct/valid": 388,
+    "intent_errors/direct/valid": 386,
+    "intent_learning/direct/valid": 387,
+    "intent_review/direct/valid": 388,
+    "intent_api_change/direct/context_skipped": 2,
+    "intent_api_usage/direct/context_skipped": 2,
+    "intent_conceptual/direct/context_skipped": 2,
+    "intent_discrepancy/direct/context_skipped": 2,
+    "intent_errors/direct/context_skipped": 2,
+    "intent_learning/direct/context_skipped": 2,
+    "intent_review/direct/context_skipped": 2,
+    "intent_errors/direct/invalid_json": 2,
+    "intent_learning/direct/invalid": 1
+  },
+  "elapsed_seconds": 4328.388826847076,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

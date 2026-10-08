@@ -1,0 +1,27 @@
+{
+  "completed_calls": 2340,
+  "planned": 2340,
+  "statuses": {
+    "presentation_actual_expected/explicit/valid": 384,
+    "presentation_constraints/explicit/valid": 387,
+    "presentation_environment/explicit/valid": 386,
+    "presentation_goal/explicit/valid": 387,
+    "presentation_input_output/explicit/valid": 382,
+    "presentation_prior_attempt/explicit/valid": 384,
+    "presentation_input_output/explicit/invalid": 6,
+    "presentation_environment/explicit/invalid": 2,
+    "presentation_actual_expected/explicit/invalid": 4,
+    "presentation_constraints/explicit/invalid": 1,
+    "presentation_prior_attempt/explicit/invalid": 4,
+    "presentation_actual_expected/explicit/context_skipped": 2,
+    "presentation_constraints/explicit/context_skipped": 2,
+    "presentation_environment/explicit/context_skipped": 2,
+    "presentation_goal/explicit/context_skipped": 2,
+    "presentation_input_output/explicit/context_skipped": 2,
+    "presentation_prior_attempt/explicit/context_skipped": 2,
+    "presentation_goal/explicit/invalid": 1
+  },
+  "elapsed_seconds": 6247.470984220505,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}
