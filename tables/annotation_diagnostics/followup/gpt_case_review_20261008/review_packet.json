@@ -1,0 +1,1469 @@
+[
+  {
+    "case_id": "R001",
+    "title": "How to plot a 2d streamline in 3d view in matplotlib",
+    "question_lines": {
+      "Q1": "I need to plot a 2d streamline in 3d view like this. As suggested by the post, I need to extract streamlines and arrows from a 2d plot and then transform it to 3d data. How to transform this 2d streamline data to 3d data and plot using mplot3d?",
+      "Q5": "Thanks in advance",
+      "Q9": "Raj",
+      "Q13": "EDIT: @gg349, with your help I could plot streamline in 3d view. The plot is here",
+      "Q17": "I have two questions:",
+      "Q23": "How to extract arrows from streamplot and plot it in 3d as you did in your earlier post",
+      "Q28": "How to extract a imshow() data and plot it in 3d. The 2d streamline with imshow() is here"
+    },
+    "answers": {
+      "X": {
+        "A1": "pyplot.streamplot returns \"lines\" and \"arrows\". ",
+        "A5": "\"Lines\" consists of series of pair of interpolated points(in x,y given in streamplot) from streamplot function. One particular streamline starts with a seed point (uniformly distributed I guess) and ends when integrator inside streamline gives same pair of points more than 5 times. Then it choose next seed and repeat the procedure. ",
+        "A9": "\"arrows\" are actually information about the patch object with edge points measured by the fig(gca) unlike \"lines\" . That is why if you get res.arrows.get_paths()",
+        "A10": "and plot vertices of it it runs from zero to (figsize[0]-2)*dpi and (figsize[1]-2)*dpi.",
+        "A14": "In principle one can invert the logic back and get the arrow. But I think that would be tedious. So better way would be, get all the segments of a particular streamline from \"lines\". Map to 3d and draw 3d-arrow using one or more segments, depending upon the arrow density you want. ",
+        "A18": "Conditions to get individual streamlines from \"lines\" is.",
+        "A19": "1. New streamline if all the four points of two consecutive segments differ.",
+        "A20": "2. End of a streamline if all the four points of two consecutive segments are same for more than 5 consecutive pairs.",
+        "A24": "A naive solution might be",
+        "A28": "[CODE]",
+        "A29": "    fig = figure(figsize=(8,6), dpi =160)",
+        "A31": "    ax = fig.add_subplot(111, projection='3d' )",
+        "A32": "    i = 0",
+        "A33": "    for line in lines:",
+        "A34": "        i += 1",
+        "A35": "        old_x = line.vertices.T[0]",
+        "A36": "        old_y = line.vertices.T[1]",
+        "A37": "        # apply for 2d to 3d transformation here",
+        "A38": "        new_z = np.exp(-(old_x ** 2 + old_y ** 2) / 4)",
+        "A39": "        new_x = 1.2 * old_x",
+        "A40": "        new_y = 0.8 * old_y",
+        "A41": "        ax.plot(new_x, new_y, new_z, 'k')",
+        "A43": "        if i%10 ==1:",
+        "A44": "            ax.quiver(new_x[0],new_y[0],new_z[0],new_x[0]-new_x[1],new_y[0]-new_y[1],new_z[0]-new_z[1], length=0.2)",
+        "A46": "[/CODE]"
+      },
+      "Y": {
+        "A1": "this example should get you started:",
+        "A5": "[CODE]",
+        "A6": "import matplotlib.pyplot as plt",
+        "A7": "import numpy as np",
+        "A9": "fig_tmp, ax_tmp = plt.subplots()",
+        "A10": "x, y = np.mgrid[0:2.5:1000j, -2.5:2.5:1000j]",
+        "A11": "vx, vy = np.cos(x - y), np.sin(x - y)",
+        "A12": "res = ax_tmp.streamplot(x.T, y.T, vx, vy, color='k')",
+        "A13": "fig_tmp.show()",
+        "A14": "# extract the lines from the temporary figure",
+        "A15": "lines = res.lines.get_paths()",
+        "A16": "#for l in lines:",
+        "A17": "#    plot(l.vertices.T[0],l.vertices.T[1],'k')",
+        "A19": "fig = plt.figure()",
+        "A20": "ax = fig.add_subplot(111, projection='3d')",
+        "A21": "for line in lines:",
+        "A22": "    old_x = line.vertices.T[0]",
+        "A23": "    old_y = line.vertices.T[1]",
+        "A24": "    # apply for 2d to 3d transformation here",
+        "A25": "    new_z = np.exp(-(old_x ** 2 + old_y ** 2) / 4)",
+        "A26": "    new_x = 1.2 * old_x",
+        "A27": "    new_y = 0.8 * old_y",
+        "A28": "    ax.plot(new_x, new_y, new_z, 'k')",
+        "A30": "[/CODE]",
+        "A34": "this generates an intermediate temporary figure:",
+        "A39": "from which the lines are extracted. Then you apply your 2d to 3d point transformation of your liking, and plot the same lines in a new 3d figure:"
+      }
+    }
+  },
+  {
+    "case_id": "R002",
+    "title": "Python Pandas Reading CSV file with Specific Line Terminators",
+    "question_lines": {
+      "Q1": "I am trying to create a dataframe from the below sample csv I've been given but I am getting Error tokenizing data. C error: EOF inside string starting at line 0. I haven't had very much practise with treating bad lines but would really like to learn the best way to handle something like this. I have attempted many different options in read_csv such as error_bad_line=False but that has not worked either. ",
+      "Q5": "[CODE]",
+      "Q6": "CParserError: Error tokenizing data. C error: EOF inside string starting at line 0",
+      "Q8": "[/CODE]",
+      "Q12": "I am guessing that the line terminators of ,\" are causing the issue and I am guessing that the best way is to loop through each line and process so I came up with the below generator with help from a different  and was hoping I am close. Would really like to learn how to use a generator and yield for this also. ",
+      "Q16": "Sample data:",
+      "Q20": "[CODE]",
+      "Q21": "\"USNC3255\",\"27\",\"US\",\"NC\",\"LANDS END\",\"72305006\",\"KNJM\",\"KNCA\",\"KNKT\",\"T72305006\",\"\",\"\",\"NCC031\",\"NCZ095\",\"\",\"545\",\"28594\",\"America/New_York\",\"34.65266\",\"-77.07661\",\"7\",\"RDU\",\"893727\",\"",
+      "Q22": "\"USNC3256\",\"27\",\"US\",\"NC\",\"LANDSDOWN\",\"72314058\",\"KEHO\",\"KAKH\",\"KIPJ\",\"T72314058\",\"\",\"\",\"NCC045\",\"NCZ068\",\"sc007\",\"517\",\"28150\",\"America/New_York\",\"35.29374\",\"-81.46537\",\"797\",\"CLT\",\"317845\",\"",
+      "Q24": "[/CODE]",
+      "Q28": "I have crafted the below which removes last two characters but not sure hot to produce a dataframe from the lines:",
+      "Q32": "[CODE]",
+      "Q33": "def big_table_generator(filename):",
+      "Q34": "    with open(filename, 'rt') as f:",
+      "Q35": "        for line in f:",
+      "Q36": "            yield line[:-3]",
+      "Q38": "gen = big_table_generator('../data/test_sun_file.csv')",
+      "Q39": "pd.DataFrame(gen)",
+      "Q41": "[/CODE]"
+    },
+    "answers": {
+      "X": {
+        "A1": "I had a similar error.  Fixed it by using the option quoting=csv.QUOTE_NONE in read_csv.",
+        "A5": "For example:",
+        "A9": "[CODE]",
+        "A10": "df = pd.read_csv(csvfile, header = None, delimiter=\"\\t\", quoting=csv.QUOTE_NONE, encoding='utf-8')",
+        "A12": "[/CODE]",
+        "A16": "Some info about why in the second comment here: https://github.com/pydata/pandas/issues/5500"
+      },
+      "Y": {
+        "A1": "Here is the solution I came up with but I really wanted to avoid using list and append and take advantage of a generator instead but not yet comfortable enough working with generators. ",
+        "A5": "[CODE]",
+        "A6": "def parse_file(filename):",
+        "A8": "    newline = []",
+        "A10": "    with open(filename, 'rb') as f:",
+        "A11": "        reader = csv.reader(f, quoting=csv.QUOTE_NONE)",
+        "A12": "        for row in reader:",
+        "A13": "            newline.append([s.strip('\"') for s in row[:-1]])",
+        "A14": "    df = pd.DataFrame(newline)",
+        "A15": "    df = df.applymap(lambda x: nan if len(x) == 0 else x).astype(object)",
+        "A16": "    return df",
+        "A18": "df = parse_file(filename)",
+        "A20": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R003",
+    "title": "TkMessageBox - No Module",
+    "question_lines": {
+      "Q1": "[CODE]",
+      "Q2": "import TkMessageBox",
+      "Q4": "[/CODE]",
+      "Q8": "When I import TkMessageBox it displays the messsge 'ImportError: No module named 'TkMessageBox'.",
+      "Q12": "As far as I know im using python 3.3.2 and Tk 8.5.",
+      "Q16": "Am I using the wrong version of python or importing it wrong ?",
+      "Q20": "Any answers would be extremely useful. Alternatively is there something similar in the version i am using?"
+    },
+    "answers": {
+      "X": {
+        "A1": "In Python3.x things have changed a little bit:",
+        "A5": "[CODE]",
+        "A6": "   >>> import tkinter",
+        "A7": "   >>> import tkinter.messagebox",
+        "A8": "   >>>",
+        "A10": "[/CODE]",
+        "A14": "I mean what we call tkMessageBox in Python2.x becomes  tkinter.messagebox in Python3.x"
+      },
+      "Y": {
+        "A1": "In Python 2.x, to import, you'd say import tkMessageBox. But in Python 3.x, it's been renamed to import tkinter.messagebox.",
+        "A5": "Hope it helped :))"
+      }
+    }
+  },
+  {
+    "case_id": "R004",
+    "title": "Add two matrices in python",
+    "question_lines": {
+      "Q1": "I'm trying to write a function that adds two matrices to pass the following doctests:",
+      "Q5": "[CODE]",
+      "Q6": "  >>> a = [[1, 2], [3, 4]]",
+      "Q7": "  >>> b = [[2, 2], [2, 2]]",
+      "Q8": "  >>> add_matrices(a, b)",
+      "Q9": "  [[3, 4], [5, 6]]",
+      "Q10": "  >>> c = [[8, 2], [3, 4], [5, 7]]",
+      "Q11": "  >>> d = [[3, 2], [9, 2], [10, 12]]",
+      "Q12": "  >>> add_matrices(c, d)",
+      "Q13": "  [[11, 4], [12, 6], [15, 19]]",
+      "Q15": "[/CODE]",
+      "Q19": "So I wrote a function:",
+      "Q23": "[CODE]",
+      "Q24": "def add(x, y):",
+      "Q25": "    return x + y",
+      "Q27": "[/CODE]",
+      "Q31": "And then I wrote the following function:",
+      "Q35": "[CODE]",
+      "Q36": "def add_matrices(c, d):",
+      "Q37": "    for i in range(len(c)):",
+      "Q38": "        print map(add, c[i], d[i])",
+      "Q40": "[/CODE]",
+      "Q44": "And I sort of get the right answer."
+    },
+    "answers": {
+      "X": {
+        "A1": "[CODE]",
+        "A2": "def addM(a, b):",
+        "A3": "    res = []",
+        "A4": "    for i in range(len(a)):",
+        "A5": "        row = []",
+        "A6": "        for j in range(len(a[0])):",
+        "A7": "            row.append(a[i][j]+b[i][j])",
+        "A8": "        res.append(row)",
+        "A9": "    return res",
+        "A11": "[/CODE]"
+      },
+      "Y": {
+        "A1": "Matrix library",
+        "A4": "You can use the numpy module, which has support for this.",
+        "A8": "[CODE]",
+        "A9": ">>> import numpy as np",
+        "A11": ">>> a = np.matrix([[1, 2], [3, 4]])",
+        "A12": ">>> b = np.matrix([[2, 2], [2, 2]])",
+        "A14": ">>> a+b",
+        "A15": "matrix([[3, 4],",
+        "A16": "        [5, 6]])",
+        "A18": "[/CODE]",
+        "A23": "Home-grown solution: heavyweight",
+        "A26": "Assuming you wanted to implement it yourself, you'd set up the following machinery, which would let you define arbitrary pairwise operations:",
+        "A30": "[CODE]",
+        "A31": "from pprint import pformat as pf",
+        "A33": "class Matrix(object):",
+        "A34": "    def __init__(self, arrayOfRows=None, rows=None, cols=None):",
+        "A35": "        if arrayOfRows:",
+        "A36": "            self.data = arrayOfRows",
+        "A37": "        else:",
+        "A38": "            self.data = [[0 for c in range(cols)] for r in range(rows)]",
+        "A39": "        self.rows = len(self.data)",
+        "A40": "        self.cols = len(self.data[0])",
+        "A42": "    @property",
+        "A43": "    def shape(self):          # myMatrix.shape -> (4,3)",
+        "A44": "        return (self.rows, self.cols)",
+        "A45": "    def __getitem__(self, i): # lets you do myMatrix[row][col",
+        "A46": "        return self.data[i]",
+        "A47": "    def __str__(self):        # pretty string formatting",
+        "A48": "        return pf(self.data)",
+        "A50": "    @classmethod",
+        "A51": "    def map(cls, func, *matrices):",
+        "A52": "        assert len(set(m.shape for m in matrices))==1, 'Not all matrices same shape'",
+        "A54": "        rows,cols = matrices[0].shape",
+        "A55": "        new = Matrix(rows=rows, cols=cols)",
+        "A56": "        for r in range(rows):",
+        "A57": "            for c in range(cols):",
+        "A58": "                new[r][c] = func(*[m[r][c] for m in matrices], r=r, c=c)",
+        "A59": "        return new",
+        "A61": "[/CODE]",
+        "A65": "Now adding pairwise methods is as easy as pie:",
+        "A69": "[CODE]",
+        "A70": "    def __add__(self, other):",
+        "A71": "        return Matrix.map(lambda a,b,**kw:a+b, self, other)",
+        "A72": "    def __sub__(self, other):",
+        "A73": "        return Matrix.map(lambda a,b,**kw:a-b, self, other)",
+        "A75": "[/CODE]",
+        "A79": "Example:",
+        "A83": "[CODE]",
+        "A84": ">>> a = Matrix([[1, 2], [3, 4]])",
+        "A85": ">>> b = Matrix([[2, 2], [2, 2]])",
+        "A86": ">>> b = Matrix([[0, 0], [0, 0]])",
+        "A88": ">>> print(a+b)",
+        "A89": "[[3, 4], [5, 6]]                                                                                                                                                                                                      ",
+        "A91": ">>> print(a-b)",
+        "A92": "[[-1, 0], [1, 2]]",
+        "A94": "[/CODE]",
+        "A98": "You can even add pairwise exponentiation, negation, binary operations, etc. I do not demonstrate it here, because it's probably best to leave * and ** for matrix multiplication and matrix exponentiation.",
+        "A103": "Home-grown solution: lightweight",
+        "A106": "If you just want a really simple way to map an operation over only two nested-list matrices, you can do this:",
+        "A110": "[CODE]",
+        "A111": "def listmatrixMap(f, *matrices):",
+        "A112": "    return \\",
+        "A113": "        [",
+        "A114": "            [",
+        "A115": "                f(*values) ",
+        "A116": "                for c,values in enumerate(zip(*rows))",
+        "A117": "            ] ",
+        "A118": "            for r,rows in enumerate(zip(*matrices))",
+        "A119": "        ]",
+        "A121": "[/CODE]",
+        "A125": "Demo:",
+        "A129": "[CODE]",
+        "A130": ">>> listmatrixMap(operator.add, a, b, c))",
+        "A131": "[[3, 4], [5, 6]]",
+        "A133": "[/CODE]",
+        "A137": "With an additional if-else and keyword argument, you can use indices in your lambda. Below is an example of how to write a matrix row-order enumerate function. The if-else and keyword were omitted above for clarity.",
+        "A141": "[CODE]",
+        "A142": ">>> listmatrixMap(lambda val,r,c:((r,c),val), a, indices=True)",
+        "A143": "[[((0, 0), 1), ((0, 1), 2)], [((1, 0), 3), ((1, 1), 4)]]",
+        "A145": "[/CODE]",
+        "A149": "edit",
+        "A153": "So we could write the above add_matrices function like so:",
+        "A157": "[CODE]",
+        "A158": "def add_matrices(a,b):",
+        "A159": "    return listmatrixMap(add, a, b)",
+        "A161": "[/CODE]",
+        "A165": "Demo:",
+        "A169": "[CODE]",
+        "A170": ">>> add_matrices(c, d)",
+        "A171": "[[11, 4], [12, 6], [15, 19]]",
+        "A173": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R005",
+    "title": "Stopping python using ctrl+c",
+    "question_lines": {
+      "Q1": "I have a python script that uses threads and makes lots of HTTP requests. I think what's happening is that while a HTTP request (using urllib2) is reading, it's blocking and not responding to CtrlC to stop the program. Is there any way around this?"
+    },
+    "answers": {
+      "X": {
+        "A1": "The only sure way is to use CtrlBreak. Stops every python script instantly!",
+        "A5": "(Note that on some keyboards, \"Break\" is labeled as \"Pause\".)"
+      },
+      "Y": {
+        "A1": "If it is running in the Python shell use Ctrl + Z, otherwise locate the python process and kill it."
+      }
+    }
+  },
+  {
+    "case_id": "R006",
+    "title": "Python JSON decoding performance",
+    "question_lines": {
+      "Q1": "I'm using the json module in Python 2.6 to load and decode JSON files. However I'm currently getting slower than expected performance. I'm using a test case which is 6MB in size and json.loads() is taking 20 seconds.",
+      "Q5": "I thought the json module had some native code to speed up the decoding?",
+      "Q9": "How do I check if this is being used?",
+      "Q13": "As a comparison, I downloaded and installed the python-cjson module, and cjson.decode() is taking 1 second for the same test case.",
+      "Q17": "I'd rather use the JSON module provided with Python 2.6 so that users of my code aren't required to install additional modules.",
+      "Q21": "(I'm developing on Mac OS X, but I getting a similar result on Windows XP.)"
+    },
+    "answers": {
+      "X": {
+        "A1": "Looking in my installation of Python 2.6.1 on windows, the json package loads the _json module, which is built into the runtime. C source for the json speedups module is here.",
+        "A5": "[CODE]",
+        "A6": ">>> import _json",
+        "A7": ">>> _json",
+        "A8": "<module '_json' (built-in)>",
+        "A9": ">>> print _json.__doc__",
+        "A10": "json speedups",
+        "A11": ">>> dir(_json)",
+        "A12": "['__doc__', '__name__', '__package__', 'encode_basestring_ascii', 'scanstring']",
+        "A13": ">>>",
+        "A15": "[/CODE]"
+      },
+      "Y": {
+        "A1": "It may vary by platform, but the builtin json module is based on simplejson, not including the C speedups.  I've found simplejson to be as a fast as python-cjson anyway, so I prefer it since it obviously has the same interface as the builtin.",
+        "A5": "[CODE]",
+        "A6": "try:",
+        "A7": "    import simplejson as json",
+        "A8": "except ImportError:",
+        "A9": "    import json",
+        "A11": "[/CODE]",
+        "A15": "Seems to me that's the best idiom for awhile, yielding the performance when available while being forwards-compatible."
+      }
+    }
+  },
+  {
+    "case_id": "R007",
+    "title": "ImportError: No module named jinja2",
+    "question_lines": {
+      "Q1": "Using google-app-engine tutorial, I got the following error stack message:",
+      "Q5": "[CODE]",
+      "Q6": "Traceback (most recent call last):",
+      "Q7": "File \"C:\\Program Files (x86)\\Google\\google_appengine\\google\\appengine\\runtime\\wsgi.py\", line 239, in Handle",
+      "Q8": "handler = _config_handle.add_wsgi_middleware(self._LoadHandler())",
+      "Q9": "File \"C:\\Program Files (x86)\\Google\\google_appengine\\google\\appengine\\runtime\\wsgi.py\", line 298, in _LoadHandler",
+      "Q10": "handler, path, err = LoadObject(self._handler)",
+      "Q11": "File \"C:\\Program Files (x86)\\Google\\google_appengine\\google\\appengine\\runtime\\wsgi.py\", line 84, in LoadObject",
+      "Q12": "obj = __import__(path[0])",
+      "Q13": "File \"D:\\Dev\\SandBoxes\\web\\omaha\\omaha.py\", line 4, in <module>",
+      "Q14": "import jinja2",
+      "Q15": "ImportError: No module named jinja2",
+      "Q17": "[/CODE]",
+      "Q21": "Even though I declared it in the libraries from app.yaml:",
+      "Q25": "[CODE]",
+      "Q26": "application: ***",
+      "Q27": "version: 1",
+      "Q28": "runtime: python27",
+      "Q29": "api_version: 1",
+      "Q30": "threadsafe: true",
+      "Q32": "libraries:",
+      "Q33": "- name: jinja2",
+      "Q34": "  version: latest",
+      "Q35": "- name: webapp2",
+      "Q36": "  version: latest",
+      "Q39": "handlers:",
+      "Q40": "- url: /css",
+      "Q41": "  static_dir: css",
+      "Q42": "- url: /js",
+      "Q43": "  static_dir: js",
+      "Q44": "- url: /img",
+      "Q45": "  static_dir: img",
+      "Q46": "- url: /.*",
+      "Q47": "  script: omaha.application",
+      "Q49": "[/CODE]",
+      "Q53": "Has anyone had a similar problem?"
+    },
+    "answers": {
+      "X": {
+        "A1": "Need to restart application in AEL.",
+        "A5": "The application in Google App Engine Launcher must be restarted for new library calls to be taken into account.",
+        "A6": "I was mislead by the fact all other changes dont need actual restart of the server."
+      },
+      "Y": {
+        "A1": "Even though it's declared in your libraries it doesn't necessarily mean the dev app server can find the library within the appengine sdk. ",
+        "A5": "Since you're running the tutorial, I'm assuming you are running the application from googles app engine launcher. Within the laucher go into \"Edit\" >> \"Prefences\" and set your Python Path and SDK Path."
+      }
+    }
+  },
+  {
+    "case_id": "R008",
+    "title": "How to open ssl socket using certificate stored in string variables in python",
+    "question_lines": {
+      "Q1": "In Python, ssl.wrap_socket can read certificates from files, ssl.wrap_socket require the certificate as a file path.",
+      "Q5": "How can I start an SSL connection using a certificate read from string variables? ",
+      "Q9": "My host environment does not allow write to files, and tempfile module is not functional",
+      "Q11": "I'm using Python 2.7.",
+      "Q13": "I store the certificate inside MySQL and read as a string.",
+      "Q17": "Edit:",
+      "Q18": "I gave up, this is basically require implement ssl by pure python code, this is beyond my current knowledge."
+    },
+    "answers": {
+      "X": {
+        "A1": "Looking at the source, ssl.wrap_socket calls directly into the native code (openssl) function  SSL_CTX_use_cert_chain_file which requires a path to a file, so what you are trying to do is not possible.",
+        "A5": "For reference:",
+        "A9": "In ssl/init.py we see:",
+        "A13": "[CODE]",
+        "A14": "def wrap_socket(sock, keyfile=None, certfile=None,",
+        "A15": "                server_side=False, cert_reqs=CERT_NONE,",
+        "A16": "                ssl_version=PROTOCOL_SSLv23, ca_certs=None,",
+        "A17": "                do_handshake_on_connect=True):",
+        "A19": "    return SSLSocket(sock, keyfile=keyfile, certfile=certfile,",
+        "A20": "                   server_side=server_side, cert_reqs=cert_reqs,",
+        "A21": "                   ssl_version=ssl_version, ca_certs=ca_certs,",
+        "A22": "                   do_handshake_on_connect=do_handshake_on_connect)",
+        "A24": "[/CODE]",
+        "A28": "Points us to the SSLSocket constructor (which is in the same file) and we see the following happen:",
+        "A32": "[CODE]",
+        "A33": "self._sslobj = _ssl2.sslwrap(self._sock, server_side,",
+        "A34": "                                     keyfile, certfile,",
+        "A35": "                                     cert_reqs, ssl_version, ca_certs)",
+        "A37": "[/CODE]",
+        "A41": "_ssl2 is implemented in C (_ssl2.c)",
+        "A45": "Looking at the sslwrap function, we see it's creating a new object:",
+        "A49": "[CODE]",
+        "A50": "    return (PyObject *) newPySSLObject(Sock, key_file, cert_file,",
+        "A51": "                                       server_side, verification_mode,",
+        "A52": "                                       protocol, cacerts_file);",
+        "A54": "[/CODE]",
+        "A58": "Looking at the constructor for that object, we eventually see:",
+        "A62": "[CODE]",
+        "A63": "            ret = SSL_CTX_use_certificate_chain_file(self->ctx,",
+        "A64": "                                                     cert_file);",
+        "A66": "[/CODE]",
+        "A70": "That function is defined in openssl, so now we need to switch to that codebase.",
+        "A74": "In ssl/ssl_rsa.c we eventually find in the function:",
+        "A78": "[CODE]",
+        "A79": "BIO_read_filename(in,file) ",
+        "A81": "[/CODE]",
+        "A85": "If you dig far enough into the BIO code (part of openssl) you'll eventually come to a normal fopen():",
+        "A89": "[CODE]",
+        "A90": "fp=fopen(ptr,p);",
+        "A92": "[/CODE]",
+        "A96": "So it looks like as it's currently written. It must be in a file openable by C's fopen().  ",
+        "A100": "Also, since python's ssl library so quickly jumps into C, I don't see a immediately obvious place to monkeypatch in a workaround either."
+      },
+      "Y": {
+        "A1": "You can treat strings like files with StringIO."
+      }
+    }
+  },
+  {
+    "case_id": "R009",
+    "title": "How to prevent user stopping script by CTRL + Z?",
+    "question_lines": {
+      "Q1": "I want to prevent user to go back to shell_prompt by pressing CTRL + Z from my python command line interpreter script."
+    },
+    "answers": {
+      "X": {
+        "A1": "The following does the trick on my Linux box:",
+        "A5": "[CODE]",
+        "A6": "signal.signal(signal.SIGTSTP, signal.SIG_IGN)",
+        "A8": "[/CODE]",
+        "A12": "Here is a complete example:",
+        "A16": "[CODE]",
+        "A17": "import signal",
+        "A19": "signal.signal(signal.SIGTSTP, signal.SIG_IGN)",
+        "A21": "for i in xrange(10):",
+        "A22": "  print raw_input()",
+        "A24": "[/CODE]",
+        "A28": "Installing my own signal handler as suggested by @ZelluX does not work here: pressing Ctrl+Z while in raw_input() gives a spurious EOFError:",
+        "A32": "[CODE]",
+        "A33": "aix@aix:~$ python test.py",
+        "A34": "^ZCtrl+Z pressed, but ignored",
+        "A35": "Traceback (most recent call last):",
+        "A36": "  File \"test.py\", line 9, in <module>",
+        "A37": "    raw_input()",
+        "A38": "EOFError",
+        "A40": "[/CODE]"
+      },
+      "Y": {
+        "A1": "You could write a signal handler for SIGTSTP, which is triggered by Ctrl + Z. Here is an example:",
+        "A5": "[CODE]",
+        "A6": "import signal",
+        "A8": "def handler(signum, frame):",
+        "A9": "    print 'Ctrl+Z pressed, but ignored'",
+        "A11": "signal.signal(signal.SIGTSTP, handler)",
+        "A13": "while True:",
+        "A14": "   pass ",
+        "A16": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R010",
+    "title": "Baby level python: Classes, and using them",
+    "question_lines": {
+      "Q1": "I am learning about classes and seem to be having a hard time grasping it. In an attempt to get some practice, I have written the following code:",
+      "Q5": "[CODE]",
+      "Q6": "class Customer:",
+      "Q7": "  def __init__(self, name, age):",
+      "Q8": "    self.name = name",
+      "Q9": "    self.age = age",
+      "Q11": "  def newAge(self):",
+      "Q12": "    self.age = self.age + 1",
+      "Q14": "  def __str__(self):",
+      "Q15": "    return '{0} ({1})'.format(self.name, self.age)",
+      "Q17": "[/CODE]",
+      "Q21": "I want to print the customers age, and their new age. So I have got:",
+      "Q25": "[CODE]",
+      "Q26": "p1 = Customer(\"Amelia\",21)",
+      "Q27": "print (p1)",
+      "Q29": "new = p1.newAge()",
+      "Q30": "print (new)",
+      "Q32": "[/CODE]",
+      "Q36": "The problem here is that the new variable is not storing anything, so it prints None. Can anyone tell me why my variable is storing none? I know that I have called the newAge incorrectly, but I don't know how to fix it."
+    },
+    "answers": {
+      "X": {
+        "A1": "Methods without a return statement return None by default. Make newAge() return self.age."
+      },
+      "Y": {
+        "A1": "newAge does not return a value, therefore new = p1.newAge() returns None. If you return self.age at the end of that method, it will do what I think you want it to."
+      }
+    }
+  },
+  {
+    "case_id": "R011",
+    "title": "How can i remove <p> </p> with python sub",
+    "question_lines": {
+      "Q1": "I have an html file and I want to replace the empty paragraphs with a space.",
+      "Q5": "[CODE]",
+      "Q6": "mystring = \"This <p></p><p>is a test</p><p></p><p></p>\"",
+      "Q7": "result = mystring.sub(\"<p></p>\" , \"&nbsp;\")",
+      "Q9": "[/CODE]",
+      "Q13": "This is not working."
+    },
+    "answers": {
+      "X": {
+        "A1": "using regexp ?",
+        "A5": "[CODE]",
+        "A6": "import re",
+        "A7": "result = re.sub(\"<p>\\s*</p>\",\"&nbsp;\", mystring, flags=re.MULTILINE)",
+        "A9": "[/CODE]",
+        "A13": "compile the regexp if you use it often."
+      },
+      "Y": {
+        "A1": "Please, don't try to parse HTML with regular expressions. Use a proper parsing module, like htmlparser or BeautifulSoup to achieve this. \"Suffer\" a short learning curve now and benefit:",
+        "A6": "Your parsing code will be more robust, handling corner cases you may not have considered that will fail with a regex",
+        "A9": "For future HTML parsing/munging tasks, you will be empowered to do things faster, so eventually the time investment pays off as well.",
+        "A14": "You won't be sorry! Profit guaranteed!"
+      }
+    }
+  },
+  {
+    "case_id": "R012",
+    "title": "There’s PyQuery… is there one for Ruby?",
+    "question_lines": {
+      "Q1": "You guys know PyQuery?",
+      "Q5": "I was wondering if there’s an equivalent for Ruby."
+    },
+    "answers": {
+      "X": {
+        "A1": "There's JRails, but it's outdated. If you're just looking for a way to use JQuery with Rails though: http://railscasts.com/episodes/136-jquery"
+      },
+      "Y": {
+        "A1": "Hpricot - http://stackoverflow.com/questions/1223793/most-jquery-like-html-parser-for-ruby"
+      }
+    }
+  },
+  {
+    "case_id": "R013",
+    "title": "creating a table if not exist; otherwise repopulate it",
+    "question_lines": {
+      "Q1": "In a python script a table is dropped and recreated but I noticed it errors if the table does not exists in the first place.",
+      "Q5": "[CODE]",
+      "Q6": "shp2pgsql = r\"shp2pgsql -s 4135 -d \"+path+\" asmithe.bigtable \"",
+      "Q7": "psql = 'psql -U asmithe -h example.org -d xyz -c \"ANALYZE asmithe.bigtable\"' ",
+      "Q8": "subprocess.Popen(shp2pgsql +\" | \"+psql, shell=True).wait()",
+      "Q10": "[/CODE]",
+      "Q14": "gives",
+      "Q18": "[CODE]",
+      "Q19": "ERROR:  relation \"asmithe.bigtable\" does not exist",
+      "Q21": "[/CODE]",
+      "Q25": "How can it be safeguarded so that if the table doesn't exist it just creates it?"
+    },
+    "answers": {
+      "X": {
+        "A1": "The -c flag directs psql to only use the string after -c as a command.",
+        "A2": "To demonstrate:",
+        "A6": "[CODE]",
+        "A7": "#!/bin/sh",
+        "A9": "    # This one fails; the pipe is never read",
+        "A10": "echo 'create TABLE omg (wtf integer NOT NULL);' \\",
+        "A11": "     | psql -U postgres -d postgres -c 'ANALYZE public.omg;'",
+        "A13": "    # this one works; *only* the pipe (stdin) is read and executed",
+        "A14": "echo 'CREATE TABLE omg (wtf integer NOT NULL); ANALYZE public.omg; DROP TABLE public.omg;' \\",
+        "A15": "     | psql -U postgres -d postgres",
+        "A17": "[/CODE]"
+      },
+      "Y": {
+        "A1": "As said in the other answer, the -c option causes psql to not read the pipe. ",
+        "A2": "Why do you execute ANALYZE? in this place is wrong. Simply remove it:",
+        "A6": "[CODE]",
+        "A7": "shp2pgsql = r\"shp2pgsql -s 4135 -d \"+path+\" asmithe.bigtable \"",
+        "A8": "psql = 'psql -U asmithe -h example.org -d xyz' ",
+        "A9": "subprocess.Popen(shp2pgsql +\" | \"+psql, shell=True).wait()",
+        "A11": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R014",
+    "title": "Python: How to check the number of occurrences and top (n) values in a dataframe?",
+    "question_lines": {
+      "Q1": "I want to count up the number of occurrences of countries in a dataframe, below is the sample and also find the top 2 countries by occurrence.",
+      "Q5": "[CODE]",
+      "Q6": "         Date            Location",
+      "Q7": "0  09/17/1908            Virginia",
+      "Q8": "1  07/12/1912          New Jersey",
+      "Q9": "2  08/06/1913              Canada",
+      "Q10": "3  09/09/1913             England",
+      "Q11": "4  10/17/1913             Germany",
+      "Q12": "5  03/05/1915             Belgium",
+      "Q13": "6  09/03/1915             Germany",
+      "Q14": "7  07/28/1916            Bulgeria",
+      "Q15": "8  09/24/1916             England",
+      "Q16": "9  10/01/1916             England",
+      "Q18": "[/CODE]",
+      "Q22": "Result value should be something like below:",
+      "Q26": "[CODE]",
+      "Q27": "Location  Count",
+      "Q28": "England     3",
+      "Q29": "Germany     2",
+      "Q31": "[/CODE]"
+    },
+    "answers": {
+      "X": {
+        "A1": "You may use groupby together with size:",
+        "A5": "[CODE]",
+        "A6": "counts = df.groupby('Location').size()",
+        "A8": "[/CODE]",
+        "A12": "counts is of type pandas.Series. You may order it by",
+        "A16": "[CODE]",
+        "A17": "counts.sort_values(inplace=True)",
+        "A19": "[/CODE]",
+        "A25": "Comparision to the answer of Nick:",
+        "A29": "[CODE]",
+        "A30": "import pandas as pd",
+        "A31": "import numpy as np",
+        "A33": "# number of items in list",
+        "A34": "N = 1e4",
+        "A36": "# create a list uniformely samples characters",
+        "A37": "l = np.random.choice( list('abcd'), N )",
+        "A39": "# create a DataFrame",
+        "A40": "df = pd.DataFrame( l, columns=['char'] )",
+        "A42": "[/CODE]",
+        "A46": "using the ipython magic command timeit for N=1e4",
+        "A50": "[CODE]",
+        "A51": "In [1]: %timeit df.char.value_counts()",
+        "A52": "1000 loops, best of 3: 1.34 ms per loop",
+        "A54": "In [2]: %timeit df.groupby('char').size()",
+        "A55": "1000 loops, best of 3: 1.01 ms per loop",
+        "A57": "[/CODE]",
+        "A61": "and N=1e6",
+        "A65": "[CODE]",
+        "A66": "In [1]: %timeit df.char.value_counts()",
+        "A67": "10 loops, best of 3: 64.2 ms per loop",
+        "A69": "In [2]: %timeit df.groupby('char').size()",
+        "A70": "10 loops, best of 3: 73.2 ms per loop",
+        "A72": "[/CODE]",
+        "A76": "For smaller DataFrames, groupby & size is faster than value_counts, but for larger DateFrames value_counts is faster than groupby & size"
+      },
+      "Y": {
+        "A1": "[CODE]",
+        "A2": "countCollection = df['collection'].value_counts()",
+        "A4": "[/CODE]",
+        "A8": ".value_counts() will give you a count for the items from the collection named collection in a dataFrame.",
+        "A12": "Also, as you mentioned you're new to Python, to get the final value:",
+        "A16": "[CODE]",
+        "A17": "countCollection[\"a\"]",
+        "A19": "[/CODE]",
+        "A23": "will get the count value from the returned collection of counts, for the row with key \"a\"."
+      }
+    }
+  },
+  {
+    "case_id": "R015",
+    "title": "PDF Thumbnailing with Google App Engine (Python)",
+    "question_lines": {
+      "Q1": "Is it possible, using the python version of google app engine, to create a thumbnail of a PDF file? ",
+      "Q5": "The goal is for the user to be able to upload a PDF, and see it represented as a thumbnail on the page."
+    },
+    "answers": {
+      "X": {
+        "A1": "No. This requires a PDF renderer, and to the best of my knowledge no such thing exists in pure-Python. You'll have to use an external service to generate thumbnails."
+      },
+      "Y": {
+        "A1": "You may be able to use Google's imaging services directly, since PDFs are essentially images and PIL can do this, though I haven't tried it. ",
+        "A5": "If the direct approach doesn't work, you may be able to use the following process: ",
+        "A10": "Save the PDF to the blobstore. ",
+        "A13": "Open its link. ",
+        "A16": "Obtain a snapshot of the displayed PDF using a service like http://www.websnapr.com/. ",
+        "A19": "Save that generated image into your blobstore."
+      }
+    }
+  },
+  {
+    "case_id": "R016",
+    "title": "Is there a file-like object in Python/Java that can filter lines based on regex pattern matching?",
+    "question_lines": {
+      "Q1": "I am running some very chatty programs that emit so many important things that I want to split their output into multiple files based upon patterns in what they are saying.",
+      "Q5": "So, I feel I need a file-like object that can intercept lines that match certain regular expressions and write them to different actual files.  Non-matching lines would pass through to the 'default' file. The googlenets are not helping.",
+      "Q9": "I imagine myself using it like this:",
+      "Q13": "[CODE]",
+      "Q14": "outputFile = FilteringFile('unfiltered-output.txt', 'w')",
+      "Q15": "outputFile.addFilter(re.compile(r'spam'), 'regarding-spam.txt')",
+      "Q16": "outputFile.addFilter(re.compile(r'eggs'), 'regarding-eggs.txt')",
+      "Q18": "[/CODE]",
+      "Q22": "Now, I can outputFile.write('...') and all lines having to do with spam will be safely written into only regarding-spam.txt, and all lines having to do with eggs will be safely written into only regarding-eggs.txt.  All those lines having to do with neither spam nor eggs would pass safely into unfiltered-output.txt.  Apart from this internal magic, outputFile behaves like an ordinary file.",
+      "Q26": "Does either Python or Java already have such a thing?  If not, how would you go about accomplishing this kind of thing efficiently?  I will accept a solution in either language, as my code is running on Jython."
+    },
+    "answers": {
+      "X": {
+        "A1": "I'd look into using Log4J 2 in Java. You set up a configuration file in src/main/resources/log4j2.xml:",
+        "A5": "[CODE]",
+        "A6": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "A7": "<Configuration status=\"warn\" name=\"MyApp\" packages=\"\">",
+        "A8": "  <Appenders>",
+        "A9": "    <RollingFile name=\"RollingFile\" fileName=\"logs/app.log\"",
+        "A10": "                 filePattern=\"logs/app-%d{MM-dd-yyyy}.log.gz\">",
+        "A11": "      <RegexFilter regex=\".* test .*\" onMatch=\"ACCEPT\" onMismatch=\"DENY\"/>",
+        "A12": "      <PatternLayout>",
+        "A13": "        <pattern>%d %p %c{1.} [%t] %m%n</pattern>",
+        "A14": "      </PatternLayout>",
+        "A15": "      <TimeBasedTriggeringPolicy />",
+        "A16": "    </RollingFile>",
+        "A17": "  </Appenders>",
+        "A18": "  <Loggers>",
+        "A19": "    <Root level=\"info\">",
+        "A20": "      <AppenderRef ref=\"RollingFile\"/>",
+        "A21": "    </Root>",
+        "A22": "  </Loggers>",
+        "A23": "</Configuration>",
+        "A25": "[/CODE]",
+        "A29": "then in Java code, you can do things like:",
+        "A33": "[CODE]",
+        "A34": "Logger log = LogManager.getLogger();",
+        "A35": "log.info(\"Here is some info about a test object: {}\", object);",
+        "A37": "[/CODE]",
+        "A41": "Depending on the various appenders and loggers that you've defined in your config file, each line logged gets written to the appropriate files. In this case, our logger is logging messages at severity INFO or higher, and the message matches the RegexFilter, so this line would make it into logs/app.log."
+      },
+      "Y": {
+        "A1": "Here is hacky way to do this in Python with the help of stdlib's logging module (and it's amazing filtering abilities). Basically you will need to create two separate handlers, and add correct filters to both of them. ",
+        "A5": "Filters need to be implemented by developer and they simply return 1 if the message passes the filtering and 0 if it is not. You can read more about Filter objects  on the official documentation page of the logging module.",
+        "A9": "In following code I've implemented a simple filter that takes a regular expression as one of it's init method arguments and then matches every record to that regex. Unfortunately the code is pretty wordy because of the necessary configuration of logger object.",
+        "A13": "multifilelogging.py",
+        "A17": "[CODE]",
+        "A18": "import logging",
+        "A19": "import re",
+        "A21": "# Creating a filter object that will match records based on supplied regex",
+        "A22": "class re_filter(logging.Filter):",
+        "A23": "    def __init__(self, name='', regex_str=''):",
+        "A24": "        self.regex = re.compile(regex_str)",
+        "A25": "        super().__init__(name=name)",
+        "A27": "    def filter(self, record):",
+        "A28": "        matched = 1 if self.regex.match(record.msg) else 0",
+        "A29": "        return matched",
+        "A31": "# Instantiating the logger",
+        "A32": "logger = logging.getLogger(__name__)",
+        "A33": "logger.setLevel(logging.DEBUG)",
+        "A34": "formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')",
+        "A36": "# Creating two handlers",
+        "A37": "spam_handler = logging.FileHandler(\"spam.txt\")",
+        "A38": "eggs_handler = logging.FileHandler(\"eggs.txt\")",
+        "A40": "# Setting a loglevel for them",
+        "A41": "spam_handler.setLevel(logging.DEBUG)",
+        "A42": "eggs_handler.setLevel(logging.DEBUG)",
+        "A44": "# Setting a formatter for them",
+        "A45": "spam_handler.setFormatter(formatter)",
+        "A46": "eggs_handler.setFormatter(formatter)",
+        "A48": "# Adding the filters",
+        "A49": "spam_handler.addFilter(re_filter(regex_str=r'.*spam.*'))",
+        "A50": "eggs_handler.addFilter(re_filter(regex_str=r'.*eggs.*'))",
+        "A52": "# Finally, attaching the handlers to the logger",
+        "A53": "logger.addHandler(spam_handler)",
+        "A54": "logger.addHandler(eggs_handler)",
+        "A56": "# This goes to spam.txt",
+        "A57": "logger.debug(\"Here's the spam\")",
+        "A58": "# This goes to eggs.txt",
+        "A59": "logger.info(\"Here's the eggs\")",
+        "A61": "[/CODE]",
+        "A65": "Here's the output:",
+        "A69": "spam.txt",
+        "A73": "[CODE]",
+        "A74": "2016-05-20 23:16:04,731 - INFO - Here's the spam",
+        "A76": "[/CODE]",
+        "A80": "eggs.txt",
+        "A84": "[CODE]",
+        "A85": "2016-05-20 23:16:04,731 - INFO - Here's the eggs",
+        "A87": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R017",
+    "title": "inserting data into google app engine datastore",
+    "question_lines": {
+      "Q1": "The Google_App-Engine erases everything in my table using the put statement.  I don't want it to do that, it makes for more code to have to re.put everything back in the table, every time something is added. ",
+      "Q5": "Basically the issue is that the put statement erases everything.  is there a way to save what I don't want to update? ",
+      "Q9": "here is the code: ((python web2py))",
+      "Q13": "[CODE]",
+      "Q14": "biography2 = bayside(key_name='bayside', Biography=form_biography.vars.one)",
+      "Q15": "biography2.put()",
+      "Q16": "redirect(URL(\"b1\", \"bayside\"))",
+      "Q18": "[/CODE]",
+      "Q22": "the put statement, will update the biography under the table bayside, but it erases everything else in that table (genre, songs, etc...)  I want it to keep the other table elements and only update the biography.  Is that possible?   Right now I have had to resort to hack that updates all table elements when I really just want to update one.  it is very frustrating, and makes for a ton of extra code."
+    },
+    "answers": {
+      "X": {
+        "A1": "to me it looks like you are overwriting an existing entity instead of getting and updating properties of an existing one.",
+        "A2": "you should take a look at the docs.",
+        "A3": "https://developers.google.com/appengine/docs/python/datastore/entities#Updating_an_Entity"
+      },
+      "Y": {
+        "A1": "You need to get the entity from the datastore first. Then, you can modify the entity and put it back into the datastore."
+      }
+    }
+  },
+  {
+    "case_id": "R018",
+    "title": "How to make faster my script on python?",
+    "question_lines": {
+      "Q1": "I have a script in python but it takes more than 20 hours to run until the end.",
+      "Q5": "Since my code is pretty big, I will post a simplified one.",
+      "Q9": "The first part of the code:",
+      "Q13": "[CODE]",
+      "Q14": "flag = 1",
+      "Q15": "mydic = {}",
+      "Q16": "for i in mylist:",
+      "Q17": "    mydic[flag] = myfunction(i)",
+      "Q18": "    flag += 1",
+      "Q20": "[/CODE]",
+      "Q24": "mylist has more than 700 entries and each time I call myfunction it run for around 20sec.",
+      "Q28": "So, I was thinking if I can use paraller programming to split the iteration into two groups and run it simultaneously. Is that possible and will I need the half time than before?",
+      "Q32": "The second part of the code:",
+      "Q36": "[CODE]",
+      "Q37": "mymatrix = []",
+      "Q38": "for n1 in range(0,flag):",
+      "Q39": "    mat = []",
+      "Q40": "    for n2 in range(0,flag):",
+      "Q41": "        if n1 >= n2:",
+      "Q42": "            mat.append(0)",
+      "Q43": "        else:",
+      "Q44": "            res = myfunction2(mydic(n1),mydic(n2))",
+      "Q45": "            mat.append(res)",
+      "Q46": "    mymatrix.append(mat)",
+      "Q48": "[/CODE]",
+      "Q52": "So, if mylist has 700 entries, I want to create a 700x700 matrix where it is upper triangular matrix. But the myfunction2() needs around 30sec each time. I don't know if I can use parallel programming here too.",
+      "Q56": "I cannot simplify the myfunction() and myfunction2() since they are functions where I call an external api and return the results.",
+      "Q60": "Do you have any suggestion of how can I change it to make it faster."
+    },
+    "answers": {
+      "X": {
+        "A1": "how about using a generator for the second part instead of one of the for loops",
+        "A5": "[CODE]",
+        "A6": "def fn():",
+        "A7": "    for n1 in range(0, flag):",
+        "A8": "        yield n1",
+        "A10": "generate = fn()",
+        "A12": "while True:",
+        "A13": "    a = next(generate)",
+        "A14": "    for n2 in range(0, flag):",
+        "A15": "        if a >= n2:",
+        "A16": "            mat.append(0)",
+        "A17": "        else:",
+        "A18": "            mat.append(myfunction2(mydic(a),mydic(n2))",
+        "A19": "            mymatrix.append(mat)",
+        "A21": "[/CODE]"
+      },
+      "Y": {
+        "A1": "Based on your comments, I think it's very likely that the 30seconds of time is mostly due to external API calls.  I would add some timing code to test what portions of your code are actually responsible for the slowness.",
+        "A5": "If it is from the external API calls, there are some easy fixes.  The external API calls block, so you'll get a speedup if you can move to a parallel model ( though 30s of blocking sounds huge to me ).",
+        "A9": "I think it would be easiest to create a quick \"task list\" by having the output of 2 loops be a matrix of arguments to pass into a function.  Then I'd pipe them into Celery to run the tasks.  That should give you a decent speedup with a minimal amount of work.",
+        "A13": "You would probably save a lot more time with the threading or multiprocessing modules to run tasks (or sections) , or even write it all in Twisted python - but that usually takes longer than a simple celery function.",
+        "A17": "The one caveat with the Celery approach is that you'll be dispatching a lot of work - so you'll have to have some functionality to poll for results. That could be a while loop that just sleeps(10) and repeats itself until celery has a result for every task.  If you do it in Twisted, you can access/track results on finish.  I've never had to do something like this with multiprocessing, so don't know how that would fit in."
+      }
+    }
+  },
+  {
+    "case_id": "R019",
+    "title": "Is there a way to register queries in SQLite?",
+    "question_lines": {
+      "Q1": "Instead of writing...",
+      "Q5": "[CODE]",
+      "Q6": "SELECT {long ass list of crap}",
+      "Q7": "FROM long_table_name",
+      "Q8": "WHERE {annoyingly complex criteria} = 1",
+      "Q10": "[/CODE]",
+      "Q14": "...every time it's required, is there a way to register this query? A sort of CREATE_QUERY command, if you will?",
+      "Q18": "Thanks in advance."
+    },
+    "answers": {
+      "X": {
+        "A1": "You can't create stored procedure in SQLite, instead you do some of this",
+        "A6": "Create a table or separate database where you can store your query and retrieve them using  a unique key or name",
+        "A9": "Create a file and retrieve them",
+        "A12": "Hard code them in your application",
+        "A15": "Create class that do the query and call it when you need it with input parameter(if necessary)"
+      },
+      "Y": {
+        "A1": "Use a view.",
+        "A5": "[CODE]",
+        "A6": "CREATE VIEW view_name AS",
+        "A7": "SELECT {long ass list of crap}",
+        "A8": "FROM long_table_name",
+        "A9": "WHERE {annoyingly complex criteria} = 1;",
+        "A11": "[/CODE]",
+        "A15": "Afterwards, you can simply write SELECT * FROM view_name"
+      }
+    }
+  },
+  {
+    "case_id": "R020",
+    "title": "How to avoid building C library with my python package?",
+    "question_lines": {
+      "Q1": "I'm building a python package using a C library with ctypes.",
+      "Q2": "I want to make my package portable (Windows, Mac and Linux).",
+      "Q6": "I found a strategy, using build_ext with pip to build the library during the installation of my package. It creates libfoo.dll or libfoo.dylib or libfoo.so depending on the target's platform.",
+      "Q10": "The problem with this is that my user needs CMake installed.",
+      "Q14": "Does exist another strategy to avoid building during the installation? Do I have to bundle built libraries in my package?",
+      "Q18": "I want to keep my users doing pip install mylib.",
+      "Q22": "Edit: thank to @Dawid comment, I'm trying to make a python wheel with the command python setup.py bdist_wheel without any success.",
+      "Q26": "How can I create my python wheel for different platform with the embedded library ?",
+      "Q30": "Edit 2: I'm using python 3.4 and working on Mac OS X, but I have access to Windows computer, and Linux computer"
+    },
+    "answers": {
+      "X": {
+        "A1": "You're certainly heading down the right path according to my research...  As Daniel says, the only option you have is to build and distribute the binaries yourself.",
+        "A5": "In general, the recommended way to install packages is covered well in the packaging user guide.  I won't repeat advice there as you have clearly already found it.  However the key point in there is that the Python community, specifically PyPA are trying to standardize on using platform wheels to package binary extensions.  Sadly, there are a few issues at this point:",
+        "A10": "As mentioned in the above link, you cannot upload Linux wheels to PyPI, which means you have to manage the distribution to your users yourself.",
+        "A13": "The advice on building extensions is somewhat incomplete, reflecting the lack of a complete solution for binary distributions.",
+        "A16": "People then try to build their own library and distribute it as a data file, which confuses setuptools.  ",
+        "A21": "I think you are hitting this last issue.  A workaround is to force the Distribution to build a platform wheel by overriding is_pure() to always return False.  However you could just keep your original build instructions and bdist_wheel should handle it.",
+        "A25": "Once you've built the wheel, though, you still need to distribute it and maybe other binary packages that it uses or use it.  At this point, you probably need to use one of the recommended tools like conda or a PyPI proxy like devpi to serve up your wheels.",
+        "A29": "EDIT: To answer the extra question about cross-compiling",
+        "A33": "As covered here Python 2.6 and later allows cross-compilation for Windows 32/64-bit builds.  There is no formal support for other packages on other platforms and people have had limited success trying to do it.  You are really best off building natively on each of your Linux/Mac/Windows environments."
+      },
+      "Y": {
+        "A1": "If you don't want the user to build during installation, you have to provide a pre-built binary package, I don't think any other strategy is possible.  I've heard good things about py2exe, but I don't use windows so IDK.  I've had good experiences with miniconda, but it does require a little extra work to build binary packages from pypi."
+      }
+    }
+  },
+  {
+    "case_id": "R021",
+    "title": "How to return history of validation loss in Keras",
+    "question_lines": {
+      "Q1": "Using Anaconda Python 2.7 Windows 10.",
+      "Q5": "I am training a language model using the Keras exmaple:",
+      "Q9": "[CODE]",
+      "Q10": "print('Build model...')",
+      "Q11": "model = Sequential()",
+      "Q12": "model.add(GRU(512, return_sequences=True, input_shape=(maxlen, len(chars))))",
+      "Q13": "model.add(Dropout(0.2))",
+      "Q14": "model.add(GRU(512, return_sequences=False))",
+      "Q15": "model.add(Dropout(0.2))",
+      "Q16": "model.add(Dense(len(chars)))",
+      "Q17": "model.add(Activation('softmax'))",
+      "Q19": "model.compile(loss='categorical_crossentropy', optimizer='rmsprop')",
+      "Q21": "def sample(a, temperature=1.0):",
+      "Q22": "    # helper function to sample an index from a probability array",
+      "Q23": "    a = np.log(a) / temperature",
+      "Q24": "    a = np.exp(a) / np.sum(np.exp(a))",
+      "Q25": "    return np.argmax(np.random.multinomial(1, a, 1))",
+      "Q28": "# train the model, output generated text after each iteration",
+      "Q29": "for iteration in range(1, 3):",
+      "Q30": "    print()",
+      "Q31": "    print('-' * 50)",
+      "Q32": "    print('Iteration', iteration)",
+      "Q33": "    model.fit(X, y, batch_size=128, nb_epoch=1)",
+      "Q34": "    start_index = random.randint(0, len(text) - maxlen - 1)",
+      "Q36": "    for diversity in [0.2, 0.5, 1.0, 1.2]:",
+      "Q37": "        print()",
+      "Q38": "        print('----- diversity:', diversity)",
+      "Q40": "        generated = ''",
+      "Q41": "        sentence = text[start_index: start_index + maxlen]",
+      "Q42": "        generated += sentence",
+      "Q43": "        print('----- Generating with seed: \"' + sentence + '\"')",
+      "Q44": "        sys.stdout.write(generated)",
+      "Q46": "        for i in range(400):",
+      "Q47": "            x = np.zeros((1, maxlen, len(chars)))",
+      "Q48": "            for t, char in enumerate(sentence):",
+      "Q49": "                x[0, t, char_indices[char]] = 1.",
+      "Q51": "            preds = model.predict(x, verbose=0)[0]",
+      "Q52": "            next_index = sample(preds, diversity)",
+      "Q53": "            next_char = indices_char[next_index]",
+      "Q55": "            generated += next_char",
+      "Q56": "            sentence = sentence[1:] + next_char",
+      "Q58": "            sys.stdout.write(next_char)",
+      "Q59": "            sys.stdout.flush()",
+      "Q60": "        print()",
+      "Q62": "[/CODE]",
+      "Q66": "According to Keras documentation, the model.fit method returns a History callback, which has a history attribute containing the lists of successive losses and other metrics.",
+      "Q70": "[CODE]",
+      "Q71": "hist = model.fit(X, y, validation_split=0.2)",
+      "Q72": "print(hist.history)",
+      "Q74": "[/CODE]",
+      "Q78": "After training my model, if I run print(model.history) I get the error:",
+      "Q82": "[CODE]",
+      "Q83": " AttributeError: 'Sequential' object has no attribute 'history'",
+      "Q85": "[/CODE]",
+      "Q89": "How do I return my model history after training my model with the above code?",
+      "Q93": "UPDATE",
+      "Q97": "The issue was that:",
+      "Q101": "The following had to first be defined:",
+      "Q105": "[CODE]",
+      "Q106": "from keras.callbacks import History ",
+      "Q107": "history = History()",
+      "Q109": "[/CODE]",
+      "Q113": "The callbacks option had to be called",
+      "Q117": "[CODE]",
+      "Q118": "model.fit(X_train, Y_train, nb_epoch=5, batch_size=16, callbacks=[history])",
+      "Q120": "[/CODE]",
+      "Q124": "But now if I print",
+      "Q128": "[CODE]",
+      "Q129": "print(history.History)",
+      "Q131": "[/CODE]",
+      "Q135": "it returns",
+      "Q139": "[CODE]",
+      "Q140": "{}",
+      "Q142": "[/CODE]",
+      "Q146": "even though I ran an iteration."
+    },
+    "answers": {
+      "X": {
+        "A1": "The dictionary with histories of \"acc\", \"loss\", etc. is available and saved in hist.history variable."
+      },
+      "Y": {
+        "A1": "It's been solved.",
+        "A5": "The losses only save to the History over the epochs. I was running iterations instead of using the Keras built in epochs option.",
+        "A9": "so instead of doing 4 iterations I now have ",
+        "A13": "[CODE]",
+        "A14": "model.fit(......, nb_epoch = 4)",
+        "A16": "[/CODE]",
+        "A20": "Now it returns the loss for each epoch run:",
+        "A24": "[CODE]",
+        "A25": "print(hist.history)",
+        "A26": "{'loss': [1.4358016599558268, 1.399221191623641, 1.381293383180471, h1.3758836857303727]}",
+        "A28": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R022",
+    "title": "Python dataframe sum rows",
+    "question_lines": {
+      "Q1": "If I have a dataframe with n rows, is there a way to set the ith row to be sum of row[i] and row[i-1] and do this so that the assignment to earlier rows is reflected in the latter rows? I would really like to avoid loops if possible.",
+      "Q5": "Example DF:",
+      "Q9": "[CODE]",
+      "Q10": "             SPY   AAPL   GOOG",
+      "Q11": "2011-01-10  0.44  -0.81   1.80",
+      "Q12": "2011-01-11  0.00   0.00   0.00",
+      "Q13": "2011-01-12 -1.11  -2.77  -0.86",
+      "Q14": "2011-01-13 -0.91  -4.02  -0.68",
+      "Q16": "[/CODE]",
+      "Q20": "Sample pseudo code of summing two rows:",
+      "Q24": "[CODE]",
+      "Q25": "DF[2011-01-11] = DF[2011-01-10] + DF[2011-01-11]",
+      "Q26": "DF[2011-01-12] = DF[2011-01-11] + DF[2011-01-12]",
+      "Q28": "[/CODE]",
+      "Q32": "and so on."
+    },
+    "answers": {
+      "X": {
+        "A1": "Use DF.shift()",
+        "A5": "[CODE]",
+        "A6": "DF + DF.shift()",
+        "A8": "[/CODE]"
+      },
+      "Y": {
+        "A1": "based on your question, you are looking for a cumulative sum of each columns. you could use the cumsum() method",
+        "A5": "[CODE]",
+        "A6": "DF.cumsum()",
+        "A8": "               SPY    AAPL   GOOG",
+        "A9": "2011-01-10  0.4400 -0.8100 1.8000",
+        "A10": "2011-01-11  0.4400 -0.8100 1.8000",
+        "A11": "2011-01-12 -0.6700 -3.5800 0.9400",
+        "A12": "2011-01-13 -1.5800 -7.6000 0.2600",
+        "A14": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R023",
+    "title": "alternate different shas of the same file. why?",
+    "question_lines": {
+      "Q1": "can somebody give me a reason why i get alternate shas of the same file? but the same for every second sha?",
+      "Q5": "[CODE]",
+      "Q6": ">>> f = open('480p.m4v')    ",
+      "Q7": ">>> sha1 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q8": ">>> sha1",
+      "Q9": "'4aa8cf11b849b77f608302fdcdad3703dce54c33ba4bac80fa0ef700'",
+      "Q10": ">>> f.close()",
+      "Q11": ">>> f = open('480p.m4v')",
+      "Q12": ">>> sha2 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q13": ">>> f.close()",
+      "Q14": ">>> sha2",
+      "Q15": "'ae60e45200c960f79d25049ef0135709ca6edf246b3f9e53cd084e58'",
+      "Q16": ">>> f = open('480p.m4v')",
+      "Q17": ">>> sha3 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q18": ">>> f.close()",
+      "Q19": ">>> sha3",
+      "Q20": "'4aa8cf11b849b77f608302fdcdad3703dce54c33ba4bac80fa0ef700'",
+      "Q21": ">>> f = open('480p.m4v')",
+      "Q22": ">>> sha4 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q23": ">>> f.close()",
+      "Q24": ">>> sha4",
+      "Q25": "'ae60e45200c960f79d25049ef0135709ca6edf246b3f9e53cd084e58'",
+      "Q26": ">>> f = open('480p.m4v')",
+      "Q27": ">>> sha5 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q28": ">>> f.close()",
+      "Q29": ">>> sha5",
+      "Q30": "'4aa8cf11b849b77f608302fdcdad3703dce54c33ba4bac80fa0ef700'",
+      "Q31": ">>> f = open('480p.m4v')",
+      "Q32": ">>> sha6 = str(hashlib.sha224(str(f)).hexdigest())",
+      "Q33": ">>> f.close()",
+      "Q34": ">>> sha6",
+      "Q35": "'ae60e45200c960f79d25049ef0135709ca6edf246b3f9e53cd084e58'",
+      "Q37": "[/CODE]"
+    },
+    "answers": {
+      "X": {
+        "A1": "The reason you're getting different hashes is because you're not really hashing the contents of the file, only the file object's string representation. For example:",
+        "A5": "[CODE]",
+        "A6": ">>> f = open('480p.m4v')",
+        "A7": ">>> print str(f)",
+        "A8": "<open file '480p.m4v', mode 'r' at 0x0224C9D0>",
+        "A10": "[/CODE]",
+        "A14": "You'll note that the address of the object is obviously changing between the different instances, causing the hash to change. Apparently the memory location of one file object is reused by every second other instance created, causing the hashes to coincide.",
+        "A18": "To hash the contents of the file, you can use this:",
+        "A22": "[CODE]",
+        "A23": ">>> sha = str(hashlib.sha224(f.read()).hexdigest())    # read() slurps the whole file into a string",
+        "A25": "[/CODE]"
+      },
+      "Y": {
+        "A1": "str(f) doesn't give you the contents of the file, it will return something like:",
+        "A5": "[CODE]",
+        "A6": "\"<open file '480p.m4v', mode 'r' at 0xb7855230>\"",
+        "A8": "[/CODE]",
+        "A12": "I'm not sure why this alternates, though."
+      }
+    }
+  },
+  {
+    "case_id": "R024",
+    "title": "Python - Converting byte address (from ReadProcessMemory) to string?",
+    "question_lines": {
+      "Q1": "Update 1:",
+      "Q5": "I've tried the solution given below using buffer.value.decode(). This resulted in getting back just (#, which is a step in the right direction, but I want to get this to 9000. When I use Cheat Engine to change the address value to 2000, this same method runs into the error UnicodeDecodeError: 'utf-8' can't decode byte 0xd0 in position 0: invalid continuation byte. So I'm guessing I have the wrong encoding. Any suggestion on what I should do with that?",
+      "Q9": "Original Question:",
+      "Q13": "I'm trying to use ReadProcessMemory from ctypes to get the value from an address in a process. I seem to acquiring the byte data without a problem, but I'm running into difficult converting it into the appropriate form. I'm using Cheat Engine to inspect the data via a third party method, and using it to change the data in the address I'm sure I have the correct address output from my script. The value I'm expecting to have returned is 9000. The complete code I'm using is below, but I'm reading the memory into a buffer of the type c_char_p (from ctypes). I've tried a couple ways of converting the value to a string and printing it. using just str(buffer), as expected I get back the byte representation as c_char_p(b'(#'). When I try to convert the data using str(int.from_bytes(buffer, sys.byteorder)) I get back 43586512. I have seen elsewhere the ability to convert from bytes using buffer.decode() but it appears this is not for the ctypes version as c_char_p has no decode method (which might suggest I should be taking a different approach to get the process address value other than ctypes?). Can anyone point out what I need to do to correctly get the value of this address in the form I'm looking for? Thank you much!",
+      "Q17": "Code:",
+      "Q21": "[CODE]",
+      "Q22": "from ctypes import *",
+      "Q23": "from ctypes.wintypes import *",
+      "Q25": "OpenProcess = windll.kernel32.OpenProcess",
+      "Q26": "ReadProcessMemory = windll.kernel32.ReadProcessMemory",
+      "Q27": "CloseHandle = windll.kernel32.CloseHandle",
+      "Q29": "PROCESS_ALL_ACCESS = 0x1F0FFF #I'll try to do minimum permissions later.",
+      "Q31": "pid = 3112 #Don't worry about this, I know it's right.",
+      "Q32": "address = 0x2411918 #This too.",
+      "Q34": "buffer = c_char_p(b\"The data goes here\") #Maybe I should be using something else?",
+      "Q35": "bufferSize = len(buffer.value)",
+      "Q36": "bytesRead = c_ulong(0)",
+      "Q38": "processHandle = OpenProcess(PROCESS_ALL_ACCESS, False, pid)",
+      "Q39": "if ReadProcessMemory(processHandle, address, buffer, bufferSize, byref(bytesRead)):",
+      "Q40": "    print(\"Success:\" + str(int.from_bytes(buffer, \"little\"))) #Here's the problem print line.",
+      "Q41": "else:",
+      "Q42": "    print(\"Failed.\")",
+      "Q44": "CloseHandle(processHandle)",
+      "Q46": "[/CODE]"
+    },
+    "answers": {
+      "X": {
+        "A1": "It turns out my problem had to do with the ctypes representation. If I use memmove to move to move the c_char_p to a c_int, then I end up with the correct results printing out. This can be seen done in the completed code below.",
+        "A5": "[CODE]",
+        "A6": "from ctypes import *",
+        "A7": "from ctypes.wintypes import *",
+        "A8": "import struct",
+        "A10": "OpenProcess = windll.kernel32.OpenProcess",
+        "A11": "ReadProcessMemory = windll.kernel32.ReadProcessMemory",
+        "A12": "CloseHandle = windll.kernel32.CloseHandle",
+        "A14": "PROCESS_ALL_ACCESS = 0x1F0FFF",
+        "A16": "pid = 3112",
+        "A17": "address = 0x2411918",
+        "A19": "buffer = c_char_p(b\"The data goes here\")",
+        "A20": "val = c_int()",
+        "A21": "bufferSize = len(buffer.value)",
+        "A22": "bytesRead = c_ulong(0)",
+        "A24": "processHandle = OpenProcess(PROCESS_ALL_ACCESS, False, pid)",
+        "A25": "if ReadProcessMemory(processHandle, address, buffer, bufferSize, byref(bytesRead)):",
+        "A26": "    memmove(ctypes.byref(val), buffer, ctypes.sizeof(val))",
+        "A27": "    print(\"Success:\" + str(val.value))",
+        "A28": "else:",
+        "A29": "    print(\"Failed.\")",
+        "A31": "CloseHandle(processHandle)",
+        "A33": "[/CODE]"
+      },
+      "Y": {
+        "A1": "c_char_p(b\"test\").value.decode()"
+      }
+    }
+  },
+  {
+    "case_id": "R025",
+    "title": "O(n) Java algorithm to find odd-number-out in array (not odd numbers)",
+    "question_lines": {
+      "Q1": "I'm having a great deal of trouble trying to figure this question out, and the root of that trouble is creating an algorithm of O(n) complexity. Here's the question I'm struggling with:",
+      "Q6": "An Array A of length n contains integers from the range [0, .., n - 1]. However, it only contains n - 1 distinct numbers. So one of the numbers is missing and another number is duplicated. Write a Java method that takes A as an input argument and returns the missing number; the method should run in O(n). ",
+      "Q10": "For example, when A = [0, 2, 1, 2, 4], oddOneOut() should return 3; when A = [3, 0, 0, 4, 2, 1], oddOneOut() should return 5.",
+      "Q15": "Obviously this is an easy problem to solve with an O(n2) algorithm, (and most likely O(n), I'm just not seeing it!). I've attempted to solve it using all manner of methods, but to no avail. I'm attempting to solve it in Java, but if you're more comfortable solving it Python, that would be fine as well.",
+      "Q19": "Thank you in advance..."
+    },
+    "answers": {
+      "X": {
+        "A1": "Use a hash set and take a single pass to detect which number is the duplicate.  During the same iteration, track the cumulative sum of all the numbers.",
+        "A5": "Now calculate the expected total if all the numbers were distinct: n * (n - 1) / 2.  Subtract the total you found.  You will be left with the \"missing\" number minus the duplicate.  Add the duplicate back to get your answer.",
+        "A9": "Since hash table access is constant time and we're using a single pass, this is O(n).  (Note that a single pass isn't strictly necessary: Martijn is correct in noting that a fixed number of passes is still linear complexity.)"
+      },
+      "Y": {
+        "A1": "Iterate over the array twice: That is still O(n). Create a temporary array of booleans (or a Java BitSet) to hold which numbers you got. Second time you do the loop, check if there is a hole in the array of booleans."
+      }
+    }
+  },
+  {
+    "case_id": "R026",
+    "title": "What structured text format is the best supported in Python?",
+    "question_lines": {
+      "Q1": "This question may be seen as subjective, but I'd like to ask SO users which common structured textual data format is best supported in Python.",
+      "Q5": "My initial choices are:",
+      "Q10": "XML",
+      "Q13": "JSON",
+      "Q16": "and YAML",
+      "Q21": "Which of these three is easiest to work with in Python (ie. has the best library support / performance) ... or is there another format that I haven't mentioned that is better supported in Python.",
+      "Q25": "I cannot use a Python only format (e.g. Pickling) since interop is quite important, but the majority of the code that handles these files will be written in Python, so I'm keen to use a format that has the strongest support in Python.",
+      "Q29": "CSV or fixed column text may also be viable for most use cases, however I'd prefer the flexibility of a more scalable format.",
+      "Q33": "Thank you",
+      "Q36": "Note",
+      "Q39": "Regarding interop I will be generating these files initially from Ruby, using Builder, however Ruby will not be consuming these files again."
+    },
+    "answers": {
+      "X": {
+        "A1": "It's pretty much all the same, out of those three.  Use whichever is easier to inter-operate with."
+      },
+      "Y": {
+        "A1": "I would go with JSON, I mean YAML is awesome but interop with it is not that great.",
+        "A3": "XML is just an ugly mess to look at and has too much fat. ",
+        "A7": "Python has a built-in JSON module since version 2.6."
+      }
+    }
+  },
+  {
+    "case_id": "R027",
+    "title": "Tab-delimited file into dictionary (python)",
+    "question_lines": {
+      "Q1": "I have a tab separated file ",
+      "Q5": "How can I input this file into a dictionary?"
+    },
+    "answers": {
+      "X": {
+        "A1": "[CODE]",
+        "A2": "import csv",
+        "A4": "with open(filename) as file_object:",
+        "A5": "    # skip the first two lines",
+        "A6": "    file_object.next()",
+        "A7": "    file_object.next()",
+        "A8": "    list_of_dicts = list(csv.DictReader(file_object, dialect='excel-tab'))",
+        "A10": "# list_of_dicts now will contain a list of dictionaries extracted from the file",
+        "A12": "[/CODE]"
+      },
+      "Y": {
+        "A1": "You can use the csv module with its DictReader class."
+      }
+    }
+  },
+  {
+    "case_id": "R028",
+    "title": "Sending an SMS message using Python; Time delay considering timezone",
+    "question_lines": {
+      "Q1": "So I have a code that receives relevant information for a mobile device, such as phone number, name, and message, through which it can send an SMS message. Also, there is a function which delays the SMS. So a user can choose to send a message at a later time using a drop-down menu. Furthermore the delay function checks whether the time at which the message is to be sent between 12:00am to 8:00am, and if so then the default of 8:00am is returned so the receiver will get the message at 8:00am at the earliest. However the problem I am facing is that the time delay is in terms of Mountain Daylight Time (Canada/US), which means that people living in the PDT timezone will receive the message at 7:00am (hour too early) while people in EDT receive the message at 10:00am (2 hours too late). So I was wondering if there is some python code that would potentially detect which timezone the receiver is located in so that he/she receives the message on time (if I select 8:00am in Nevada then the receiver in California will receive the message at 8:00am PDT), given the area in which the receiver is located (eg. the code is given that the receiver is located in California).",
+      "Q5": "Any idea on how to approach this problem?",
+      "Q9": "Thanks!"
+    },
+    "answers": {
+      "X": {
+        "A1": "To accurately know the time zone of the owner of the phone is impossible unless you have some code of yours running on his phone as the owner of the phone could be travelling across time zones. ",
+        "A5": "To address this concern you can do one of two things....",
+        "A9": "Best Guess: This is, use a reverse phone lookup API, like see http://www.phonenumber.com/phone/1-214-213-1234 It clearly tells you that the number belongs to Texasm hence the best guess would be use the texas time zone, its not always accurate but it is majority of the times. You need to hunt for APIs based on your usage.",
+        "A13": "Play Safe: Make sure that you may deliver in a time which is not extreme in any time zone, so that no one is disturbed. Hence lets say you pick 8:30 AM central time. Thats 6:30 AM pacific, and 9:30 AM eastern, so its not too early or too late in any time zone."
+      },
+      "Y": {
+        "A1": "With timezones, it's best to both guess and ask, because unless you have a GPS-like device you'll probably guess wrong.  And guessing is not an easy task, but worth it to improve your users' experience.",
+        "A5": "Are the messages being scheduled from a phone via SMS or from the web?  If from the phone, use a phone lookup API like @Adithya suggests.  If from the web, try a geo-ip service like http://www.hostip.info/ .  Then you'll need to find a service that converts geo coordinates to timezones.  I don't know of any off the top of my head, but I'm sure you can find some by googling.",
+        "A9": "Also keep in mind that IP addresses of mobile phones are notoriously difficult to geo-locate.  If it's a web interface being used from the phone, I probably wouldn't even bother with that route.  Try HTML5 geo-location."
+      }
+    }
+  },
+  {
+    "case_id": "R029",
+    "title": "learn python the hard way exercise 1 - file won't run in terminal",
+    "question_lines": {
+      "Q1": "I have searched all around for an answer to what seems like it would be a simple question. Alas, no dice.",
+      "Q5": "Problem: I cannot \"run\" a python file from the terminal (mac os X 10.9.2)",
+      "Q10": "running python returns:",
+      "Q15": "Python 2.7.6 (v2.7.6:3a1db0d2747e, Nov 10 2013, 00:42:54) ",
+      "Q16": "[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin",
+      "Q17": "Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.",
+      "Q18": ">>>>",
+      "Q23": "attempting to run python file from terminal",
+      "Q27": "after browsing to file where 'pthw_e01.py' is created:",
+      "Q31": "$ python pthw_e01.py",
+      "Q33": "$",
+      "Q39": "In summary, nothing happens when I try to run the python script (I believe it's a script not a file right?).",
+      "Q43": "In case it helps you answer, the python I'm trying to run in the terminal is just a bunch of print statements (see below):",
+      "Q47": "[CODE]",
+      "Q48": "print \"Hello World!\" print \"Hello Again\" print \"I like typing this.\" print \"This is fun.\" print 'Yay! Printing.' print \"I'd much rather you 'not'.\" print 'I \"said\" do not touch this.'",
+      "Q50": "[/CODE]"
+    },
+    "answers": {
+      "X": {
+        "A1": "From your screen shot above youre trying to run a python file in the interpreter and not actually run the program in the terminal. You can run each print line in the interpreter if you choose, but not the whole file. instead of just typing python and opening the interpreter, type python pthw_e01.py and it should display your program to the terminal."
+      },
+      "Y": {
+        "A1": "You need to have them on separate lines if they're in one big script, or input each line separately in the shell. Python normally uses new lines to figure out where it ends each statement.",
+        "A5": "pthw_e01.py:",
+        "A9": "[CODE]",
+        "A10": "print \"Hello World!\"",
+        "A11": "print \"Hello Again\"",
+        "A12": "print \"I like typing this.\"",
+        "A13": "print \"This is fun.\"",
+        "A14": "print 'Yay! Printing.'",
+        "A15": "print \"I'd much rather you 'not'.\"",
+        "A16": "print 'I \"said\" do not touch this.'",
+        "A18": "[/CODE]"
+      }
+    }
+  },
+  {
+    "case_id": "R030",
+    "title": "Django Storages using s3boto ignoring MEDIA_URL",
+    "question_lines": {
+      "Q1": "I am trying to use django-storages with s3boto in my app and trying to serve media and static files from s3.",
+      "Q5": "I have the following settings in my settings file:",
+      "Q9": "[CODE]",
+      "Q10": "AWS_STORAGE_BUCKET_NAME = '<bucket_name>'",
+      "Q11": "AWS_S3_ACCESS_KEY_ID = '<access_key>'",
+      "Q12": "AWS_S3_SECRET_ACCESS_KEY = '<secret>'",
+      "Q13": "AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME",
+      "Q15": "STATICFILES_LOCATION = 'static'",
+      "Q16": "STATICFILES_STORAGE = '<custom_storage_satic>'",
+      "Q18": "MEDIAFILES_LOCATION = 'media'",
+      "Q19": "DEFAULT_FILE_STORAGE = '<custom_storage_media>'",
+      "Q21": "[/CODE]",
+      "Q25": "And my custom_storages.py is",
+      "Q29": "[CODE]",
+      "Q30": "from django.conf import settings",
+      "Q31": "from storages.backends.s3boto import S3BotoStorage",
+      "Q33": "class StaticStorage(S3BotoStorage):",
+      "Q34": "    location = settings.STATICFILES_LOCATION",
+      "Q36": "class MediaStorage(S3BotoStorage):",
+      "Q37": "    location = settings.MEDIAFILES_LOCATION",
+      "Q39": "[/CODE]",
+      "Q43": "When I create an image in django, instead of getting the relative path to my image starting with",
+      "Q47": "[CODE]",
+      "Q48": "image.url",
+      "Q49": "'/media/image/<rest_of_the_path>.jpg'",
+      "Q51": "[/CODE]",
+      "Q55": "I am getting the absolute url, which is something like",
+      "Q59": "[CODE]",
+      "Q60": "image.url",
+      "Q61": "'https://<s3_bucket_name>.s3.amazonaws.com/media/image/original/'",
+      "Q63": "[/CODE]",
+      "Q67": "When I use local storage instead of s3boto, it works as expected and gives me the relative path. Am I missing something here?"
+    },
+    "answers": {
+      "X": {
+        "A1": "I struck the same issue when attempting to use the Imgix CDN for my S3 media (I suspect we're both using the same tutorial based on your use of the custom_storages.py override).",
+        "A5": "Here is an abridged version of the S3BotoStorage class in the django-storages framework. This excerpt highlights the important properties and methods for this issue, namely the custom-domain property.",
+        "A9": "[CODE]",
+        "A10": "class S3BotoStorage(Storage):",
+        "A11": "    location = setting('AWS_LOCATION', '')",
+        "A12": "    custom_domain = setting('AWS_S3_CUSTOM_DOMAIN')",
+        "A14": "    def url(self, name, headers=None, response_headers=None, expire=None):",
+        "A15": "        # Preserve the trailing slash after normalizing the path.",
+        "A16": "        name = self._normalize_name(self._clean_name(name))",
+        "A17": "        if self.custom_domain:",
+        "A18": "            return \"%s//%s/%s\" % (self.url_protocol, self.custom_domain, filepath_to_uri(name))",
+        "A20": "[/CODE]",
+        "A24": "As you can see in the url method, a URL is generated to override the STATIC_URL and MEDIA_URL Django settings. Currently the domain of the URL is created with the AWS_S3_CUSTOM_DOMAIN setting, which is why you continue to see the static S3 URL for media files. ",
+        "A28": "So first, in your Django settings file, add a setting describing your CDN's domain.",
+        "A32": "[CODE]",
+        "A33": "IMGIX_DOMAIN = 'example.imgix.net'",
+        "A35": "[/CODE]",
+        "A39": "Then, similar to the override of the location property, add an override to the custom_domain property in your MediaStorage class.",
+        "A43": "[CODE]",
+        "A44": "class MediaStorage(S3BotoStorage):",
+        "A45": "    location = settings.MEDIAFILES_LOCATION",
+        "A46": "    custom_domain = settings.IMGIX_DOMAIN",
+        "A48": "[/CODE]",
+        "A52": "Now the final URL to your media files should begin with your CDN's domain, followed by the relative path to your file on the S3 bucket."
+      },
+      "Y": {
+        "A1": "If you are serving static media from an S3 bucket, you must use an absolute URL, since the media is being served from a wholly different server."
+      }
+    }
+  },
+  {
+    "case_id": "R031",
+    "title": "Avoiding looping unnecessarily",
+    "question_lines": {
+      "Q1": "Looking for advice on how to restructure data in python to avoid too much looping.  ",
+      "Q5": "I am retrieving some data via an api which I am working with. Unfortunately, due to the data structure being received I am finding myself doing a lot of iteration.",
+      "Q9": "For example, I often receive data similar to this...",
+      "Q13": "[CODE]",
+      "Q14": "{",
+      "Q15": "    'customers' : [",
+      "Q16": "        {'CustomerId' : 1, 'Name' : 'Bill'},",
+      "Q17": "        {'CustomerId' : 2, 'Name' : 'Ted'}",
+      "Q18": "    ],",
+      "Q19": "    'orders' : [",
+      "Q20": "        {'OrderId' : 100, 'CustomerId' : '1'},",
+      "Q21": "        {'OrderId' : 101, 'CustomerId' : '1'},",
+      "Q22": "        {'OrderId' : 102, 'CustomerId' : '2'},",
+      "Q23": "    ]",
+      "Q24": "}",
+      "Q26": "[/CODE]",
+      "Q30": "You can probably see that in order to match customers with orders the different parts of the orders part needs to be looped over each time.  Additionally, if i am finding a customer and their orders then this is resulting in nested loops which i hate.",
+      "Q34": "I am considering restructuring this as follows:",
+      "Q38": "When the data is first received, it gets a single iteration and key assigned to each order item, which will be the OrderId.  Therefore it can be accessed directly instead of requiring a loop.",
+      "Q42": "Is this a naive idea - are there any better?",
+      "Q46": "If this sounds good, can anyone say most efficient way to do this in python?"
+    },
+    "answers": {
+      "X": {
+        "A1": "If you are matching all customers to orders then the natural thing is to sort the records on customer ID. You can do this in Python with code analogous to:",
+        "A5": "[CODE]",
+        "A6": "data.sort(key=lambda record: record[3])",
+        "A8": "[/CODE]",
+        "A12": "This example would sort on field 4 of the record.",
+        "A16": "Once the data is sorted you can traverse each list of customers and orders only once."
+      },
+      "Y": {
+        "A1": "If joining on CustomerID is a sufficiently common operation, you may want to maintain an index on that field. Simplest way:",
+        "A5": "[CODE]",
+        "A6": "custIDIndex = dict()",
+        "A7": "for order in orders:",
+        "A8": "    if custIDIndex.has_key(order.CustomerID):",
+        "A9": "        custIDIndex[order.CustomerID].append(order)",
+        "A10": "    else:",
+        "A11": "        custIDIndex[order.CustomerID] = [order]",
+        "A13": "[/CODE]",
+        "A17": "Then you can get a list of all the orders for a given customer simply with custIDIndex[customer].",
+        "A21": "Of course, every time you add new orders to the database you need to also add them into the index in the same way. That's the tradeoff."
+      }
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "frozen_at_utc": "2026-10-08T04:26:37.242793+00:00",
+  "cases": 31,
+  "answers": 62,
+  "hashes": {
+    "review_01.json": "277f24f69f5c4763db4de0b839426025de8b8ddd124ab757f7a32d84e694ee1d",
+    "review_02.json": "81fa1a1f832634549ad3e6f2ec545aa07d7b73250b5ef14795a17ef35c290287",
+    "review_03.json": "0630b4fccb25a9d33a976b17e6758f9fd8b55da4463d0a0a9a3d16aaed54923f",
+    "review_04.json": "8d55cda8a824de9d762f96ac7cf3688ae5df06b5e74af22c279d420b8192a29a",
+    "review_05.json": "b2aedbd76466abf8f6e2dfec7cd4947c8fa8f46d363081b50c8b03b603baef6f",
+    "review_packet.json": "d1cf8c0acfa8b96e0cd48c340e73503237a6fe634788e939c1cc4ae5c2ced5ca",
+    "protocol.json": "875f1a8d5a7aca3a94cde2c67cb9286554cd3e89af7b0fcd483aaa5171499027"
+  },
+  "statement": "Ratings frozen before unmasking. AI evidence review, not human gold, not strict blind; no code executed."
+}

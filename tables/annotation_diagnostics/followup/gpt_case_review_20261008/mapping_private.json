@@ -1,0 +1,963 @@
+[
+  {
+    "case_id": "R001",
+    "question_id": 30365069,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0106-A30404248",
+        "base_pair_id": "B27-0106",
+        "question_id": 30365069,
+        "answer_id": 30404248,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-05-22 19:11:39",
+        "delay_seconds": 136729.0
+      },
+      "Y": {
+        "pair_id": "B27-0106-A30380989",
+        "base_pair_id": "B27-0106",
+        "question_id": 30365069,
+        "answer_id": 30380989,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-05-21 17:52:35",
+        "delay_seconds": 45585.0
+      }
+    }
+  },
+  {
+    "case_id": "R002",
+    "question_id": 24460725,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0143-A29857201",
+        "base_pair_id": "B27-0143",
+        "question_id": 24460725,
+        "answer_id": 29857201,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-04-24 20:48:58",
+        "delay_seconds": 26005648.0
+      },
+      "Y": {
+        "pair_id": "B27-0143-A24468635",
+        "base_pair_id": "B27-0143",
+        "question_id": 24460725,
+        "answer_id": 24468635,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": true,
+        "created_at": "2014-06-28 16:08:50",
+        "delay_seconds": 68840.0
+      }
+    }
+  },
+  {
+    "case_id": "R003",
+    "question_id": 38181710,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0306-A38181986",
+        "base_pair_id": "B27-0306",
+        "question_id": 38181710,
+        "answer_id": 38181986,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-07-04 10:06:14",
+        "delay_seconds": 808.0
+      },
+      "Y": {
+        "pair_id": "B27-0306-A38187388",
+        "base_pair_id": "B27-0306",
+        "question_id": 38181710,
+        "answer_id": 38187388,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-07-04 14:45:36",
+        "delay_seconds": 17570.0
+      }
+    }
+  },
+  {
+    "case_id": "R004",
+    "question_id": 6382705,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0071-A6382798",
+        "base_pair_id": "B27-0071",
+        "question_id": 6382705,
+        "answer_id": 6382798,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2011-06-17 07:42:39",
+        "delay_seconds": 541.0
+      },
+      "Y": {
+        "pair_id": "B27-0071-A6382720",
+        "base_pair_id": "B27-0071",
+        "question_id": 6382705,
+        "answer_id": 6382720,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2011-06-17 07:34:48",
+        "delay_seconds": 70.0
+      }
+    }
+  },
+  {
+    "case_id": "R005",
+    "question_id": 1364173,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0097-A1364199",
+        "base_pair_id": "B27-0097",
+        "question_id": 1364173,
+        "answer_id": 1364199,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2009-09-01 19:21:49",
+        "delay_seconds": 276.0
+      },
+      "Y": {
+        "pair_id": "B27-0097-A1364179",
+        "base_pair_id": "B27-0097",
+        "question_id": 1364173,
+        "answer_id": 1364179,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2009-09-01 19:18:43",
+        "delay_seconds": 90.0
+      }
+    }
+  },
+  {
+    "case_id": "R006",
+    "question_id": 706101,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0092-A706250",
+        "base_pair_id": "B27-0092",
+        "question_id": 706101,
+        "answer_id": 706250,
+        "answer_rank": 1,
+        "answer_count": 6,
+        "self_answer": false,
+        "created_at": "2009-04-01 16:04:36",
+        "delay_seconds": 1505.0
+      },
+      "Y": {
+        "pair_id": "B27-0092-A706353",
+        "base_pair_id": "B27-0092",
+        "question_id": 706101,
+        "answer_id": 706353,
+        "answer_rank": 2,
+        "answer_count": 6,
+        "self_answer": false,
+        "created_at": "2009-04-01 16:30:29",
+        "delay_seconds": 3058.0
+      }
+    }
+  },
+  {
+    "case_id": "R007",
+    "question_id": 18944345,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0335-A18951369",
+        "base_pair_id": "B27-0335",
+        "question_id": 18944345,
+        "answer_id": 18951369,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": true,
+        "created_at": "2013-09-23 03:28:28",
+        "delay_seconds": 50426.0
+      },
+      "Y": {
+        "pair_id": "B27-0335-A18945009",
+        "base_pair_id": "B27-0335",
+        "question_id": 18944345,
+        "answer_id": 18945009,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2013-09-22 14:43:17",
+        "delay_seconds": 4515.0
+      }
+    }
+  },
+  {
+    "case_id": "R008",
+    "question_id": 12336239,
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0111-A13905835",
+        "base_pair_id": "B27-0111",
+        "question_id": 12336239,
+        "answer_id": 13905835,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2012-12-16 21:53:10",
+        "delay_seconds": 8534370.0
+      },
+      "Y": {
+        "pair_id": "B27-0111-A12343929",
+        "base_pair_id": "B27-0111",
+        "question_id": 12336239,
+        "answer_id": 12343929,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2012-09-09 23:48:43",
+        "delay_seconds": 74103.0
+      }
+    }
+  },
+  {
+    "case_id": "R009",
+    "question_id": 9174799,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0237-A9174948",
+        "base_pair_id": "B27-0237",
+        "question_id": 9174799,
+        "answer_id": 9174948,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2012-02-07 10:52:55",
+        "delay_seconds": 616.0
+      },
+      "Y": {
+        "pair_id": "B27-0237-A9174940",
+        "base_pair_id": "B27-0237",
+        "question_id": 9174799,
+        "answer_id": 9174940,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2012-02-07 10:52:19",
+        "delay_seconds": 580.0
+      }
+    }
+  },
+  {
+    "case_id": "R010",
+    "question_id": 29069405,
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0181-A29069413",
+        "base_pair_id": "B27-0181",
+        "question_id": 29069405,
+        "answer_id": 29069413,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2015-03-16 03:56:15",
+        "delay_seconds": 79.0
+      },
+      "Y": {
+        "pair_id": "B27-0181-A29069423",
+        "base_pair_id": "B27-0181",
+        "question_id": 29069405,
+        "answer_id": 29069423,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2015-03-16 03:57:30",
+        "delay_seconds": 154.0
+      }
+    }
+  },
+  {
+    "case_id": "R011",
+    "question_id": 5406326,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0120-A5406375",
+        "base_pair_id": "B27-0120",
+        "question_id": 5406326,
+        "answer_id": 5406375,
+        "answer_rank": 2,
+        "answer_count": 6,
+        "self_answer": false,
+        "created_at": "2011-03-23 13:59:22",
+        "delay_seconds": 203.0
+      },
+      "Y": {
+        "pair_id": "B27-0120-A5406342",
+        "base_pair_id": "B27-0120",
+        "question_id": 5406326,
+        "answer_id": 5406342,
+        "answer_rank": 1,
+        "answer_count": 6,
+        "self_answer": false,
+        "created_at": "2011-03-23 13:56:57",
+        "delay_seconds": 58.0
+      }
+    }
+  },
+  {
+    "case_id": "R012",
+    "question_id": 1484963,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0101-A1484996",
+        "base_pair_id": "B27-0101",
+        "question_id": 1484963,
+        "answer_id": 1484996,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2009-09-28 01:11:24",
+        "delay_seconds": 889.0
+      },
+      "Y": {
+        "pair_id": "B27-0101-A1500608",
+        "base_pair_id": "B27-0101",
+        "question_id": 1484963,
+        "answer_id": 1500608,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2009-09-30 20:54:47",
+        "delay_seconds": 244692.0
+      }
+    }
+  },
+  {
+    "case_id": "R013",
+    "question_id": 31082449,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0373-A31092177",
+        "base_pair_id": "B27-0373",
+        "question_id": 31082449,
+        "answer_id": 31092177,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-06-27 18:36:31",
+        "delay_seconds": 75945.0
+      },
+      "Y": {
+        "pair_id": "B27-0373-A31137470",
+        "base_pair_id": "B27-0373",
+        "question_id": 31082449,
+        "answer_id": 31137470,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-06-30 11:49:51",
+        "delay_seconds": 310745.0
+      }
+    }
+  },
+  {
+    "case_id": "R014",
+    "question_id": 38696101,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0022-A38697308",
+        "base_pair_id": "B27-0022",
+        "question_id": 38696101,
+        "answer_id": 38697308,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-08-01 11:09:07",
+        "delay_seconds": 3852.0
+      },
+      "Y": {
+        "pair_id": "B27-0022-A38696167",
+        "base_pair_id": "B27-0022",
+        "question_id": 38696101,
+        "answer_id": 38696167,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-08-01 10:08:40",
+        "delay_seconds": 225.0
+      }
+    }
+  },
+  {
+    "case_id": "R015",
+    "question_id": 6878642,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0088-A6893852",
+        "base_pair_id": "B27-0088",
+        "question_id": 6878642,
+        "answer_id": 6893852,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2011-08-01 02:54:51",
+        "delay_seconds": 196073.0
+      },
+      "Y": {
+        "pair_id": "B27-0088-A6878725",
+        "base_pair_id": "B27-0088",
+        "question_id": 6878642,
+        "answer_id": 6878725,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2011-07-29 20:36:13",
+        "delay_seconds": 555.0
+      }
+    }
+  },
+  {
+    "case_id": "R016",
+    "question_id": 37353403,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0255-A37353702",
+        "base_pair_id": "B27-0255",
+        "question_id": 37353403,
+        "answer_id": 37353702,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2016-05-20 18:39:13",
+        "delay_seconds": 1094.0
+      },
+      "Y": {
+        "pair_id": "B27-0255-A37355427",
+        "base_pair_id": "B27-0255",
+        "question_id": 37353403,
+        "answer_id": 37355427,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2016-05-20 20:34:56",
+        "delay_seconds": 8037.0
+      }
+    }
+  },
+  {
+    "case_id": "R017",
+    "question_id": 10003207,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0338-A10003517",
+        "base_pair_id": "B27-0338",
+        "question_id": 10003207,
+        "answer_id": 10003517,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2012-04-04 00:51:04",
+        "delay_seconds": 2714.0
+      },
+      "Y": {
+        "pair_id": "B27-0338-A10003518",
+        "base_pair_id": "B27-0338",
+        "question_id": 10003207,
+        "answer_id": 10003518,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2012-04-04 00:51:21",
+        "delay_seconds": 2731.0
+      }
+    }
+  },
+  {
+    "case_id": "R018",
+    "question_id": 18813912,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0055-A18814332",
+        "base_pair_id": "B27-0055",
+        "question_id": 18813912,
+        "answer_id": 18814332,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": null,
+        "created_at": "2013-09-15 15:52:57",
+        "delay_seconds": 2575.0
+      },
+      "Y": {
+        "pair_id": "B27-0055-A18814643",
+        "base_pair_id": "B27-0055",
+        "question_id": 18813912,
+        "answer_id": 18814643,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2013-09-15 16:22:08",
+        "delay_seconds": 4326.0
+      }
+    }
+  },
+  {
+    "case_id": "R019",
+    "question_id": 20648592,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0246-A20648694",
+        "base_pair_id": "B27-0246",
+        "question_id": 20648592,
+        "answer_id": 20648694,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2013-12-18 02:31:38",
+        "delay_seconds": 627.0
+      },
+      "Y": {
+        "pair_id": "B27-0246-A20648776",
+        "base_pair_id": "B27-0246",
+        "question_id": 20648592,
+        "answer_id": 20648776,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2013-12-18 02:46:17",
+        "delay_seconds": 1506.0
+      }
+    }
+  },
+  {
+    "case_id": "R020",
+    "question_id": 31380578,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0293-A31442889",
+        "base_pair_id": "B27-0293",
+        "question_id": 31380578,
+        "answer_id": 31442889,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2015-07-15 23:22:36",
+        "delay_seconds": 220272.0
+      },
+      "Y": {
+        "pair_id": "B27-0293-A31406355",
+        "base_pair_id": "B27-0293",
+        "question_id": 31380578,
+        "answer_id": 31406355,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2015-07-14 12:17:04",
+        "delay_seconds": 93940.0
+      }
+    }
+  },
+  {
+    "case_id": "R021",
+    "question_id": 36952763,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0284-A36953175",
+        "base_pair_id": "B27-0284",
+        "question_id": 36952763,
+        "answer_id": 36953175,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-04-30 09:33:01",
+        "delay_seconds": 2831.0
+      },
+      "Y": {
+        "pair_id": "B27-0284-A36956440",
+        "base_pair_id": "B27-0284",
+        "question_id": 36952763,
+        "answer_id": 36956440,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": true,
+        "created_at": "2016-04-30 15:00:42",
+        "delay_seconds": 22492.0
+      }
+    }
+  },
+  {
+    "case_id": "R022",
+    "question_id": 40063242,
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0368-A40063308",
+        "base_pair_id": "B27-0368",
+        "question_id": 40063242,
+        "answer_id": 40063308,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-10-15 19:25:09",
+        "delay_seconds": 380.0
+      },
+      "Y": {
+        "pair_id": "B27-0368-A40063294",
+        "base_pair_id": "B27-0368",
+        "question_id": 40063242,
+        "answer_id": 40063294,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-10-15 19:23:47",
+        "delay_seconds": 298.0
+      }
+    }
+  },
+  {
+    "case_id": "R023",
+    "question_id": 4464809,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0314-A4464838",
+        "base_pair_id": "B27-0314",
+        "question_id": 4464809,
+        "answer_id": 4464838,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2010-12-16 20:00:03",
+        "delay_seconds": 254.0
+      },
+      "Y": {
+        "pair_id": "B27-0314-A4464837",
+        "base_pair_id": "B27-0314",
+        "question_id": 4464809,
+        "answer_id": 4464837,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2010-12-16 19:59:39",
+        "delay_seconds": 230.0
+      }
+    }
+  },
+  {
+    "case_id": "R024",
+    "question_id": 19684697,
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0131-A19694041",
+        "base_pair_id": "B27-0131",
+        "question_id": 19684697,
+        "answer_id": 19694041,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": true,
+        "created_at": "2013-10-30 21:22:33",
+        "delay_seconds": 25759.0
+      },
+      "Y": {
+        "pair_id": "B27-0131-A19684977",
+        "base_pair_id": "B27-0131",
+        "question_id": 19684697,
+        "answer_id": 19684977,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2013-10-30 14:25:04",
+        "delay_seconds": 710.0
+      }
+    }
+  },
+  {
+    "case_id": "R025",
+    "question_id": 19370236,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0268-A19370367",
+        "base_pair_id": "B27-0268",
+        "question_id": 19370236,
+        "answer_id": 19370367,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2013-10-14 22:33:18",
+        "delay_seconds": 739.0
+      },
+      "Y": {
+        "pair_id": "B27-0268-A19370315",
+        "base_pair_id": "B27-0268",
+        "question_id": 19370236,
+        "answer_id": 19370315,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2013-10-14 22:27:35",
+        "delay_seconds": 396.0
+      }
+    }
+  },
+  {
+    "case_id": "R026",
+    "question_id": 3844556,
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0048-A3844563",
+        "base_pair_id": "B27-0048",
+        "question_id": 3844556,
+        "answer_id": 3844563,
+        "answer_rank": 1,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2010-10-02 05:54:39",
+        "delay_seconds": 110.0
+      },
+      "Y": {
+        "pair_id": "B27-0048-A3844566",
+        "base_pair_id": "B27-0048",
+        "question_id": 3844556,
+        "answer_id": 3844566,
+        "answer_rank": 2,
+        "answer_count": 4,
+        "self_answer": false,
+        "created_at": "2010-10-02 05:55:58",
+        "delay_seconds": 189.0
+      }
+    }
+  },
+  {
+    "case_id": "R027",
+    "question_id": 5256845,
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0276-A5256942",
+        "base_pair_id": "B27-0276",
+        "question_id": 5256845,
+        "answer_id": 5256942,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2011-03-10 08:03:19",
+        "delay_seconds": 835.0
+      },
+      "Y": {
+        "pair_id": "B27-0276-A5256859",
+        "base_pair_id": "B27-0276",
+        "question_id": 5256845,
+        "answer_id": 5256859,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2011-03-10 07:51:17",
+        "delay_seconds": 113.0
+      }
+    }
+  },
+  {
+    "case_id": "R028",
+    "question_id": 7435275,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0221-A7435445",
+        "base_pair_id": "B27-0221",
+        "question_id": 7435275,
+        "answer_id": 7435445,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2011-09-15 18:07:24",
+        "delay_seconds": 941.0
+      },
+      "Y": {
+        "pair_id": "B27-0221-A7435682",
+        "base_pair_id": "B27-0221",
+        "question_id": 7435275,
+        "answer_id": 7435682,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2011-09-15 18:30:08",
+        "delay_seconds": 2305.0
+      }
+    }
+  },
+  {
+    "case_id": "R029",
+    "question_id": 22582146,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0079-A27895460",
+        "base_pair_id": "B27-0079",
+        "question_id": 22582146,
+        "answer_id": 27895460,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2015-01-12 04:49:07",
+        "delay_seconds": 25523107.0
+      },
+      "Y": {
+        "pair_id": "B27-0079-A22585626",
+        "base_pair_id": "B27-0079",
+        "question_id": 22582146,
+        "answer_id": 22585626,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2014-03-23 00:46:15",
+        "delay_seconds": 20535.0
+      }
+    }
+  },
+  {
+    "case_id": "R030",
+    "question_id": 34832212,
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0219-A38276944",
+        "base_pair_id": "B27-0219",
+        "question_id": 34832212,
+        "answer_id": 38276944,
+        "answer_rank": 2,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-07-09 00:01:18",
+        "delay_seconds": 15043565.0
+      },
+      "Y": {
+        "pair_id": "B27-0219-A34832381",
+        "base_pair_id": "B27-0219",
+        "question_id": 34832212,
+        "answer_id": 34832381,
+        "answer_rank": 1,
+        "answer_count": 2,
+        "self_answer": false,
+        "created_at": "2016-01-16 21:33:09",
+        "delay_seconds": 1076.0
+      }
+    }
+  },
+  {
+    "case_id": "R031",
+    "question_id": 16763491,
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "answers": {
+      "X": {
+        "pair_id": "B27-0325-A16763596",
+        "base_pair_id": "B27-0325",
+        "question_id": 16763491,
+        "answer_id": 16763596,
+        "answer_rank": 1,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2013-05-26 20:53:05",
+        "delay_seconds": 862.0
+      },
+      "Y": {
+        "pair_id": "B27-0325-A16763602",
+        "base_pair_id": "B27-0325",
+        "question_id": 16763491,
+        "answer_id": 16763602,
+        "answer_rank": 2,
+        "answer_count": 3,
+        "self_answer": false,
+        "created_at": "2013-05-26 20:54:20",
+        "delay_seconds": 937.0
+      }
+    }
+  }
+]

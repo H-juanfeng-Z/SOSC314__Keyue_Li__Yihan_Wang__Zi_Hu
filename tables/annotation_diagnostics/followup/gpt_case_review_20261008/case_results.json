@@ -1,0 +1,2810 @@
+[
+  {
+    "case_id": "R001",
+    "question_id": 30365069,
+    "title": "How to plot a 2d streamline in 3d view in matplotlib",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "edited_question_scope",
+      "missing_linked_figures"
+    ],
+    "request": "Transform streamlines into3D; visible edited question additionally asks about arrows and imshow data.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0106-A30380989",
+          "base_pair_id": "B27-0106",
+          "question_id": 30365069,
+          "answer_id": 30380989,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-05-21 17:52:35",
+          "delay_seconds": 45585.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A15",
+            "A25",
+            "A28"
+          ],
+          "reason": "Directly demonstrates extraction and3D plotting for the original request; does not cover the added arrow/imshow requests. Would be substantial under the narrower original scope."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0106-A30404248",
+          "base_pair_id": "B27-0106",
+          "question_id": 30365069,
+          "answer_id": 30404248,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-05-22 19:11:39",
+          "delay_seconds": 136729.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A14",
+            "A38",
+            "A44"
+          ],
+          "reason": "Provides a concrete3D line/arrow approach, but does not address the edited imshow request. Assumes extracted lines and has unverified streamline heuristics."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "both_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R002",
+    "question_id": 24460725,
+    "title": "Python Pandas Reading CSV file with Specific Line Terminators",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "historical_python_version",
+      "secondary_generator_goal"
+    ],
+    "request": "Parse the malformed quoted comma-separated sample into a DataFrame; a generator is a stated preference.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0143-A24468635",
+          "base_pair_id": "B27-0143",
+          "question_id": 24460725,
+          "answer_id": 24468635,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": true,
+          "created_at": "2014-06-28 16:08:50",
+          "delay_seconds": 68840.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A11",
+            "A13",
+            "A14"
+          ],
+          "reason": "Supplies CSV parsing, trailing-field removal, quote stripping and DataFrame construction for the central task. Does not implement the preferred generator; runtime/import compatibility not executed."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0143-A29857201",
+          "base_pair_id": "B27-0143",
+          "question_id": 24460725,
+          "answer_id": 29857201,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-04-24 20:48:58",
+          "delay_seconds": 26005648.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1",
+            "A10"
+          ],
+          "reason": "Suggests disabling quote parsing, but the tab delimiter does not match supplied comma-separated data and there is no cleanup into the intended fields."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_substantial_second_not",
+      "14B": "both_substantial",
+      "7B": "both_substantial"
+    }
+  },
+  {
+    "case_id": "R003",
+    "question_id": 38181710,
+    "title": "TkMessageBox - No Module",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [],
+    "request": "Correct the messagebox import for explicitly stated Python3.3.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0306-A38181986",
+          "base_pair_id": "B27-0306",
+          "question_id": 38181710,
+          "answer_id": 38181986,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-07-04 10:06:14",
+          "delay_seconds": 808.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A7",
+            "A14"
+          ],
+          "reason": "Provides the Python3 import and explains the rename; sufficient for the narrow import error."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0306-A38187388",
+          "base_pair_id": "B27-0306",
+          "question_id": 38181710,
+          "answer_id": 38187388,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-07-04 14:45:36",
+          "delay_seconds": 17570.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Clearly gives the Python2 versus Python3 names and correct target import. No larger program is required."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "both_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R004",
+    "question_id": 6382705,
+    "title": "Add two matrices in python",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "example_inconsistency_in_Y"
+    ],
+    "request": "Return nested-list elementwise matrix sums matching the given doctests.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0071-A6382720",
+          "base_pair_id": "B27-0071",
+          "question_id": 6382705,
+          "answer_id": 6382720,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2011-06-17 07:34:48",
+          "delay_seconds": 70.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A115",
+            "A118",
+            "A159"
+          ],
+          "reason": "The lightweight implementation plus add_matrices wrapper covers the requested nested-list output. Some unrelated heavyweight/demo lines contain inconsistencies, so the entire response is not certified correct."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0071-A6382798",
+          "base_pair_id": "B27-0071",
+          "question_id": 6382705,
+          "answer_id": 6382798,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2011-06-17 07:42:39",
+          "delay_seconds": 541.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A7",
+            "A8",
+            "A9"
+          ],
+          "reason": "Constructs and returns row-wise element sums for the displayed same-shape matrices. Renaming addM is a minor adaptation, not a substantive missing algorithm."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "both_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R005",
+    "question_id": 1364173,
+    "title": "Stopping python using ctrl+c",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "operating_system_unspecified",
+      "force_termination_vs_interrupt"
+    ],
+    "request": "Stop a threaded HTTP-request script that does not respond to Ctrl+C.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0097-A1364179",
+          "base_pair_id": "B27-0097",
+          "question_id": 1364173,
+          "answer_id": 1364179,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2009-09-01 19:18:43",
+          "delay_seconds": 90.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Process termination is a usable fallback, but Ctrl+Z behavior is platform/context dependent and the response does not explain interruption of the described blocking script."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0097-A1364199",
+          "base_pair_id": "B27-0097",
+          "question_id": 1364173,
+          "answer_id": 1364199,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2009-09-01 19:21:49",
+          "delay_seconds": 276.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A5"
+          ],
+          "reason": "Offers a concrete alternative key combination but overclaims that it stops every script, without establishing applicable platform or addressing blocking/thread behavior."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "neither_substantial",
+      "7B": "neither_substantial"
+    }
+  },
+  {
+    "case_id": "R006",
+    "question_id": 706101,
+    "title": "Python JSON decoding performance",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "native_availability_vs_active_use",
+      "unverified_platform_claim"
+    ],
+    "request": "Check whether the standard Python2.6 JSON decoder is using native acceleration without requiring extra packages.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0092-A706250",
+          "base_pair_id": "B27-0092",
+          "question_id": 706101,
+          "answer_id": 706250,
+          "answer_rank": 1,
+          "answer_count": 6,
+          "self_answer": false,
+          "created_at": "2009-04-01 16:04:36",
+          "delay_seconds": 1505.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A6",
+            "A12"
+          ],
+          "reason": "Identifies the acceleration module and shows how to inspect its availability. Does not directly test whether the slow decoding path actually uses it; offers useful diagnostic information."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0092-A706353",
+          "base_pair_id": "B27-0092",
+          "question_id": 706101,
+          "answer_id": 706353,
+          "answer_rank": 2,
+          "answer_count": 6,
+          "self_answer": false,
+          "created_at": "2009-04-01 16:30:29",
+          "delay_seconds": 3058.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A7",
+            "A9"
+          ],
+          "reason": "Offers a compatible optional-package fallback but does not answer the native-use check and still depends on an extra package for the proposed improvement. The blanket speedups claim is unverified here."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "both_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R007",
+    "question_id": 18944345,
+    "title": "ImportError: No module named jinja2",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "environment_dependent_remedy"
+    ],
+    "request": "Resolve a Jinja2 import failure despite app.yaml already declaring the library.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0335-A18945009",
+          "base_pair_id": "B27-0335",
+          "question_id": 18944345,
+          "answer_id": 18945009,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2013-09-22 14:43:17",
+          "delay_seconds": 4515.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A5"
+          ],
+          "reason": "Provides a specific launcher-path diagnostic, but does not establish a path problem or explain how it reconciles the displayed SDK traceback and declared library. Useful alternative troubleshooting, not a demonstrated resolution."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0335-A18951369",
+          "base_pair_id": "B27-0335",
+          "question_id": 18944345,
+          "answer_id": 18951369,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": true,
+          "created_at": "2013-09-23 03:28:28",
+          "delay_seconds": 50426.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A5"
+          ],
+          "reason": "Provides a concrete restart remedy and explains why the already-edited declaration may not be active. Plausible and targeted, not execution-verified."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R008",
+    "question_id": 12336239,
+    "title": "How to open ssl socket using certificate stored in string variables in python",
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "historical_API_scope"
+    ],
+    "request": "Load a certificate from a string with Python2.7 ssl.wrap_socket when writing files is unavailable.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0111-A12343929",
+          "base_pair_id": "B27-0111",
+          "question_id": 12336239,
+          "answer_id": 12343929,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2012-09-09 23:48:43",
+          "delay_seconds": 74103.0
+        },
+        "gpt": {
+          "label": "unhelpful",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "StringIO offers a file-like object, not the filesystem path the question explicitly says the API requires. No bridge to that API is supplied."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0111-A13905835",
+          "base_pair_id": "B27-0111",
+          "question_id": 12336239,
+          "answer_id": 13905835,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2012-12-16 21:53:10",
+          "delay_seconds": 8534370.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A63",
+            "A90",
+            "A96"
+          ],
+          "reason": "Explains the file-path limitation of the specified API with a source-level chain. A supported negative answer can satisfy the request without supplying a nonexistent workaround; not a claim about every TLS library."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "first_substantial_second_not"
+    }
+  },
+  {
+    "case_id": "R009",
+    "question_id": 9174799,
+    "title": "How to prevent user stopping script by CTRL + Z?",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [
+      "interactive_input_behavior",
+      "platform_scope"
+    ],
+    "request": "Prevent Ctrl+Z from returning a command-line interpreter script to the shell.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0237-A9174940",
+          "base_pair_id": "B27-0237",
+          "question_id": 9174799,
+          "answer_id": 9174940,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2012-02-07 10:52:19",
+          "delay_seconds": 580.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A11",
+            "A13"
+          ],
+          "reason": "Shows the relevant signal and a handler, but its busy-loop example does not address interactive-input behavior. It is useful direction; sufficiency for the requested interpreter is uncertain without that context."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0237-A9174948",
+          "base_pair_id": "B27-0237",
+          "question_id": 9174799,
+          "answer_id": 9174948,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2012-02-07 10:52:55",
+          "delay_seconds": 616.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A6",
+            "A19",
+            "A28"
+          ],
+          "reason": "Provides SIG_IGN with an interactive-input example and explains a relevant distinction from a custom handler. Directly addresses terminal suspension within the stated Linux scope."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "both_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R010",
+    "question_id": 29069405,
+    "title": "Baby level python: Classes, and using them",
+    "added": false,
+    "disagreement": false,
+    "control": true,
+    "flags": [],
+    "request": "Explain why newAge returns None and how to obtain the incremented age.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0181-A29069413",
+          "base_pair_id": "B27-0181",
+          "question_id": 29069405,
+          "answer_id": 29069413,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2015-03-16 03:56:15",
+          "delay_seconds": 79.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Identifies implicit None and supplies the exact return-value fix; one sentence is sufficient for this narrow bug."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0181-A29069423",
+          "base_pair_id": "B27-0181",
+          "question_id": 29069405,
+          "answer_id": 29069423,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2015-03-16 03:57:30",
+          "delay_seconds": 154.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Explains the missing return and tells the asker to return self.age at the end of the method."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "both_substantial",
+      "7B": "both_substantial"
+    }
+  },
+  {
+    "case_id": "R011",
+    "question_id": 5406326,
+    "title": "How can i remove <p> </p> with python sub",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "narrow_replacement_vs_general_HTML_parsing"
+    ],
+    "request": "Replace empty p tags with the supplied space entity in the example string.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0120-A5406342",
+          "base_pair_id": "B27-0120",
+          "question_id": 5406326,
+          "answer_id": 5406342,
+          "answer_rank": 1,
+          "answer_count": 6,
+          "self_answer": false,
+          "created_at": "2011-03-23 13:56:57",
+          "delay_seconds": 58.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1",
+            "A6"
+          ],
+          "reason": "Recommends concrete parsing libraries and explains robustness, but does not show how to identify or replace the empty paragraphs."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0120-A5406375",
+          "base_pair_id": "B27-0120",
+          "question_id": 5406326,
+          "answer_id": 5406375,
+          "answer_rank": 2,
+          "answer_count": 6,
+          "self_answer": false,
+          "created_at": "2011-03-23 13:59:22",
+          "delay_seconds": 203.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A6",
+            "A7"
+          ],
+          "reason": "Supplies the correct re.sub call and a pattern for empty/whitespace-only paragraphs. No general-purpose HTML parser is necessary to demonstrate this narrow replacement."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R012",
+    "question_id": 1484963,
+    "title": "There’s PyQuery… is there one for Ruby?",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "encoding_artifacts",
+      "linked_content_not_read"
+    ],
+    "request": "Identify a Ruby equivalent of PyQuery.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0101-A1484996",
+          "base_pair_id": "B27-0101",
+          "question_id": 1484963,
+          "answer_id": 1484996,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2009-09-28 01:11:24",
+          "delay_seconds": 889.0
+        },
+        "gpt": {
+          "label": "unhelpful",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Addresses using browser jQuery with Rails rather than a PyQuery-like HTML query/parser library, so the central equivalence is not established."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0101-A1500608",
+          "base_pair_id": "B27-0101",
+          "question_id": 1484963,
+          "answer_id": 1500608,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2009-09-30 20:54:47",
+          "delay_seconds": 244692.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Names Hpricot with a link explicitly identified as a jQuery-like HTML parser for Ruby. A named candidate adequately answers this resource-identification request; linked contents and exact feature parity were not verified."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R013",
+    "question_id": 31082449,
+    "title": "creating a table if not exist; otherwise repopulate it",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "diagnosis_vs_literal_safeguard"
+    ],
+    "request": "Fix the missing-table error in the displayed shp2pgsql-to-psql pipeline.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0373-A31092177",
+          "base_pair_id": "B27-0373",
+          "question_id": 31082449,
+          "answer_id": 31092177,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-06-27 18:36:31",
+          "delay_seconds": 75945.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A11",
+            "A14"
+          ],
+          "reason": "Identifies that -c bypasses piped SQL and shows the corrected stdin execution pattern. This addresses the displayed causal mistake rather than merely adding a table-existence guard."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0373-A31137470",
+          "base_pair_id": "B27-0373",
+          "question_id": 31082449,
+          "answer_id": 31137470,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-06-30 11:49:51",
+          "delay_seconds": 310745.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A8",
+            "A9"
+          ],
+          "reason": "Applies the specific removal of -c ANALYZE to the user's pipeline. No independent database execution or certification of all shp2pgsql behavior is claimed."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "partial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R014",
+    "question_id": 38696101,
+    "title": "Python: How to check the number of occurrences and top (n) values in a dataframe?",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "top_n_omitted"
+    ],
+    "request": "Count Location occurrences and return the top two locations in the displayed format.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0022-A38696167",
+          "base_pair_id": "B27-0022",
+          "question_id": 38696101,
+          "answer_id": 38696167,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-08-01 10:08:40",
+          "delay_seconds": 225.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A2",
+            "A8",
+            "A17"
+          ],
+          "reason": "Introduces value_counts, but uses a different column name and explains single-key lookup instead of returning the top two requested locations."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0022-A38697308",
+          "base_pair_id": "B27-0022",
+          "question_id": 38696101,
+          "answer_id": 38697308,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-08-01 11:09:07",
+          "delay_seconds": 3852.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A6",
+            "A17"
+          ],
+          "reason": "Provides counts and sorting, but not top-two selection; default ascending sorting is not the requested descending result. Benchmarks do not fill that gap."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R015",
+    "question_id": 6878642,
+    "title": "PDF Thumbnailing with Google App Engine (Python)",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "historical_service_capability_unverified",
+      "speculative_alternatives"
+    ],
+    "request": "Determine whether PDF thumbnails can be generated in Python Google App Engine and how to support uploads.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0088-A6878725",
+          "base_pair_id": "B27-0088",
+          "question_id": 6878642,
+          "answer_id": 6878725,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2011-07-29 20:36:13",
+          "delay_seconds": 555.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "low",
+          "evidence_ids": [
+            "A1",
+            "A16",
+            "A19"
+          ],
+          "reason": "Outlines an external-snapshot workflow, but explicitly has not tested direct imaging and does not establish that the suggested service renders the stored PDF. Useful direction, not an established end-to-end solution."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0088-A6893852",
+          "base_pair_id": "B27-0088",
+          "question_id": 6878642,
+          "answer_id": 6893852,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2011-08-01 02:54:51",
+          "delay_seconds": 196073.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Identifies the renderer requirement and external-service route, but the categorical impossibility rests on an unverified existence claim and no concrete supported service/integration is supplied."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R016",
+    "question_id": 37353403,
+    "title": "Is there a file-like object in Python/Java that can filter lines based on regex pattern matching?",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "default_route_omitted",
+      "file_like_adapter_omitted"
+    ],
+    "request": "Route matching output lines to distinct files, unmatched lines to a default, through a file-like interface.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0255-A37353702",
+          "base_pair_id": "B27-0255",
+          "question_id": 37353403,
+          "answer_id": 37353702,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2016-05-20 18:39:13",
+          "delay_seconds": 1094.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A11",
+            "A35",
+            "A41"
+          ],
+          "reason": "Shows regex-based logging to a file, but not default routing or a file-like write adapter for existing program output. The supplied filter discards nonmatches."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0255-A37355427",
+          "base_pair_id": "B27-0255",
+          "question_id": 37353403,
+          "answer_id": 37355427,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2016-05-20 20:34:56",
+          "delay_seconds": 8037.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A28",
+            "A49",
+            "A50"
+          ],
+          "reason": "Implements the two matching handlers but no unmatched/default handler or file-like interface. Substantial working direction still omits explicit central behavior."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid_json",
+            "label": null,
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R017",
+    "question_id": 10003207,
+    "title": "inserting data into google app engine datastore",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [],
+    "request": "Update Biography without overwriting the entity's other properties.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0338-A10003517",
+          "base_pair_id": "B27-0338",
+          "question_id": 10003207,
+          "answer_id": 10003517,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2012-04-04 00:51:04",
+          "delay_seconds": 2714.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Identifies replacement of an existing entity and contrasts it with getting and updating the existing entity. That conceptual correction addresses the central error; linked documentation is not required for the diagnosis."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0338-A10003518",
+          "base_pair_id": "B27-0338",
+          "question_id": 10003207,
+          "answer_id": 10003518,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2012-04-04 00:51:21",
+          "delay_seconds": 2731.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Gives the exact retrieve-modify-put sequence needed to preserve other properties; a complete application is unnecessary."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R018",
+    "question_id": 18813912,
+    "title": "How to make faster my script on python?",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "performance_not_benchmarked"
+    ],
+    "request": "Speed up two sets of slow external API calls, including pairwise work, and assess parallelization.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0055-A18814332",
+          "base_pair_id": "B27-0055",
+          "question_id": 18813912,
+          "answer_id": 18814332,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": null,
+          "created_at": "2013-09-15 15:52:57",
+          "delay_seconds": 2575.0
+        },
+        "gpt": {
+          "label": "unhelpful",
+          "confidence": "high",
+          "evidence_ids": [
+            "A7",
+            "A14",
+            "A18"
+          ],
+          "reason": "Replacing an outer iterator with a generator does not reduce or parallelize the expensive API calls; supplied code also has syntax/state issues. It does not address the stated bottleneck."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0055-A18814643",
+          "base_pair_id": "B27-0055",
+          "question_id": 18813912,
+          "answer_id": 18814643,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2013-09-15 16:22:08",
+          "delay_seconds": 4326.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A9",
+            "A17"
+          ],
+          "reason": "Proposes timing the bottleneck, turning loop work into independent task arguments, parallel execution and result collection. Adequate at the requested suggestion/design level; speedup and external API limits are not verified."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R019",
+    "question_id": 20648592,
+    "title": "Is there a way to register queries in SQLite?",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [],
+    "request": "Give a reusable name to the displayed SQLite SELECT query.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0246-A20648694",
+          "base_pair_id": "B27-0246",
+          "question_id": 20648592,
+          "answer_id": 20648694,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2013-12-18 02:31:38",
+          "delay_seconds": 627.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A6",
+            "A12",
+            "A15"
+          ],
+          "reason": "Suggests application-side reuse mechanisms but does not supply the direct database-level named-query solution. Stored procedures are not the only relevant abstraction."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "partial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0246-A20648776",
+          "base_pair_id": "B27-0246",
+          "question_id": 20648592,
+          "answer_id": 20648776,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2013-12-18 02:46:17",
+          "delay_seconds": 1506.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A6",
+            "A9",
+            "A15"
+          ],
+          "reason": "Shows CREATE VIEW around the query and the exact subsequent SELECT syntax, satisfying the requested reuse."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R020",
+    "question_id": 31380578,
+    "title": "How to avoid building C library with my python package?",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "edited_question_scope",
+      "historical_packaging_API_unverified"
+    ],
+    "request": "Distribute embedded C binaries as platform wheels so users can pip install without building; the edited question asks how to build those wheels.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0293-A31406355",
+          "base_pair_id": "B27-0293",
+          "question_id": 31380578,
+          "answer_id": 31406355,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2015-07-14 12:17:04",
+          "delay_seconds": 93940.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Identifies prebuilt binaries but mainly names alternative packaging tools; does not address the edited platform-wheel construction task or retained pip installation workflow."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0293-A31442889",
+          "base_pair_id": "B27-0293",
+          "question_id": 31380578,
+          "answer_id": 31442889,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2015-07-15 23:22:36",
+          "delay_seconds": 220272.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A21",
+            "A25",
+            "A33"
+          ],
+          "reason": "Provides useful platform-wheel, native-build and distribution guidance, but the concrete embedding/build failure remains underspecified and the named Distribution hook is not verified. Adequacy would be higher for the original high-level strategy question."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R021",
+    "question_id": 36952763,
+    "title": "How to return history of validation loss in Keras",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "edited_question_scope",
+      "training_vs_validation_loss",
+      "return_value_capture"
+    ],
+    "request": "Retrieve training/validation history in a repeated-fit Keras example, including a later update reporting empty history.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0284-A36953175",
+          "base_pair_id": "B27-0284",
+          "question_id": 36952763,
+          "answer_id": 36953175,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-04-30 09:33:01",
+          "delay_seconds": 2831.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Points to the correct history attribute of a returned object, but does not connect it to the loop's uncaptured fit return or resolve the added empty-history issue."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0284-A36956440",
+          "base_pair_id": "B27-0284",
+          "question_id": 36952763,
+          "answer_id": 36956440,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": true,
+          "created_at": "2016-04-30 15:00:42",
+          "delay_seconds": 22492.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A5",
+            "A14",
+            "A25"
+          ],
+          "reason": "Explains using multiple epochs in one fit and shows a loss history, but leaves return-object capture implicit and shows training loss rather than establishing validation history. The edited request mixes distinct issues."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  },
+  {
+    "case_id": "R022",
+    "question_id": 40063242,
+    "title": "Python dataframe sum rows",
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "flags": [],
+    "request": "Perform cumulative row sums so earlier updates contribute to every later row, avoiding Python loops.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0368-A40063294",
+          "base_pair_id": "B27-0368",
+          "question_id": 40063242,
+          "answer_id": 40063294,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-10-15 19:23:47",
+          "delay_seconds": 298.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1",
+            "A6",
+            "A11"
+          ],
+          "reason": "Identifies cumsum and illustrates the cumulative values matching the requested operation."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0368-A40063308",
+          "base_pair_id": "B27-0368",
+          "question_id": 40063242,
+          "answer_id": 40063308,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-10-15 19:25:09",
+          "delay_seconds": 380.0
+        },
+        "gpt": {
+          "label": "unhelpful",
+          "confidence": "high",
+          "evidence_ids": [
+            "A6"
+          ],
+          "reason": "Adding a shifted original frame only sums adjacent original rows; it does not implement the explicitly requested cumulative dependency."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_substantial_second_not",
+      "14B": "first_not_second_substantial",
+      "7B": "both_substantial"
+    }
+  },
+  {
+    "case_id": "R023",
+    "question_id": 4464809,
+    "title": "alternate different shas of the same file. why?",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "memory_reuse_explanation_not_runtime_verified"
+    ],
+    "request": "Explain why hashes alternate for repeatedly opened instances of the same file.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0314-A4464837",
+          "base_pair_id": "B27-0314",
+          "question_id": 4464809,
+          "answer_id": 4464837,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2010-12-16 19:59:39",
+          "delay_seconds": 230.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1",
+            "A6",
+            "A12"
+          ],
+          "reason": "Correctly identifies hashing the representation but explicitly leaves the recurring alternation unexplained and supplies no content-reading correction."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0314-A4464838",
+          "base_pair_id": "B27-0314",
+          "question_id": 4464809,
+          "answer_id": 4464838,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2010-12-16 20:00:03",
+          "delay_seconds": 254.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A8",
+            "A14",
+            "A23"
+          ],
+          "reason": "Distinguishes object representation from file content, explains the alternating address reuse, and supplies content reading for hashing. The exact allocator sequence is explanatory rather than executed here."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R024",
+    "question_id": 19684697,
+    "title": "Python - Converting byte address (from ReadProcessMemory) to string?",
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "edited_question_scope",
+      "code_import_defect",
+      "buffer_safety_not_validated"
+    ],
+    "request": "Interpret process-memory bytes as the numeric value9000, not a text encoding.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0131-A19684977",
+          "base_pair_id": "B27-0131",
+          "question_id": 19684697,
+          "answer_id": 19684977,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2013-10-30 14:25:04",
+          "delay_seconds": 710.0
+        },
+        "gpt": {
+          "label": "unhelpful",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Decodes bytes as text rather than interpreting the requested numeric value; the visible update explicitly reports that this approach did not produce9000."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0131-A19694041",
+          "base_pair_id": "B27-0131",
+          "question_id": 19684697,
+          "answer_id": 19694041,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": true,
+          "created_at": "2013-10-30 21:22:33",
+          "delay_seconds": 25759.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A20",
+            "A26",
+            "A27"
+          ],
+          "reason": "Provides the useful integer-representation approach, but the claimed complete code references ctypes without importing that module name and retains a questionable writable buffer setup. Not a verified runnable solution."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "both_substantial"
+    }
+  },
+  {
+    "case_id": "R025",
+    "question_id": 19370236,
+    "title": "O(n) Java algorithm to find odd-number-out in array (not odd numbers)",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "hash_complexity_expected_not_worst_case"
+    ],
+    "request": "Find the missing number in linear time when one value is duplicated.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0268-A19370315",
+          "base_pair_id": "B27-0268",
+          "question_id": 19370236,
+          "answer_id": 19370315,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2013-10-14 22:27:35",
+          "delay_seconds": 396.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Marking seen values and finding the hole gives a complete linear-time algorithm, with a concrete Java data structure."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0268-A19370367",
+          "base_pair_id": "B27-0268",
+          "question_id": 19370236,
+          "answer_id": 19370367,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2013-10-14 22:33:18",
+          "delay_seconds": 739.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A1",
+            "A5",
+            "A9"
+          ],
+          "reason": "Supplies a complete algorithm and sum correction; hash operations give expected linear time. Code is not essential to communicate the requested algorithm."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R026",
+    "question_id": 3844556,
+    "title": "What structured text format is the best supported in Python?",
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "subjective_recommendation",
+      "comparative_performance_not_verified"
+    ],
+    "request": "Recommend an interoperable structured text format with strong Python support.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0048-A3844563",
+          "base_pair_id": "B27-0048",
+          "question_id": 3844556,
+          "answer_id": 3844563,
+          "answer_rank": 1,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2010-10-02 05:54:39",
+          "delay_seconds": 110.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Offers an interoperability criterion but no concrete library support or basis for claiming the formats are equivalent."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "unhelpful",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0048-A3844566",
+          "base_pair_id": "B27-0048",
+          "question_id": 3844556,
+          "answer_id": 3844566,
+          "answer_rank": 2,
+          "answer_count": 4,
+          "self_answer": false,
+          "created_at": "2010-10-02 05:55:58",
+          "delay_seconds": 189.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A7"
+          ],
+          "reason": "Makes a concrete JSON recommendation with built-in Python support as a relevant reason. This addresses the recommendation request, but the broader YAML and XML comparisons are assertions, not verified performance evidence."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "first_not_second_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "neither_substantial"
+    }
+  },
+  {
+    "case_id": "R027",
+    "question_id": 5256845,
+    "title": "Tab-delimited file into dictionary (python)",
+    "added": true,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "incomplete_input_layout",
+      "header_and_output_shape_unspecified"
+    ],
+    "request": "Read a tab-separated file into dictionary-form data.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0276-A5256859",
+          "base_pair_id": "B27-0276",
+          "question_id": 5256845,
+          "answer_id": 5256859,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2011-03-10 07:51:17",
+          "delay_seconds": 113.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Names a relevant class but omits tab delimiter configuration and assumptions needed to obtain the requested mapping."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0276-A5256942",
+          "base_pair_id": "B27-0276",
+          "question_id": 5256845,
+          "answer_id": 5256942,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2011-03-10 08:03:19",
+          "delay_seconds": 835.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A5",
+            "A8",
+            "A10"
+          ],
+          "reason": "Provides tab-aware DictReader code but skips two lines without support in the visible question and assumes headers and a list of row dictionaries. These choices could discard data."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "both_substantial"
+    }
+  },
+  {
+    "case_id": "R028",
+    "question_id": 7435275,
+    "title": "Sending an SMS message using Python; Time delay considering timezone",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "sender_recipient_location_ambiguity"
+    ],
+    "request": "Schedule SMS at the recipient's local time using the given recipient area.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0221-A7435445",
+          "base_pair_id": "B27-0221",
+          "question_id": 7435275,
+          "answer_id": 7435445,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2011-09-15 18:07:24",
+          "delay_seconds": 941.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A9",
+            "A13"
+          ],
+          "reason": "Offers a location inference strategy but does not implement given-location timezone scheduling. Its fallback explicitly permits 6:30 AM, violating the requested 8 AM lower bound."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0221-A7435682",
+          "base_pair_id": "B27-0221",
+          "question_id": 7435275,
+          "answer_id": 7435682,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2011-09-15 18:30:08",
+          "delay_seconds": 2305.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A5",
+            "A9"
+          ],
+          "reason": "Offers geolocation avenues and caveats but leaves location-to-timezone conversion unresolved and may identify the scheduling sender rather than the recipient."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "neither_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R029",
+    "question_id": 22582146,
+    "title": "learn python the hard way exercise 1 - file won't run in terminal",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "missing_screenshot",
+      "possible_code_formatting_loss",
+      "reported_symptom_inconsistent_with_shown_code"
+    ],
+    "request": "Explain why running the shown Python file produces no output.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0079-A22585626",
+          "base_pair_id": "B27-0079",
+          "question_id": 22582146,
+          "answer_id": 22585626,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2014-03-23 00:46:15",
+          "delay_seconds": 20535.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1",
+            "A10",
+            "A16"
+          ],
+          "reason": "Corrects the visible single-line print sequence. However that sequence would normally cause a syntax error, not silent success; whether formatting was lost is unknown, so the reported execution problem remains unresolved."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0079-A27895460",
+          "base_pair_id": "B27-0079",
+          "question_id": 22582146,
+          "answer_id": 27895460,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2015-01-12 04:49:07",
+          "delay_seconds": 25523107.0
+        },
+        "gpt": {
+          "label": "uncertain",
+          "confidence": "low",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "The diagnosis relies on an unavailable screenshot and repeats the command already shown as producing no output. The decisive evidence cannot be checked."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "indeterminate",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R030",
+    "question_id": 34832212,
+    "title": "Django Storages using s3boto ignoring MEDIA_URL",
+    "added": false,
+    "disagreement": true,
+    "control": false,
+    "flags": [
+      "historical_backend_not_executed"
+    ],
+    "request": "Explain why S3-backed image URLs are absolute rather than local MEDIA_URL paths.",
+    "answers": [
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0219-A34832381",
+          "base_pair_id": "B27-0219",
+          "question_id": 34832212,
+          "answer_id": 34832381,
+          "answer_rank": 1,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-01-16 21:33:09",
+          "delay_seconds": 1076.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A1"
+          ],
+          "reason": "Directly explains why a remote storage host needs to be addressed instead of using the local relative path. The statement is broad but adequate for the displayed configuration, without requiring a full implementation."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          }
+        }
+      },
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0219-A38276944",
+          "base_pair_id": "B27-0219",
+          "question_id": 34832212,
+          "answer_id": 38276944,
+          "answer_rank": 2,
+          "answer_count": 2,
+          "self_answer": false,
+          "created_at": "2016-07-09 00:01:18",
+          "delay_seconds": 15043565.0
+        },
+        "gpt": {
+          "label": "substantial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A18",
+            "A24",
+            "A46"
+          ],
+          "reason": "Shows the backend URL construction and directly explains the settings behavior. The additional CDN customization is optional to the central explanation."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "both_substantial",
+      "14B": "both_substantial",
+      "7B": "first_not_second_substantial"
+    }
+  },
+  {
+    "case_id": "R031",
+    "question_id": 16763491,
+    "title": "Avoiding looping unnecessarily",
+    "added": true,
+    "disagreement": false,
+    "control": false,
+    "flags": [
+      "code_does_not_match_supplied_dictionary_schema",
+      "identifier_type_mismatch"
+    ],
+    "request": "Efficiently join customer and order dictionaries and show the Python restructuring approach.",
+    "answers": [
+      {
+        "letter": "X",
+        "metadata": {
+          "pair_id": "B27-0325-A16763596",
+          "base_pair_id": "B27-0325",
+          "question_id": 16763491,
+          "answer_id": 16763596,
+          "answer_rank": 1,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2013-05-26 20:53:05",
+          "delay_seconds": 862.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "medium",
+          "evidence_ids": [
+            "A6",
+            "A12",
+            "A16"
+          ],
+          "reason": "Gives a useful sort-and-traverse strategy but an unrelated numeric-field example, leaving the actual dictionary join and mismatched ID types unresolved."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "partial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      },
+      {
+        "letter": "Y",
+        "metadata": {
+          "pair_id": "B27-0325-A16763602",
+          "base_pair_id": "B27-0325",
+          "question_id": 16763491,
+          "answer_id": 16763602,
+          "answer_rank": 2,
+          "answer_count": 3,
+          "self_answer": false,
+          "created_at": "2013-05-26 20:54:20",
+          "delay_seconds": 937.0
+        },
+        "gpt": {
+          "label": "partial",
+          "confidence": "high",
+          "evidence_ids": [
+            "A8",
+            "A11",
+            "A17"
+          ],
+          "reason": "Correctly identifies CustomerId indexing, but its code uses attributes on dictionaries and a different key spelling, and leaves string-versus-integer IDs unresolved. The concept is useful; the supplied implementation needs adaptation."
+        },
+        "qwen": {
+          "14B": {
+            "status": "valid",
+            "label": "substantial",
+            "errors": []
+          },
+          "7B": {
+            "status": "invalid",
+            "label": "substantial",
+            "errors": [
+              "evidence_ids"
+            ]
+          }
+        }
+      }
+    ],
+    "patterns": {
+      "GPT": "neither_substantial",
+      "14B": "first_not_second_substantial",
+      "7B": "indeterminate"
+    }
+  }
+]

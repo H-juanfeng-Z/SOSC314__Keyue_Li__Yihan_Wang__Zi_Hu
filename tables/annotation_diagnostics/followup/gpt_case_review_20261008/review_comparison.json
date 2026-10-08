@@ -1,0 +1,289 @@
+{
+  "cases": 31,
+  "answers": 62,
+  "gpt_labels": {
+    "partial": 31,
+    "substantial": 25,
+    "unhelpful": 5,
+    "uncertain": 1
+  },
+  "strata": {
+    "all": {
+      "n": 31,
+      "gpt_patterns": {
+        "neither_substantial": 12,
+        "first_substantial_second_not": 2,
+        "both_substantial": 7,
+        "first_not_second_substantial": 9,
+        "indeterminate": 1
+      },
+      "case_ids_by_gpt_pattern": {
+        "both_substantial": [
+          "R003",
+          "R004",
+          "R010",
+          "R013",
+          "R017",
+          "R025",
+          "R030"
+        ],
+        "first_not_second_substantial": [
+          "R007",
+          "R008",
+          "R009",
+          "R011",
+          "R012",
+          "R018",
+          "R019",
+          "R023",
+          "R026"
+        ],
+        "first_substantial_second_not": [
+          "R002",
+          "R022"
+        ],
+        "indeterminate": [
+          "R029"
+        ],
+        "neither_substantial": [
+          "R001",
+          "R005",
+          "R006",
+          "R014",
+          "R015",
+          "R016",
+          "R020",
+          "R021",
+          "R024",
+          "R027",
+          "R028",
+          "R031"
+        ]
+      }
+    },
+    "added14": {
+      "n": 14,
+      "gpt_patterns": {
+        "first_not_second_substantial": 4,
+        "both_substantial": 2,
+        "neither_substantial": 7,
+        "first_substantial_second_not": 1
+      },
+      "case_ids_by_gpt_pattern": {
+        "both_substantial": [
+          "R013",
+          "R025"
+        ],
+        "first_not_second_substantial": [
+          "R008",
+          "R019",
+          "R023",
+          "R026"
+        ],
+        "first_substantial_second_not": [
+          "R022"
+        ],
+        "neither_substantial": [
+          "R014",
+          "R015",
+          "R016",
+          "R021",
+          "R024",
+          "R027",
+          "R031"
+        ]
+      }
+    },
+    "disagreement14": {
+      "n": 14,
+      "gpt_patterns": {
+        "first_not_second_substantial": 6,
+        "both_substantial": 2,
+        "neither_substantial": 4,
+        "first_substantial_second_not": 1,
+        "indeterminate": 1
+      },
+      "case_ids_by_gpt_pattern": {
+        "both_substantial": [
+          "R017",
+          "R030"
+        ],
+        "first_not_second_substantial": [
+          "R007",
+          "R008",
+          "R011",
+          "R012",
+          "R018",
+          "R026"
+        ],
+        "first_substantial_second_not": [
+          "R022"
+        ],
+        "indeterminate": [
+          "R029"
+        ],
+        "neither_substantial": [
+          "R020",
+          "R024",
+          "R027",
+          "R028"
+        ]
+      }
+    },
+    "target_union23": {
+      "n": 23,
+      "gpt_patterns": {
+        "first_not_second_substantial": 8,
+        "both_substantial": 4,
+        "neither_substantial": 9,
+        "first_substantial_second_not": 1,
+        "indeterminate": 1
+      },
+      "case_ids_by_gpt_pattern": {
+        "both_substantial": [
+          "R013",
+          "R017",
+          "R025",
+          "R030"
+        ],
+        "first_not_second_substantial": [
+          "R007",
+          "R008",
+          "R011",
+          "R012",
+          "R018",
+          "R019",
+          "R023",
+          "R026"
+        ],
+        "first_substantial_second_not": [
+          "R022"
+        ],
+        "indeterminate": [
+          "R029"
+        ],
+        "neither_substantial": [
+          "R014",
+          "R015",
+          "R016",
+          "R020",
+          "R021",
+          "R024",
+          "R027",
+          "R028",
+          "R031"
+        ]
+      }
+    },
+    "controls8": {
+      "n": 8,
+      "gpt_patterns": {
+        "neither_substantial": 3,
+        "first_substantial_second_not": 1,
+        "both_substantial": 3,
+        "first_not_second_substantial": 1
+      },
+      "case_ids_by_gpt_pattern": {
+        "both_substantial": [
+          "R003",
+          "R004",
+          "R010"
+        ],
+        "first_not_second_substantial": [
+          "R009"
+        ],
+        "first_substantial_second_not": [
+          "R002"
+        ],
+        "neither_substantial": [
+          "R001",
+          "R005",
+          "R006"
+        ]
+      }
+    }
+  },
+  "agreement_descriptive_not_accuracy": {
+    "14B": {
+      "comparable_answers": 61,
+      "exact_label_agreement": 32,
+      "substantial_binary_agreement": 37,
+      "cross_tab_gpt_to_qwen": {
+        "partial -> substantial": 18,
+        "substantial -> substantial": 22,
+        "partial -> unhelpful": 3,
+        "partial -> partial": 10,
+        "unhelpful -> partial": 2,
+        "unhelpful -> substantial": 3,
+        "substantial -> unhelpful": 1,
+        "substantial -> partial": 2
+      }
+    },
+    "7B": {
+      "comparable_answers": 46,
+      "exact_label_agreement": 25,
+      "substantial_binary_agreement": 30,
+      "cross_tab_gpt_to_qwen": {
+        "partial -> substantial": 7,
+        "substantial -> substantial": 15,
+        "partial -> unhelpful": 3,
+        "partial -> partial": 10,
+        "unhelpful -> substantial": 3,
+        "substantial -> unhelpful": 2,
+        "unhelpful -> partial": 2,
+        "substantial -> partial": 4
+      }
+    }
+  },
+  "flags": {
+    "edited_question_scope": 4,
+    "missing_linked_figures": 1,
+    "historical_python_version": 1,
+    "secondary_generator_goal": 1,
+    "example_inconsistency_in_Y": 1,
+    "operating_system_unspecified": 1,
+    "force_termination_vs_interrupt": 1,
+    "native_availability_vs_active_use": 1,
+    "unverified_platform_claim": 1,
+    "environment_dependent_remedy": 1,
+    "historical_API_scope": 1,
+    "interactive_input_behavior": 1,
+    "platform_scope": 1,
+    "narrow_replacement_vs_general_HTML_parsing": 1,
+    "encoding_artifacts": 1,
+    "linked_content_not_read": 1,
+    "diagnosis_vs_literal_safeguard": 1,
+    "top_n_omitted": 1,
+    "historical_service_capability_unverified": 1,
+    "speculative_alternatives": 1,
+    "default_route_omitted": 1,
+    "file_like_adapter_omitted": 1,
+    "performance_not_benchmarked": 1,
+    "historical_packaging_API_unverified": 1,
+    "training_vs_validation_loss": 1,
+    "return_value_capture": 1,
+    "memory_reuse_explanation_not_runtime_verified": 1,
+    "code_import_defect": 1,
+    "buffer_safety_not_validated": 1,
+    "hash_complexity_expected_not_worst_case": 1,
+    "subjective_recommendation": 1,
+    "comparative_performance_not_verified": 1,
+    "incomplete_input_layout": 1,
+    "header_and_output_shape_unspecified": 1,
+    "sender_recipient_location_ambiguity": 1,
+    "missing_screenshot": 1,
+    "possible_code_formatting_loss": 1,
+    "reported_symptom_inconsistent_with_shown_code": 1,
+    "historical_backend_not_executed": 1,
+    "code_does_not_match_supplied_dictionary_schema": 1,
+    "identifier_type_mismatch": 1
+  },
+  "limitations": [
+    "Targeted sampling and eight non-target controls; not representative accuracy.",
+    "Same-context GPT review, not strict blinded independent validation or human gold.",
+    "Technical code not executed and external linked contents not inspected.",
+    "Archived edited questions may not reflect requests visible when answers were written.",
+    "Do not extrapolate reviewed transitions to the unreviewed 183-case cohort.",
+    "Review defines overall sufficiency only; no new independent scores for the three Qwen dimensions."
+  ]
+}

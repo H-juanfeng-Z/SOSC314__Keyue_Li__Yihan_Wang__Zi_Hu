@@ -1,0 +1,31 @@
+{
+  "reviewer": "GPT assistant in current Codex conversation; exact backend model ID not exposed to this review script",
+  "review_type": "AI evidence review, not human gold or strict blinded independent validation",
+  "known_context": "Reviewer has seen aggregate results and some previous examples. Packet hides previous model scores, author identity and chronological answer rank.",
+  "sampling": {
+    "added": 14,
+    "disagreement": 14,
+    "overlap": 5,
+    "target_union": 23,
+    "controls": 8,
+    "total": 31,
+    "salt": "gpt-case-audit-314"
+  },
+  "unit": "Question with two independently rated answers, shown in hash-randomized order",
+  "rubric": {
+    "substantial": "Supplied answer adequately addresses central expressed request; narrow correction or conceptual explanation can suffice without complete application.",
+    "partial": "Some usable help, but central request has material gaps or unsupported solution claims.",
+    "unhelpful": "No substantive usable assistance for expressed request.",
+    "uncertain": "Essential missing context or unresolved technical issue prevents defensible classification."
+  },
+  "constraints": [
+    "No execution, external-link contents not assumed",
+    "Distinguish stated plausibility from verified correctness",
+    "Cite supplied answer line IDs",
+    "Record ambiguity rather than solve missing content",
+    "Targeted sample cannot estimate population accuracy",
+    "Eight controls are sampled from non-target remainder, not full population",
+    "No revisions after unmasking without an explicit amendment log",
+    "No GitHub uploads"
+  ]
+}
