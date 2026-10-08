@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800"><rect width="100%" height="100%" fill="white"/><g font-family="Arial, sans-serif" fill="#182733">
+<text x="30" y="34" font-size="23" text-anchor="start" fill="#182733">Intent–first-answer associations depend on measurement choices</text>
+<text x="30" y="61" font-size="14" text-anchor="start" fill="#182733">Pooled reused development sample; substantial-rated first answers; unadjusted descriptive differences</text>
+<line x1="30" y1="89" x2="50" y2="89" stroke="#25618b" stroke-width="4"/>
+<text x="60" y="94" font-size="14" text-anchor="start" fill="#182733">Direct intent / original examples</text>
+<line x1="550" y1="89" x2="570" y2="89" stroke="#d28228" stroke-width="4"/>
+<text x="580" y="94" font-size="14" text-anchor="start" fill="#182733">Direct intent / no examples</text>
+<line x1="30" y1="117" x2="50" y2="117" stroke="#268776" stroke-width="4"/>
+<text x="60" y="122" font-size="14" text-anchor="start" fill="#182733">Request-first intent / original examples</text>
+<line x1="550" y1="117" x2="570" y2="117" stroke="#9d4a91" stroke-width="4"/>
+<text x="580" y="122" font-size="14" text-anchor="start" fill="#182733">Request-first intent / no examples</text>
+<line x1="265.0" y1="154" x2="265.0" y2="675" stroke="#e4e9ed" stroke-width="1"/>
+<text x="265.0" y="701" font-size="13" text-anchor="middle" fill="#182733">-100</text>
+<line x1="455.0" y1="154" x2="455.0" y2="675" stroke="#e4e9ed" stroke-width="1"/>
+<text x="455.0" y="701" font-size="13" text-anchor="middle" fill="#182733">-50</text>
+<line x1="645.0" y1="154" x2="645.0" y2="675" stroke="#80929e" stroke-width="1"/>
+<text x="645.0" y="701" font-size="13" text-anchor="middle" fill="#182733">0</text>
+<line x1="835.0" y1="154" x2="835.0" y2="675" stroke="#e4e9ed" stroke-width="1"/>
+<text x="835.0" y="701" font-size="13" text-anchor="middle" fill="#182733">50</text>
+<line x1="1025.0" y1="154" x2="1025.0" y2="675" stroke="#e4e9ed" stroke-width="1"/>
+<text x="1025.0" y="701" font-size="13" text-anchor="middle" fill="#182733">100</text>
+<text x="28" y="192" font-size="16" text-anchor="start" fill="#182733">Api Change</text>
+<text x="28" y="213" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 382</text>
+<line x1="610.4731182795699" y1="178" x2="778.2065217391305" y2="178" stroke="#25618b" stroke-width="2"/>
+<circle cx="707.990990990991" cy="178" r="4" fill="#25618b"/>
+<line x1="584.1182795698925" y1="191" x2="704.4070080862533" y2="191" stroke="#d28228" stroke-width="2"/>
+<circle cx="662.6306306306305" cy="191" r="4" fill="#d28228"/>
+<line x1="555.1221328567174" y1="204" x2="770.9782608695652" y2="204" stroke="#268776" stroke-width="2"/>
+<circle cx="666.3232050967899" cy="204" r="4" fill="#268776"/>
+<line x1="472.4438095238095" y1="217" x2="691.5940054495914" y2="217" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="588.4795393285959" cy="217" r="4" fill="#9d4a91"/>
+<text x="28" y="268" font-size="16" text-anchor="start" fill="#182733">Api Usage</text>
+<text x="28" y="289" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 382</text>
+<line x1="623.3006535947713" y1="254" x2="709.0064102564102" y2="254" stroke="#25618b" stroke-width="2"/>
+<circle cx="664.6073059360731" cy="254" r="4" fill="#25618b"/>
+<line x1="623.5265924551638" y1="267" x2="686.0996563573883" y2="267" stroke="#d28228" stroke-width="2"/>
+<circle cx="653.0395738203956" cy="267" r="4" fill="#d28228"/>
+<line x1="546.1645962732919" y1="280" x2="702.7944862155388" y2="280" stroke="#268776" stroke-width="2"/>
+<circle cx="619.3801652892562" cy="280" r="4" fill="#268776"/>
+<line x1="598.4261838440111" y1="293" x2="732.8038147138964" y2="293" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="656.8457300275483" cy="293" r="4" fill="#9d4a91"/>
+<text x="28" y="344" font-size="16" text-anchor="start" fill="#182733">Conceptual</text>
+<text x="28" y="365" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 382</text>
+<line x1="590.9948320413437" y1="330" x2="674.2681367849153" y2="330" stroke="#25618b" stroke-width="2"/>
+<circle cx="631.1301484540686" cy="330" r="4" fill="#25618b"/>
+<line x1="613.6961487668202" y1="343" x2="673.3138397821835" y2="343" stroke="#d28228" stroke-width="2"/>
+<circle cx="644.6182609666257" cy="343" r="4" fill="#d28228"/>
+<line x1="600.3510003510003" y1="356" x2="691.129636568003" y2="356" stroke="#268776" stroke-width="2"/>
+<circle cx="646.0695364238411" cy="356" r="4" fill="#268776"/>
+<line x1="630.7577235772358" y1="369" x2="686.6225841476655" y2="369" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="658.5894039735099" cy="369" r="4" fill="#9d4a91"/>
+<text x="28" y="420" font-size="16" text-anchor="start" fill="#182733">Discrepancy</text>
+<text x="28" y="441" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 379</text>
+<line x1="637.8315548780488" y1="406" x2="714.7607960706769" y2="406" stroke="#25618b" stroke-width="2"/>
+<circle cx="675.0932400932401" cy="406" r="4" fill="#25618b"/>
+<line x1="649.6108690389735" y1="419" x2="709.1886792452831" y2="419" stroke="#d28228" stroke-width="2"/>
+<circle cx="677.1678321678321" cy="419" r="4" fill="#d28228"/>
+<line x1="632.1354166666667" y1="432" x2="706.443311708372" y2="432" stroke="#268776" stroke-width="2"/>
+<circle cx="670.8753488372092" cy="432" r="4" fill="#268776"/>
+<line x1="650.0504233067729" y1="445" x2="708.3249051833122" y2="445" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="679.2176744186047" cy="445" r="4" fill="#9d4a91"/>
+<text x="28" y="496" font-size="16" text-anchor="start" fill="#182733">Errors</text>
+<text x="28" y="517" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 381</text>
+<line x1="632.9236843558451" y1="482" x2="702.4221291140636" y2="482" stroke="#25618b" stroke-width="2"/>
+<circle cx="668.9699074074074" cy="482" r="4" fill="#25618b"/>
+<line x1="658.4402783146502" y1="495" x2="706.8585098733338" y2="495" stroke="#d28228" stroke-width="2"/>
+<circle cx="682.1329365079365" cy="495" r="4" fill="#d28228"/>
+<line x1="611.8007937382868" y1="508" x2="684.1520906213559" y2="508" stroke="#268776" stroke-width="2"/>
+<circle cx="649.2222222222222" cy="508" r="4" fill="#268776"/>
+<line x1="635.3096539162113" y1="521" x2="686.5082747550783" y2="521" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="661.6053067993366" cy="521" r="4" fill="#9d4a91"/>
+<text x="28" y="572" font-size="16" text-anchor="start" fill="#182733">Learning</text>
+<text x="28" y="593" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 382</text>
+<line x1="480.8232044198895" y1="558" x2="653.2525252525253" y2="558" stroke="#25618b" stroke-width="2"/>
+<circle cx="565.952380952381" cy="558" r="4" fill="#25618b"/>
+<line x1="548.524844720497" y1="571" x2="683.030620467365" y2="571" stroke="#d28228" stroke-width="2"/>
+<circle cx="619.9874686716792" cy="571" r="4" fill="#d28228"/>
+<line x1="383.494623655914" y1="584" x2="584.669391462307" y2="584" stroke="#268776" stroke-width="2"/>
+<circle cx="479.1351351351351" cy="584" r="4" fill="#268776"/>
+<line x1="492.7956989247312" y1="597" x2="693.5106382978723" y2="597" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="597.2432432432432" cy="597" r="4" fill="#9d4a91"/>
+<text x="28" y="648" font-size="16" text-anchor="start" fill="#182733">Review</text>
+<text x="28" y="669" font-size="12" text-anchor="start" fill="#182733">Matched eligible n = 382</text>
+<line x1="597.3661971830986" y1="634" x2="670.0328347945676" y2="634" stroke="#25618b" stroke-width="2"/>
+<circle cx="633.7484737484738" cy="634" r="4" fill="#25618b"/>
+<line x1="623.6552706552707" y1="647" x2="682.4891774891775" y2="647" stroke="#d28228" stroke-width="2"/>
+<circle cx="650.8693528693528" cy="647" r="4" fill="#d28228"/>
+<line x1="575.2241379310344" y1="660" x2="648.0707504520796" y2="660" stroke="#268776" stroke-width="2"/>
+<circle cx="612.2451822614348" cy="660" r="4" fill="#268776"/>
+<line x1="616.3825112760076" y1="673" x2="667.3981640849111" y2="673" stroke="#9d4a91" stroke-width="2"/>
+<circle cx="641.934060831205" cy="673" r="4" fill="#9d4a91"/>
+<text x="645" y="729" font-size="14" text-anchor="middle" fill="#182733">Difference: intent present minus absent (percentage points)</text>
+<text x="30" y="761" font-size="12" text-anchor="start" fill="#182733">Intervals: paired bootstrap conditional on fixed model labels, not annotation uncertainty or population inference.</text>
+<text x="30" y="781" font-size="12" text-anchor="start" fill="#182733">Intent categories overlap. No causal interpretation; these are sensitivity results, not validated effects.</text>
+</g></svg>
