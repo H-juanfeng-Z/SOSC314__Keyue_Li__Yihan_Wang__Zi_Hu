@@ -1,0 +1,19 @@
+{
+  "purpose": "Check explicit operational definitions and transfer to additional reused development cases; not another model search.",
+  "design": "96 cases x4 answer conditions x2 prompts; 48 previous selected cases and 48 hash-selected additional reused cases.",
+  "primary_checks": [
+    "empty: three zeros and unhelpful",
+    "generic: overall unhelpful and actionability/sufficiency zero; relevance zero is rubric-sensitive secondary check",
+    "original: paired rating transitions by sample group",
+    "original no-example control reproduction on previous48",
+    "swapped: exploratory, not guaranteed negative"
+  ],
+  "limits": [
+    "No natural-data gold labels or accuracy estimate",
+    "Concise arm changes length, wording and definitions together; not a single-factor causal test",
+    "Additional cases are reused development cases, NOT a held-out test set",
+    "Cannot choose a winner by higher scores or greater agreement alone"
+  ],
+  "next": "Inspect disagreements; freeze a documented rubric before common-ID intent/helpfulness association analysis. No further automatic prompt search.",
+  "budget": "Single L20, four Torch threads, maximum3h; no GitHub upload."
+}

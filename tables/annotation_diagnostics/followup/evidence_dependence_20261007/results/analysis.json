@@ -1,0 +1,244 @@
+{
+  "records": 1728,
+  "unique_ids": 1728,
+  "planned": 1728,
+  "conditions": {
+    "helpfulness/cited_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "substantial": 80,
+        "partial": 14,
+        "unhelpful": 2
+      }
+    },
+    "helpfulness/cited_removed": {
+      "n": 96,
+      "valid": 95,
+      "labels": {
+        "substantial": 47,
+        "unhelpful": 38,
+        "partial": 10
+      }
+    },
+    "helpfulness/original": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "substantial": 86,
+        "partial": 9,
+        "unhelpful": 1
+      }
+    },
+    "helpfulness/random_removed": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "substantial": 64,
+        "unhelpful": 21,
+        "partial": 11
+      }
+    },
+    "intent_api_change/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 95,
+        "yes": 1
+      }
+    },
+    "intent_api_change/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 96
+      }
+    },
+    "intent_api_usage/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "yes": 71,
+        "no": 25
+      }
+    },
+    "intent_api_usage/title_only": {
+      "n": 96,
+      "valid": 95,
+      "labels": {
+        "no": 61,
+        "yes": 34
+      }
+    },
+    "intent_conceptual/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 77,
+        "yes": 19
+      }
+    },
+    "intent_conceptual/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 96
+      }
+    },
+    "intent_discrepancy/full": {
+      "n": 96,
+      "valid": 95,
+      "labels": {
+        "no": 26,
+        "yes": 69
+      }
+    },
+    "intent_discrepancy/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 79,
+        "yes": 17
+      }
+    },
+    "intent_errors/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 44,
+        "yes": 52
+      }
+    },
+    "intent_errors/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 87,
+        "yes": 9
+      }
+    },
+    "intent_learning/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 91,
+        "yes": 5
+      }
+    },
+    "intent_learning/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 96
+      }
+    },
+    "intent_review/full": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "yes": 58,
+        "no": 38
+      }
+    },
+    "intent_review/title_only": {
+      "n": 96,
+      "valid": 96,
+      "labels": {
+        "no": 93,
+        "yes": 3
+      }
+    }
+  },
+  "transitions": {
+    "helpfulness/cited_only": {
+      "substantial -> substantial": 79,
+      "partial -> partial": 8,
+      "substantial -> partial": 6,
+      "unhelpful -> unhelpful": 1,
+      "substantial -> unhelpful": 1,
+      "partial -> substantial": 1
+    },
+    "helpfulness/cited_removed": {
+      "substantial -> substantial": 47,
+      "substantial -> unhelpful": 29,
+      "partial -> unhelpful": 8,
+      "unhelpful -> unhelpful": 1,
+      "substantial -> partial": 9,
+      "partial -> partial": 1
+    },
+    "helpfulness/random_removed": {
+      "substantial -> substantial": 63,
+      "substantial -> unhelpful": 16,
+      "partial -> partial": 4,
+      "substantial -> partial": 7,
+      "unhelpful -> unhelpful": 1,
+      "partial -> unhelpful": 4,
+      "partial -> substantial": 1
+    },
+    "intent_api_change/title_only": {
+      "no -> no": 95,
+      "yes -> no": 1
+    },
+    "intent_api_usage/title_only": {
+      "yes -> no": 38,
+      "yes -> yes": 32,
+      "no -> no": 23,
+      "no -> yes": 2
+    },
+    "intent_conceptual/title_only": {
+      "no -> no": 77,
+      "yes -> no": 19
+    },
+    "intent_discrepancy/title_only": {
+      "no -> no": 26,
+      "yes -> yes": 17,
+      "yes -> no": 52
+    },
+    "intent_errors/title_only": {
+      "no -> no": 44,
+      "yes -> yes": 9,
+      "yes -> no": 43
+    },
+    "intent_learning/title_only": {
+      "no -> no": 91,
+      "yes -> no": 5
+    },
+    "intent_review/title_only": {
+      "yes -> no": 55,
+      "no -> no": 38,
+      "yes -> yes": 3
+    }
+  },
+  "semantic_flags": [],
+  "help_control_reproduction": {
+    "valid": 96,
+    "same": 96
+  },
+  "ablation_audit": {
+    "no_citations": 1,
+    "random_overlaps_cited": 66,
+    "all_lines_cited": 15
+  },
+  "ablation_subgroups": {
+    "nonoverlap_nonempty_citations": {
+      "planned_pairs": 29,
+      "paired_labels": {
+        "substantial vs substantial": 22,
+        "unhelpful vs substantial": 4,
+        "partial vs partial": 1,
+        "unhelpful vs partial": 1
+      }
+    },
+    "overlapping_deletions": {
+      "planned_pairs": 66,
+      "paired_labels": {
+        "substantial vs substantial": 25,
+        "unhelpful vs substantial": 6,
+        "unhelpful vs unhelpful": 20,
+        "unhelpful vs partial": 6,
+        "partial vs partial": 3,
+        "partial vs substantial": 6
+      }
+    }
+  }
+}

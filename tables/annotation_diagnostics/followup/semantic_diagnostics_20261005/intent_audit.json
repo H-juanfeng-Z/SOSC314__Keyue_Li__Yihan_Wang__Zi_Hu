@@ -1,0 +1,650 @@
+[
+  {
+    "case": {
+      "pair_id": "B27-0308",
+      "question_id": 37460386,
+      "answer_id": 37460628,
+      "title": "How does dependencies isolation between MongoDB and Django work?",
+      "question_text": "How does Isolation dependencies between mongdb and django work?\n\n\n\nI have made several projects with JAVA/SPRING, and the recent days, \nI am studying Python django .\n\n\n\nI successed to get connection between django and sqlite, and few days ago, \nwhen I tried to connect to mongodb, it is hard to seperate dependencies database and django because of django-admin.\n\n\n\nDjango-admin require to attain specific Fields to each model, however, every database has each their own Field properties. Therefore, when project should change database structure, we should change a lot of code in model.py. \n\n\n\ne.g\n\n\n\nWhat if sqlite to Mongodb? only using different driver cannot make server work. e.g models.TextField(sqlite) -> models.StringField(mongodb). It is unavoidable, right? It seems difficult that solating dependencies completely between database and django\n\n\n\nIs it Okay? do I miss something?",
+      "answer_text": "What if sqlite to Mongodb? only using different driver cannot make server work. e.g models.TextField(sqlite) -> models.StringField(mongodb). It is unavoidable, right? It seems difficult that solating dependencies completely between database and django\n\n\n\n\nTextField and StringField isn't where you will have problems since it is supported in almost all databases, but consider this library django-mongodb-engine, it reuses the basic fields that already exist in Django ORM to the extent of what's possible, e.g.\n\n\n\n[CODE]\nclass Post(models.Model):\n    title = models.CharField() <-- both Django ORM and mongodb-engine have this\n    text = models.TextField()  <-- both Django ORM and mongodb-engine have this\n\n[/CODE]\n\n\n\nThis model will work as is both in SQL and MongoDB engines, but if you use a MongoDB-only (as in not in default Django ORM engine) feature like ListField()\n\n\n\n[CODE]\nclass Post(models.Model):\n    title = models.CharField()\n    text = models.TextField()\n    tags = ListField() # <-- not supported everywhere\n\n[/CODE]\n\n\n\nThen you migration to a SQL engine will involve some manual work to map that field.\n\n\n\n  \nTherefore, when project should change database structure, we should change a lot of code in models.py. Is it Okay?\n\n\n\n\nTypically yes, to change the database structure you make changes in models.py. After which you would be running a migration, which is a step that generates scripts to alter the database (e.g. adding a new SQL table column). For MongoDB there's no explicit migration, as its schema is flexible (or schemaless if you prefer).\n\n\n\nAs for the admin, it's fairly smart when it comes to Django models, you may need to define the models and fields you want to appear in the admin, but in the detail view you don't have to worry about every single field, as Django admin understands them based on the information in models.py\n\n\n\nAnd to change database drivers, it's the DATABASES value in settings.py"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q11",
+        "reason": "The user explicitly asks how to separate dependencies between MongoDB and Django."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q11",
+        "reason": "The author explicitly asks about isolating dependencies between MongoDB and Django, specifically mentioning difficulties with Django-admin."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The questions focus on dependency isolation between MongoDB and Django but do not explicitly request concrete implementation steps or API usage."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0093",
+      "question_id": 3071327,
+      "answer_id": 3071402,
+      "title": "Problem accessing config files within a Python egg",
+      "question_text": "I have a Python project that has the following structure:\n\n\n\n[CODE]\npackage1\n  class.py\n  class2.py\n  ...\npackage2\n  otherClass.py\n  otherClass2.py\n  ...\nconfig\n  dev_settings.ini\n  prod_settings.ini\n\n[/CODE]\n\n\n\nI wrote a setup.py file that converts this into an egg with the same file structure. (When I examine it using a zip program the structure seems identical.) The funny thing is, when I run the Python code from my IDE it works fine and can access the config files; but when I try to run it from a different Python script using the egg, it can't seem to find the config files in the egg. If I put the config files into a directory relative to the calling Python script (external to the egg), it works - but that sort of defeats the purpose of having a self-contained egg that has all the functionality of the program and can be called from anywhere. I can use any classes/modules and run any functions from the egg as long as they don't use the config files... but if they do, the egg can't find them and so the functions don't work.\n\n\n\nAny help would be really appreciated! We're kind of new to the egg thing here and don't really know where to start.",
+      "answer_text": "The problem is, the config files are not files anymore - they're packaged within the egg. It's not easy to find the answer in the docs, but it is there. From the setuptools developer's guide:\n\n\n\n  \nTypically, existing programs manipulate a package's __file__ attribute in order to find the location of data files. However, this manipulation isn't compatible with PEP 302-based import hooks, including importing from zip files and Python Eggs.\n\n\n\n\nTo access them, you need to follow the instructions for the Resource Management API.\n\n\n\nIn my own code, I had this problem with a logging configuration file. I used the API successfully like this:\n\n\n\n[CODE]\nfrom pkg_resources import resource_stream\n\n_log_config_file = 'logging.conf'\n_log_config_location = resource_stream(__name__, _log_config_file)\nlogging.config.fileConfig(_log_config_location)\n_log = logging.getLogger('package.module')\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q26",
+        "reason": "The author explicitly asks for help with accessing config files within a Python egg."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q26",
+        "reason": "The user explicitly asks for help with using eggs, indicating a request for implementation steps."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It describes a problem and seeks help, but does not ask for specific implementation steps."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0388",
+      "question_id": 11437898,
+      "answer_id": 11439853,
+      "title": "Restarting Threads in python and checking for exceptions",
+      "question_text": "I have drawn out a flowchart of a process I would like to follow, but cannot figure out how to carry this out.  At the moment I have the following.\n\n\n\nt1 is a database insertion script not cherrypy.\n\n\n\n[CODE]\ndef main():\n    thread = ThreadUrl(queue)\n    thread = thread()\n    thread.start()\n    cherrypy.config.update({'server.socket_host': '0.0.0.0',\n                            'server.socket_port': 2970})\n                            #'server.thread_pool': 100})\n    queue.join()\n    cherrypy.engine.start()\n    while True:\n        if thread.isAlive():\n            try:\n                cherrypy.engine.start()\n            except Exception:\n                print ('Started cherrypy already.')\n            print ('I am alive.')\n        else:\n            try:\n                thread.exit()\n            except Exception:\n                print ('Already killed this thread.')\n            print ('I am dead.')\n            try:\n                cherrypy.engine.stop()\n            except Exception:\n                print ('Already stopped cherrypy.')\n            try:\n                thread.start()\n            except Exception:\n                print (sys.exc_info()[1])\n\nif __name__ == '__main__':\n    main()\n\n[/CODE]",
+      "answer_text": "You could create a state table in a dict. Each node would be in a function which performs its action and then returns the next state, something like this:\n\n\n\n[CODE]\ndef start_t1():\n    # Start t1.\n    return \"start cherrypy\"\n\ndef start_cherrypy():\n    # Start Cherrypy.\n    return \"is t1 alive?\"\n\ndef is_cherrypy_alive():\n    # Check whether Cherrypy is alive.\n    if alive:\n        return \"stop cherrypy\"\n    return \"start t1\"\n\nactions = {\n    \"start t1\": start_t1,\n    \"start cherrypy\": start_cherrypy,\n    \"is t1 alive?\": is_t1_alive,\n    \"is cherry pie alive?\": is_cherrypy_alive,\n    ...\n}\n\nstate = \"start t1\"\nwhile True:\n    state = actions[state]()\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It primarily shows existing code without an expressed need for further guidance."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they need help carrying out a process involving threads and CherryPy server management."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they cannot figure out how to carry out a process and requests help with implementation steps."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0239",
+      "question_id": 5476239,
+      "answer_id": 5476307,
+      "title": "Start a process in a different console window",
+      "question_text": "How can I start a process to run in a different console window using Python in Linux, something similar to this in windows(using start):\n\n\n\n[CODE]\nimport os\n\nos.system('start dir c:\\*.* /s') \n\n[/CODE]",
+      "answer_text": "xterm -e should do the trick for you.\n\n\n\n  \n-e program [ arguments ... ]\n\n  \n  \nThis option specifies the program (and its command line arguments) to be\n  run in the xterm window. It also sets\n  the window title and icon name to be\n  the basename of the program being\n  executed if neither -T nor -n are\n  given on the command line. This must\n  be the last option on the command\n  line.\n\n\n\n\nE.g.\n\n\n\n[CODE]\nimport os\n\nos.system(\"xterm -e 'your command'\")\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request instructions for implementing functionality or using an API/tool. It shows existing code without asking for specific implementation steps."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks how to start a process in a different console window using Python on Linux, which requires concrete implementation steps."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks how to start a process in a different console window using Python on Linux."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0052",
+      "question_id": 3717544,
+      "answer_id": 3717580,
+      "title": "Python installation",
+      "question_text": "i have a machine with two users accounts.\n\n\n\ni installed python in the first account without any problem but when am gone to install into the second account it cause the following error\n\n\n\n[CODE]\nchecking for C compiler default output file name... configure: error: C compiler cannot create executables\n\n[/CODE]\n\n\n\ncaused when execute the following command:\n\n\n\n[CODE]\n./configure --prefix=\"/home/df/python5\"\n\n[/CODE]\n\n\n\ni don't why ? could anyone help me \n\n\n\nThanks in Advance",
+      "answer_text": "When you execute ./configure in what folder you are (absolute path) ?\n\n\n\nCheck if this folder and sub-folders are read-writable for your \"second\" user account.\n\n\n\nSeems you have no write access ...\n\n\n\nAnyway, why do you want to install the same python two times ?"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q27",
+        "reason": "The user explicitly asks for help with the issue they are facing."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q16",
+        "reason": "The user explicitly requests help with executing a specific command related to installing Python."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not express a request for concrete instructions for implementing functionality or using an API/tool. It describes an error encountered during Python installation and seeks help to resolve it."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0354",
+      "question_id": 13651351,
+      "answer_id": 13651414,
+      "title": "accessing namespace which called a function using builtin dir()",
+      "question_text": "i am having a problem with scope. i would like to have a function  operate on the result of the builtin function dir(). so, as a simple example, i want to \n\n\n\n[CODE]\n>>> print (dir())\n>>>  .... bunch of stuff ...\n\n[/CODE]\n\n\n\nbut, i want define a function which operates on this results of dir(). however, if try this like so\n\n\n\n[CODE]\n>>> def print_dir(dummy_var=None):\n        print dir()\n>>> print_dir()\n>>> ['dummy_var']\n\n[/CODE]\n\n\n\ni cant access the namespace of what called print_dir which i understand is a scope thing and makes sense, but is there a way to access the namespace from which a function is called? or do i have to pass the result of dir() to the function? like. \n\n\n\n[CODE]\n>>> act_on_namespace(dir())\n\n[/CODE]\n\n\n\nthe specific goal in mind is something like this, \n\n\n\n[CODE]\ndef act_on_namespace()\n    for k in dir():\n        try:\n            print(eval(k).__module__)\n        except:\n            pass\n\n[/CODE]",
+      "answer_text": "dir returns a sorted,standard python list, precisely so that you can manipulate it as you see fit. Just store it in a variable and Bob's your uncle."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q27",
+        "reason": "The author explicitly asks about accessing the namespace of the caller within a function."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they want to 'have a function operate on the result of the builtin function dir()'."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The author is asking about accessing the namespace of the caller within a function, but does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0032",
+      "question_id": 32527806,
+      "answer_id": 32529682,
+      "title": "Conflicting 'order' models in application 'order'",
+      "question_text": "I have a problem with overwitten model from Django oscar. I want add a new field to model but when i do it i have RuntimeError: Conflicting 'order' models in application 'order':  and .\n\n\n\nThats my code \nmyapp.oscar_apps.order.models.py\n\n\n\n[CODE]\nfrom oscar.apps.order.models import *  # noqa\nfrom oscar.apps.order.abstract_models import AbstractOrder  # noqa\nfrom django.db import models\n\nclass Order(AbstractOrder):\n    hash = models.CharField(max_length=256, blank=True, null=True)\n\n\nfrom oscar.apps.order.models import *\n\n[/CODE]\n\n\n\n*myapp.oscar_apps.order.init.py\n\n\n\n[CODE]\ndefault_app_config = 'bakdrop.oscar_apps.order.config.OrderConfig'\n\n[/CODE]\n\n\n\n*myapp.oscar_apps.order.config.py\n\n\n\n[CODE]\nfrom myapp.apps.order import config\n\n\nclass OrderConfig(config.OrderConfig):\n    name = 'myapp.oscar_apps.order'\n\n[/CODE]\n\n\n\nCan anybody help my solve this problem ?\n\n\n\nUpdate my INSTALLED_APPS\n\n\n\n[CODE]\n INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django.contrib.sites',\n    'django.contrib.flatpages',\n    'compressor',\n    'paypal',\n    'crispy_forms',\n    'django_select2',\n    'myapp.apps.user',\n    'myapp.apps.organization',\n    'widget_tweaks',\n    'djcelery',\n\n] + get_core_apps([\n                'myapp.apps.promotions',\n                'myapp.oscar_apps.checkout',\n                'myapp.oscar_apps.order',\n                'myapp.oscar_apps.basket',\n                'myapp.oscar_apps.shipping',\n                'myapp.oscar_apps.payment',\n\n            ])\n\n[/CODE]",
+      "answer_text": "Instead of doing \n\n\n\nfrom oscar.apps.order.models import * \n\n\n\nI think you need \n\n\n\nfrom myapp.oscar.apps.order.models import *\n\n\n\nA good debugging strategy for this is to comment out all of these, and reintroduce them line by line. That way you can pin-point the error:\n\n\n\n[CODE]\nget_core_apps([\n                'myapp.apps.promotions',\n                #'myapp.oscar_apps.checkout',\n                #'myapp.oscar_apps.order',\n                #'myapp.oscar_apps.basket',\n                #'myapp.oscar_apps.shipping',\n                #'myapp.oscar_apps.payment',\n\n            ])\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q51",
+        "reason": "The user explicitly asks for help solving the problem by stating 'Can anybody help my solve this problem ?'."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q51",
+        "reason": "The user explicitly asks for help to solve the problem."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0077",
+      "question_id": 31413165,
+      "answer_id": 31413208,
+      "title": "Filtering objects from lists in python",
+      "question_text": "I'm trying to program something that will filter all the vowels out of a string of text and I'm not sure why my function doesn't work. Here's my code\n\n\n\n[CODE]\ndef anti_vowel(text):\n letters = text.split() #make a list of all the letters in the string\n index = 0 #for del\n for x in letters:\n     if x == \"a\" or x == \"A\" or x == \"u\" or x == \"U\" or x == \"i\" or x == \"I\" or x == \"o\" or x == \"O\" or x == \"e\" or x == \"E\":\n         del letters[index]\n     index += 1 #to make the if-clause work\n return \"\".join(letters) #turn the edited list into a string\n\n[/CODE]\n\n\n\nWhile iterating over letters the if-clause should be activated when the object in letters is a vowel right? so it should delete that object. But what am I doing wrong?",
+      "answer_text": "I would use re.sub\n\n\n\n[CODE]\nre.sub(r'(?i)[AEIOU]', '', st)\n\n[/CODE]\n\n\n\nExplanation:\n\n\n\n\n(?i) case-insensitive modifier helps to do case insensitive match.\n\n\n[AEIOU] matches any one charcater from the given list. Since we already added the case-insensitive modifier, this would match both upper and lowercase vowels."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request instructions for implementing functionality or using an API/tool. It shows existing code and asks for help with debugging."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks for help with their function implementation."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q19",
+        "reason": "The author explicitly asks why their function to filter vowels from a string does not work as expected."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0188",
+      "question_id": 30698701,
+      "answer_id": 30698714,
+      "title": "Modelling two particles under gravity",
+      "question_text": "I have some code and I think it mostly works. I am supposed to be modelling the way two particles interact under gravity in 2D. It works until the second loop over the update function, so I think there is something wrong with the update function but I can't see it.\n\n\n\n[CODE]\nfrom __future__ import print_function, division\nimport numpy as np # imports the scientific computing package\nG = 10 # of course G is not really 10 but this make it easier to track the accuracy of calculations.  \nt=5 # defines the timestep\n\nclass Particle:\n    def __init__(self,mass):\n        self.mass = mass # gives the particle mass\n        self.position = np.array([0,0],int) # gives the particle a position defined by a vector. Therefore all answers will now be given as vectors.    \n\n    def calculateForce(self,other):\n        '''\n        this function calculates the force acting on the particles\n        '''\n        force = (G*self.mass*other.mass)/(other.position - self.position)**2\n        print('The force acting on the particles is', force)\n        return(force)\n\n    def calculateAcceleration(self,force):\n        '''\n        calculates the acceleration of the first particle\n        '''\n        acceleration = (force/self.mass)    \n        print('Acceleration of particle is', acceleration)\n        return acceleration   \n\n    def calculateAcceleration1(other, force):\n        '''\n        calculates the acceleration of the second particle\n        '''\n        acceleration1 = (force/other.mass)\n        print('Acceleration of particle1 is', acceleration1)\n        return acceleration1        \n\n    def calculateVelocity(self, acceleration):\n        '''\n        calculates the velocity of the first particle\n        '''\n        velocity = (acceleration*t)\n        print('Velocity of particle is', velocity)\n        return velocity\n\n    def calculateVelocity1(self, acceleration1):\n        '''\n        calculates the velocity of the second particle\n        '''\n        velocity1 = (acceleration1*t)\n        print('Velocity of particle1 is', velocity1)\n        return velocity1\n\n    def calculatePosition(self, velocity):\n        '''\n        calculates the position of the first particle\n        '''\n        position = (velocity*t)\n        print('Position of particle is', position)\n        return position\n\n    def calculatePosition1(self,velocity1):\n        '''\n        calculates the position of the second particle\n        '''\n        position1 = (velocity1*t)\n        print('Position of particle1 is', position1)\n        return position1\n\n\n    def update(self,other):\n       # for x in range(0,1):\n            self.position = position\n            other.position = position1\n            print(self.position)\n            print(other.position)\n            return self.position\n            return other.position\n\n    def repeat(self,other):\n        for x in range(0,5):\n            force = p.calculateForce(p1) \n            acceleration = p.calculateAcceleration(force)\n            acceleration1 = p1.calculateAcceleration1(force)\n            velocity = p.calculateVelocity(acceleration)\n            velocity1 = p1.calculateVelocity1(acceleration1)\n            position = p.calculatePosition(velocity)\n            position1 = p1.calculatePosition1(velocity1)\n            p.update(p1)\n\np = Particle(10) # gives first particle a mass of 10\np1 = Particle(20) # gives second particle a mass of 20      \np1.position[0] = 5 # x coordinate of second particle is 5\np1.position[1] = 5 # y coordinate of second particle is 5  \nprint(p1.position)\n\nforce = p.calculateForce(p1)\nacceleration = p.calculateAcceleration(force)\nacceleration1 = p1.calculateAcceleration1(force)\nvelocity = p.calculateVelocity(acceleration)\nvelocity1 = p1.calculateVelocity1(acceleration1)\nposition = p.calculatePosition(velocity)\nposition1 = p1.calculatePosition1(velocity1)\np.update(p1)\np.repeat(p1)\n\n[/CODE]",
+      "answer_text": "Your second return is unreachable in update:\n\n\n\n[CODE]\n def update(self,other):\n       # for x in range(0,1):\n            self.position = position\n            other.position = position1\n            print(self.position)\n            print(other.position)\n            return self.position\n            return other.position <- unreachable\n\n[/CODE]\n\n\n\nIf you wanted to return two values you could return a tuple of both and change your code appropriately to use the values:\n\n\n\n[CODE]\n return self.position, other.position\n\n[/CODE]\n\n\n\nIf either one or the other should be returned then you need to add some logic."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It primarily shows existing code and describes issues encountered."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they are having trouble with their code and need help debugging the update function."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they are having trouble with their code and need help debugging the update function."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0115",
+      "question_id": 28245138,
+      "answer_id": 28245598,
+      "title": "Issue converting from series to str on python 2.7.4 Anaconda",
+      "question_text": "[CODE]\nimport sys\nsys.version\n\n[/CODE]\n\n\n\n  \n'2.7.8 |Anaconda 2.1.0 (64-bit)| (default, Jul  2 2014, 15:12:11) [MSC\n  v.1500 64 bit (AMD64)]'\n\n\n\n\n[CODE]\nfrom pandas import DataFrame,Series\nimport datetime\n\nid = [199995,199996,199997]\nhour = [14102101,14102102,14102103]\ndf = pd.DataFrame({'id':Series(id),'hour':Series(hour)})\nkk=df.hour.apply(str)\ndf_dt=datetime.datetime.strptime(kk,\"%y%m%d%H\").date()\n\n[/CODE]\n\n\n\n  \nTypeError: must be string, not Series\n\n\n\n\nI got this data from a time dimension table off a relational database so I cant really do much to change the importing format. How can I resolve this error?",
+      "answer_text": "You are passing in kk to your strptime(...) which is a series where it is expecting a string. You can iterate over the rows in the series if you wish to print out each of the dates like so:\n\n\n\n[CODE]\nfor i in range(len(kk)):\n    df_dt=datetime.datetime.strptime(kk[i],\"%y%m%d%H\")\n    print(df_dt)\n\n[/CODE]\n\n\n\nwhich will give you\n\n\n\n[CODE]\n2014-10-21 01:00:00\n2014-10-21 02:00:00\n2014-10-21 03:00:00\n2014-10-21 03:00:00\n\n[/CODE]\n\n\n\nHowever, I am guessing at what your desired output is since you did not specify that in your original question.\n\n\nedit\n\n\nUsing the %timeit module running in IPython Notebook the for loop compared to the apply.(lambda ...) is a little over 3 times as fast.\n\n\n\n[CODE]\n1000 loops, best of 3: 91.6 µs per loop\n1000 loops, best of 3: 345 µs per loop\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q36",
+        "reason": "The author explicitly asks how to resolve a TypeError related to converting a Series to a string."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q36",
+        "reason": "The user explicitly asks how to resolve a TypeError when converting a pandas Series to a string."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It describes a problem and seeks a solution to a TypeError."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0041",
+      "question_id": 11697457,
+      "answer_id": 11697490,
+      "title": "How can I prevent my website from being \"hit-boosted\"?",
+      "question_text": "I am making a social site where users can post content and the content has views. Whenever a user from a different IP address views the content, the view count is incremented; multiple requests coming from the same IP address do not count. However lately someone is iterating though a list of proxies or something and artificially increasing the view counts. How can I prevent this? Is there something I can do by checking headers or something? Thanks.",
+      "answer_text": "The best way to do it is pattern-recognition, since most proxies won't tell you that they are a proxy: if you see certain spikes of traffic, flag them and don't add them to the hitcount.\n\n\nAlternatively, if (s)he's using the same proxies over and over again, just blacklist those IP addresses. You could also try to detect proxies by using some sort of API proxy list service or checking for listening proxy servers."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks how to prevent artificial view count increases by detecting and blocking proxy-based requests."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks how to prevent artificial view count increases by detecting and blocking proxy-based requests."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0343",
+      "question_id": 22808656,
+      "answer_id": 22809034,
+      "title": "How to work with big arrays preventing massive use of RAM?",
+      "question_text": "A file provides me a 400x400x200x1 array and a shape. Depending on the data transmitted by the array, the shape changes. My task is to adapt the 400x400x200x1 array to the data its contains.\n\nFor example:\n\n\n\n[CODE]\nshape = np.array([20,180,1,1])\nb= []                            \nl = np.load(\"testfile.npy\")\nd = (np.reshape(l[:shape[0],:shape[1],:shape[2],:shape[3]],(shape[0],shape[1]))).transpose()\nappend(d)\n\n[/CODE]\n\n\n\nThe idea is to create a new array, with the size adapted to its data.\nNow comes the problem: I have to do this process several times, but each time I do it, my RAM-load factor increases.:\n\n\n\n[CODE]\nshape = np.array([20,180,1,1])\nb= []                            \nfor j in range(9):\n  l = np.load(\"testfile.npy\")\n  d = (np.reshape(l[:shape[0],:shape[1],:shape[2],:shape[3]],(shape[0],shape[1]))).transpose()\n  time.sleep(2)\n  b.append(d)\n\n[/CODE]\n\n\n\n\n\n\n\nIs that just because the appendet arrays are so big? the output array which I'm append has the size of 180x20... but the RAM load-factor increases 0,12GB each time.Is there a more efficient way to store arrays, without tempfiles?\n\n\n\nthanks and sorry for my english.",
+      "answer_text": "Most of your RAM usage comes from reading the whole 400x400x200x1 array into memory. Tell numpy to memory-map the input array instead, and it should be able to avoid reading most of it:\n\n\n\n[CODE]\nl = np.load(\"testfile.npy\", mmap_mode='r')\n\n[/CODE]\n\n\n\nSince both reshape and transpose return views of the original array whenever possible, it may also be worthwhile to explicitly make a copy of the result. We can also simplify the indexing:\n\n\n\n[CODE]\nd = l[:20, :180, 0, 0].transpose().copy()\n\n[/CODE]\n\n\n\nI don't think the particular indexes you've chosen allow NumPy to return a view, but when it does return a view, the view will cause the entire original array to be retained. For a memory-mapped array, I believe a view will also be memory-mapped, which probably isn't what you want."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It primarily describes a problem and seeks advice on optimizing memory usage."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The user explicitly asks how to adapt a 400x400x200x1 array to different shapes based on the data it contains."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q40",
+        "reason": "The user explicitly asks for a more efficient way to store arrays without using temporary files."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0181",
+      "question_id": 29069405,
+      "answer_id": 29069413,
+      "title": "Baby level python: Classes, and using them",
+      "question_text": "I am learning about classes and seem to be having a hard time grasping it. In an attempt to get some practice, I have written the following code:\n\n\n\n[CODE]\nclass Customer:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\n  def newAge(self):\n    self.age = self.age + 1\n\n  def __str__(self):\n    return '{0} ({1})'.format(self.name, self.age)\n\n[/CODE]\n\n\n\nI want to print the customers age, and their new age. So I have got:\n\n\n\n[CODE]\np1 = Customer(\"Amelia\",21)\nprint (p1)\n\nnew = p1.newAge()\nprint (new)\n\n[/CODE]\n\n\n\nThe problem here is that the new variable is not storing anything, so it prints None. Can anyone tell me why my variable is storing none? I know that I have called the newAge incorrectly, but I don't know how to fix it.",
+      "answer_text": "Methods without a return statement return None by default. Make newAge() return self.age."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q36",
+        "reason": "The author explicitly asks for help with fixing the issue in their code."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q36",
+        "reason": "The author explicitly asks for help in fixing the issue with the 'newAge' method call."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The author is asking for an explanation of why a variable is storing None, not requesting concrete instructions for implementing functionality or using an API/tool."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0282",
+      "question_id": 36672607,
+      "answer_id": 36673118,
+      "title": "How to find the colour of main object in an fixed sized image",
+      "question_text": "My aim is to find the color of main object in a frame/image. In my case image is always of same type. For example News reporter(human) in Forest or News reporter in Animal farm.The position of news reporter is also same.What is the simple solution to find out the dominant colour of the main object(News Reporter)\n\n\n\nAny help is welcome.Thanks\n\n\n\nEDIT Code added\n\n\n\n[CODE]\nimport cv2\nfrom collections import namedtuple\nfrom math import sqrt\nimport random\nimport webcolors\n\n\ntry:\n import Image\nexcept ImportError:\n from PIL import Image\n\nPoint = namedtuple('Point', ('coords', 'n', 'ct'))\nCluster = namedtuple('Cluster', ('points', 'center', 'n'))\n\ndef get_points(img):\n points = []\n w, h = img.size\n for count, color in img.getcolors(w * h):\n    points.append(Point(color, 3, count))\n return points\n\n rtoh = lambda rgb: '#%s' % ''.join(('%02x' % p for p in rgb))\n\ndef colorz(filename, n=3):\n img = Image.open(filename)\n img.thumbnail((200, 200))\n w, h = img.size\n\n points = get_points(img)\n clusters = kmeans(points, n, 1)\n rgbs = [map(int, c.center.coords) for c in clusters]\n return map(rtoh, rgbs)\n\ndef euclidean(p1, p2):\n  return sqrt(sum([\n  (p1.coords[i] - p2.coords[i]) ** 2 for i in range(p1.n)\n ]))\n\n def calculate_center(points, n):\n  vals = [0.0 for i in range(n)]\n  plen = 0\n  for p in points:\n    plen += p.ct\n    for i in range(n):\n        vals[i] += (p.coords[i] * p.ct)\n   return Point([(v / plen) for v in vals], n, 1)\n\ndef kmeans(points, k, min_diff):\n clusters = [Cluster([p], p, p.n) for p in random.sample(points, k)]\n\n while 1:\n   plists = [[] for i in range(k)]\n\n   for p in points:\n        smallest_distance = float('Inf')\n        for i in range(k):\n            distance = euclidean(p, clusters[i].center)\n            if distance < smallest_distance:\n                smallest_distance = distance\n                idx = i\n        plists[idx].append(p)\n\n    diff = 0\n    for i in range(k):\n        old = clusters[i]\n        center = calculate_center(plists[i], old.n)\n        new = Cluster(plists[i], center, old.n)\n        clusters[i] = new\n        diff = max(diff, euclidean(old.center, new.center))\n\n    if diff < min_diff:\n        break\n\n return clusters\n\ndef main():\n\n img = cv2.imread('d:/Emmanu/project-data/b1.jpg')\n res=cv2.resize(img,(400,300))\n crop_img = res[100:200, 150:250]\n cv2.imwrite(\"d:/Emmanu/project-data/color-test.jpg\", crop_img)\n g= colorz('d:/Emmanu/project-data/color-test.jpg',1)\n k=g[0]\n print k\n f=webcolors.hex_to_rgb(k)\n print webcolors.rgb_to_name(f, spec='css3')\n\nif __name__ == '__main__':main()\n\n[/CODE]\n\n\n\nThe problem is this returns the major color in the whole image not the main object",
+      "answer_text": "If your taking the colour of whole image,in most cases you will get wrong answer since background is more.If your image size is fixed and you are sure about object's position The most simple solution is Crop the image at where you expect the object.In most cases it will work.\n\n\n\nIn order to crop\n\n\n\n[CODE]\nimport cv2\nimg = cv2.imread(\"'d:/Emmanu/project-data/b1.jpg'\")\ncrop_img = img[200:400, 100:300] # Crop from x, y, w, h -> 100, 200, 300, 400\n# NOTE: its img[y: y + h, x: x + w] and *not* img[x: x + w, y: y + h]\ncv2.imshow(\"cropped\", crop_img)\ncv2.waitKey(0)\n\n[/CODE]\n\n\n\nNow give this crop_image as input to your code.And in most cases it will give correct solution.There is nothing more simple that this.I think this will help."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The user explicitly asks for a simple solution to find the dominant color of the main object in an image."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The user explicitly asks for a simple solution to find the dominant color of the main object in a fixed-sized image."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The user is seeking a solution to find the dominant color of the main object in an image, but the provided code does not address this specific requirement. The code appears to find the dominant color in the entire image rather than isolating the main object."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0287",
+      "question_id": 20530731,
+      "answer_id": 20530822,
+      "title": "Why is Python's .decode('cp037') not working on specific binary array?",
+      "question_text": "When printing out DB2 query results I'm getting the following error on column 'F00002' which is a binary array.\n\n\n\n[CODE]\nUnicodeEncodeError: 'ascii' codec can't encode character u'\\xe3' in position 2: ordinal not in range(128)\n\n[/CODE]\n\n\n\nI am using the following line:\n\n\n\nprint result[2].decode('cp037') \n\n\n\n...just as I do the first two columns where the same code works fine. Why is this not working on the third column and what is the proper decoding/encoding?",
+      "answer_text": "It seems that your result[2] is already unicode:\n\n\n\n[CODE]\n>>> u'\\xe3'.decode('cp037')\nTraceback (most recent call last):\n   ...\nUnicodeEncodeError: 'ascii' codec can't encode character u'\\xe3' in position 0: ordinal not in range(128)\n>>> u'\\xe3'.encode('cp037')\n'F'\n\n[/CODE]\n\n\n\nIn fact, as pointed out @abarnert in comments, in python 2.x decode being called for unicode object is performed in two steps:\n\n\n\n\nencoding to string with sys.getdefaultencoding(), \n\n\nthen decoding back to unicode\n\n\n\n\ni.e., you statement is translated as:\n\n\n\n[CODE]\n>>> import sys\n>>> sys.getdefaultencoding()\n'ascii'\n>>> u'\\xe3'.encode('ascii').decode('cp037')\n\n[/CODE]\n\n\n\nand the error you get is from the first part of expression, u'\\xe3'.encode('ascii')"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q16",
+        "reason": "The user explicitly requests implementation steps by asking how to properly decode a binary array using Python's .decode('cp037') method."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q16",
+        "reason": "The user explicitly requests decoding steps for a specific column using Python's .decode('cp037') method."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0058",
+      "question_id": 18632703,
+      "answer_id": 18632721,
+      "title": "Python 2.7 Only numbers as input, the ValueError issue",
+      "question_text": "How do i stop python from giving me an ValueError everytime I put a letter in? Input must be a number! Using Python 2.7.3",
+      "answer_text": "Instead of using input(), use raw_input(), which returns a string.\n\n\n\ninput() is equivalent to eval(raw_input()) in Python 2.7. Hence, if you input a letter (let's say 'a'), it will try look for a variable called 'a'. If there isn't one, a NameError is raised.\n\n\n\nif you're working with numbers, then you can always call int() on the input received by using raw_input(). You could also use a try: except: structure to catch any ValueErrors incase the input is not a number."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The user explicitly asks for instructions on how to handle ValueError when input is not a number."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks how to stop Python from raising a ValueError when non-numeric input is provided."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The question asks how to handle non-numeric input but does not explicitly request concrete implementation steps or API usage."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0082",
+      "question_id": 34418934,
+      "answer_id": 34419021,
+      "title": "Trying to make sure certain symbols aren't in a word",
+      "question_text": "I currently have the following to filter words with square and normal brackets and can't help but think there must be a tidier way to do this..\n\n\n\n[CODE]\nwords = [word for word in random.choice(headlines).split(\" \")[1:-1] if \"[\" not in word and \"]\" not in word and \"(\" not in word and \")\" not in word]\n\n[/CODE]\n\n\n\nI tried creating a list or tuple of symbols and doing\n\n\n\n[CODE]\nif symbol not in word\n\n[/CODE]\n\n\n\nBut it dies because I'm comparing a list with a string. I appreciate I could explode this out and do a compare like:\n\n\n\n[CODE]\nfor word in random.choice(headlines).split(\" \")[1:-1]:\n    popIn = 1\n    for symbol in symbols: \n        if symbol in word:\n            popIn = 0\n    if popIn = 1:\n        words.append(word)\n\n[/CODE]\n\n\n\nBut it seems like overkill in my head. I appreciate I'm a novice programmer so anything I can do to tidy either method up would be very helpful.",
+      "answer_text": "Use set intersection.\n\n\n\n[CODE]\nbrackets = set(\"[]()\")\nwords = [word for word in random.choice(headlines).split(\" \")[1:-1] if not brackets.intersection(word)]\n\n[/CODE]\n\n\n\nThe intersection is empty if word does not contain any of the characters in brackets.\n\n\n\nYou might also consider using itertools instead of a list comprehension.\n\n\n\n[CODE]\nwords = list(itertools.ifilterfalse(brackets.intersection,\n                                    random.choice(headlines).split(\" \"))[1:-1]))\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It primarily discusses different approaches to filtering words based on symbols."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks for a 'tidier way' to filter words, indicating a request for implementation steps."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks for a 'tidier way' to filter words by removing specific symbols, indicating a request for implementation steps."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0068",
+      "question_id": 6433646,
+      "answer_id": 6435963,
+      "title": "cannot debug python GAE Django",
+      "question_text": "I have a simple test app that seem to run fine.  I'm trying to debug by placing the following in the code:\n\n\n\n[CODE]\nimport pdb; pdb.set_trace()\n\n[/CODE]\n\n\n\nWhen I run the app I get the following fatal error that I don't understand: \n\n\n\n[CODE]\nERROR:root:Exception in request:\nTraceback (most recent call last):\n  File \"C:\\Documents and Settings\\Administrator\\Desktop\\App Engine\\testapp\\djang\no\\core\\handlers\\base.py\", line 111, in get_response\n    response = callback(request, *callback_args, **callback_kwargs)\n  File \"C:\\Documents and Settings\\Administrator\\Desktop\\AppEngine\\rtest\\polls\\vi\news.py\", line 13, in create\n    cd = form.cleaned_data\n  File \"C:\\Documents and Settings\\Administrator\\Desktop\\AppEngine\\rtest\\polls\\vi\news.py\", line 13, in create\n    cd = form.cleaned_data\n  File \"C:\\Python25\\lib\\bdb.py\", line 48, in trace_dispatch\n    return self.dispatch_line(frame)\n  File \"C:\\Python25\\lib\\bdb.py\", line 67, in dispatch_line\n    if self.quitting: raise BdbQuit\nBdbQuit\nINFO:root:\"POST /create HTTP/1.1\" 200 -\nINFO:root:\"GET /favicon.ico HTTP/1.1\" 404 -\n\n[/CODE]\n\n\n\nWhy am I getting errors when I try to debug?",
+      "answer_text": "Yes, the GAE runtime doesn't support pdb. Hard Luck.\n\n\n\nIf you want a similar runtime, you should check out Apphosted"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q40",
+        "reason": "The author explicitly asks 'Why am I getting errors when I try to debug?' which indicates a request for implementation steps or API use."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The user explicitly requests debugging steps for a Python GAE Django application."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool. It describes a debugging issue and asks for help understanding an error."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0112",
+      "question_id": 30390947,
+      "answer_id": 30497710,
+      "title": "Uninstall Python package using pip3",
+      "question_text": "I am working with Python 3.4 and have installed a package (spyder) using pip3 install. It is works as it should and I can start it from the terminal.\n\n\n\nSince I want to switch my IDE, I tried to uninstall it using pip3 uninstall in the same way as the installation. But this gives me a message that no files can be found.\n\n\n\nHere's my terminal output:\n\n\n\n[CODE]\ncord@laptop:~$ sudo pip3 freeze\nCoopr==3.5.8748\n...\nspyder==2.3.4\n...\nxdiagnose==3.6.3build2\nxkit==0.0.0\ncord@laptop:~$ sudo pip3 uninstall spyder\nCan't uninstall 'spyder'. No files were found to uninstall.\n\n[/CODE]\n\n\n\nMy OS is Ubuntu 14.04 x64.\n\n\n\nAny hints?",
+      "answer_text": "Go to /usr/local/bin and find the packages you want to delete\n\n\n\nThen just use sudo rm -r spyder or whatever the directory name is.\nThat way the files get manually removed from your system."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q32",
+        "reason": "The author explicitly asks for hints on how to uninstall the package."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q5",
+        "reason": "The user explicitly requests help with uninstalling a Python package using pip3."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not express a request for concrete instructions on implementing functionality or using an API/tool. The user is seeking help with an error encountered while attempting to uninstall a Python package."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0190",
+      "question_id": 29833789,
+      "answer_id": 29833862,
+      "title": "Python simple call function from given parameter?",
+      "question_text": "I am learning python, I get this error:\n\n\n\n[CODE]\ngetattr(args, args.tool)(args)\nAttributeError: 'Namespace' object has no attribute 'cat'\n\n[/CODE]\n\n\n\nIf I execute my script like this:\n\n\n\n[CODE]\nmyscript.py -t cat\n\n[/CODE]\n\n\n\nWhat i want is print\n\n\n\n[CODE]\nRun cat here\n\n[/CODE]\n\n\n\nHere is my full code:\n\n\n\n[CODE]\n#!/usr/bin/python\nimport sys, argparse\nparser = argparse.ArgumentParser(str(sys.argv[0]))\nparser.add_argument('-t', '--tool', help='Input tool name.', required=True, choices=[\"dog\",\"cat\",\"fish\"])\nargs = parser.parse_args()\n\n# Call function requested by user    \ngetattr(args, args.tool)(args)\n\ndef dog(args):\n  print 'Run something dog here'\n\ndef cat(args):\n  print 'Run cat here'\n\ndef fish(args):\n  print 'Yes run fish here'\n\nprint \"Bye !\"    \n\n[/CODE]\n\n\n\nThanks, for your help :D",
+      "answer_text": "This:\n\n\n\n[CODE]\ndef cat(args):\n  print 'Run cat here'\n\nif \"cat\" in globals():\n  globals()[\"cat\"](\"arg\")\n\n[/CODE]\n\n\n\nwill print \"Run cat here\". You should consider making a habit of having your function definitions at the top of your file. Otherwise, the above snippet would not have worked, as your function cat would not yet be in the dictionary returned by globals()."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q47",
+        "reason": "The author explicitly asks how to implement a function call based on user input."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q47",
+        "reason": "The author explicitly requests implementation steps for calling a function based on a command-line argument."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The author is seeking help with debugging an AttributeError but does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0030",
+      "question_id": 22983523,
+      "answer_id": 22983621,
+      "title": "Comparing pandas.Series for equality when they are in different orders",
+      "question_text": "Pandas automatically aligns data indices of Series objects before applying the binary operators such as addition and subtraction, but this is not done when checking for equality. Why is this, and how do I overcome it?\n\n\n\nConsider the following example:\n\n\n\n[CODE]\nIn [15]: x = pd.Series(index=[\"A\", \"B\", \"C\"], data=[1,2,3])\n\nIn [16]: y = pd.Series(index=[\"C\", \"B\", \"A\"], data=[3,2,1])\n\nIn [17]: x\nOut[17]:\nA    1\nB    2\nC    3\ndtype: int64\n\nIn [18]: y\nOut[18]:\nC    3\nB    2\nA    1\ndtype: int64\n\nIn [19]: x==y\nOut[19]:\nA    False\nB     True\nC    False\ndtype: bool\n\nIn [20]: x-y\nOut[20]:\nA    0\nB    0\nC    0\ndtype: int64\n\n[/CODE]\n\n\n\nI am using pandas 0.12.0.",
+      "answer_text": "You can overcome it with:\n\n\n\n[CODE]\nIn [5]: x == y.reindex(x.index)\nOut[5]: \nA    True\nB    True\nC    True\ndtype: bool\n\n[/CODE]\n\n\n\nor \n\n\n\n[CODE]\nIn [6]: x.sort_index() == y.sort_index()\nOut[6]: \nA    True\nB    True\nC    True\ndtype: bool\n\n[/CODE]\n\n\n\nThe 'why' is explained here: https://github.com/pydata/pandas/issues/1134#issuecomment-5347816\n\n\n\nUpdate: there is an issue that dicusses this (https://github.com/pydata/pandas/issues/1134) and a PR to fix this (https://github.com/pydata/pandas/pull/6860)"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks 'Why is this, and how do I overcome it?' which indicates a request for implementation steps."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks 'Why is this, and how do I overcome it?' regarding the alignment of indices when comparing Series for equality."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0277",
+      "question_id": 32794510,
+      "answer_id": 32794567,
+      "title": "Node.js install ws error with python",
+      "question_text": "Got python version 3.5.0 installed (Thanks to Hiren S.) for saying I didn't have it installed. Now I am getting this error when I try to install ws (web socket.) Still have no idea what error I am getting or what it means.\n\n\n\n[CODE]\nC:\\Documents and Settings\\Grimm>npm install python\npython@0.0.4 node_modules\\python\n\nC:\\Documents and Settings\\Grimm>npm install ws\n-\n> bufferutil@1.2.1 install C:\\Documents and Settings\\Grimm\\node_modules\\ws\\node_m\nodules\\bufferutil\n> node-gyp rebuild\n\n\nC:\\Documents and Settings\\Grimm\\node_modules\\ws\\node_modules\\bufferutil>if not de\nfined npm_config_node_gyp (node \"E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\\npm\n\\bin\\node-gyp-bin\\\\..\\..\\node_modules\\node-gyp\\bin\\node-gyp.js\" rebuild )  else\n(node  rebuild )\ngyp ERR! UNCAUGHT EXCEPTION\ngyp ERR! stack Error: spawn UNKNOWN\ngyp ERR! stack     at exports._errnoException (util.js:837:11)\ngyp ERR! stack     at ChildProcess.spawn (internal/child_process.js:298:11)\ngyp ERR! stack     at exports.spawn (child_process.js:339:9)\ngyp ERR! stack     at exports.execFile (child_process.js:141:15)\ngyp ERR! stack     at checkPythonVersion (E:\\Agar\\Ogar-master\\src\\nodejs\\node_mo\ndules\\npm\\node_modules\\node-gyp\\lib\\configure.js:86:5)\ngyp ERR! stack     at E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\\npm\\node_modul\nes\\node-gyp\\lib\\configure.js:53:9\ngyp ERR! stack     at E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\\npm\\node_modul\nes\\which\\which.js:82:18\ngyp ERR! stack     at FSReqWrap.oncomplete (fs.js:82:15)\ngyp ERR! System Windows_NT 5.1.2600\ngyp ERR! command \"E:\\\\Agar\\\\Ogar-master\\\\src\\\\nodejs\\\\node.exe\" \"E:\\\\Agar\\\\Ogar-\nmaster\\\\src\\\\nodejs\\\\node_modules\\\\npm\\\\node_modules\\\\node-gyp\\\\bin\\\\node-gyp.js\n\" \"rebuild\"\ngyp ERR! cwd C:\\Documents and Settings\\Grimm\\node_modules\\ws\\node_modules\\bufferu\ntil\ngyp ERR! node -v v4.1.1\ngyp ERR! node-gyp -v v3.0.3\ngyp ERR! This is a bug in `node-gyp`.\ngyp ERR! Try to update node-gyp and file an Issue if it does not help:\ngyp ERR!     <https://github.com/nodejs/node-gyp/issues>\n\n> utf-8-validate@1.2.1 install C:\\Documents and Settings\\Grimm\\node_modules\\ws\\no\nde_modules\\utf-8-validate\n> node-gyp rebuild\n\n\nC:\\Documents and Settings\\Grimm\\node_modules\\ws\\node_modules\\utf-8-validate>if no\nt defined npm_config_node_gyp (node \"E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\n\\npm\\bin\\node-gyp-bin\\\\..\\..\\node_modules\\node-gyp\\bin\\node-gyp.js\" rebuild )  e\nlse (node  rebuild )\ngyp ERR! UNCAUGHT EXCEPTION\ngyp ERR! stack Error: spawn UNKNOWN\ngyp ERR! stack     at exports._errnoException (util.js:837:11)\ngyp ERR! stack     at ChildProcess.spawn (internal/child_process.js:298:11)\ngyp ERR! stack     at exports.spawn (child_process.js:339:9)\ngyp ERR! stack     at exports.execFile (child_process.js:141:15)\ngyp ERR! stack     at checkPythonVersion (E:\\Agar\\Ogar-master\\src\\nodejs\\node_mo\ndules\\npm\\node_modules\\node-gyp\\lib\\configure.js:86:5)\ngyp ERR! stack     at E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\\npm\\node_modul\nes\\node-gyp\\lib\\configure.js:53:9\ngyp ERR! stack     at E:\\Agar\\Ogar-master\\src\\nodejs\\node_modules\\npm\\node_modul\nes\\which\\which.js:82:18\ngyp ERR! stack     at FSReqWrap.oncomplete (fs.js:82:15)\ngyp ERR! System Windows_NT 5.1.2600\ngyp ERR! command \"E:\\\\Agar\\\\Ogar-master\\\\src\\\\nodejs\\\\node.exe\" \"E:\\\\Agar\\\\Ogar-\nmaster\\\\src\\\\nodejs\\\\node_modules\\\\npm\\\\node_modules\\\\node-gyp\\\\bin\\\\node-gyp.js\n\" \"rebuild\"\ngyp ERR! cwd C:\\Documents and Settings\\Grimm\\node_modules\\ws\\node_modules\\utf-8-v\nalidate\ngyp ERR! node -v v4.1.1\ngyp ERR! node-gyp -v v3.0.3\ngyp ERR! This is a bug in `node-gyp`.\ngyp ERR! Try to update node-gyp and file an Issue if it does not help:\ngyp ERR!     <https://github.com/nodejs/node-gyp/issues>\nnpm WARN optional dep failed, continuing bufferutil@1.2.1\nnpm WARN optional dep failed, continuing utf-8-validate@1.2.1\nws@0.8.0 node_modules\\ws\n├── options@0.0.6\n└── ultron@1.0.2\n\nC:\\Documents and Settings\\Grimm>\n\n[/CODE]",
+      "answer_text": "You did not installed Python or PYTHON environment variable is not set.\n\n\n\nyou have to download python from here : https://www.python.org/downloads/"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The post describes errors encountered during the installation of the 'ws' package in Node.js, but does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q9",
+        "reason": "The author explicitly requests to install the 'ws' package using npm, which is a clear implementation request."
+      },
+      "summary_only": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly states they are trying to install the 'ws' package using npm and encountering an error related to 'node-gyp'."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0325",
+      "question_id": 16763491,
+      "answer_id": 16763596,
+      "title": "Avoiding looping unnecessarily",
+      "question_text": "Looking for advice on how to restructure data in python to avoid too much looping.  \n\n\n\nI am retrieving some data via an api which I am working with. Unfortunately, due to the data structure being received I am finding myself doing a lot of iteration.\n\n\n\nFor example, I often receive data similar to this...\n\n\n\n[CODE]\n{\n    'customers' : [\n        {'CustomerId' : 1, 'Name' : 'Bill'},\n        {'CustomerId' : 2, 'Name' : 'Ted'}\n    ],\n    'orders' : [\n        {'OrderId' : 100, 'CustomerId' : '1'},\n        {'OrderId' : 101, 'CustomerId' : '1'},\n        {'OrderId' : 102, 'CustomerId' : '2'},\n    ]\n}\n\n[/CODE]\n\n\n\nYou can probably see that in order to match customers with orders the different parts of the orders part needs to be looped over each time.  Additionally, if i am finding a customer and their orders then this is resulting in nested loops which i hate.\n\n\n\nI am considering restructuring this as follows:\n\n\n\nWhen the data is first received, it gets a single iteration and key assigned to each order item, which will be the OrderId.  Therefore it can be accessed directly instead of requiring a loop.\n\n\n\nIs this a naive idea - are there any better?\n\n\n\nIf this sounds good, can anyone say most efficient way to do this in python?",
+      "answer_text": "If you are matching all customers to orders then the natural thing is to sort the records on customer ID. You can do this in Python with code analogous to:\n\n\n\n[CODE]\ndata.sort(key=lambda record: record[3])\n\n[/CODE]\n\n\n\nThis example would sort on field 4 of the record.\n\n\n\nOnce the data is sorted you can traverse each list of customers and orders only once."
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q46",
+        "reason": "The author explicitly asks for the most efficient way to implement their idea in Python."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q1",
+        "reason": "The author explicitly asks for advice on restructuring data in Python to avoid excessive looping."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The author is seeking advice on restructuring data to avoid excessive looping, but does not explicitly request concrete instructions for implementing functionality or using an API/tool."
+      }
+    }
+  },
+  {
+    "case": {
+      "pair_id": "B27-0303",
+      "question_id": 13319074,
+      "answer_id": 13319091,
+      "title": "Error using %r with a tuple",
+      "question_text": "I'm trying to make a string by inserting a tuple. I'm trying to get 'k = as.numeric(list(1, 2, 3))' as my output:\n\n\n\n[CODE]\nj = (1, 2, 3)\n'k = as.numeric(list%r)' % j\n\n[/CODE]\n\n\n\nThis returns \n\n\n\n[CODE]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: not all arguments converted during string formatting\n\n[/CODE]\n\n\n\nCould someone please explain what went wrong here? Thanks.",
+      "answer_text": "If you give % a tuple, it assumes you want to use the elements of the tuple as the items to format, even if the format string contains only one placeholder. The solution is to wrap the tuple in a one-tuple:\n\n\n\n[CODE]\n'...%r...' % (j,)\n\n[/CODE]"
+    },
+    "decisions": {
+      "direct_control": {
+        "decision": "yes",
+        "evidence_id": "Q26",
+        "reason": "The user explicitly asks for an explanation of the error, indicating a request for implementation steps."
+      },
+      "extraction_control": {
+        "decision": "yes",
+        "evidence_id": "Q26",
+        "reason": "The author explicitly asks for an explanation of the error encountered during string formatting."
+      },
+      "summary_only": {
+        "decision": "no",
+        "evidence_id": null,
+        "reason": "The author is asking about an error encountered while using Python's string formatting method, but there is no explicit request for concrete instructions on how to implement or use an API/tool."
+      }
+    }
+  }
+]

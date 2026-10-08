@@ -1,0 +1,25 @@
+{
+  "completed_calls": 768,
+  "planned": 768,
+  "statuses": {
+    "empty/balanced/valid": 48,
+    "empty/balanced_reverse/valid": 48,
+    "empty/no_examples/valid": 48,
+    "empty/original_examples/valid": 48,
+    "generic/balanced/valid": 48,
+    "generic/balanced_reverse/valid": 48,
+    "generic/no_examples/valid": 48,
+    "generic/original_examples/valid": 48,
+    "original/balanced/valid": 48,
+    "original/balanced_reverse/valid": 48,
+    "original/no_examples/valid": 48,
+    "original/original_examples/valid": 48,
+    "swapped/balanced/valid": 48,
+    "swapped/balanced_reverse/valid": 48,
+    "swapped/no_examples/valid": 48,
+    "swapped/original_examples/valid": 48
+  },
+  "elapsed_seconds": 3156.835647583008,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

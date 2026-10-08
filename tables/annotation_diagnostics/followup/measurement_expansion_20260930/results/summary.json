@@ -1,0 +1,17 @@
+{
+  "completed_calls": 2693,
+  "planned": 2693,
+  "statuses": {
+    "intent/direct_control/valid": 387,
+    "intent/extraction_control/valid": 387,
+    "intent/summary_only/valid": 387,
+    "helpfulness/isolated_actionability/valid": 382,
+    "helpfulness/isolated_sufficiency/valid": 383,
+    "helpfulness/joint_control/valid": 383,
+    "helpfulness/joint_no_examples/valid": 383,
+    "helpfulness/isolated_actionability/invalid": 1
+  },
+  "elapsed_seconds": 11902.607031583786,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

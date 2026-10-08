@@ -1,0 +1,30 @@
+{
+  "completed_calls": 1728,
+  "planned": 1728,
+  "statuses": {
+    "helpfulness/cited_only/valid": 96,
+    "helpfulness/cited_removed/valid": 95,
+    "helpfulness/original/valid": 96,
+    "helpfulness/random_removed/valid": 96,
+    "intent_api_change/full/valid": 96,
+    "intent_api_change/title_only/valid": 96,
+    "intent_api_usage/full/valid": 96,
+    "intent_api_usage/title_only/valid": 95,
+    "intent_conceptual/full/valid": 96,
+    "intent_conceptual/title_only/valid": 96,
+    "intent_discrepancy/full/valid": 95,
+    "intent_discrepancy/title_only/valid": 96,
+    "intent_errors/full/valid": 96,
+    "intent_errors/title_only/valid": 96,
+    "intent_learning/full/valid": 96,
+    "intent_learning/title_only/valid": 96,
+    "intent_review/full/valid": 96,
+    "intent_review/title_only/valid": 96,
+    "intent_api_usage/title_only/invalid": 1,
+    "helpfulness/cited_removed/invalid": 1,
+    "intent_discrepancy/full/invalid": 1
+  },
+  "elapsed_seconds": 5355.989126205444,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

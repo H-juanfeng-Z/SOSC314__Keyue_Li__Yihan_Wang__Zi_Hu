@@ -1,0 +1,16 @@
+{
+  "planned": 768,
+  "cases": 48,
+  "changed": 24,
+  "unchanged": 24,
+  "tasks_sha256": "11c6c86fa170d2139c35a49636d0ee58be7a1b66dec71077082dd654c3019939",
+  "source_log_sha256": "3b665e5d4773a20b807c88b6ae2c2cfbf3729b3b6579482db44e413928cde851",
+  "reserved_used": false,
+  "corrected_intent_strata": {
+    "extension/no_to_yes": 99,
+    "extension/unchanged": 876,
+    "reused/no_to_yes": 120,
+    "reused/unchanged": 60,
+    "extension/yes_to_no": 6
+  }
+}

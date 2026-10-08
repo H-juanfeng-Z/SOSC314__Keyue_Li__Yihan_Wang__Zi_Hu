@@ -1,0 +1,194 @@
+{
+  "records": 768,
+  "conditions": {
+    "original/original_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "partial": 27,
+        "substantial": 19,
+        "unhelpful": 2
+      }
+    },
+    "original/no_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "substantial": 43,
+        "partial": 4,
+        "unhelpful": 1
+      }
+    },
+    "original/balanced": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "partial": 11,
+        "substantial": 35,
+        "unhelpful": 2
+      }
+    },
+    "original/balanced_reverse": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "substantial": 40,
+        "partial": 6,
+        "unhelpful": 2
+      }
+    },
+    "empty/original_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 48
+    },
+    "empty/no_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 48
+    },
+    "empty/balanced": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 48
+    },
+    "empty/balanced_reverse": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 37,
+        "uncertain": 11
+      },
+      "strict_constraint_pass": 37
+    },
+    "generic/original_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 23
+    },
+    "generic/no_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 39
+    },
+    "generic/balanced": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 20
+    },
+    "generic/balanced_reverse": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "strict_constraint_pass": 4
+    },
+    "swapped/original_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "swapped/no_examples": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "swapped/balanced": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "swapped/balanced_reverse": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    }
+  },
+  "example_transitions": {
+    "original/no_examples": {
+      "partial -> partial": 4,
+      "partial -> substantial": 23,
+      "substantial -> substantial": 19,
+      "unhelpful -> substantial": 1,
+      "unhelpful -> unhelpful": 1
+    },
+    "original/balanced": {
+      "partial -> partial": 11,
+      "partial -> substantial": 16,
+      "substantial -> substantial": 19,
+      "unhelpful -> unhelpful": 2
+    },
+    "original/balanced_reverse": {
+      "partial -> partial": 6,
+      "partial -> substantial": 21,
+      "substantial -> substantial": 19,
+      "unhelpful -> unhelpful": 2
+    },
+    "empty/no_examples": {
+      "unhelpful -> unhelpful": 48
+    },
+    "empty/balanced": {
+      "unhelpful -> unhelpful": 48
+    },
+    "empty/balanced_reverse": {
+      "unhelpful -> unhelpful": 37,
+      "unhelpful -> uncertain": 11
+    },
+    "generic/no_examples": {
+      "unhelpful -> unhelpful": 48
+    },
+    "generic/balanced": {
+      "unhelpful -> unhelpful": 48
+    },
+    "generic/balanced_reverse": {
+      "unhelpful -> unhelpful": 48
+    },
+    "swapped/no_examples": {
+      "unhelpful -> unhelpful": 48
+    },
+    "swapped/balanced": {
+      "unhelpful -> unhelpful": 48
+    },
+    "swapped/balanced_reverse": {
+      "unhelpful -> unhelpful": 48
+    }
+  },
+  "limits": "Selected reused development cases; diagnostic constraints are not natural-data accuracy. Swapped answers are not guaranteed unrelated.",
+  "balanced_order_transitions_original": {
+    "partial -> partial": 6,
+    "substantial -> substantial": 35,
+    "partial -> substantial": 5,
+    "unhelpful -> unhelpful": 2
+  },
+  "control_reproduction": {
+    "valid": 48,
+    "same_scores": 48
+  }
+}

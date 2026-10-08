@@ -1,0 +1,1569 @@
+[
+  {
+    "pair_id": "B27-0366",
+    "question_id": 22443568,
+    "answer_id": 22447523,
+    "stratum": "changed",
+    "title": "How do I apply a perspective transform with more than 4 pairs of points?",
+    "question_text": "I took some photos that I am attempting to map/transform onto satellite images on Google Maps. Normally, I would need only 4 pairs of points to apply a perspective transform effectively. However, this is not useful in my case because of two reasons:\n\n\n\n\nMainly, the poor resolution of Google's satellite images (poor for my application, at least) make it harder to pinpoint the exact points that correspond with those on my photos.\n\n\nI think Google's satellite images are stitched together slightly imperfectly meaning that even with perfectly chosen pairs of points, I might be a little off because the points on the Google images are slightly off themselves.\n\n\n\n\nAs a result, I would like to conduct a least-squares estimation of the perspective transform using more than 4 points, so that I can get a better fit. However, I have no idea how to do so.\n\n\n\nI am using Python with PIL and/or OpenCV for this, so a solution using those libraries would be helpful.",
+    "answer_text": "Homography is slightly more powerful than affine (it doesn’t preserve parallel lines). It requires 4 points or more (findHomography uses RANSAC and selects its best set of inliers using a linear solution; this is followed by non-linear optimization of distance residual in a  least squares sense). You have to provide as many matches as you can (>=4) but try to avoid too many inaccurate matches. \n\n\n\nThe original statistical model for least squares is ML (maximum likelihood) that finds an optimal solution in the presence of noise. RANSAC compensates for the presence of outliers. There is nothing in the algorithm though that compensates for systematic biases. If they cannot be modeled as noise or outliers a solution is not well defined. If the number of inliers (after rejecting outliers) is less than 4 the solution won’t be found.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer provides relevant information about homography and RANSAC, but does not offer concrete steps or code for implementing a least-squares estimation with more than 4 points."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer provides a clear explanation of how homography works with more than 4 points and discusses the use of RANSAC for robust estimation. It also explains the limitations of the method regarding systematic biases."
+    },
+    "donor_pair_id": "B27-0324"
+  },
+  {
+    "pair_id": "B27-0085",
+    "question_id": 36599804,
+    "answer_id": 36600422,
+    "stratum": "changed",
+    "title": "How to create a model with ManyToOne like fields?",
+    "question_text": "I'm trying to figure out how to properly create a model which has to have two attributes (Models) and it should meet some conditions.\n\n\n\nSo the model is called Job.\n\n\n\nThe Job represents buying a translation from one language (model Language) to another language (model Language too). \n\n\n\nEach Job have to have exactly 1 language_from attribute and exactly 1 language_to attribute. \n\n\n\nMy old models:\n\n\n\n[CODE]\nclass Language(models.Model):\n    shortcut = models.CharField(max_length=40)\n    name = models.CharField(max_length=40)\n\n    def __str__(self):\n        return self.name\n\nclass Job(models.Model):\n    customer = models.ForeignKey(User, related_name='orders')\n    translator = models.ForeignKey(User, related_name='jobs',null=True)\n    price = models.FloatField(null=True,blank=True)\n\n    language_from = # Didn't know what to put here\n    language_to = # Didn't know what to put here   \n\n    def __str__(self):\n        return '{}: {}'.format(self.customer,)\n\n[/CODE]\n\n\n\nI was searching for a way how to make it work, I though about some ManyToOne field but I've realised that there is no such field. So I've been adviced to rebuilt my models this way:\n\n\n\n  \nThere will be no language_from and language_to attributes in Job.\n  There will be to and from attributes in model Language which\n  will be ForeignKeys.\n\n\n\n\nSo the Job would not have language_from/to attributes, instead of that, there would be attributes in Language model:\n\n\n\n[CODE]\nclass Language(models.Model):\n    shortcut = models.CharField(max_length=40)\n    name = models.CharField(max_length=40)\n    job_from = models.ForeignKey('Job',related_name='language_form',null=True)\n    job_to = models.ForeignKey('Job',related_name='language_to',null=True)\n\n    def __str__(self):\n        return self.name\n\n[/CODE]\n\n\n\nThis way probably would work correctly but there are many problems. \n\n\n\n\nI can't tell the Django that every Job has to have exactly on\nlanguage_form and language_to\n\n\nThere are problems when trying to create a JobCreationForm because I can't add language_from/to fields inside a class Meta:\n\n\nI think that it is not intuitive and there will be more problems which I don't know yet about\n\n\n\n\n.\n\n\n\n[CODE]\nclass JobCreationForm(forms.ModelForm):\n    description = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Specification'}))\n    file = forms.FileField()\n\n\n    class Meta:\n        model = Job\n        fields = (\n            'language_from','language_to', 'description', 'file', 'specialist'\n        )\n\n[/CODE]\n\n\n\n  \n    \n      \nException Value: \n      Unknown field(s) (language_from, language_to) specified for Job\n\n    \n  \n\n\n\nDo anybody knows what should I do?",
+    "answer_text": "First of all, you can't use related name in your fields().\nSo change \n\n\n\n[CODE]\n    fields = (\n        'language_from','language_to', 'description', 'file', 'specialist'\n    )\n\n[/CODE]\n\n\n\ninto \n\n\n\n[CODE]\n    fields = (\n        'job_from','job_to', 'description', 'file', 'specialist'\n    )\n\n[/CODE]\n\n\n\nNext, if you want to have for each job a language from & a language to, these are mandatory fields, so you can do this:\n\n\n\n[CODE]\njob_from = models.ForeignKey('Job',related_name='language_form')\njob_to = models.ForeignKey('Job',related_name='language_to')\n\n[/CODE]\n\n\n\n(https://docs.djangoproject.com/en/1.9/ref/forms/fields/#required)",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A15",
+        "A28"
+      ],
+      "reason": "The answer provides relevant suggestions for modifying the form fields and adding required constraints, but it does not fully resolve the issues with the model design."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A15",
+        "A28"
+      ],
+      "reason": "The answer directly addresses the central request by providing specific changes to the Job model and form fields. It offers concrete steps and code examples to resolve the issues mentioned."
+    },
+    "donor_pair_id": "B27-0204"
+  },
+  {
+    "pair_id": "B27-0218",
+    "question_id": 28340493,
+    "answer_id": 28343257,
+    "stratum": "changed",
+    "title": "Getting a list of changed and not yet flushed objects in a \"before commit\" hook",
+    "question_text": "Context: Pyramid, SQLAlchemy session with ZopeTransactionExtension, Pyramid transaction manager. \n\n\n\nThis doc (http://zodb.readthedocs.org/en/latest/transactions.html#more-features-and-things-to-keep-in-mind-about-transactions ) says:\n\n\n\nBefore-commit hooks\n\n\n\nIn some cases, it may be desirable to execute some code right before a transaction is committed. For example, if an operation needs to be performed on all objects changed during a transaction, it might be better to call it once at commit time instead of every time an object is changed, which could slow things down.\n\n\n\nI need to do exactly that (get a list of changed objects, whether flushed or not), but the problem is hook functions that can be added by current_transaction.addBeforeCommitHook() appear to receive only args and kwargs passed by the programmers: not a list of changed objects, not a transaction, etc.\n\n\n\nQ: How to get hook access objects changed in current transaction before they are flushed?",
+    "answer_text": "I worked out the solution, although not in \"before commit\" hook, but rather by inheriting from ZopeTransactionExtension:\n\n\n\n[CODE]\nclass ZopeTransactionExtensionWithRequest(ZopeTransactionExtension):\n\n    def before_flush(self, session, flush_context, instances):\n        super(ZopeTransactionExtensionWithRequest, self).before_flush(session, flush_context, instances)\n        for sqa_inst in session.dirty:\n            pass\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A6"
+      ],
+      "reason": "The answer provides a conceptual approach using a custom transaction extension, but it does not fully address how to get a list of changed objects in a 'before commit' hook."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A8",
+        "A10"
+      ],
+      "reason": "The answer provides a concrete solution by extending ZopeTransactionExtension and overriding the before_flush method to access changed objects."
+    },
+    "donor_pair_id": "B27-0311"
+  },
+  {
+    "pair_id": "B27-0230",
+    "question_id": 40074856,
+    "answer_id": 40080168,
+    "stratum": "changed",
+    "title": "How to use sublime 3 jinja2 highlighter",
+    "question_text": "I have a problem with jinja2 highlighter in sublime 3.All the files associated with .html\n extensions don't recognize jinja templates blocks..I searched the web but the only solution I found is to make a .jinja.html custom extension..anyone got any idea how to solve this?..This is the plugin I installed https://packagecontrol.io/packages/Jinja2",
+    "answer_text": "You need to add .j2 to your file extension:\n\n\n\nmysupertemplate.html.j2\n\n\n\nHave a look at the syntax file (under fileTypes)\n\n\n\nMatt",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer suggests adding .j2 to file extensions, which is partly relevant and actionable. However, it does not fully address the core issue of .html files not recognizing Jinja2 template blocks."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer provides specific steps to resolve the Jinja2 highlighting issue in Sublime Text 3, including adding a new file extension and modifying the syntax file."
+    },
+    "donor_pair_id": "B27-0187"
+  },
+  {
+    "pair_id": "B27-0243",
+    "question_id": 33939496,
+    "answer_id": 33939637,
+    "stratum": "changed",
+    "title": "Timestamp url with function",
+    "question_text": "I am trying to insert my function some 'int' that i get form \"datetime\"  url API.\nFirst i am import the UNIX timestamp from the API,the data that i get is not a clean numbers so I need to divideit with casting function,so i will get only \"numbers\", i am getting a \"1382310549\" UNIX and convert it to a regular date,then I am asking only for the \"year\" and i get \"2013\" ,the problem is that my function give me back \"none\" instead of give me back what \"2013\" is equal and that is \"wow\"... \nIts looks like the function cannot understand what is (value.strftime('%Y')...\n\n\n\n[CODE]\nimport urllib.request\nimport datetime\nresponse3 = urllib.request.urlopen(\"https://blockchain.info/q/addressfirstseen/1LuckyR1fFHEsXYyx5QK4UFzv3PEAepPMK\").read()\n\ndef type_conversion(val, to_type, default=None):\n    try:\n        return to_type(val)\n    except ValueError:\n        return default\n\ndef FirstTransaction(c):\n        if c == 2013 :\n            return  ('wow')\n        elif c == 2010 :\n            return  ('yeaaaa')\n\ntimestamp = (type_conversion(response3, int))\nvalue = datetime.datetime.fromtimestamp(timestamp)\nprint(FirstTransaction(value.strftime('%Y')))\n\n[/CODE]\n\n\n\nTnx guys!",
+    "answer_text": "value.strftime('%Y') yields a string like \"2013\". So you need to compare c == \"2013\" and c == \"2010\" within FirstTransaction.\n\n\n\nBy the way: You might want wo return some default string if c is not among 2013 or 2010. Currently, you implicitly return None.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer correctly identifies the issue with comparing strings instead of integers, but does not provide a complete solution."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer correctly identifies the issue with comparing strings and integers, provides a concrete solution, and suggests handling cases where the year is not 2013 or 2010."
+    },
+    "donor_pair_id": "B27-0017"
+  },
+  {
+    "pair_id": "B27-0076",
+    "question_id": 32291378,
+    "answer_id": 32291421,
+    "stratum": "changed",
+    "title": "Is there a tool to view the child class and all its attributes and methods inherited from multiple parents in Django / Python?",
+    "question_text": "I'm doing battle with Django's Class Based Views and their mixin inheritance at the moment. What would really help me to understand what is going on would be a way to \"export\" from my child class all its inheritances. What I mean, is a tool that would go through all the parent classes pulling out methods and attributes, overriding as necessary so that I could see the \"Frankenstein\" class constructed from all of the different parts in one file. I think that would make it easier to work out what is going on. Does anybody know of such a tool? I use PyCharm by the way if that helps.",
+    "answer_text": "I'm not sure if you're looking for something more customizable to your project, but you can take a look at Classy Django which does what you're looking for with Django's built-in class based views.\n\n\n\nIf that's not going to cut it, you can always install IPython and explore instances of each class or classes themselves by pressing the tab key to view all members on an instance/class.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer suggests tools that might help, but does not directly address the specific request for a tool to view child class attributes and methods inherited from multiple parents."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer provides specific tools (Classy Django and IPython) that directly address the request for viewing child class attributes and methods inherited from multiple parents in Django. The suggestions are actionable and sufficient for understanding the 'Frankenstein' class constructed from various parts."
+    },
+    "donor_pair_id": "B27-0010"
+  },
+  {
+    "pair_id": "B27-0190",
+    "question_id": 29833789,
+    "answer_id": 29833862,
+    "stratum": "changed",
+    "title": "Python simple call function from given parameter?",
+    "question_text": "I am learning python, I get this error:\n\n\n\n[CODE]\ngetattr(args, args.tool)(args)\nAttributeError: 'Namespace' object has no attribute 'cat'\n\n[/CODE]\n\n\n\nIf I execute my script like this:\n\n\n\n[CODE]\nmyscript.py -t cat\n\n[/CODE]\n\n\n\nWhat i want is print\n\n\n\n[CODE]\nRun cat here\n\n[/CODE]\n\n\n\nHere is my full code:\n\n\n\n[CODE]\n#!/usr/bin/python\nimport sys, argparse\nparser = argparse.ArgumentParser(str(sys.argv[0]))\nparser.add_argument('-t', '--tool', help='Input tool name.', required=True, choices=[\"dog\",\"cat\",\"fish\"])\nargs = parser.parse_args()\n\n# Call function requested by user    \ngetattr(args, args.tool)(args)\n\ndef dog(args):\n  print 'Run something dog here'\n\ndef cat(args):\n  print 'Run cat here'\n\ndef fish(args):\n  print 'Yes run fish here'\n\nprint \"Bye !\"    \n\n[/CODE]\n\n\n\nThanks, for your help :D",
+    "answer_text": "This:\n\n\n\n[CODE]\ndef cat(args):\n  print 'Run cat here'\n\nif \"cat\" in globals():\n  globals()[\"cat\"](\"arg\")\n\n[/CODE]\n\n\n\nwill print \"Run cat here\". You should consider making a habit of having your function definitions at the top of your file. Otherwise, the above snippet would not have worked, as your function cat would not yet be in the dictionary returned by globals().",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A9",
+        "A10"
+      ],
+      "reason": "The answer provides a workaround using the globals() function, which addresses the issue but does not fully resolve the core problem of function definition order."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A9",
+        "A10",
+        "A16"
+      ],
+      "reason": "The answer provides a concrete solution by suggesting a conditional check to ensure the function is defined before calling it. It also explains why the original code failed and offers a practical alternative."
+    },
+    "donor_pair_id": "B27-0075"
+  },
+  {
+    "pair_id": "B27-0050",
+    "question_id": 30650709,
+    "answer_id": 31697795,
+    "stratum": "changed",
+    "title": "Using multiprocessing in python to improve Cassandra write instructions not working",
+    "question_text": "I was trying to improve Cassandra database write performance using multiprocessing in python as given here but the time taken by this process has increased a lot. I want to know if I am making any mistake in the code. Posting my python code snippet. I am inserting data into two tables using two different worker methods. This is first worker\n\n\n\n[CODE]\n    def worker(daymonthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, p):\n\n        cluster = Cluster(['127.0.0.1'])\n        metadata = cluster.metadata\n        session = cluster.connect()\n\n        session.execute(\"USE db;\")\n        print current_process().name\n\n        session.execute(\"INSERT INTO db.day (daymonthyear, ts, c_country, c_lat, c_lon, e_sma, e_dma, e_etype, ip_version, ip_ihl, ip_tos_dscp, ip_totallen, ip_idnum, ip_fragoff, ip_ttl, ip_proto, ip_hdrchksm, ip_sip, ip_dip, ip_opts, s_sp, s_dp, s_vtag, s_chksm) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);\",(str(daymonthyear), int(ts1), str(country), str(lat), str(lon), str(sma), str(dma), str(etype), str(version), str(ihl), str(tos_dscp), int(totallen), int(idnum), str(fragoff), int(ttl), int(proto), str(hdrchksm), str(sip), str(dip), str(opts), int(s_sp), int(s_dp), int(s_vtag), str(s_chksm)))\n\n        session.cluster.shutdown()\n        session.shutdown()\n\n[/CODE]\n\n\n\nSecond worker:\n\n\n\n[CODE]\n    def worker1(monthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, p):\n\n        cluster = Cluster(['127.0.0.1'])\n        metadata = cluster.metadata\n        session = cluster.connect()\n        session.execute(\"USE db;\")\n        print current_process().name\n        session.execute(\"INSERT INTO db.month (monthyear, ts, c_country, c_lat, c_lon, e_sma, e_dma, e_etype, ip_version, ip_ihl, ip_tos_dscp, ip_totallen, ip_idnum, ip_fragoff, ip_ttl, ip_proto, ip_hdrchksm, ip_sip, ip_dip, ip_opts, u_sp, u_dp, u_len, u_chksm) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);\",(str(monthyear), int(ts1), str(country), str(lat), str(lon), str(sma), str(dma), str(etype), str(version), str(ihl), str(tos_dscp), int(totallen), int(idnum), str(fragoff), int(ttl), int(proto), str(hdrchksm), str(sip), str(dip), str(opts), int(u_sp), int(u_dp), int(u_len), str(u_chksm)))\n\n        session.cluster.shutdown()\n        session.shutdown()\n\n[/CODE]\n\n\n\nCalling method:\n\n\n\n[CODE]\ndef dump():\n\n    for ts1,buf in pcap:\n        if ip.p == dpkt.ip.IP_PROTO_TCP:\n            res = pool.apply_async(worker, args=(daymonthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, process_n,))\n            res.wait()\n            res = pool.apply_async(worker1, args=(monthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, process_n,))\n            res.wait()\n        if type(ip.data) == UDP :\n            res = pool.apply_async(worker, args=(daymonthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, process_n,))\n            res.wait()\n            res = pool.apply_async(worker1, args=(monthyear, ts1, country, lat, lon, sma, dma, etype, version, ihl, tos_dscp, totallen, idnum, fragoff, ttl, proto, hdrchksm, sip, dip, opts, t_sp, t_dp, t_sqnum, t_acknum, t_dataoff, t_flags, t_winsz, t_chksm, t_urgptr, t_opts, process_n,))\n            res.wait()\n\n[/CODE]\n\n\n\nAll the variables used are declared and there is no error in the code. The only problem is that it takes much more time than executing the insert statement sequentially in the dump method. Can anyone tell if I am using multiprocessing in the right way or not?",
+    "answer_text": "Connecting to Cassandra is very expansive. If you connect from each process, you are spending more resources. This is especially evident when the number of processes increases. Making N connections (for a large N) is like DoSing yourself in principle.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer identifies a potential issue with connecting to Cassandra from each process, which could explain the increased time. However, it does not provide concrete steps or a solution."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer directly addresses the issue of increased time due to multiple connections in each process, providing a clear explanation and actionable advice."
+    },
+    "donor_pair_id": "B27-0310"
+  },
+  {
+    "pair_id": "B27-0162",
+    "question_id": 25768230,
+    "answer_id": 25768414,
+    "stratum": "changed",
+    "title": "How to extract specific columns from a space separated file in Python?",
+    "question_text": "I'm trying to process a file from the protein data bank which is separated by spaces (not \\t). I have a .txt file and I want to extract specific rows and, from that rows, I want to extract only a few columns.\n\n\n\nI need to do it in Python. I tried first with command line and used awk command with no problem, but I have no idea of how to do the same in Python.\n\n\n\nHere is an extract of my file:\n\n\n\n[CODE]\n\n[...]\nSEQRES   6 B   80  ALA LEU SER ILE LYS LYS ALA GLN THR PRO GLN GLN TRP          \nSEQRES   7 B   80  LYS PRO                                                      \nHELIX    1   1 THR A   68  SER A   81  1                                  14    \nHELIX    2   2 CYS A   97  LEU A  110  1                                  14    \nHELIX    3   3 ASN A  122  SER A  133  1                                  12    \n[...]\n\n[/CODE]\n\n\n\nFor example, I'd like to take only the 'HELIX' rows and then the 4th, 6th, 7th and 9th columns. I started reading the file line by line with a for loop and then extracted those rows starting with 'HELIX'... and that's all.\n\n\n\nEDIT: This is the code I have right now, but the print doesn't work properly, only prints the first line of each block (HELIX SHEET AND DBREF)\n\n\n\n[CODE]\n#!/usr/bin/python\nimport sys\n\nfor line in open(sys.argv[1]):\n if 'HELIX' in line:\n   helix = line.split()\n elif 'SHEET'in line:\n   sheet = line.split()\n elif 'DBREF' in line:\n   dbref = line.split()\n\nprint (helix), (sheet), (dbref)\n\n[/CODE]",
+    "answer_text": "Have a look at the CSV library.\nhttps://docs.python.org/2/library/csv.html\nThe following code should do the trick\n\n\n\n[CODE]\n>>> import csv\n>>> with open('my-file.txt', 'rb') as myfile:\n...     spamreader = csv.reader(myfile, delimiter=' ', )\n...     for row in spamreader:\n...         print row[3]\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A3",
+        "A7",
+        "A8"
+      ],
+      "reason": "The answer provides a code snippet that demonstrates how to read a space-separated file using the CSV library, but it does not address extracting specific columns from 'HELIX' rows as requested."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A3",
+        "A8",
+        "A12"
+      ],
+      "reason": "The answer provides a concrete code example using the CSV library to read a space-separated file and extract specific columns, addressing the user's request."
+    },
+    "donor_pair_id": "B27-0381"
+  },
+  {
+    "pair_id": "B27-0015",
+    "question_id": 33337352,
+    "answer_id": 33408566,
+    "stratum": "changed",
+    "title": "Pool to Celery group",
+    "question_text": "I'm using Celery to launch a task, this task includes a port scanner which is built using multiprocessing and ThreadPool. When I launch it I get the following error, looking for an alternative or tutorial to migrate my existing code:\n\n\n\n[CODE]\n[2015-10-25 18:53:57,090: ERROR/Worker-3] daemonic processes are not allowed to have children\nTraceback (most recent call last):\n  File \"/Users/user/Documents/OpenSource/Development/Python/test/utils/port_scanner.py\", line 57, in is_port_opened\n    ports = list(scan_ports(server=server, port=int(port)))\n  File \"/Users/user/Documents/OpenSource/Development/Python/test/utils/port_scanner.py\", line 37, in scan_ports\n    p = Pool(NUM_CORES)\n  File \"/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/__init__.py\", line 232, in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild)\n  File \"/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/pool.py\", line 159, in __init__\n    self._repopulate_pool()\n  File \"/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/pool.py\", line 223, in _repopulate_pool\n    w.start()\n  File \"/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/process.py\", line 124, in start\n    'daemonic processes are not allowed to have children'\nAssertionError: daemonic processes are not allowed to have children\n\n[/CODE]\n\n\n\nThis is my code:\n\n\n\n[CODE]\nimport socket\nfrom functools import partial\nfrom multiprocessing import Pool\nfrom multiprocessing.pool import ThreadPool\nfrom errno import ECONNREFUSED\n\nNUM_CORES = 4\ndef portscan(target, port):\n    try:\n        # Create Socket\n        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        s.settimeout(12)\n        s.connect((target, port))\n        print 'port_scanner.is_port_opened() ' + str(port) + \" is opened\"\n        return port\n    except socket.error as err:\n        print str(err)\n        if err.errno == ECONNREFUSED:\n            return False\n\n\n# Wrapper function that calls portscanner\ndef scan_ports(server=None, port=None, portStart=None, portEnd=None, **kwargs):\n    p = Pool(NUM_CORES)\n    ping_host = partial(portscan, server)\n\n    if portStart and portStart:\n        # Filter returns Booleans\n        return filter(bool, p.map(ping_host, range(portStart, portStart)))\n    else:\n        return filter(bool, p.map(ping_host, range(port, port + 1)))\n\n\n# Check if port is opened\ndef is_port_opened(server=None, port=None, **kwargs):\n    try:\n        # check if its IP Address:\n        ports = list(scan_ports(server=server, port=int(port)))\n        if len(ports) != 0:\n            print 'port_scanner.is_port_opened() ' + str(len(ports)) + \" port(s) available.\"\n            return True\n        else:\n            print 'port_scanner.is_port_opened() port not opened: (' + str(port) + ')'\n            return False\n\n    except Exception, e:\n        print str(e)\n\nif __name__ == '__main__':\n    is_port_opened(server='110.10.0.144', port=22)\n\n[/CODE]",
+    "answer_text": "Your problem is pretty close to the one experienced in this question.\nDaemonic processes cannot spawn child processes. The reason behind it, is because a daemonic process gets terminated forcefully by its parent. But if the parent would be a daemonic process as well, it would be terminated forcefully without having time to do the same with its child.\n\n\n\nmultiprocessing.Pool uses daemonic processes to ensure they don't leak when your program extits. I assume Celery does the same to run your task. Therefore you're spawning daemonic processes within a daemon process.\n\n\n\nA possible solution would be to quickly implement a Pool of processes yourself using Process and Queue objects from multiprocessing library. You would spawn non daemonic processes and feed them through a queue.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A2",
+        "A6",
+        "A10"
+      ],
+      "reason": "The answer explains the root cause of the error and suggests a potential solution, but it does not provide a complete runnable code or a detailed step-by-step guide."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A2",
+        "A6",
+        "A10"
+      ],
+      "reason": "The answer provides a clear explanation of the issue and suggests a practical solution involving non-daemonic processes."
+    },
+    "donor_pair_id": "B27-0210"
+  },
+  {
+    "pair_id": "B27-0054",
+    "question_id": 10859461,
+    "answer_id": 11704041,
+    "stratum": "changed",
+    "title": "Confused on how to apply google and yahoo OpenID in Django-social-auth",
+    "question_text": "I get django social auth from https://github.com/omab/django-social-auth and follow its instructions.\n\n\n\nI am using google oauth and yahoo auth but the problem is that it cant get the first name and lastname of the user so that i wanted to use OpenID to save in the database the first name, last name, email, ect... but in the documentation I can't understand on how to Implement id. \n\n\n\ni also went to http://openid.net/get-an-openid/ maybe i can make an app but i can't find on how to do it.\n\n\n\nmy question is that how can i enable OpenID for google and yahoo in my django? \n\n\n\nthis is what i have done in my settings.py\n\n\n\n[CODE]\nAUTHENTICATION_BACKENDS = (\n    'userena.backends.UserenaAuthenticationBackend',\n    'guardian.backends.ObjectPermissionBackend',\n    'django.contrib.auth.backends.ModelBackend',\n    'social_auth.backends.facebook.FacebookBackend',\n    'social_auth.backends.twitter.TwitterBackend',\n    'social_auth.backends.google.GoogleOAuthBackend',\n    'social_auth.backends.google.GoogleOAuth2Backend',\n    'social_auth.backends.google.GoogleBackend',\n    'social_auth.backends.yahoo.YahooBackend',\n    'social_auth.backends.OpenIDBackend'\n)\n\n\n#facebook\nFACEBOOK_APP_ID              = '45252'\nFACEBOOK_API_SECRET          = '234324'\nFACEBOOK_EXTENDED_PERMISSIONS = ['email']\n#twitter\nTWITTER_CONSUMER_KEY = '234324'\nTWITTER_CONSUMER_SECRET = '234234'\nTWITTER_EXTENDED_PERMISSIONS = ['email']\n#google\n#GOOGLE_OAUTH2_CLIENT_ID = 23423#''\n#GOOGLE_OAUTH2_CLIENT_SECRET = '234324'\n#GOOGLE_APP_ID = '23432'\n#GOOGLE_APP_KEY = '234'\n#GOOGLE_SREG_EXTRA_DATA = ''#[('First name', '...')]\n#GOOGLE_AX_EXTRA_DATA = ''# [('...', '...')]\n#yahoo\n#YAHOO_CONSUMER_KEY = '234342'\n#YAHOO_CONSUMER_SECRET = '234234'\n\n[/CODE]\n\n\n\nwhen i acccess http://127.0.0.1:8000/associate/google/ or http://127.0.0.1:8000/associate/yahoo/ it goes to the log.in of yahoo or google but it does not logged-in my my django project and when i look to my database, the user is not created...\n\n\n\ni think in using OpenID for google and yahoo did not require KEY or ID. so it does not need an app like what i have done in facebook and twitter?\n\n\n\ni always got this in my log :\n\n\n\n[CODE]\nGenerated checkid_setup request to https://www.google.com/accounts/o8/ud with assocication AMlYA9XiAAnknkW9He8EyJeKuzgFtnhl9YByYurLWutc80ZtG_5XwbOW\n[02/Jun/2012 15:00:23] \"GET /associate/google/ HTTP/1.1\" 200 2390\nError attempting to use stored discovery information: <openid.consumer.consumer.TypeURIMismatch: Required type http://specs.openid.net/auth/2.0/signon not found in ['http://specs.openid.net/auth/2.0/server', 'http://openid.net/srv/ax/1.0', 'http://specs.openid.net/extensions/ui/1.0/mode/popup', 'http://specs.openid.net/extensions/ui/1.0/icon', 'http://specs.openid.net/extensions/pape/1.0'] for endpoint <openid.consumer.discover.OpenIDServiceEndpoint server_url='https://www.google.com/accounts/o8/ud' claimed_id=None local_id=None canonicalID=None used_yadis=True >>\nAttempting discovery to verify endpoint\nPerforming discovery on https://www.google.com/accounts/o8/id?id=AItOawmyGFHvB71i5EXC9I1dyjOKEXxIPJtHRqM\nReceived id_res response from https://www.google.com/accounts/o8/ud using association AMlYA9XiAAnknkW9He8EyJeKuzgFtnhl9YByYurLWutc80ZtG_5XwbOW\nNo handlers could be found for logger \"SocialAuth\"\n\n[/CODE]\n\n\n\ndo anyone can help me on how can i apply OpenID for google and yahoo in my django project?\n\n\n\nthanks in advance ....",
+    "answer_text": "I had some problems with implementing OpenID too. SocialAuth gave me error page without any explanation.\n\n\n\nAfter some research, I found that problem was with pipeline setting. In my case I had got errors with my pipeline.py. Some methods was with errors, but django was quiet and didn't log any errors.\n\n\n\nError stopped appearing, when I changed SOCIAL_AUTH_PIPELINE to some simple value:\n\n\n\n[CODE]\nSOCIAL_AUTH_PIPELINE = (\n    'social_auth.backends.pipeline.social.social_auth_user',\n    'social_auth.backends.pipeline.associate.associate_by_email',\n    'social_auth.backends.pipeline.misc.save_status_to_session',\n    'social_auth.backends.pipeline.user.get_username',\n    'social_auth.backends.pipeline.user.create_user',\n    'social_auth.backends.pipeline.social.associate_user',\n    'social_auth.backends.pipeline.social.load_extra_data',\n    'social_auth.backends.pipeline.user.update_user_details',\n    'social_auth.backends.pipeline.misc.save_status_to_session',\n)\n\n[/CODE]\n\n\n\nThis setting was taken from SocialAuth readme.\n\n\n\nIn summary, if authentication isn't working and log says nothing, problem can be in pipeline (in setting or in methods).",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A5",
+        "A9",
+        "A13"
+      ],
+      "reason": "The answer suggests checking the pipeline settings, which is a relevant step for troubleshooting authentication issues. However, it does not directly address how to enable OpenID for Google and Yahoo specifically."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A5",
+        "A9",
+        "A13"
+      ],
+      "reason": "The answer provides a detailed explanation of a potential issue with the pipeline setting in django-social-auth, which is directly related to the user's problem. It includes a concrete code snippet that suggests a solution, making it actionable and sufficient."
+    },
+    "donor_pair_id": "B27-0056"
+  },
+  {
+    "pair_id": "B27-0033",
+    "question_id": 32973347,
+    "answer_id": 32973437,
+    "stratum": "changed",
+    "title": "Python's unittest doesn't initialize logger as expected",
+    "question_text": "My unittest module breaks when testing my main file because my main file references a logger that was not initialized. \n\n\n\nWe have the following simple example. \n\n\n\nlogger_main.py:\n\n\n\n[CODE]\nimport logging\n\ndef some_func():\n    logger.info(__name__ + \" started \")\n    # Do something\n    logger.info(__name__ + \" finished \")\n    return 1\n\nif __name__ == '__main__':\n    logging.basicConfig(level=logging.INFO)\n    logger = logging.getLogger(__name__)\n    some_func()\n\n[/CODE]\n\n\n\nlogger_main_tests.py:\n\n\n\n[CODE]\nimport unittest\nimport logging\nfrom logger_main import some_func\n\nclass Test(unittest.TestCase):\n    def setUp(self):\n        logging.basicConfig(level=logging.DEBUG)\n        logger = logging.getLogger(__name__)\n\n    def testName(self):\n        self.assertEqual(some_func(), 1)\n\nif __name__ == \"__main__\":\n    unittest.main()\n\n[/CODE]\n\n\n\nlogger_main.py runs as expected, however, logger_main_tests.py gives the following error. \n\n\n\n[CODE]\nFinding files... done.\nImporting test modules ... done.\n\n======================================================================\nERROR: testName (logger_main_tests.Test)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\workspaces\\PythonPlayground\\DataStoreHierarchy\\logger_main_tests.py\", line 11, in testName\n    self.assertEqual(some_func(), 1)\n  File \"C:\\workspaces\\PythonPlayground\\DataStoreHierarchy\\logger_main.py\", line 4, in some_func\n    logger.info(__name__ + \" started \")\nNameError: name 'logger' is not defined\n\n----------------------------------------------------------------------\nRan 1 test in 0.003s\n\nFAILED (errors=1)        \n\n[/CODE]\n\n\n\nThe error makes sense since some_func() is trying to use logger that doesn't exists in its scope and I would like to figure out how to set up my unittests with a logger (set at the DEBUG level) so that any logger.info or logger.debug statement inside of my functions (such as some_func()) in logger_main.py would be printed out at the appropriate level.",
+    "answer_text": "This is because the logger is only being defined when __name__ == \"__main__\".\n\n\n\nGenerally you'll define one logger per file, something like:\n\n\n\n[CODE]\nlogger = logging.getLogger(__name__)\n\n[/CODE]\n\n\n\nAt the top of the file, after the imports.\n\n\n\nAlso, notice that the logger defined in Test.setUp is local to the function, so it won't do anything.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A10",
+        "A16"
+      ],
+      "reason": "The answer identifies the issue with logger scope and provides a conceptual explanation for defining the logger at the top of the file. However, it does not offer a complete solution or actionable steps to resolve the problem in the context of the unittest setup."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A10",
+        "A16"
+      ],
+      "reason": "The answer correctly identifies the issue and provides a clear solution by defining the logger at the top of the file and ensuring it is accessible within the function scope."
+    },
+    "donor_pair_id": "B27-0040"
+  },
+  {
+    "pair_id": "B27-0052",
+    "question_id": 3717544,
+    "answer_id": 3717580,
+    "stratum": "changed",
+    "title": "Python installation",
+    "question_text": "i have a machine with two users accounts.\n\n\n\ni installed python in the first account without any problem but when am gone to install into the second account it cause the following error\n\n\n\n[CODE]\nchecking for C compiler default output file name... configure: error: C compiler cannot create executables\n\n[/CODE]\n\n\n\ncaused when execute the following command:\n\n\n\n[CODE]\n./configure --prefix=\"/home/df/python5\"\n\n[/CODE]\n\n\n\ni don't why ? could anyone help me \n\n\n\nThanks in Advance",
+    "answer_text": "When you execute ./configure in what folder you are (absolute path) ?\n\n\n\nCheck if this folder and sub-folders are read-writable for your \"second\" user account.\n\n\n\nSeems you have no write access ...\n\n\n\nAnyway, why do you want to install the same python two times ?",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer provides relevant questions and suggestions about the installation process, but it does not offer a concrete solution to the specific error encountered."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer directly addresses the user's issue by asking about the current directory and checking permissions, which are relevant and actionable steps."
+    },
+    "donor_pair_id": "B27-0183"
+  },
+  {
+    "pair_id": "B27-0202",
+    "question_id": 21428349,
+    "answer_id": 21479042,
+    "stratum": "changed",
+    "title": "Inheriting data in openerp",
+    "question_text": "I have inherited exiting data from one form to another form using following coding\n\n\n\n[CODE]\nxml: <field name = \"res_model\">lis.lab</field> \npython: _inherit=\"lis.lab\"\n\n[/CODE]\n\n\n\nlis.lab is first form. I enter information and save only here.\ntest.lab is another form. Here I have finished to display that record here(test.lab) in tree view using above two line click. But It has only exiting field in \"test.lab\" form. And it's not showing new field in second form(test.lab).\n\n\n\nxml\n\n\n\n[CODE]\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<openerp>\n<data>\n<!-- ===================== This is tree layout =============================-->\n<record id=\"lis_tree\" model=\"ir.ui.view\">\n        <field name=\"name\">Lab Registration</field>\n        <field name=\"model\">lis.lab</field>\n        <field name=\"arch\" type=\"xml\">\n            <tree string=\"lab\">\n                <field name = \"name\"/>\n                <field name = \"customer_email\"/>\n                <field name = \"customer_name\"/>\n                <field name = \"customer_city\"/>\n                <field name = \"customer_mobile\"/>\n            </tree>\n        </field>\n    </record>\n\n<!-- ========================This is Form layout===============================-->\n<record id=\"lis_form\" model=\"ir.ui.view\">\n        <field name=\"name\">Lab Registration</field>\n        <field name=\"model\">lis.lab</field>\n        <field name=\"arch\" type=\"xml\">\n            <form string=\"lab\" version=\"7.0\">\n                <sheet>\n                    <group>\n                        <field name = \"name\"/>\n                        <field name = \"customer_name\" on_change=\"on_change_customer(customer_name)\"/>\n                        <field name = \"customer_city\"/>\n                        <field name = \"customer_email\"/>\n                        <field name = \"customer_mobile\"/>    \n                    </group>\n               </sheet>\n            </form>\n       </field>\n    </record>\n\n<!-- ========================= Action Layout ============================= -->\n    <record id=\"action_lab\" model=\"ir.actions.act_window\">\n        <field name=\"name\">Lab Registration</field>\n        <field name=\"type\">ir.actions.act_window</field>\n        <field name=\"res_model\">lis.lab</field>\n        <field name=\"view_type\">form</field>\n        <field name=\"view_mode\">tree,form</field>\n        <field name=\"view_id\" ref=\"lis_tree\"/>\n    </record>\n\n    <!-- ===================== This is tree layout =============================-->\n<record id=\"test_tree\" model=\"ir.ui.view\">\n        <field name=\"name\">Test Report</field>\n        <field name=\"model\">test.lab</field>\n        <field name=\"arch\" type=\"xml\">\n            <tree string=\"test\">\n                <field name = \"name\"/>\n                <field name = \"customer_email\"/>\n                <field name = \"customer_name\"/>\n                <field name = \"customer_city\"/>\n                <field name = \"customer_mobile\"/>\n            </tree>\n        </field>\n    </record>\n\n<!-- ========================This is Form layout===============================-->\n<record id=\"test_form\" model=\"ir.ui.view\">\n        <field name=\"name\">Test Report</field>\n        <field name=\"model\">test.lab</field>\n        <field name=\"arch\" type=\"xml\">\n            <form string=\"test\" version=\"7.0\">\n                <sheet>\n                    <notebook >\n                        <page string=\"Hamthalaogy Report\">\n                            <field name = \"sam\" />\n                        </page>\n                        <page string=\"Serology Report\">\n                            <field name = \"sam1\" />\n                        </page>\n                    </notebook>\n                </sheet>\n            </form>\n       </field>\n    </record>\n\n<!-- ========================= Action Layout ============================= -->\n    <record id=\"action_test\" model=\"ir.actions.act_window\">\n        <field name=\"name\">Test Report</field>\n        <field name=\"type\">ir.actions.act_window</field>\n        <field name=\"res_model\">lis.lab</field>\n        <field name=\"view_type\">form</field>\n        <field name=\"view_mode\">tree,form</field>\n        <field name=\"view_id\" ref=\"test_tree\"/>\n    </record>\n\n    <!-- ===========================Menu Settings=========================== -->\n    <menuitem name = \"LIS\" id = \"menu_lis_lab\" />\n        <menuitem name = \"Lab Info\" id = \"menu_sub\" parent = \"menu_lis_lab\"/>\n            <menuitem name = \"Lab Registration\" id = \"lab_register\" parent = \"menu_sub\" action = \"action_lab\" />\n            <menuitem name = \"Test Report\" id = \"lab_test\" parent = \"menu_sub\" action = \"action_test\" />\n\n</data>\n</openerp>\n\n[/CODE]\n\n\n\npython\n\n\n\n[CODE]\nfrom osv import osv\nfrom osv import fields\n\nclass cus(osv.osv):\n _name = \"lis.lab\"\n _description = \"This table is for keeping lab data of cord blood\"\n _columns = {\n    'name': fields.char('Lab Id',size=20,required=True),\n    'customer_name': fields.many2one('res.partner', 'Customer Name', domain=[('customer', '=', True)]),\n    'customer_city': fields.char('City', size=20),\n    'customer_email': fields.char('Email', size=20),\n    'customer_mobile': fields.char('Mobile', size=20),\n    'sam': fields.char('Sample', size=64),\n    'sam1': fields.char('Sample1', size=64)\n }\n def on_change_customer(self, cr, uid, ids, customer_name, context=None):\n  values = {}\n  if customer_name:\n   cust = self.pool.get('res.partner').browse(cr, uid, customer_name, context=context)\n   values = {\n    'customer_city': cust.city,\n    'customer_email': cust.email,\n    'customer_mobile': cust.mobile\n   }\n  return {'value' : values}\n\nclass test(osv.osv):\n _name = \"test.lab\"\n _inherit = \"lis.lab\"\n _description = \"Lab Result\"\n _columns = {\n\n }\n def on_change_labid(self, cr, uid, ids, name, context=None):\n  values = {}\n  if name:\n   custinfo = self.pool.get('lis.lab').browse(cr, uid, name, context=context)\n   values = {\n   }\n  return {'value' : values}\n\n[/CODE]",
+    "answer_text": "Use Class inheritance to achieve your goal.\n\n\n\nYou are using inheritance by prototyping concept of OpenERP. Where _name != _inherit. New instances of child class will therefore never been seen by views or trees operating on the superclasses table.\n\n\n\nTo display instances of Super Class in Child Class view, You need to use class inheritance where _name = _inherit. where The child inherits data (fields) and behaviour (functions) of his parent.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer explains the issue with inheritance and provides a conceptual solution, but it does not offer concrete steps or code to resolve the problem."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer provides clear guidance on using class inheritance in OpenERP to achieve the desired functionality. It explains the difference between prototype and class inheritance and how to correctly set up class inheritance to display instances of the superclass in the child class view."
+    },
+    "donor_pair_id": "B27-0263"
+  },
+  {
+    "pair_id": "B27-0160",
+    "question_id": 31478584,
+    "answer_id": 31478663,
+    "stratum": "changed",
+    "title": "Flask view to handle Stripe request can't find stripeToken",
+    "question_text": "I am trying to integrate Stripe with Flask, but the following error appears as soon as the page loads. \n\n\n\n[CODE]\nThe browser (or proxy) sent a request that this server could not understand.\n\n[/CODE]\n\n\n\nWhy am I getting this error and how do I fix it?\n\n\n\n[CODE]\n@store.route('/payment',methods=['GET', 'POST'])\ndef payment():\n    stripe.api_key = \"test_key\"\n    token = request.form['stripeToken']\n\n    try:\n        charge = stripe.Charge.create(\n            amount=1000,\n            currency=\"cad\",\n            source=token,\n            description=\"Example charge\"\n        )\n    except stripe.error.CardError, e:\n        pass\n\n    return render_template(\"payment_form.html\")\n\n[/CODE]\n\n\n\n[CODE]\n<script type=\"text/javascript\" src=\"https://js.stripe.com/v2/\"></script>\n<script type=\"text/javascript\">\n    Stripe.setPublishableKey('test_key');\n\n    jQuery(function($) {\n        $('#payment-form').submit(function(event) {\n            var $form = $(this);\n            $form.find('button').prop('disabled', true);\n            Stripe.card.createToken($form, stripeResponseHandler);\n            return false;\n        });\n    });\n\n    function stripeResponseHandler(status, response) {\n        var $form = $('#payment-form');\n\n        if (response.error) {\n            $form.find('.payment-errors').text(response.error.message);\n            $form.find('button').prop('disabled', false);\n        } else {\n            var token = response.id;\n            $form.append($('<input type=\"hidden\" name=\"stripeToken\" />').val(token));\n            $form.get(0).submit();\n        }\n    };\n</script>\n\n[/CODE]",
+    "answer_text": "You want request.form.get('stripeToken', None)",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer suggests using `request.form.get('stripeToken', None)` which is a relevant suggestion for handling the missing `stripeToken`. However, it does not fully address the error message or provide a complete solution."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer directly addresses the issue by suggesting using `request.form.get('stripeToken', None)` instead of `request.form['stripeToken']`, which helps prevent a KeyError if 'stripeToken' is not present."
+    },
+    "donor_pair_id": "B27-0104"
+  },
+  {
+    "pair_id": "B27-0338",
+    "question_id": 10003207,
+    "answer_id": 10003517,
+    "stratum": "changed",
+    "title": "inserting data into google app engine datastore",
+    "question_text": "The Google_App-Engine erases everything in my table using the put statement.  I don't want it to do that, it makes for more code to have to re.put everything back in the table, every time something is added. \n\n\n\nBasically the issue is that the put statement erases everything.  is there a way to save what I don't want to update? \n\n\n\nhere is the code: ((python web2py))\n\n\n\n[CODE]\nbiography2 = bayside(key_name='bayside', Biography=form_biography.vars.one)\nbiography2.put()\nredirect(URL(\"b1\", \"bayside\"))\n\n[/CODE]\n\n\n\nthe put statement, will update the biography under the table bayside, but it erases everything else in that table (genre, songs, etc...)  I want it to keep the other table elements and only update the biography.  Is that possible?   Right now I have had to resort to hack that updates all table elements when I really just want to update one.  it is very frustrating, and makes for a ton of extra code.",
+    "answer_text": "to me it looks like you are overwriting an existing entity instead of getting and updating properties of an existing one.\nyou should take a look at the docs.\nhttps://developers.google.com/appengine/docs/python/datastore/entities#Updating_an_Entity",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A3"
+      ],
+      "reason": "The answer suggests checking the documentation and provides a link, which is partly relevant and actionable. However, it does not directly address how to prevent overwriting other entities."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "reason": "The answer directly addresses the issue by suggesting to get and update properties of an existing entity instead of overwriting it. It also provides a link to the official documentation for further guidance."
+    },
+    "donor_pair_id": "B27-0091"
+  },
+  {
+    "pair_id": "B27-0012",
+    "question_id": 19901040,
+    "answer_id": 19901101,
+    "stratum": "changed",
+    "title": "Simple ping implementation",
+    "question_text": "I need simple ping that will return some float number or None if destination unreachable. I am using Python 3 and windows and don't want to use standart ping, cause i have to decode bytes from shell and parse results. I know nothing about implementation of ICMP protocol so ready to use library is the best choice.",
+    "answer_text": "You could use a pure Python implementation like the following:\n\n\n\nhttps://pypi.python.org/pypi/ping\n\n\n\nor if you prefer this one:\n\n\n\nhttp://www.python.org/~jeremy/python.html\n\n\n\nand also take a look here, because they are discussing about the subject and you may find it useful:\n\n\n\npython non-privileged ICMP\n\n\n\nUPDATE\n\n\n\nWithout the need of patching for Py 3, a very simple example:\n\n\n\nhttps://github.com/volftomas/pyicmp",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A5",
+        "A13",
+        "A33"
+      ],
+      "reason": "The answer provides links to libraries that could be used for implementing a simple ping in Python, but it does not directly address the requirement to return a float number or None if the destination is unreachable."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A5",
+        "A13",
+        "A33"
+      ],
+      "reason": "The answer provides multiple links to libraries and examples that can be used to implement a simple ping in Python, addressing the central request."
+    },
+    "donor_pair_id": "B27-0089"
+  },
+  {
+    "pair_id": "B27-0211",
+    "question_id": 28617870,
+    "answer_id": 28618240,
+    "stratum": "changed",
+    "title": "Return elements in a location corresponding to the minimum values of another array",
+    "question_text": "I have two arrays with the same shape in the first two dimensions and I'm looking to record the minimum value in each row of the first array. However I would also like to record the elements in the corresponding position in the third dimension of the second array. I can do it like this:\n\n\n\n[CODE]\nA = np.random.random((5000, 100))\nB = np.random.random((5000, 100, 3))\n\nA_mins = np.ndarray((5000, 4))\n\nfor i, row in enumerate(A):\n    current_min = min(row)\n    A_mins[i, 0] = current_min \n    A_mins[i, 1:] = B[i, row == current_min]\n\n[/CODE]\n\n\n\nI'm new to programming (so correct me if I'm wrong) but I understand that with Numpy doing calculations on whole arrays is faster than iterating over them. With this in mind is there a faster way of doing this? I can't see a way to get rid of the row == current_min bit even though the location of the minimum point must have been 'known' to the computer when it was calculating the min(). \n\n\n\nAny tips/suggestions appreciated! Thanks.",
+    "answer_text": "For getting the index of the minimum value, use amin instead of min + comparison\n\n\n\nThe amin function (and many other functions in numpy) also takes the argument axis, that you can use to get the minimum of each row or each column. \n\n\n\nSee http://docs.scipy.org/doc/numpy/reference/generated/numpy.amin.html",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer suggests using numpy's amin function and the axis argument, which is relevant and actionable. However, it does not provide a complete solution or code example."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer provides concrete steps and a useful conceptual explanation using numpy's amin function, which directly addresses the user's request for a faster way to find minimum values and their corresponding elements."
+    },
+    "donor_pair_id": "B27-0051"
+  },
+  {
+    "pair_id": "B27-0108",
+    "question_id": 35667252,
+    "answer_id": 35667320,
+    "stratum": "changed",
+    "title": "How do I run python 3.5 in Sublime Text 3",
+    "question_text": "I have installed the python 3.5 interpretor in my device (Windows).\n\n\n\nCan anybody guide me through the process of using packages to run it like SublimeREPL?",
+    "answer_text": "You can't, and you really shouldn't be doing this. If you somehow manage to use another Python version inside Sublime, you're very likely to break some of your packages.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 0,
+      "sufficiency": 0,
+      "overall": "unhelpful",
+      "evidence_ids": [],
+      "reason": "The answer advises against running Python 3.5 in Sublime Text 3 and does not provide any guidance on how to do so."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 0,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer directly addresses the central request by advising against running Python 3.5 in Sublime Text 3 and providing a clear rationale."
+    },
+    "donor_pair_id": "B27-0070"
+  },
+  {
+    "pair_id": "B27-0101",
+    "question_id": 1484963,
+    "answer_id": 1484996,
+    "stratum": "changed",
+    "title": "There’s PyQuery… is there one for Ruby?",
+    "question_text": "You guys know PyQuery?\n\n\n\nI was wondering if there’s an equivalent for Ruby.",
+    "answer_text": "There's JRails, but it's outdated. If you're just looking for a way to use JQuery with Rails though: http://railscasts.com/episodes/136-jquery",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer suggests JRails as an equivalent for PyQuery in Ruby, but notes it's outdated. It also provides a link to a Railscast episode on using jQuery with Rails, which is partly relevant but doesn't fully address the request."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer directly addresses the question by suggesting JRails and providing a link to a Railscast episode on using jQuery with Rails."
+    },
+    "donor_pair_id": "B27-0021"
+  },
+  {
+    "pair_id": "B27-0333",
+    "question_id": 12433443,
+    "answer_id": 12433478,
+    "stratum": "changed",
+    "title": "Debugging python function",
+    "question_text": "I am having trouble to get my function to work. My functions needs to be a parameter which accepts *Asterisk characters and will print out 1 asterisk, 3 ast., 5, any odd numbers in the subsequent lines. So first line will have 1 ast, second line 3 ast., and so on. The parameter will accept any odd int.\n\n\n\nMy attempt:\n\n\n\n[CODE]\ndef arrowHead(n):\n    spaces = n / 2\n    for x in range(1, n+2, 2):\n        string_ln = ''\n    for num in range(spaces):\n        string_ln = string_ln + ' '\n    for num2 in range(x): string_ln = string_ln + '*'\n        spaces = spaces - 1\n        print string_ln\n        final_string = ''\n    for x in range(n / 2):\n        final_string = final_string + ' '\n        final_string = final_string + '*'\n    for x in range(3):\n        print final_string\n\n[/CODE]",
+    "answer_text": "Not clear with your question, but if you want to print asterisk odd number of times, go with this\n\n\n\n[CODE]\ndef arrowHead(n):\n   print '*' * (2*n-1)\n\n[/CODE]\n\n\n\nUpdate:-\n\n\n\n[CODE]\n>>> def arrow(n,flag=1):\n    if flag<n:\n        print (' '*(arrow(n,flag+1))+' * '*(n-(2*flag-1)))\n    return 2*flag-1\n\n>>> arrow(10)\n\n\n\n\n            * \n          *  *  * \n        *  *  *  *  * \n      *  *  *  *  *  *  * \n    *  *  *  *  *  *  *  *  * \n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A18",
+        "A20"
+      ],
+      "reason": "The answer provides a conceptual explanation and a recursive function to print asterisks in a pattern, but it does not directly address the original function's logic or the specific requirements mentioned."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A18",
+        "A20"
+      ],
+      "reason": "The answer provides a clear explanation and a working code snippet that addresses the central request of printing asterisks in odd numbers on subsequent lines."
+    },
+    "donor_pair_id": "B27-0231"
+  },
+  {
+    "pair_id": "B27-0138",
+    "question_id": 23999910,
+    "answer_id": 23999978,
+    "stratum": "changed",
+    "title": "How to format data into a python list",
+    "question_text": "I am trying to figure out how to take data which looks like:\n\n\n\n[CODE]\n1 2 3 4 5\n\n6 7 8 9 10\n\n11 12 13 14 15\n\n16 17 18 19 20\n\n[/CODE]\n\n\n\nfrom a file and make it look like:\n\n\n\n[CODE]\n[1, 2, 3, 4, 5,\n\n6, 7, 8, 9, 10,\n\n11, 12, 13, 14, 15,\n\n16, 17, 18, 19, 20]\n\n[/CODE]\n\n\n\nEach line represents a row from the data file, so the starting format should not be confused with:\n\n\n\n[CODE]\n1 2 3 4 5 6 7... \n\n[/CODE]\n\n\n\nThe original data is contained in a file so it must be first read in and then rewritten with the commas and brackets into a new file. My starting point would be to first read in the data:\n\n\n\nwith open(\"data.txt\",\"r\") as data:\n    lines = data.readlines()\n\n\n\n\nThen I know that I have to take the read lines and rewrite them in the format I need but I don't know how to do this for each element of each line.",
+    "answer_text": "You can try something like this:\n\n\n\n[CODE]\n>>> data = open('data.txt').read().split()\n>>> data = [int(item) for item in data if item.isdigit()\n>>> data\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]\n\n[/CODE]\n\n\n\nThis will get all of the integers in the file. If you don't care, just remove the second, line, and call data = open('data.txt').read().split().",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A6",
+        "A7"
+      ],
+      "reason": "The answer provides a code snippet that reads and processes the data, but it does not explicitly show how to write the processed data back into a new file with the desired format."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A6",
+        "A7",
+        "A9"
+      ],
+      "reason": "The answer provides a clear and actionable solution by reading the file, splitting the data, converting to integers, and formatting it as required."
+    },
+    "donor_pair_id": "B27-0229"
+  },
+  {
+    "pair_id": "B27-0072",
+    "question_id": 7222470,
+    "answer_id": 10459737,
+    "stratum": "changed",
+    "title": "Python CJKLIB: no pinyin tones",
+    "question_text": "I'm working with CJKLIB, using the getReadingForCharacter, to convert Chinese characters into pinyin. However, is there some way \n\n\n\n[CODE]\nreadings = cjk.getReadingForCharacter(c, 'Pinyin')\n\n[/CODE]\n\n\n\nThe problem is that it returns pinyin with the tones on them, which I do not want. For example, I want \"Beijing\", not \"Běijīng\" - with all the tone marks.\n\n\n\nAnyone know how I can get an output without the tones? Thanks!",
+    "answer_text": "Maybe using a simpler lib fit your task better and faster, cjklib don't provide an API to convert chinese to pinyin without tone. \n\n\n\nsuch python lib is as follows:\n\n\n\n\n\nhanzi2pinyin\n\n\n\n\nxpinyin",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A11",
+        "A16"
+      ],
+      "reason": "The answer suggests alternative libraries that might better suit the task, but does not provide a direct solution or code to modify the current approach."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A11",
+        "A16"
+      ],
+      "reason": "The answer provides alternative libraries (hanzi2pinyin and xpinyin) that can convert Chinese characters to pinyin without tones, directly addressing the user's need."
+    },
+    "donor_pair_id": "B27-0124"
+  },
+  {
+    "pair_id": "B27-0135",
+    "question_id": 16370076,
+    "answer_id": 16370128,
+    "stratum": "changed",
+    "title": "Flaskr UnicodeDecodeError",
+    "question_text": "I'm a beginner at Python.\nI want to learn a web framework, and I chose Flask.\nI have run through the quickstart.\nAfter that, I kept going on the Tutorial. \nBut, I was stuck.\n\n\n\nAfter I cloned this project on github\nhttps://github.com/zhangjingqiang/flaskr\n\n\n\nI ran python flaskr.py and opened my web browser to check if it's working.\nI got this error message:\n\n\n\n[CODE]\nException happened during processing of request from ('127.0.0.1', 60970)\nTraceback (most recent call last):\n  File \"/usr/lib/python2.7/SocketServer.py\", line 295, in _handle_request_noblock\n    self.process_request(request, client_address)\n  File \"/usr/lib/python2.7/SocketServer.py\", line 321, in process_request\n    self.finish_request(request, client_address)\n  File \"/usr/lib/python2.7/SocketServer.py\", line 334, in finish_request\n    self.RequestHandlerClass(request, client_address, self)\n  File \"/usr/lib/python2.7/SocketServer.py\", line 649, in __init__\n    self.handle()\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/serving.py\", line 182, in handle\n    rv = BaseHTTPRequestHandler.handle(self)\n  File \"/usr/lib/python2.7/BaseHTTPServer.py\", line 340, in handle\n    self.handle_one_request()\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/serving.py\", line 217, in handle_one_request\n    return self.run_wsgi()\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/serving.py\", line 176, in run_wsgi\n    traceback.plaintext)\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/utils.py\", line 77, in __get__\n    value = self.func(obj)\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/debug/tbtools.py\", line 332, in plaintext\n    return u'\\n'.join(self.generate_plaintext_traceback())\n  File \"/home/jsying/桌面/flaskr/venv/local/lib/python2.7/site-packages/werkzeug/debug/tbtools.py\", line 326, in generate_plaintext_traceback\n    frame.function_name\nUnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 13: ordinal not in range(128)   \n\n[/CODE]\n\n\n\nI have no idea how to fix it.  Can somebody help me? Thanks.",
+    "answer_text": "My guess would be that there is an issue because of the special characters in the path, 桌面. Try moving the folder to \n\n\n\n/home/jsying/flaskr/",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer suggests moving the project folder to a path without special characters, which could potentially resolve the UnicodeDecodeError. However, it does not provide a complete solution or further steps."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5"
+      ],
+      "reason": "The answer provides a concrete suggestion to move the project folder to a path without special characters, which directly addresses the UnicodeDecodeError."
+    },
+    "donor_pair_id": "B27-0077"
+  },
+  {
+    "pair_id": "B27-0324",
+    "question_id": 26343004,
+    "answer_id": 26343145,
+    "stratum": "unchanged",
+    "title": "Writing Python lists into file, items seperated by semicolon",
+    "question_text": "[CODE]\nsource= numpy.array([8,9])\nsink= numpy.array([7,8])\npop_percentage= numpy.array([50,70,85])\nbuses= numpy.array([100,150,200])\nbus_capacity= numpy.array([60,90])\na=[source,sink,pop_percentage,bus_capacity,buses,['mat1','mat2']]\nfile = open(\"/home/deep/Desktop/DATA/First_Data_File.txt\", \"w\")\nfor list in itertools.product(*a):\n    for line in list:\n        print>>file,list[0],list[1],list[2]\n\n[/CODE]\n\n\n\nI have written the above code and I got the following format in file:\n\n\n\n  \n8 7 50\n\n\n\n\nI need to separate the items using semicolon which should look like:\n\n\n\n  \n8;7;50\n\n\n\n\nPlease suggest the most pythonic way to get this. Thanks in advance.",
+    "answer_text": "[CODE]\nprint>>file, \";\".join([str (l) for l in list[:3]])\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A2"
+      ],
+      "reason": "The answer directly addresses the request by providing a Pythonic way to join list items with a semicolon."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A2"
+      ],
+      "reason": "The answer directly addresses the request by providing a Pythonic way to join list items with a semicolon. It includes a concrete code snippet that solves the problem."
+    },
+    "donor_pair_id": "B27-0366"
+  },
+  {
+    "pair_id": "B27-0204",
+    "question_id": 23088294,
+    "answer_id": 23093845,
+    "stratum": "unchanged",
+    "title": "Converting character counts to token counts",
+    "question_text": "My problem is the following.  I have a string that contains a few English sentences.  I also have a separate list of annotations that have been made on that string that are of the form\n\n\n\n[CODE]\nchar_index_start | char_index_end | annotation\n\n[/CODE]\n\n\n\nSo for each annotation, the word (or words) that have been annotated are shown as well as where they appear in the sentence via the character index where the word(s) begin and and index where they end.  If the annotation contains multiple words then they are contiguous within the sentence.  Here is an example annotation\n\n\n\n[CODE]\n230 | 240 | 2006 Civic\n\n[/CODE]\n\n\n\nWhat I want to do is convert the character index to a token index (i.e. counting tokens instead of counting characters).  The problem with this is that I cannot think of a straight-forward way of mapping character indices to token indices.  The problem is that tokenizers ignore spaces. So tokenizing the string and mapping them to character indices by assuming there is one space character between each token would not work.  For example if there was a double space somewhere, the character count would be incorrect.  I suppose one way to do it would be to make a list of contiguous whitespace character counts that occur between each non-whitespace character then map these between tokens.  However this would create problems also because a tokenizer can separate tokens that do not have any space between them.  Is there any straight-forward way of doing this?  Or existing code?",
+    "answer_text": "I managed to get a solution in the following way.  Before I was using the nltk tokenizer to tokenize my string.  The issue was that I was not able to retrieve the character indices for the tokens that it produced (maybe it is possible but after a bit of time spent researching, I still could not find a way).  So eventually I decided to create my own regex-based tokenizer that would also give me the character indices of the tokens.  Given a string, a list of all its tokens and their indices can be found via\n\n\n\n[CODE]\n[(m.start(0), m.end(0),m.group()) for m in re.finditer(\"\\w+|\\$[\\d\\.]+|\\S+\",input_string)]\n\n[/CODE]\n\n\n\nSo now I was left with a list of tokens and their character indices and a list of annotations and their character indices and it was pretty trivial to match them.  Then I was left with token-level annotations which is what I wanted.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A12"
+      ],
+      "reason": "The answer provides a clear and actionable solution by suggesting a regex-based tokenizer that captures character indices, which directly addresses the core request."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A12"
+      ],
+      "reason": "The answer provides a clear, actionable solution using a regex-based tokenizer to obtain character indices for tokens, which directly addresses the core request."
+    },
+    "donor_pair_id": "B27-0085"
+  },
+  {
+    "pair_id": "B27-0311",
+    "question_id": 29253446,
+    "answer_id": 29253741,
+    "stratum": "unchanged",
+    "title": "python-dateutil - RRule - Different times for different weekdays",
+    "question_text": "I'm using rrule as shown here:\nhttps://labix.org/python-dateutil#head-470fa22b2db72000d7abe698a5783a46b0731b57\n\n\n\nI'm wondering if it somehow possible to create a rule where different times are specified for different weekdays\ne.g. WEEKLY Thursday 6pm and Saturday 10am\n\n\n\nHope someone can help :)",
+    "answer_text": "A single rrule can not specify both pairs of days and hours, but you could use a rrule.ruleset to combine rrules:\n\n\n\n[CODE]\nimport datetime as DT\nimport dateutil.rrule as RR\ntoday = DT.date.today()\n\naset = RR.rruleset()\naset.rrule(RR.rrule(RR.WEEKLY, byweekday=RR.TH, byhour=18, count=3, dtstart=today))\naset.rrule(RR.rrule(RR.WEEKLY, byweekday=RR.SA, byhour=10, count=3, dtstart=today))\nfor date in aset:\n    print(date)\n\n[/CODE]\n\n\n\nyields\n\n\n\n[CODE]\n2015-03-26 18:00:00\n2015-03-28 10:00:00\n2015-04-02 18:00:00\n2015-04-04 10:00:00\n2015-04-09 18:00:00\n2015-04-11 10:00:00\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A11",
+        "A12"
+      ],
+      "reason": "The answer provides a clear conceptual explanation and a concrete code example using rrule.ruleset to achieve the desired functionality."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A11",
+        "A12"
+      ],
+      "reason": "The answer provides a clear conceptual explanation and a concrete code example using rrule.ruleset to achieve the desired functionality."
+    },
+    "donor_pair_id": "B27-0218"
+  },
+  {
+    "pair_id": "B27-0187",
+    "question_id": 29106426,
+    "answer_id": 29106577,
+    "stratum": "unchanged",
+    "title": "Else statement invalid syntax",
+    "question_text": "My code is throwing a SyntaxError: invalid syntax error at the last else statement (second to last line in code below). Can anyone see what is causing this? I'm running Python 2.7 on CentOS.\n\n\n\n[CODE]\ndef mintosec(time):\n    foo = time.split(':')\n    if re.match('o|O',foo[0]) == True: #check to see if any zeros are incorrectly labled as 'o's and replace if so\n            div = list(foo[0])\n            if div[0] == 'o' or 'O':\n                    new = 0\n            else:\n                    new = div[0]\n            if div[1] == 'o' or 'O':\n                    new1 = 0\n            else:\n                    new1 = div[1]\n            bar = int(str(new)+str(new1))*60\n    else:\n            bar = int(foo[0]) * 60\n\n[/CODE]",
+    "answer_text": "You cannot do:\n\n\n\n[CODE]\nif div[0] == 'o' or 'O':\n    new = 0\n\n[/CODE]\n\n\n\nYou must declare it like:\n\n\n\n[CODE]\nif div[1] == 'o' or div[1] == 'O':\n    new1 = 0\n\n[/CODE]\n\n\n\nA better way to do this check would be:\n\n\n\n[CODE]\n if div[1].lower() == 'o'\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A6",
+        "A18",
+        "A30"
+      ],
+      "reason": "The answer correctly identifies the syntax error in the if statements and provides a clear, actionable solution."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A6",
+        "A18",
+        "A30"
+      ],
+      "reason": "The answer correctly identifies the syntax error in the 'else' statements and provides a corrected version of the conditional checks."
+    },
+    "donor_pair_id": "B27-0230"
+  },
+  {
+    "pair_id": "B27-0017",
+    "question_id": 19086442,
+    "answer_id": 19086628,
+    "stratum": "unchanged",
+    "title": "Decode and encode unicode characters as '\\u####'",
+    "question_text": "I'm attempting to write a python implementation of java.util.Properties which has a requirement that unicode characters are written to the output file in the format of \\u####\n\n\n\n(Documentation is here if you are curious, though it isn't important to the question: http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html)\n\n\n\nI basically need something that passes the following test case\n\n\n\n[CODE]\ndef my_encode(s):\n    # Magic\n\ndef my_decode(s):\n    # Magic\n\n# Easy ones that are solved by .encode/.decode 'unicode_escape'\nassert my_decode('\\u2603') == u'☃'\nassert my_encode(u'☃') == '\\\\u2603'\n\n# This one also works with .decode('unicode_escape')\nassert my_decode('\\\\u0081') == u'\\x81'\n# But this one does not quite produce what I want\nassert my_encode(u'\\u0081') == '\\\\u0081' # Instead produces '\\\\x81'\n\n[/CODE]\n\n\n\nNote that I've tried unicode_escape and it comes close but doesn't quite satisfy what I want\n\n\n\nI've noticed that simplejson does this conversion correctly:\n\n\n\n[CODE]\n>> simplejson.dumps(u'\\u0081')\n'\"\\\\u0081\"'\n\n[/CODE]\n\n\n\nBut I'd rather avoid:\n\n\n\n\nreinventing the wheel\n\n\ndoing some gross substringing of simplejson's output",
+    "answer_text": "According to the documentation you linked to:\n\n\n\n  \nCharacters less than \\u0020 and characters greater than \\u007E in property keys or values are written as \\uxxxx for the appropriate hexadecimal value xxxx.\n\n\n\n\nSo, that converts into Python readily as:\n\n\n\n[CODE]\ndef my_encode(s):\n    return ''.join(\n        c if 0x20 <= ord(c) <= 0x7E else r'\\u%04x' % ord(c)\n        for c in s\n    )\n\n[/CODE]\n\n\n\nFor each character in the string, if the code point is between 0x20 and 0x7E, then that character remains unchanged; otherwise, \\u followed by the code point encoded as a 4-digit hex number is used.  The expression c for c in s is a generator expression, so we convert that back into a string using str.join on the empty string.\n\n\n\nFor decoding, you can just use the unicode_escape codec as you mentioned:\n\n\n\n[CODE]\ndef my_decode(s):\n    return s.decode('unicode_escape')\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A15",
+        "A34"
+      ],
+      "reason": "The answer provides concrete implementations for both encoding and decoding functions, addressing the core request."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A15",
+        "A34"
+      ],
+      "reason": "The answer provides concrete implementations for both encoding and decoding functions, addressing the core request."
+    },
+    "donor_pair_id": "B27-0243"
+  },
+  {
+    "pair_id": "B27-0010",
+    "question_id": 18254180,
+    "answer_id": 18254622,
+    "stratum": "unchanged",
+    "title": "Income tax calculator and global var problems",
+    "question_text": "Complete beginner here. I've been trying to pick up programming in my spare time and don't really have any interactive resources to consult. I've tried my best to get a program working where I've tried to program an income tax calculator. I've pasted my program in its entirety. \n\n\n\nWhat I'm hoping to understand from this is why the tax_calc() function is not saving variable payable. I've created a test line \n\n\n\n[CODE]\nprint ('Test Tann:', tann,'Test Tmon', tmon,'Test tinc',tinc,'test payable',payable)\n\n[/CODE]\n\n\n\nin order to check the var values and the only one that doesn't update is payable. Is it a global var problem?\n\n\n\nI'd also really appreciate any other advice regarding my coding. It's my first program and I only really know how to use globals to change vars in this regard despite a lot of experienced users expressing that the global call is very unnecessary and messy or unpythonic. Also, whatever advice you have to shorten or make my code more efficient is really appreciated.  \n\n\n\n[CODE]\nfrom decimal import *\n\n#Hmm, looks like I have to define all vars and dicts before functions even if I only call functions after declaration? \ntinc = 0\ntann = 0\ntmon = 0\nage = 0\npayable = 0\n\n#Define calculation for specific tax brackets\nrates = {}\nrates['T1'] = 0.18 * tinc\nrates['T2'] = 29808 + (.25 * (tinc - 165600))\nrates['T3'] = 53096 + (.30 * (tinc - 258750))\nrates['T4'] = 82904 + (.35 * (tinc - 358110))\nrates['T5'] = 132894 + (.38 * (tinc - 500940))\nrates['T6'] = 185205 + (.40 * (tinc - 638600))\n\n#Defines the actual range for deciding on tax brackets\ntier = {}\ntier['T1'] = range(0,165600)\ntier['T2'] = range(165601,258750)\ntier['T3'] = range(258751,358110)\ntier['T4'] = range(358111,500940)\ntier['T5'] = range(500941,638600)\ntier['T6'] = range(638601, 5000000)\n\n#Defines the brackets for age variable \ntierage = {}\ntierage['T1'] = 12080\ntierage['T2'] = 12080 + 6750\ntierage['T3'] = 12080 + 6750 + 2250\n\n#Asks for whether you want to enter monthly or annual salary\ndef ask_choice():\n    print ('Would you like to input monthly or annual salary? Please select (m/a)')\n    global choice\n    choice = str(input('> '))\n\n#Asks for age\ndef ask_age():\n    global age\n    age = int(input(\"Please enter your age: \"))\n\n#Asks for annual salary, all inputs done in floats to allow for cents\ndef ask_annual():\n    global tann, tinc\n    tann = 0\n    tann = float(input(\"Please enter your annual taxable income: \"))\n    tinc = tann\n    print ('Your annual taxable income is',tinc)\n\n#Asks for monthly salary, all inputs done in floats to allow for cents\ndef ask_monthly():\n    global tmon, tinc\n    tmon = 0\n    tmon = float(input(\"Please enter your monthly taxable income: \"))\n    tinc = tmon*12\n    print ('Your annual taxable income is',tinc)\n\n#Decides on and calls on which function to ask for for asking salary\ndef asking():\n    global error\n    error = True\n#keeps looping until you enter Mm or Aa\n    while error == True:\n        if choice.lower() == \"m\":\n            ask_monthly()\n            error == False\n            break\n        elif choice.lower() == \"a\":\n            ask_annual()\n            error == False\n            break\n        else:\n            print (\"Input error, please input either 'a' to select annual or 'm' to select monthly\")\n            error == True\n            ask_choice()\n\n\ndef tax_calc():\n    global payable, decpayable, tinc\n    if tinc in tier['T1']:\n        payable = rates['T1']\n        print ('You fall in tax bracket 1')\n    elif tinc in tier['T2']:\n        payable = rates['T2']\n        print ('You fall in tax bracket 2')\n    elif tinc in tier['T3']:\n        payable = rates['T3']\n        print ('You fall in tax bracket 3')\n    elif tinc in tier['T4']:\n        payable = rates['T4']\n        print ('You fall in tax bracket 4')\n    elif tinc in tier['T5']:\n        payable = rates['T5']\n        print ('You fall in tax bracket 5')\n    elif tinc in tier['T6']:\n        payable = rates['T6']\n        print ('You fall in tax bracket 6')\n\n    decpayable = Decimal(payable).quantize(Decimal('0.01'))\n    #Decimal used specifically for money, defines two decimal places. \n    print ('Tax before rebates: R',decpayable)\n    print ('Test Tann:', tann,'Test Tmon', tmon,'Test tinc',tinc,'test payable',payable)\n\ndef age_calc():\n    global final\n    if age < 65:\n        final = payable - tierage['T1']\n        print('You qualify for a primary rebate')\n    elif 65 <= age < 75:\n        final = payable - tierage['T2']\n        print('You qualify for a primary and secondary rebate')\n    elif age >= 75:\n        final = payable - tierage['T3']\n        print('You qualify for a primary, secondary and tertiary rebate')\n\n    decfinal = Decimal(final).quantize(Decimal('.01'))\n    print ('Annual tax after rebates is: R'+str(decfinal))\n    print ('Monthly tax is: R', Decimal(final/12).quantize(Decimal('.01')))\n    print ('You net salary per month is therefore: ', (tinc/12 - payable),\n             'or',(tinc - payable*12),'per year')\n\ndef enter_another():\n    print (\"Would you like to calculate tax on another amount? (y/n) \")\n    yesno = input('> ')\n    if yesno.lower() == \"y\" or yesno.lower() == \"yes\":\n        print ('Alright, let\\'s start again\\n')\n        ask_choice()\n        asking()\n        ask_age()\n        tax_calc()\n        age_calc()\n        enter_another()\n    elif yesno.lower() == \"n\" or yesno.lower() == \"no\":\n        print ('Thank you for trying out this calculator')\n\n\nask_choice()\nasking()\nask_age()\ntax_calc()\nage_calc()\nenter_another()\n\ninput()\n\n[/CODE]",
+    "answer_text": "I think the global variables are causing you trouble.\nYou have this near the top\n\n\n\n[CODE]\ntinc = 0\n#...\nrates = {}\nrates['T1'] = 0.18 * tinc\nrates['T2'] = 29808 + (.25 * (tinc - 165600))\nrates['T3'] = 53096 + (.30 * (tinc - 258750))\nrates['T4'] = 82904 + (.35 * (tinc - 358110))\nrates['T5'] = 132894 + (.38 * (tinc - 500940))\nrates['T6'] = 185205 + (.40 * (tinc - 638600))\n\n[/CODE]\n\n\n\nThis will use a value of 0 for tinc to set up the rates. However, you have a function later where the user inputs the taxable income (in ask_monthly or ask_annual). You will need to change the rates you use depending on the value tinc takes.\n\n\n\nEDIT\n\n\n\nIf you change this into a function and return the dictionary, you can pass that to whichever functions use it\n\n\n\n[CODE]\ndef setup_rates(tinc):\n    rates = {}\n    rates['T1'] = 0.18 * tinc\n    rates['T2'] = 29808 + (.25 * (tinc - 165600))\n    rates['T3'] = 53096 + (.30 * (tinc - 258750))\n    rates['T4'] = 82904 + (.35 * (tinc - 358110))\n    rates['T5'] = 132894 + (.38 * (tinc - 500940))\n    rates['T6'] = 185205 + (.40 * (tinc - 638600))\n    return rates\n\n[/CODE]\n\n\n\nChange tax_calc to takes the rates:\n\n\n\n[CODE]\ndef tax_calc(rates):\n    #... as you were\n\n[/CODE]\n\n\n\nand then changes your \"main\" function to find it out:\n\n\n\n[CODE]\nasking()\nask_age()\nrates = setup_rates(tinc)\ntax_calc(rates)\n\n[/CODE]\n\n\n\nYou can probably gradually refactor the functions to return the variables that are currently global and use that in the next functions, removing the globals slowly.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A21",
+        "A48"
+      ],
+      "reason": "The answer directly addresses the issue with global variables and provides a concrete solution by suggesting to refactor the code to avoid using global variables. It includes a detailed explanation and code snippets to guide the user through the necessary changes."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A21",
+        "A48"
+      ],
+      "reason": "The answer directly addresses the issue with global variables and provides a concrete solution by suggesting to refactor the code to avoid using global variables. It includes a detailed explanation and code snippets to guide the user through the necessary changes."
+    },
+    "donor_pair_id": "B27-0076"
+  },
+  {
+    "pair_id": "B27-0075",
+    "question_id": 8146596,
+    "answer_id": 8146731,
+    "stratum": "unchanged",
+    "title": "How can I extract tweets from Twitter tagged with latitude and longitude in text file",
+    "question_text": "I want to extract tweets with latitude and longitude from Twitter in text file, using python\n\n\n\nFor example, I want to have the following in the extracted text file:\n\n\n\n[CODE]\n\n[50.4146912, -119.2066755]  6   2011-08-28 19:24:29 @NaomiAKlein @TheRealRoseanne \"BreakingNews: President Obama to deliver live statement on Hurricane Irene from Rose Garden - NBC News\"\n[38.896544300000002, -76.994223250000005]   6   2011-08-28 19:26:31 RT @ProducerMatthew: President Obama to deliver statement at 2pm PT / 5pm ET on Hurricane #Irene from the Rose Garden.\n[33.787082099999999, -118.1678924]  6   2011-08-28 19:38:06 Ps. As the joke in itself is what ones know for ones selves as ones do to you yourselves to Obama self, ones government to the police\n[43.108731089999999, -89.335464060000007]   6   2011-08-28 19:46:44 “@crewislife: US Federal debt increases by U.S Presidents: Reagan 186% Bush I 54% Clinton 41% Bush II 72% Obama 23% Source: CBO #wiunion\n[43.108731089999999, -89.335464060000007]   6   2011-08-28 19:47:40 RT @crewislife: US Federal debt increases by U.S Presidents: Reagan 186% Bush I 54% Clinton 41% Bush II 72% Obama 23% Source: CBO #wiunion\n\n[/CODE]",
+    "answer_text": "Here's a link to the docs for the Twitter REST API.\n\n\n\nAnd here are the basics to start pulling information down from Twitter:\n\n\n\n[CODE]\nimport urllib2, json, pprint\n\nu = urllib2.urlopen('http://search.twitter.com/search.json?q=obama&rpp=25')\nresultdict = json.load(u)\n\npprint.pprint(resultdict)\nfor tweet in resultdict['results']:\n    print tweet['text']\n\n[/CODE]\n\n\n\nNote, the long/lat isn't included explicitly.  Twitter converts the locations into \"placecodes\" which you will then need to reverse: https://dev.twitter.com/terms/geo-developer-guidelines\n\n\n\nThe rest is (as they say) left as an exercise for the reader :-)",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A10",
+        "A12",
+        "A13"
+      ],
+      "reason": "The answer provides a basic Python script to fetch tweets using the Twitter REST API, but it does not include functionality to extract latitude and longitude from the tweets."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A10",
+        "A12",
+        "A13"
+      ],
+      "reason": "The answer provides a basic Python script to fetch tweets using the Twitter REST API, but it does not specifically extract tweets with latitude and longitude. It also mentions that the location data is not directly available and needs to be reversed."
+    },
+    "donor_pair_id": "B27-0190"
+  },
+  {
+    "pair_id": "B27-0310",
+    "question_id": 26025761,
+    "answer_id": 26026658,
+    "stratum": "unchanged",
+    "title": "Python Threading - Prioritising Input Over Output",
+    "question_text": "I have a python program that sends a message over a network using sockets, which uses two threads, one to run the server, and one to run the client.\nHowever, if a message is received while the user has partially entered an input, the received message is printed between the halves of the input.\nWhile this makes no difference functionally, aesthetically it looks horrible. Is there any way I can make the message be output as if it was received before the user began typing?\n\n\n\nIn case my explanation wasn't clear, assuming the user entered \"hel\" before the message (\"Sup\") was received, and then \"lo\" after, this would be shown:\n\n\n\n[CODE]\nHelPartner Sent: Sup\nlo\n\n[/CODE]\n\n\n\nAny suggestions would be more than welcome.",
+    "answer_text": "I think you can do this with just readline.\n\n\n\nOf course that means it won't help on Windows. Or if you've done anything funky with sys.stdin, or you're reading directly from stdin instead of using functions like input, or you're not on a TTY, or you're running under an environment like IDLE that hooks input in its own way, etc. But assuming none of those is a deal-breaker, readline.get_line_buffer() may be what you want.\n\n\n\nIf you're looking to queue up output until the user finishes typing—basically the same thing the shell does with, e.g., job control messages—something like this:\n\n\n\n[CODE]\nimport readline\noutput_buffer = []\noutput_buffer_lock = threading.Lock()\n\n# Wherever you would normally print the output\nif readline.get_line_buffer():\n    with output_buffer_lock:\n        output_buffer.append(output)\nelse:\n    with output_buffer_lock:\n        print('\\n'.join(output_buffer + [output]))\n        output_buffer = []\n\n# Wherever you're reading the input\nline = input()\nwith output_buffer_lock:\n    print('\\n'.join(output_buffer + [output]))\n    output_buffer = []\n\n[/CODE]\n\n\n\nIf you instead want to interrupt the user's input, remember what they'd typed, show the output, and restart the input, that's a bit more complicated. The output thread will need some way to stash the current input buffer (readline.get_line_buffer), interrupt the input thread, clear the current input (printing '\\r' then a row of spaces and another '\\r' should do it in simple cases, but see below), print the output, start a newinputcall, and refill the buffer (readline.insert_textthen possiblyreadline.redisplay; note that you have to call this afterinputstarts but before it returns, so you probably want to useset_pre_input_hook` to do this).\n\n\n\nIf the input is happening on the main thread, a signal handler (which just raises a custom exception) is a great way to interrupt the input call. If not, it's a lot trickier.\n\n\n\nMeanwhile, readline supports multi-line input, and by default will wrap things onto multiple lines if the user types more than 80 (or $COLS) characters. In that case, there's really no way to erase the whole input from the high-level API that Python's readline module provides. Unless you want to write or find a lower-level wrapper with ctypes or a custom extension module, I can't see any way around this problem.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A9",
+        "A13"
+      ],
+      "reason": "The answer provides a detailed explanation and code snippet that addresses the central request of prioritizing input over output in a Python program using threads."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A19",
+        "A28"
+      ],
+      "reason": "The answer provides a detailed explanation and code snippet that addresses the central request of prioritizing input over output in a Python program using threads. It explains how to use readline.get_line_buffer() to manage output buffering and ensures that messages are printed after the user finishes typing."
+    },
+    "donor_pair_id": "B27-0050"
+  },
+  {
+    "pair_id": "B27-0381",
+    "question_id": 16970499,
+    "answer_id": 16978749,
+    "stratum": "unchanged",
+    "title": "Passing Structs in Ctypes",
+    "question_text": "I have been trying to pass a struct in Ctypes. But the function call is throwing a format error.\n\n\n\nThis is my C function:\n\n\n\n[CODE]\ntypedef struct Point2Struct {   \n    double x, y;\n    } Point2;\n\nPoint2 test(Point2 k)\n{\n  return k;\n}\n\n[/CODE]\n\n\n\nThe python call is as follows:\n\n\n\n[CODE]\nclass Point2(Structure):\n    _fields_ = [('x',c_double),('y',c_double)]\n\nlib.test.argtypes=[Point2]\nlib.test.restype=Point2\np = Point2(1.1, 2.2)\n\ng = lib.test(p)\n\nprint g.x, g.y\n\n[/CODE]\n\n\n\nWhen I call the function through CDLL, I get:\n\n\n\n[CODE]\nValueError: Procedure called with not enough arguments (4 bytes missing) or wrong calling convention\n\n[/CODE]\n\n\n\nwith WinDLL, I get:\n\n\n\n[CODE]\nValueError: Procedure probably called with too many arguments (16 bytes in excess)\n\n[/CODE]\n\n\n\nI compiled the C code into a DLL using (Mingw) gcc under Windows 7. \n\n\n\n[CODE]\n gcc -shared -o test.dll test.o\n\n[/CODE]\n\n\n\nI also tried using a .so file with:\n\n\n\n[CODE]\ngcc -shared -Wl,-soname,test-o test.so -fPIC test.c\n\n[/CODE]\n\n\n\nBut I get the same errors. \n\n\n\nWhat am I doing wrong ? Should I compile with any specific option ?",
+    "answer_text": "To handle aggregate returns larger than 8 bytes, both MinGW and Microsoft's compiler implicitly pass a pointer to local memory in the caller. It looks like your version of gcc defaults to popping this pointer in the callee. However, ctypes/libffi was built with Visual Studio and expects Microsoft's convention, which handles this in the caller. That's why it complains about missing 4 bytes.\n\n\n\nIf you're using gcc 4.6+, there's a function attribute to enable Microsoft's convention:\n\n\n\n  \ncallee_pop_aggregate_return (number)\n\n  \n  \nOn 32-bit i?86-- targets, you can control by those attribute for aggregate return in memory, if the caller is responsible to pop the hidden pointer together with the rest of the arguments - number equal to zero -, or if the callee is responsible to pop hidden pointer - number equal to one. The default i386 ABI assumes that the callee pops the stack for hidden pointer.\n\n\n\n\nIt seems gcc 4.7 uses the Microsoft convention as the default for Windows targets:\n\n\n\n  \nNote, that on 32-bit i386 Windows targets the compiler assumes that the caller pops the stack for hidden pointer. \n\n\n\n\nWith my test using gcc 4.6.3 on Windows, it still used the \"default i386 ABI\". Setting the function attribute solved the problem:\n\n\n\n[CODE]\nPoint2 test(Point2 k)\n    __attribute__((callee_pop_aggregate_return(0)));\n\n[/CODE]\n\n\n\nYour mileage may vary, of course. Better still, if you're in control of the spec I think it's simpler to just use an explicit output parameter passed by reference.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A33"
+      ],
+      "reason": "The answer provides a clear explanation of the issue and offers a concrete solution by suggesting the use of the `callee_pop_aggregate_return` attribute in the C function."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A33"
+      ],
+      "reason": "The answer provides a detailed explanation of the issue related to aggregate return conventions and offers a concrete solution using a function attribute in GCC."
+    },
+    "donor_pair_id": "B27-0162"
+  },
+  {
+    "pair_id": "B27-0210",
+    "question_id": 6590757,
+    "answer_id": 6590877,
+    "stratum": "unchanged",
+    "title": "Command-line interface design with base options and subcommands",
+    "question_text": "I'm trying to develop a command line interface for a tool I'm writing. I'm tossing up between an interface similar to Fabric's fab tool and one like svn's command line tool.\n\n\n\nfab's usage message:\n\n\n\n[CODE]\nUsage: fab [options] <command>[:arg1,arg2=val2,host=foo,hosts='h1;h2',...] ...\n\n[/CODE]\n\n\n\nsvn's usage message:\n\n\n\n[CODE]\nusage: svn <subcommand> [options] [args]\n\n[/CODE]\n\n\n\nNote that svn also supports two options --version and --quiet (at least the one I'm using).\n\n\n\nMy questions are:\n\n\n\n\nIs fab's cli (with multiple commands, each of which can have arguments) design common among command-line tools? To me, the svn tool's cli seems more commonly used (not sure though).\n\n\nWould it be straightforward implementing fab's cli using plac(or argparse)?\n\n\nIf I do decide to go with svn's cli, can be this be implemented using plac? I like plac, though I haven't been able to figure out how to add options to the tool directly, instead of the subcommands. It can definitely be implemented using argparse.\n\n\n\n\nP.S.: The only reason fab's cli appeals to me is that one can accomplish multiple tasks in one step, however ease of implementation is my main concern",
+    "answer_text": "subversion's way is more standard.\n\n\nProbably not.\n\n\nYou can cut butter with a hand axe.\n\n\n\n\nIf you want to simplify documentation and usage, go with SVN's way. I can see why fab's way seems appealing, it's logical for a programmer. But it's actually complicated and messed up for users.\n\n\n\nPlac looks cool, but you need to install it. Your users too.\n\n\n\nI like to follow a simple rule when it comes to software engineering:\nKeep it simple and standard, use bleeding edge technologies when you really need it.\nRetro-compatibility should be achieved when possible.\n\n\n\nHowever, you're just fooling around and don't plan on distributing your work, then go on, flab's way and using flac ;).",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A12",
+        "A21"
+      ],
+      "reason": "The answer provides some insights into CLI design choices but lacks concrete guidance on implementing either design using plac or argparse."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1",
+        "A12",
+        "A26"
+      ],
+      "reason": "The answer addresses the central request by comparing the two CLI designs and providing some insights. However, it lacks concrete steps or code examples for implementing either design using plac or argparse."
+    },
+    "donor_pair_id": "B27-0015"
+  },
+  {
+    "pair_id": "B27-0056",
+    "question_id": 30190033,
+    "answer_id": 30191098,
+    "stratum": "unchanged",
+    "title": "Python suds_passworddigest module : \"AttributeError: 'module' object has no attribute 'UsernameDigestToken'\"",
+    "question_text": "I have following python code : \n\n\n\n[CODE]\n    import suds\n    import os\n    import suds_passworddigest\n\n    SERVER_URL = 'http://<address>/onvif/device_service'\n    WSDL_URL='file:' + os.getcwd() + '/wsdl/devicemgmt.wsdl'\n    cli=suds.client.Client(WSDL_URL)\n    cli.set_options(location=SERVER_URL)\n    security =  suds.wsse.Security()\n    token = suds_passworddigest.UsernameDigestToken('usr', 'password')  \n    #token.setnonce(token.setonce()) # token.setonce() didn't work for me\n\n    security.tokens.append(token)\n    cli.set_options(wsse=security)\n\n    list_of_methods = [method for method in cli.wsdl.services[0].ports[0].methods]  \n    print list_of_methods\n    res=cli.service.GetDNS()\n    print res\n\n[/CODE]\n\n\n\nit gives the \n\n\n\n  \nAttributeError: 'module' object has no attribute 'UsernameDigestToken'\n\n\n\n\ni checked my imports and look at the source code of suds-passworddigest it has attribute UsernameDigestToken so why i am getting this error.",
+    "answer_text": "Change your code as below. UsernameDigestToken is an attribute of token.py\n\n\n\n[CODE]\nfrom suds_passworddigest.token import UsernameDigestToken\n...\n...\n...\ntoken = UsernameDigestToken('usr', 'password')\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A10"
+      ],
+      "reason": "The answer directly addresses the issue by providing a corrected import statement and showing how to use the UsernameDigestToken class."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A10"
+      ],
+      "reason": "The answer directly addresses the AttributeError by providing a corrected import statement and showing how to use the UsernameDigestToken class. It offers concrete steps and code that resolve the issue."
+    },
+    "donor_pair_id": "B27-0054"
+  },
+  {
+    "pair_id": "B27-0040",
+    "question_id": 31348737,
+    "answer_id": 31358325,
+    "stratum": "unchanged",
+    "title": "How to plot kernel density plot of dates in Pandas?",
+    "question_text": "I have a pandas dataframe where each observation has a date (as a column of entries in datetime[64] format). These dates are spread over a period of about 5 years. I would like to plot a kernel-density plot of the dates of all the observations, with the years labelled on the x-axis. \n\n\n\nI have figured out how to create a time-delta relative to some reference date and then create a density plot of the number of hours/days/years between each observation and the reference date:\n\n\n\n[CODE]\ndf['relativeDate'].astype('timedelta64[D]').plot(kind='kde')\n\n[/CODE]\n\n\n\nBut this isn't exactly what I want: If I convert to year-deltas, then the x-axis is right but I lose the within-year variation. But if I take a smaller unit of time like hour or day, the x-axis labels are much harder to interpret.\n\n\n\nWhat's the simplest way to make this work in Pandas?",
+    "answer_text": "I imagine there is some better and automatic way to do this, but if not then this ought to be a decent workaround.  First, let's set up some sample data:\n\n\n\n[CODE]\nnp.random.seed(479)\nstart_date = '2011-1-1'\ndf = pd.DataFrame({ 'date':np.random.choice( \n                    pd.date_range(start_date, periods=365*5, freq='D'), 50) })\n\ndf['rel'] = df['date'] - pd.to_datetime(start_date)\ndf.rel = df.rel.astype('timedelta64[D]')\n\n        date   rel\n0 2014-06-06  1252\n1 2011-10-26   298\n2 2013-08-24   966\n3 2014-09-25  1363\n4 2011-12-23   356\n\n[/CODE]\n\n\n\nAs you can see, 'rel' is just the number of days since the starting day.  It's essentially an integer, so all you really need to do is normalize it with respect to the starting date.\n\n\n\n[CODE]\ndf['year_as_float'] = pd.to_datetime(start_date).year + df.rel / 365.\n\n        date   rel  year_as_float\n0 2014-06-06  1252    2014.430137\n1 2011-10-26   298    2011.816438\n2 2013-08-24   966    2013.646575\n3 2014-09-25  1363    2014.734247\n4 2011-12-23   356    2011.975342\n\n[/CODE]\n\n\n\nYou'd need to adjust that slightly for a date not starting on Jan 1.  That's also ignoring any leap years which really isn't a practical issue if you're just producing a KDE plot over 5 years, but it could matter depending on what else you might want to do.\n\n\n\nHere's the plot\n\n\n\n[CODE]\ndf['year_as_float']d.plot(kind='kde')\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A30",
+        "A52"
+      ],
+      "reason": "The answer provides a clear and actionable solution by normalizing the dates into a float representation of years and then plotting the KDE. The code is directly applicable and addresses the core request."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A30",
+        "A52"
+      ],
+      "reason": "The answer provides a clear and actionable solution by converting dates to a float representation of years and plotting the KDE. The code is directly applicable and addresses the core request."
+    },
+    "donor_pair_id": "B27-0033"
+  },
+  {
+    "pair_id": "B27-0183",
+    "question_id": 23305971,
+    "answer_id": 23365877,
+    "stratum": "unchanged",
+    "title": "Adding parameters to cpdef func definition in derived cython class",
+    "question_text": "I'm trying to change the method signature of a cpdef method in a derived class but keep getting errors.\n\n\n\nIn *.pxd:\n\n\n\n[CODE]\nfrom libc.stdint cimport uint64_t\n\ncdef struct _ft_device_list_info_node_os:\n        uint64_t ftHandle\nctypedef _ft_device_list_info_node_os FT_DEVICE_LIST_INFO_NODE_OS\n\ncdef class BaseClass(object):\n    cpdef object do_something(BaseClass self)\n\ncdef class DerivedClass(BaseClass):\n    cdef FT_DEVICE_LIST_INFO_NODE_OS cheese\n\n[/CODE]\n\n\n\nIn *.pyx:\n\n\n\n[CODE]\ncdef class BaseClass(object):\n\n    cpdef object do_something(BaseClass self):\n        pass\n\ncdef class DerivedClass(BaseClass):\n\n    cpdef object do_something(DerivedClass self, int val=10):\n        cdef FT_DEVICE_LIST_INFO_NODE_OS node\n        self.cheese = node\n\n[/CODE]\n\n\n\nWhen compiling I get the following error:\n\n\n\n[CODE]\ncythoning test.pyx to pybarst\\test.cpp\n\nError compiling Cython file:\n------------------------------------------------------------\n...\n\ncdef class DerivedClass(BaseClass):\n\n    cpdef object do_something(DerivedClass self, int val=10):\n        cdef FT_DEVICE_LIST_INFO_NODE_OS node\n        self.cheese = node\n                         ^\n------------------------------------------------------------\n\ntest.pyx:10:26: Cannot convert 'FT_DEVICE_LIST_INFO_NODE_OS' to Python object\n\n[/CODE]\n\n\n\nThis error doesn't seem to happen if the struct is defined with only ints or simpler data types, i.e. if I do int ftHandle the error does not occur.\n\n\n\nIt seems that it gets confused in the derived class's do_something method, where it thinks that it is the base class and therefore cannot find cheese.\n\n\n\nIs there maybe a proper way of adding parameters in a derived class.",
+    "answer_text": "Turns out it was a bug that they fixed with this. See here.",
+    "prior_control": {
+      "relevance": 0,
+      "actionability": 0,
+      "sufficiency": 0,
+      "overall": "unhelpful",
+      "evidence_ids": [],
+      "reason": "The answer merely states that it was a bug that was fixed without providing any details or a link to the fix."
+    },
+    "prior_no_examples": {
+      "relevance": 0,
+      "actionability": 0,
+      "sufficiency": 0,
+      "overall": "unhelpful",
+      "evidence_ids": [],
+      "reason": "The answer does not provide any relevant information or solution to the problem described in the question."
+    },
+    "donor_pair_id": "B27-0052"
+  },
+  {
+    "pair_id": "B27-0263",
+    "question_id": 33240687,
+    "answer_id": 33240947,
+    "stratum": "unchanged",
+    "title": "Python: Indentation Error in simple code",
+    "question_text": "I typed in the following code \n\n\n\n[CODE]\ndef root():\n    x = int(raw_input(\"Enter a number:\\n\"))\n    y = int(raw_input(\"Enter the power which you want:\\n\"))\n    return x^y\nprint \"Hey, we are learning python!\"\nprint \"Let's learn about functions!\"\nprint \"The result is:\", root()\n\n[/CODE]\n\n\n\nI get the following error:\n\n\n\n[CODE]\ny = int(raw_input(\"Enter the power you want\\n:\"))\n^\nIndentation Error: unexpected indent\n\n[/CODE]",
+    "answer_text": "You should use the same indentation throughout your code.\nIf you start with 4 spaces, use 4 spaces everywhere.\nIf you start with tabs, continue with tabs etc.\n\n\n\nFor that reason, also be careful when copying code for a file with different indentations.\n\n\n\nSome text editors  (i.e. Sublime) or IDEs can convert your whole file to the same indentation to avoid such errors.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "reason": "The answer directly addresses the indentation error by explaining the importance of consistent indentation and providing specific guidance on using spaces or tabs consistently."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "reason": "The answer directly addresses the indentation error by explaining the importance of consistent indentation and providing specific guidance on using spaces or tabs consistently. It also offers practical advice on avoiding such errors in the future."
+    },
+    "donor_pair_id": "B27-0202"
+  },
+  {
+    "pair_id": "B27-0104",
+    "question_id": 38771317,
+    "answer_id": 38772857,
+    "stratum": "unchanged",
+    "title": "Creating a 2D array from Nested Dictionaries",
+    "question_text": "I am a student working with python dictionaries for the first time and I'm getting stuck on resorting them in to matrix arrays.\n\n\n\nI have a nested ordered dictionary describing the temperature and humidity week by week.\n\n\n\n[CODE]\nweather = OrderedDict([(92, OrderedDict([('Mon', 79), ('Tues', 85), \n          ('Weds', 87), ('Thurs', 83)])), \n          (96, OrderedDict([('Mon', 65), ('Tues', 71), \n          ('Weds', 74), ('Thurs', 68)])), \n          (91, OrderedDict([('Mon', 83), ('Tues', 84), \n          ('Weds', 82), ('Thurs', 80)]))])\n\n[/CODE]\n\n\n\nThe overall key for each week indicates average humidity, and the individual values for each day are temperature.\n\n\n\nI am trying to create a single figure plot in matplotlib of lines of temperature vs. day that will use humidity as a third variable to indicate the color from a colorbar. It seems that LineCollection will do this with a 2D array of day and temperature. But when I try to pull out the 2D array from the nested dictionary, I cannot seem to get it into the necessary Nx2 shape for LineCollection.\n\n\n\nAny help is greatly appreciated!\n\n\n\nHere's the code I have so far:\n\n\n\n[CODE]\nplt.figure()\nx=[]\ny=[]\nz=[]\nticks=[]\nfor humidity, data_dict in weather.iteritems():\n    x.append(range(len(data_dict)))\n    y.append(data_dict.values())\n    z.append(humidity)\n    ticks.append(data_dict.keys())\nfor ii in x,y,z:\n    ii = np.array(ii)\nlines=np.array(zip(x,y))\nprint lines.shape\n\n[/CODE]\n\n\n\nAnd this returns that the shape is (3, 2, 4) instead of (3, 2)\n\n\n\nEDIT:\nI'm hoping for lines in an output that looks like this, so numpy can recognize it as a 3x2 2D-array:\n\n\n\n[CODE]\n [[(0 1 2 3), (79 85 87 83)],\n  [(0 1 2 3), (65 71 74 68)],\n  [(0 1 2 3), (83 84 82 80)]]\n\n[/CODE]",
+    "answer_text": "If you want a 2D array you need to be concatenating your ranges with x and y rather than appending. The reason you're not getting the output you want is x.append(list) inserts the list as an element of x--this means you have\n\n\n\n[CODE]\n[[0, 1, 2, 3], [0, 1, 2, 3],...] \n\n[/CODE]\n\n\n\nwhen it seems you want\n\n\n\n[CODE]\n[0,1,2,3,0,...]\n\n[/CODE]\n\n\n\nModifying your for loop like so should produce a (12, 2) array of days and temperatures:\n\n\n\n[CODE]\nfor humidity, data_dict in weather.iteritems():\n    x = x + range(len(data_dict))\n    y = y + (data_dict.values())\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A23",
+        "A27",
+        "A28"
+      ],
+      "reason": "The answer provides a clear explanation and a concrete code modification to achieve the desired 2D array shape."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A23",
+        "A27",
+        "A28"
+      ],
+      "reason": "The answer directly addresses the core request by providing a concrete solution to reshape the data into a 2D array suitable for LineCollection. It includes a clear explanation and a code snippet that modifies the for loop to concatenate the ranges and values correctly."
+    },
+    "donor_pair_id": "B27-0160"
+  },
+  {
+    "pair_id": "B27-0091",
+    "question_id": 17541426,
+    "answer_id": 17541502,
+    "stratum": "unchanged",
+    "title": "Python regular expression: about getting text",
+    "question_text": "i'm trying to make a teleport module for a game but first i have to get coordinates from ListBoxEx\n\n\n\n[CODE]\nself.Gui[3].AppendItem(Item(str(chr.GetNameByVID(i)) + \"    \" + str(nonplayer.GetLevelByVID(i)) + \"    \" + \"%d, %d\" % (mobX/100, mobY/100)))\n\n[/CODE]\n\n\n\nhttp://i.stack.imgur.com/MX8aV.jpg\n\n\n\ni tried this\n\n\n\n[CODE]\nmob_x, mob_y = re.findall(r\"\\(([0-9]+), ([0-9]+)\\)\", item_index.GetText())[0]\n\n[/CODE]\n\n\n\nresult: Index error \n\n\n\n[CODE]\n    def Teleport(self):\n    item_index = self.Gui[3].GetSelectedItem() \n    if not item_index: \n        chat.AppendChat(chat.CHAT_TYPE_INFO, \"Kein Item ausgewählt!\") \n        return \n    mob_x, mob_y = re.findall(r\"\\(([0-9]+), ([0-9]+)\\)\", item_index.GetText())[0]  \n\n    chr.SetPixelPosition(mob_x, mob_y)\n\n[/CODE]",
+    "answer_text": "According to the screenshot your text is something like \"108, 109\" but reqular expression is parsing \"(108, 109)\". Use:\n\n\n\n[CODE]\nmob_x, mob_y = re.findall(r\"([0-9]+), ([0-9]+)\", item_index.GetText())[0]\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6"
+      ],
+      "reason": "The answer correctly identifies the issue with the regular expression and provides a corrected version that should resolve the problem."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6"
+      ],
+      "reason": "The answer directly addresses the issue by correcting the regular expression to match the actual text format. It provides a concrete step with code that should resolve the IndexError."
+    },
+    "donor_pair_id": "B27-0338"
+  },
+  {
+    "pair_id": "B27-0089",
+    "question_id": 17622373,
+    "answer_id": 17622426,
+    "stratum": "unchanged",
+    "title": "How to check if an xml node has children in python with minidom?",
+    "question_text": "How to check if an xml node has children in python with minidom?\n\n\n\nI'm writing an recursive function to remove all attributes in an xml file and I need to check if an node has child nodes before calling the same function again.\n\n\n\nWhat I've tried:\nI tried to use node.childNodes.length, but didn't have much luck. Any other suggestions?\n\n\n\nThanks\n\n\n\nMy Code:\n\n\n\n[CODE]\n    def removeAllAttributes(dom):\n        for node in dom.childNodes:\n            if node.attributes:\n                for key in node.attributes.keys():\n                    node.removeAttribute(key)\n            if node.childNodes.length > 1:\n                node = removeAllAttributes(dom)\n        return dom\n\n[/CODE]\n\n\n\nError code:\nRuntimeError: maximum recursion depth exceeded",
+    "answer_text": "You could try hasChildNodes() - although if inspecting the childNodes attribute directly isn't working you may have other problems.\n\n\n\nOn a guess, your processing is being thrown off because your element has no element children, but does have text children or something.  You can check for that this way:\n\n\n\n[CODE]\ndef removeAllAttributes(element):\n    for attribute_name in element.attributes.keys():\n        element.removeAttribute(attribute_name)\n    for child_node in element.childNodes:\n        if child_node.nodeType == xml.dom.minidom.ELEMENT_NODE:\n            removeAllAttributes(child_node)           \n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A14",
+        "A15"
+      ],
+      "reason": "The answer provides a relevant method (hasChildNodes()) and a concrete implementation that checks for element nodes before recursing, addressing the core request."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A14",
+        "A15"
+      ],
+      "reason": "The answer provides a direct solution using `hasChildNodes()` and a corrected recursive function that checks node types, addressing the core request."
+    },
+    "donor_pair_id": "B27-0012"
+  },
+  {
+    "pair_id": "B27-0051",
+    "question_id": 18129041,
+    "answer_id": 18129070,
+    "stratum": "unchanged",
+    "title": "Python - regex search for string which starts and ends with the given text",
+    "question_text": "I have a list of files, and I want to keep only the ones which start with 'test_' and end with '.py'.  I want the regex to only return the text inside the 'test_' and '.py'.  I do not want .pyc files included.\n\n\n\nI have tried:\n\n\n\n[CODE]\n>>>filename = 'test_foo.py'\n>>>re.search(r'(?<=test_).+(?=\\.py)', filename).group()\nfoo.py\n\n[/CODE]\n\n\n\nbut it still returns the extension, and will allow '.pyc' extensions (which I do not want).  I'm pretty sure it's the '+' which is consuming the whole string.\n\n\n\nThis works as a fallback, but I would prefer a regex solution:\n\n\n\n[CODE]\n>>>filename = 'test_foo.py'\n>>>result = filename.startswith('test_') and filename.endswith('.py')\n>>>result = result.replace('test_', '').replace('.py', '')\n>>>print result\nfoo\n\n[/CODE]",
+    "answer_text": "The problem is that your pattern matches any string that comes after by test_ and before .py, but that doesn't restrict it from having other characters before the test_ or after the .py.\n\n\n\nYou need to use start (^) and end ($) anchors. Also, don't forget to escape the . character. Try this pattern:\n\n\n\n[CODE]\n(?<=^test_).+(?=\\.py$)\n\n[/CODE]",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A5",
+        "A10"
+      ],
+      "reason": "The answer provides a correct regex pattern that addresses the user's request, ensuring the string starts with 'test_' and ends with '.py', excluding '.pyc' files."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A5",
+        "A10"
+      ],
+      "reason": "The answer provides a correct regex pattern that addresses the user's request, ensuring the string starts with 'test_' and ends with '.py', excluding '.pyc' files."
+    },
+    "donor_pair_id": "B27-0211"
+  },
+  {
+    "pair_id": "B27-0070",
+    "question_id": 16729486,
+    "answer_id": 16928743,
+    "stratum": "unchanged",
+    "title": "Python: ImportError: No module named logging",
+    "question_text": "I am trying to import logging in Monkeyrunner environment but it always respond \"ImportError: No module named logging\" ?",
+    "answer_text": "Check your version of Android SDK Tools. If it is Rev. 22.0, then there is a known issue with monkey dependencies, which has a fix in Rev. 22.0.1.  \n\n\n\nSimilar question: Trying to run simple monkeyrunner python script, 'importerror no module named os'\n\n\n\nSee also:\n\n - monkeyrunner: ImportError: No module named re",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer provides a potential solution related to the Android SDK Tools version, which could be relevant to the issue. However, it does not directly address the 'logging' module import error in the Monkeyrunner environment."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer provides a potential solution related to the Android SDK Tools version, which could be relevant. However, it does not directly address the 'logging' module issue or provide concrete steps to resolve it."
+    },
+    "donor_pair_id": "B27-0108"
+  },
+  {
+    "pair_id": "B27-0021",
+    "question_id": 31603657,
+    "answer_id": 31608453,
+    "stratum": "unchanged",
+    "title": "How to get scipy.stats.chisquare to function properly",
+    "question_text": "I have 2 input files of identical size/shape, however the data they contain has a different resolution and I am looking to perform a chi squared test on them.\n\n\n\nThe input files are 500 lines long and contain 4 columns delineated by spaces, I am trying to test the second column of each input file against the other.\n\n\n\nMy code is as follows:\n\n\n\n[CODE]\n# Import statements\n\nC = pl.loadtxt(\"input_1.txt\")\nD = pl.loadtxt(\"input_2.txt\")\n\ncol2_C = C[:,1]\ncol2_D = D[:,1]\n\nf_obs = np.array([col2_C])\nf_exp = np.array([col2_D])\n\nchisquare(f_obs, f_exp)\n\n[/CODE]\n\n\n\nThis gives me an error saying:\n\n\n\n[CODE]\nValueError: df <= 0\n\n[/CODE]\n\n\n\nI don't even understand what it is complaining about here.\n\n\n\nI have tried several other syntaxes within the script, each of which also resulted in various errors:\n\n\n\nThis one was found here.\n\n\n\n[CODE]\nchisquare = f_obs=[col2_C], f_exp=[col2_D])\n\nTypeError: chisquare() takes at least one positional argument\n\n[/CODE]\n\n\n\nThen I tried\n\n\n\n[CODE]\nchisquare = f_obs(col2_C), F_exp=[col2_D)\n\nNameError: name 'f_obs' is not defined\n\n[/CODE]\n\n\n\nI also tried several other syntactical tweaks but nothing to any avail. If anybody could please help me get this running I would appreciate it greatly.\n\n\n\nThanks in advance.",
+    "answer_text": "First, be sure you are importing chisquare from scipy.stats.  Numpy has the function numpy.random.chisquare, but that does not do a statistical test.  It generates samples from a chi-square probability distribution.\n\n\n\nSo be sure you use:\n\n\n\n[CODE]\nfrom scipy.stats import chisquare\n\n[/CODE]\n\n\n\nThere is a second problem.\nAs slices of the two-dimensional array returned by loadtxt, col2_C and col2_D are one-dimensional numpy arrays, so there is no need to use, for example, np.array([col2_C]) when you pass these to chisquare.  Just use col2_C and col2_D directly:\n\n\n\n[CODE]\nchisquare(col2_C, col2_D)\n\n[/CODE]\n\n\n\nWrapping the arrays with np.array like you did is causing the problem.  chisquare accepts multidimensional arrays and an axis argument.  When you do f_exp = np.array([col2_C]) (with the extra square brackets), f_exp is actually a two-dimensional array, with shape (1, 500).  Similarly f_obs has shape (1, 500).  The default axis argument of chisquare is 0.  So when you called chisquare(f_obs, f_exp), you were asking chisquare to perform 500 chi-square tests, with each test having a single observed and expected value.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A17",
+        "A22"
+      ],
+      "reason": "The answer correctly identifies the need to import chisquare from scipy.stats and explains the issue with wrapping the arrays with np.array. It provides a clear, actionable solution."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A17",
+        "A22"
+      ],
+      "reason": "The answer correctly identifies the need to import chisquare from scipy.stats and explains the issue with wrapping the arrays with np.array. It provides a clear solution by showing how to call chisquare directly with col2_C and col2_D."
+    },
+    "donor_pair_id": "B27-0101"
+  },
+  {
+    "pair_id": "B27-0231",
+    "question_id": 2964540,
+    "answer_id": 2964544,
+    "stratum": "unchanged",
+    "title": "Is there an OR filter? - Django",
+    "question_text": "is there any way of doing the following\n\n\n\n[CODE]\nUnicorn.objects.or_filter(magical=True).or_filter(unicorn_length=15).or_filter(skin_color='White').or_filter(skin_color='Blue')\n\n[/CODE]\n\n\n\nwhere or_filter stands for an isolated match\n\n\n\n\n\nI remember using something similar but cannot find the function anymore!\n\n\n\nHelp would be great! Thanks :)",
+    "answer_text": "You're looking for Q objects.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer suggests using Q objects, which is partly relevant and actionable, but does not provide a complete solution or sufficient details."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 1,
+      "sufficiency": 1,
+      "overall": "partial",
+      "evidence_ids": [
+        "A1"
+      ],
+      "reason": "The answer suggests using Q objects, which is relevant to the question. However, it does not provide concrete steps or code to implement the OR filter in Django."
+    },
+    "donor_pair_id": "B27-0333"
+  },
+  {
+    "pair_id": "B27-0229",
+    "question_id": 10982417,
+    "answer_id": 10982547,
+    "stratum": "unchanged",
+    "title": "Capturing http status codes with scrapy spider",
+    "question_text": "I am new to scrapy. I am writing a spider designed to check a long list of urls for the server status codes and, where appropriate, what URLs they are redirected to. Importantly, if there is a chain of redirects, I need to know the status code and url at each jump. I am using  response.meta['redirect_urls'] to capture the urls, but am unsure how to capture the status codes - there doesn't seem to be a response meta key for it. \n\n\n\nI realise I may need to write some custom middlewear to expose these values but am not quite clear how to log the status codes for every hop, nor how to access these values from the spider. I've had a look but can't find an example of anyone doing this. If anyone can point me in the right direction it would be much appreciated.\n\n\n\nFor example, \n\n\n\n[CODE]\n    items = []\n    item = RedirectItem()\n    item['url'] = response.url\n    item['redirected_urls'] = response.meta['redirect_urls']     \n    item['status_codes'] = #????\n    items.append(item)\n\n[/CODE]\n\n\n\nEdit - Based on feedback from warawauk and some really proactive help from the guys on the IRC channel (freenode #scrappy) I've managed to do this. I believe it's a little hacky so any comments for improvement welcome:\n\n\n\n(1) Disable the default middleware in the settings, and add your own:\n\n\n\n\n[CODE]\nDOWNLOADER_MIDDLEWARES = {\n    'scrapy.contrib.downloadermiddleware.redirect.RedirectMiddleware': None,\n    'myproject.middlewares.CustomRedirectMiddleware': 100,\n}\n\n[/CODE]\n\n\n\n(2) Create your CustomRedirectMiddleware in your middlewares.py. It inherits from the main redirectmiddleware class and captures the redirect:\n\n\n\n[CODE]\nclass CustomRedirectMiddleware(RedirectMiddleware):\n    \"\"\"Handle redirection of requests based on response status and meta-refresh html tag\"\"\"\n\n    def process_response(self, request, response, spider):\n        #Get the redirect status codes\n        request.meta.setdefault('redirect_status', []).append(response.status)\n        if 'dont_redirect' in request.meta:\n            return response\n        if request.method.upper() == 'HEAD':\n            if response.status in [301, 302, 303, 307] and 'Location' in response.headers:\n                redirected_url = urljoin(request.url, response.headers['location'])\n                redirected = request.replace(url=redirected_url)\n\n                return self._redirect(redirected, request, spider, response.status)\n            else:\n                return response\n\n        if response.status in [302, 303] and 'Location' in response.headers:\n            redirected_url = urljoin(request.url, response.headers['location'])\n            redirected = self._redirect_request_using_get(request, redirected_url)\n            return self._redirect(redirected, request, spider, response.status)\n\n        if response.status in [301, 307] and 'Location' in response.headers:\n            redirected_url = urljoin(request.url, response.headers['location'])\n            redirected = request.replace(url=redirected_url)\n            return self._redirect(redirected, request, spider, response.status)\n\n        if isinstance(response, HtmlResponse):\n            interval, url = get_meta_refresh(response)\n            if url and interval < self.max_metarefresh_delay:\n                redirected = self._redirect_request_using_get(request, url)\n                return self._redirect(redirected, request, spider, 'meta refresh')\n\n\n        return response\n\n[/CODE]\n\n\n\n(3) You can now access the list of redirects in your spider with\n\n\n\n[CODE]\nrequest.meta['redirect_status']\n\n[/CODE]",
+    "answer_text": "I believe that's available as\n\n\n\n[CODE]\nresponse.status\n\n[/CODE]\n\n\n\nSee http://doc.scrapy.org/en/0.14/topics/request-response.html#scrapy.http.Response",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A6"
+      ],
+      "reason": "The answer directly addresses the question by providing the correct way to capture status codes using `response.status`."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A6"
+      ],
+      "reason": "The answer directly addresses the question by providing the correct way to capture HTTP status codes using `response.status`. It also includes code snippets that demonstrate how to implement a custom middleware to track redirects and their status codes."
+    },
+    "donor_pair_id": "B27-0138"
+  },
+  {
+    "pair_id": "B27-0124",
+    "question_id": 32974976,
+    "answer_id": 32995233,
+    "stratum": "unchanged",
+    "title": "imdbpy: do not get full writer list from get_movie['writer']",
+    "question_text": "Checking for the series Firefly http://www.imdb.com/title/tt0303461/.\nGiven the code:\n\n\n\n[CODE]\nfrom imdb import IMDb\nparser = IMDb()\nparsed = parser.get_movie('0303461')\nlist_writers = parsed['writer']\n\n[/CODE]\n\n\n\nThe list parsed['writer'] appears to ignore any writers with less than two episode to their name. \nCalling:\n\n\n\n[CODE]\nparser.update(parsed,'writer')\n\n[/CODE]\n\n\n\nResults in the error:\n\n\n\n  \n2015-10-06 12:24:05,877 ERROR [imdbpy] /usr/local/lib/python2.7/dist-packages/imdb/init.py:768: unknown information set \"writer\"\n\n\n\n\nIs this correct functionality, and the full list can only be obtained through the sql database? Or am I doing something wrong?\n\n\n\nResponding to the @davide-alberani's commend comment below:\n\n\n\nI agree that the fetch was unnecessary, however with or without it, it does not get the entire record that can be seen from imdb itself. Running parsed.get('writer'), I get the following name list: \n    [\"Whedon, Joss\", \"Minear, Tim\", \"Edlund, Ben\", \"Molina, Jose\"] \n\n\n\nThe series writing credits here, show the following additional writers: \n\n\n\n\nCheryl Cain   ... (1 episode, 2002) \n\n\nJane Espenson ... (1 episode, 2002) \n\n\nDrew Z. Greenberg ... (1 episode, 2002) \n\n\nBrett Matthews    ... (1 episode, 2003)",
+    "answer_text": "There is no need to fetch that information, since it's already present in the main data of a movie.\n\n\n\nSo, in your case, you can access: parsed.get('writer') to get a list of writers (verified working with the repository version).\n\n\n\nIf you want to know which data set are available for a movie, you have to call: parser.get_movie_infoset() (similar methods are available for person, company and character objects).\n\n\n\nIf you want to know which info set was already fetched, see the list parsed.current_info",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer directly addresses the issue by explaining that the writer information is already present in the main data and provides a concrete step to access it using `parsed.get('writer')`. It also offers additional context on how to check available data sets and fetched info sets."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A5",
+        "A9"
+      ],
+      "reason": "The answer directly addresses the issue by confirming that the writer information is already present in the main data and provides a concrete step to access it using `parsed.get('writer')`. It also explains how to check available data sets and fetched info sets."
+    },
+    "donor_pair_id": "B27-0072"
+  },
+  {
+    "pair_id": "B27-0077",
+    "question_id": 31413165,
+    "answer_id": 31413208,
+    "stratum": "unchanged",
+    "title": "Filtering objects from lists in python",
+    "question_text": "I'm trying to program something that will filter all the vowels out of a string of text and I'm not sure why my function doesn't work. Here's my code\n\n\n\n[CODE]\ndef anti_vowel(text):\n letters = text.split() #make a list of all the letters in the string\n index = 0 #for del\n for x in letters:\n     if x == \"a\" or x == \"A\" or x == \"u\" or x == \"U\" or x == \"i\" or x == \"I\" or x == \"o\" or x == \"O\" or x == \"e\" or x == \"E\":\n         del letters[index]\n     index += 1 #to make the if-clause work\n return \"\".join(letters) #turn the edited list into a string\n\n[/CODE]\n\n\n\nWhile iterating over letters the if-clause should be activated when the object in letters is a vowel right? so it should delete that object. But what am I doing wrong?",
+    "answer_text": "I would use re.sub\n\n\n\n[CODE]\nre.sub(r'(?i)[AEIOU]', '', st)\n\n[/CODE]\n\n\n\nExplanation:\n\n\n\n\n(?i) case-insensitive modifier helps to do case insensitive match.\n\n\n[AEIOU] matches any one charcater from the given list. Since we already added the case-insensitive modifier, this would match both upper and lowercase vowels.",
+    "prior_control": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A12"
+      ],
+      "reason": "The answer provides a working solution using regular expressions and explains the components effectively."
+    },
+    "prior_no_examples": {
+      "relevance": 2,
+      "actionability": 2,
+      "sufficiency": 2,
+      "overall": "substantial",
+      "evidence_ids": [
+        "A1",
+        "A6",
+        "A17"
+      ],
+      "reason": "The answer provides a concrete solution using regular expressions, explains how it works, and addresses the core request."
+    },
+    "donor_pair_id": "B27-0135"
+  }
+]

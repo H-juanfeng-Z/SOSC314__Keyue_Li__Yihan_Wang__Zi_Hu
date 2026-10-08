@@ -1,0 +1,18 @@
+{
+  "planned": 2693,
+  "intent_cases": 387,
+  "helpfulness_cases": 383,
+  "selection": {
+    "extension/flipped": 99,
+    "extension/stable": 882,
+    "reused/flipped": 120,
+    "reused/stable": 60,
+    "reused/changed": 144,
+    "extension/unchanged": 1052,
+    "reused/unchanged": 336
+  },
+  "prior_log_sha256": "fa8fbbd5e29400ac5969a79d1de52f6dcb8775aec6d0b970a8038d06b683abe2",
+  "tasks_sha256": "ce2a160d1d094f5ef0683467b0be82609f92587ea7d390ed6bab11b9512be7a6",
+  "reserved_used": false,
+  "limits": "Selected reused development cases; no accuracy or population prevalence. Isolated prompts change output format and wording jointly."
+}

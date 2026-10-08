@@ -1,0 +1,168 @@
+{
+  "records": 2693,
+  "statuses": {
+    "valid": 2692,
+    "invalid": 1
+  },
+  "comparisons": {
+    "intent/direct_control/extraction_control": {
+      "transitions": {
+        "extension/stable/yes -> yes": 276,
+        "extension/stable/no -> no": 16,
+        "reused/stable/yes -> yes": 19,
+        "extension/flipped/no -> yes": 33,
+        "reused/flipped/no -> yes": 40,
+        "extension/stable/yes -> no": 2,
+        "reused/stable/no -> no": 1
+      },
+      "invalid_or_missing": 0
+    },
+    "intent/extraction_control/summary_only": {
+      "transitions": {
+        "extension/stable/yes -> no": 31,
+        "extension/stable/yes -> yes": 245,
+        "extension/stable/no -> no": 17,
+        "reused/stable/yes -> no": 1,
+        "reused/stable/yes -> yes": 18,
+        "extension/flipped/yes -> no": 17,
+        "reused/flipped/yes -> no": 20,
+        "reused/flipped/yes -> yes": 20,
+        "extension/flipped/yes -> yes": 16,
+        "extension/stable/no -> yes": 1,
+        "reused/stable/no -> no": 1
+      },
+      "invalid_or_missing": 0
+    },
+    "intent/direct_control/summary_only": {
+      "transitions": {
+        "extension/stable/yes -> no": 32,
+        "extension/stable/yes -> yes": 246,
+        "extension/stable/no -> no": 16,
+        "reused/stable/yes -> no": 1,
+        "reused/stable/yes -> yes": 18,
+        "extension/flipped/no -> no": 17,
+        "reused/flipped/no -> no": 20,
+        "reused/flipped/no -> yes": 20,
+        "extension/flipped/no -> yes": 16,
+        "reused/stable/no -> no": 1
+      },
+      "invalid_or_missing": 0
+    },
+    "helpfulness/joint_control/joint_no_examples": {
+      "transitions": {
+        "reused/changed/substantial -> substantial": 21,
+        "extension/unchanged/substantial -> substantial": 183,
+        "extension/unchanged/partial -> partial": 23,
+        "reused/unchanged/substantial -> substantial": 54,
+        "extension/unchanged/partial -> substantial": 53,
+        "reused/unchanged/partial -> substantial": 15,
+        "reused/unchanged/partial -> partial": 14,
+        "reused/changed/partial -> partial": 4,
+        "reused/changed/partial -> unhelpful": 1,
+        "extension/unchanged/unhelpful -> unhelpful": 2,
+        "reused/changed/partial -> substantial": 7,
+        "extension/unchanged/unhelpful -> substantial": 1,
+        "reused/changed/unhelpful -> partial": 2,
+        "reused/changed/unhelpful -> unhelpful": 1,
+        "reused/unchanged/partial -> unhelpful": 1,
+        "extension/unchanged/unhelpful -> partial": 1
+      },
+      "invalid_or_missing": 0
+    },
+    "helpfulness/isolated_actionability/isolated_sufficiency": {
+      "transitions": {
+        "reused/changed/2 -> 2": 21,
+        "extension/unchanged/2 -> 2": 227,
+        "extension/unchanged/2 -> 1": 11,
+        "reused/unchanged/2 -> 2": 67,
+        "reused/unchanged/2 -> 1": 6,
+        "reused/changed/1 -> 1": 3,
+        "extension/unchanged/0 -> 1": 3,
+        "reused/changed/0 -> 0": 4,
+        "extension/unchanged/1 -> 1": 15,
+        "extension/unchanged/0 -> 0": 5,
+        "reused/changed/0 -> 1": 2,
+        "reused/unchanged/1 -> 1": 8,
+        "extension/unchanged/2 -> 0": 1,
+        "reused/changed/1 -> 2": 1,
+        "reused/unchanged/1 -> 2": 1,
+        "reused/unchanged/0 -> 1": 1,
+        "reused/changed/2 -> 1": 4,
+        "extension/unchanged/1 -> 2": 1,
+        "reused/unchanged/0 -> 0": 1
+      },
+      "invalid_or_missing": 1
+    },
+    "helpfulness/joint_control/isolated_actionability": {
+      "transitions": {
+        "reused/changed/2 -> 2": 19,
+        "extension/unchanged/2 -> 2": 183,
+        "extension/unchanged/1 -> 2": 56,
+        "reused/unchanged/2 -> 2": 54,
+        "reused/unchanged/1 -> 2": 19,
+        "reused/changed/0 -> 1": 3,
+        "extension/unchanged/1 -> 0": 4,
+        "reused/changed/1 -> 0": 3,
+        "extension/unchanged/1 -> 1": 15,
+        "reused/unchanged/1 -> 1": 9,
+        "extension/unchanged/0 -> 0": 4,
+        "reused/changed/1 -> 2": 6,
+        "reused/unchanged/1 -> 0": 2,
+        "extension/unchanged/0 -> 1": 1,
+        "reused/changed/2 -> 0": 1,
+        "reused/changed/1 -> 1": 1,
+        "reused/changed/0 -> 0": 2
+      },
+      "invalid_or_missing": 1
+    },
+    "helpfulness/joint_control/isolated_sufficiency": {
+      "transitions": {
+        "reused/changed/2 -> 2": 17,
+        "extension/unchanged/2 -> 2": 180,
+        "extension/unchanged/1 -> 1": 26,
+        "reused/unchanged/2 -> 2": 54,
+        "extension/unchanged/1 -> 2": 48,
+        "reused/unchanged/1 -> 1": 15,
+        "reused/unchanged/1 -> 2": 14,
+        "reused/changed/2 -> 1": 4,
+        "reused/changed/1 -> 0": 2,
+        "extension/unchanged/1 -> 0": 2,
+        "reused/changed/1 -> 1": 5,
+        "extension/unchanged/0 -> 0": 3,
+        "reused/changed/1 -> 2": 5,
+        "extension/unchanged/2 -> 1": 2,
+        "extension/unchanged/2 -> 0": 1,
+        "reused/changed/0 -> 1": 1,
+        "reused/changed/0 -> 0": 2,
+        "reused/unchanged/1 -> 0": 1,
+        "extension/unchanged/0 -> 1": 1
+      },
+      "invalid_or_missing": 0
+    }
+  },
+  "control_repetition": {
+    "direct_control": {
+      "valid": 387,
+      "same_decisions": 387
+    },
+    "extraction_control": {
+      "valid": 387,
+      "same_decisions": 387
+    },
+    "joint_control": {
+      "valid": 383,
+      "same_decisions": 383
+    }
+  },
+  "joint_control": {
+    "valid": 383,
+    "numeric": 383,
+    "dimensions_equal": 380
+  },
+  "joint_no_examples": {
+    "valid": 383,
+    "numeric": 383,
+    "dimensions_equal": 375
+  },
+  "interpretation": "Selected development diagnostics, not semantic accuracy; altered isolated wording is a confound."
+}

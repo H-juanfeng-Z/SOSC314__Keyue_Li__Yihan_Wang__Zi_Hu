@@ -1,0 +1,14 @@
+{
+  "purpose": "Cross answer-content controls with prompt examples; no accuracy claims.",
+  "model": "Unchanged Qwen2.5-Coder-14B greedy fp16",
+  "design": "48 selected reused cases x4 answer conditions x4 prompt conditions",
+  "expectations": {
+    "empty": "all dimension scores0 and overall unhelpful",
+    "generic": "no substantive assistance; all scores0 and overall unhelpful",
+    "swapped": "exploratory only; donor answers may accidentally help, not gold negatives",
+    "original": "no known correct rating"
+  },
+  "interpretation": "Balanced versus absent examples changes content and length; reverse order isolates order within the same example set. Neither high scores nor agreement selects a winner. Sample is outcome-stratified, not prevalence representative. No partial deletions or invented complete answers without case review.",
+  "next": "Review actual disagreement cases and freeze measurement protocol before linking intent and helpfulness.",
+  "budget": "One scheduledGPU,4CPU,64GiB,3h cap; roughly1-2h expected. No GitHub upload. Preserve held64773."
+}

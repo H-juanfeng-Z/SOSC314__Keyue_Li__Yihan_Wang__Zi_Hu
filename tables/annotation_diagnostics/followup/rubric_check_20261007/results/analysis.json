@@ -1,0 +1,163 @@
+{
+  "records": 768,
+  "unique_task_ids": 768,
+  "groups": {
+    "previous_selected48/original/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "substantial": 43,
+        "partial": 4,
+        "unhelpful": 1
+      }
+    },
+    "previous_selected48/original/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 2,
+        "substantial": 43,
+        "partial": 3
+      }
+    },
+    "previous_selected48/empty/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 48
+    },
+    "previous_selected48/empty/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 44,
+        "substantial": 4
+      },
+      "no_help_pass": 44,
+      "all_zero_pass": 44
+    },
+    "previous_selected48/generic/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 39
+    },
+    "previous_selected48/generic/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 48
+    },
+    "previous_selected48/swapped/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "previous_selected48/swapped/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "additional_reused48/original/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "substantial": 43,
+        "partial": 5
+      }
+    },
+    "additional_reused48/original/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "substantial": 46,
+        "unhelpful": 1,
+        "partial": 1
+      }
+    },
+    "additional_reused48/empty/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 48
+    },
+    "additional_reused48/empty/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 47,
+        "substantial": 1
+      },
+      "no_help_pass": 47,
+      "all_zero_pass": 47
+    },
+    "additional_reused48/generic/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 39
+    },
+    "additional_reused48/generic/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      },
+      "no_help_pass": 48,
+      "all_zero_pass": 48
+    },
+    "additional_reused48/swapped/no_examples_control": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    },
+    "additional_reused48/swapped/concise_rubric": {
+      "attempted": 48,
+      "valid": 48,
+      "overall": {
+        "unhelpful": 48
+      }
+    }
+  },
+  "transitions": {
+    "previous_selected48": {
+      "substantial -> substantial": 42,
+      "substantial -> unhelpful": 1,
+      "partial -> partial": 3,
+      "unhelpful -> unhelpful": 1,
+      "partial -> substantial": 1
+    },
+    "additional_reused48": {
+      "substantial -> substantial": 43,
+      "partial -> substantial": 3,
+      "partial -> partial": 1,
+      "partial -> unhelpful": 1
+    }
+  },
+  "limits": "Reused development data; no accuracy claims. Rubric changes are bundled.",
+  "control_reproduction": {
+    "valid": 48,
+    "same_scores": 48
+  }
+}

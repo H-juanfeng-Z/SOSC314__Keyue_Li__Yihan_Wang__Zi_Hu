@@ -1,0 +1,20 @@
+{
+  "planned": 2693,
+  "seed": 314,
+  "torch": "2.2.0+cu121",
+  "transformers": "4.53.0",
+  "max_input": 7500,
+  "max_output": 256,
+  "do_sample": false,
+  "input_sha256": "ce2a160d1d094f5ef0683467b0be82609f92587ea7d390ed6bab11b9512be7a6",
+  "scripts_sha256": {
+    "submit.py": "c281efb6bc613e45692fd663e182dfd8e9a30a12228088b5db5354fba36d9eda",
+    "analyze.py": "658032338a6eb7601d69f5fdc75f17033d3ab660c0585099565feef5db41d3d5",
+    "run.py": "10b2c0b2ea5a9d82a8f09da8685614455fc3c6d0b1badc149cf55873e272bba3",
+    "run_helpfulness_grounding.py": "4641e92f95fbcbba7bcf35815cf457d235a06e4f902559ba85c233f8a60b0e18",
+    "request_protocol.py": "8580e48c90306381d0411d2395a004cf846f615f5443e865f6c61e1300df8537",
+    "prepare.py": "3bc59026394ab7aacf587ba1886bd7dabd94e560c46570eba55875823cbfc799"
+  },
+  "source_manifest_sha256": "543c84cf3958b347c6a4dc9b388cc16ff25d2b18eeaca3a8fd210e12bf38d142",
+  "model_name": "Qwen2.5-Coder-14B-Instruct"
+}

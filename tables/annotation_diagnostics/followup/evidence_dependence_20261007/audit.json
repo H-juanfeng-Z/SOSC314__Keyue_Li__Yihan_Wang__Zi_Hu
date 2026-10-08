@@ -1,0 +1,1554 @@
+[
+  {
+    "pair_id": "B27-0208",
+    "cited_ids": [
+      "A1",
+      "A13",
+      "A27"
+    ],
+    "random_ids": [
+      "A10",
+      "A13",
+      "A21"
+    ],
+    "overlap": 1,
+    "line_count": 27,
+    "cited_characters": 107,
+    "random_characters": 119
+  },
+  {
+    "pair_id": "B27-0009",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A21"
+    ],
+    "random_ids": [
+      "A6",
+      "A15",
+      "A12"
+    ],
+    "overlap": 1,
+    "line_count": 7,
+    "cited_characters": 144,
+    "random_characters": 85
+  },
+  {
+    "pair_id": "B27-0138",
+    "cited_ids": [
+      "A6",
+      "A7",
+      "A9"
+    ],
+    "random_ids": [
+      "A15",
+      "A5",
+      "A9"
+    ],
+    "overlap": 1,
+    "line_count": 8,
+    "cited_characters": 169,
+    "random_characters": 221
+  },
+  {
+    "pair_id": "B27-0338",
+    "cited_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "random_ids": [
+      "A1",
+      "A3",
+      "A2"
+    ],
+    "overlap": 3,
+    "line_count": 3,
+    "cited_characters": 245,
+    "random_characters": 245
+  },
+  {
+    "pair_id": "B27-0060",
+    "cited_ids": [
+      "A6",
+      "A37",
+      "A40"
+    ],
+    "random_ids": [
+      "A40",
+      "A39",
+      "A35"
+    ],
+    "overlap": 1,
+    "line_count": 24,
+    "cited_characters": 78,
+    "random_characters": 77
+  },
+  {
+    "pair_id": "B27-0359",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A16"
+    ],
+    "random_ids": [
+      "A23",
+      "A16",
+      "A21"
+    ],
+    "overlap": 1,
+    "line_count": 9,
+    "cited_characters": 274,
+    "random_characters": 149
+  },
+  {
+    "pair_id": "B27-0044",
+    "cited_ids": [
+      "A1",
+      "A15",
+      "A27"
+    ],
+    "random_ids": [
+      "A5",
+      "A22",
+      "A10"
+    ],
+    "overlap": 0,
+    "line_count": 17,
+    "cited_characters": 384,
+    "random_characters": 39
+  },
+  {
+    "pair_id": "B27-0210",
+    "cited_ids": [
+      "A1",
+      "A12",
+      "A26"
+    ],
+    "random_ids": [
+      "A7",
+      "A21",
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 9,
+    "cited_characters": 347,
+    "random_characters": 153
+  },
+  {
+    "pair_id": "B27-0039",
+    "cited_ids": [
+      "A1",
+      "A14",
+      "A34"
+    ],
+    "random_ids": [
+      "A14",
+      "A18",
+      "A17"
+    ],
+    "overlap": 1,
+    "line_count": 23,
+    "cited_characters": 222,
+    "random_characters": 128
+  },
+  {
+    "pair_id": "B27-0101",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 142,
+    "random_characters": 142
+  },
+  {
+    "pair_id": "B27-0256",
+    "cited_ids": [
+      "A2",
+      "A22",
+      "A41"
+    ],
+    "random_ids": [
+      "A1",
+      "A48",
+      "A3"
+    ],
+    "overlap": 0,
+    "line_count": 37,
+    "cited_characters": 54,
+    "random_characters": 28
+  },
+  {
+    "pair_id": "B27-0367",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A12"
+    ],
+    "random_ids": [
+      "A12",
+      "A24",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 259,
+    "random_characters": 299
+  },
+  {
+    "pair_id": "B27-0366",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A1",
+      "A5"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 834,
+    "random_characters": 834
+  },
+  {
+    "pair_id": "B27-0146",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A12"
+    ],
+    "random_ids": [
+      "A12",
+      "A5",
+      "A6"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 670,
+    "random_characters": 498
+  },
+  {
+    "pair_id": "B27-0311",
+    "cited_ids": [
+      "A1",
+      "A11",
+      "A12"
+    ],
+    "random_ids": [
+      "A13",
+      "A28",
+      "A27"
+    ],
+    "overlap": 0,
+    "line_count": 20,
+    "cited_characters": 279,
+    "random_characters": 55
+  },
+  {
+    "pair_id": "B27-0001",
+    "cited_ids": [
+      "A6",
+      "A18"
+    ],
+    "random_ids": [
+      "A5",
+      "A13"
+    ],
+    "overlap": 0,
+    "line_count": 10,
+    "cited_characters": 105,
+    "random_characters": 25
+  },
+  {
+    "pair_id": "B27-0212",
+    "cited_ids": [
+      "A1",
+      "A16",
+      "A21"
+    ],
+    "random_ids": [
+      "A5",
+      "A16",
+      "A21"
+    ],
+    "overlap": 2,
+    "line_count": 15,
+    "cited_characters": 242,
+    "random_characters": 75
+  },
+  {
+    "pair_id": "B27-0183",
+    "cited_ids": [],
+    "random_ids": [],
+    "overlap": 0,
+    "line_count": 1,
+    "cited_characters": 0,
+    "random_characters": 0
+  },
+  {
+    "pair_id": "B27-0302",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A1",
+      "A17",
+      "A9"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 579,
+    "random_characters": 531
+  },
+  {
+    "pair_id": "B27-0381",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A33"
+    ],
+    "random_ids": [
+      "A41",
+      "A1",
+      "A37"
+    ],
+    "overlap": 1,
+    "line_count": 12,
+    "cited_characters": 486,
+    "random_characters": 562
+  },
+  {
+    "pair_id": "B27-0085",
+    "cited_ids": [
+      "A1",
+      "A15",
+      "A28"
+    ],
+    "random_ids": [
+      "A11",
+      "A2",
+      "A36"
+    ],
+    "overlap": 0,
+    "line_count": 19,
+    "cited_characters": 182,
+    "random_characters": 24
+  },
+  {
+    "pair_id": "B27-0002",
+    "cited_ids": [
+      "A11",
+      "A22",
+      "A28"
+    ],
+    "random_ids": [
+      "A69",
+      "A52",
+      "A21"
+    ],
+    "overlap": 0,
+    "line_count": 57,
+    "cited_characters": 90,
+    "random_characters": 121
+  },
+  {
+    "pair_id": "B27-0050",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 251,
+    "random_characters": 251
+  },
+  {
+    "pair_id": "B27-0230",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A13",
+      "A5",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 4,
+    "cited_characters": 114,
+    "random_characters": 70
+  },
+  {
+    "pair_id": "B27-0025",
+    "cited_ids": [
+      "A2",
+      "A8"
+    ],
+    "random_ids": [
+      "A4",
+      "A1"
+    ],
+    "overlap": 0,
+    "line_count": 4,
+    "cited_characters": 67,
+    "random_characters": 13
+  },
+  {
+    "pair_id": "B27-0258",
+    "cited_ids": [
+      "A1",
+      "A7",
+      "A12"
+    ],
+    "random_ids": [
+      "A1",
+      "A18",
+      "A8"
+    ],
+    "overlap": 1,
+    "line_count": 18,
+    "cited_characters": 157,
+    "random_characters": 149
+  },
+  {
+    "pair_id": "B27-0054",
+    "cited_ids": [
+      "A5",
+      "A9",
+      "A13"
+    ],
+    "random_ids": [
+      "A17",
+      "A9",
+      "A26"
+    ],
+    "overlap": 1,
+    "line_count": 18,
+    "cited_characters": 283,
+    "random_characters": 153
+  },
+  {
+    "pair_id": "B27-0052",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A13",
+      "A5",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 4,
+    "cited_characters": 189,
+    "random_characters": 217
+  },
+  {
+    "pair_id": "B27-0160",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 46,
+    "random_characters": 46
+  },
+  {
+    "pair_id": "B27-0231",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 29,
+    "random_characters": 29
+  },
+  {
+    "pair_id": "B27-0059",
+    "cited_ids": [
+      "A1",
+      "A10"
+    ],
+    "random_ids": [
+      "A12",
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 5,
+    "cited_characters": 100,
+    "random_characters": 85
+  },
+  {
+    "pair_id": "B27-0151",
+    "cited_ids": [
+      "A1",
+      "A6"
+    ],
+    "random_ids": [
+      "A8",
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 4,
+    "cited_characters": 51,
+    "random_characters": 23
+  },
+  {
+    "pair_id": "B27-0263",
+    "cited_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "random_ids": [
+      "A1",
+      "A2",
+      "A7"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 156,
+    "random_characters": 199
+  },
+  {
+    "pair_id": "B27-0107",
+    "cited_ids": [
+      "A1",
+      "A7",
+      "A15"
+    ],
+    "random_ids": [
+      "A33",
+      "A7",
+      "A6"
+    ],
+    "overlap": 1,
+    "line_count": 16,
+    "cited_characters": 447,
+    "random_characters": 62
+  },
+  {
+    "pair_id": "B27-0280",
+    "cited_ids": [
+      "A17",
+      "A20",
+      "A24"
+    ],
+    "random_ids": [
+      "A9",
+      "A35",
+      "A6"
+    ],
+    "overlap": 0,
+    "line_count": 25,
+    "cited_characters": 91,
+    "random_characters": 94
+  },
+  {
+    "pair_id": "B27-0056",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A10"
+    ],
+    "random_ids": [
+      "A12",
+      "A8",
+      "A9"
+    ],
+    "overlap": 0,
+    "line_count": 8,
+    "cited_characters": 177,
+    "random_characters": 13
+  },
+  {
+    "pair_id": "B27-0076",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A5",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 382,
+    "random_characters": 382
+  },
+  {
+    "pair_id": "B27-0218",
+    "cited_ids": [
+      "A1",
+      "A8",
+      "A10"
+    ],
+    "random_ids": [
+      "A8",
+      "A10",
+      "A13"
+    ],
+    "overlap": 2,
+    "line_count": 8,
+    "cited_characters": 220,
+    "random_characters": 107
+  },
+  {
+    "pair_id": "B27-0012",
+    "cited_ids": [
+      "A5",
+      "A13",
+      "A33"
+    ],
+    "random_ids": [
+      "A33",
+      "A17",
+      "A13"
+    ],
+    "overlap": 2,
+    "line_count": 9,
+    "cited_characters": 109,
+    "random_characters": 176
+  },
+  {
+    "pair_id": "B27-0379",
+    "cited_ids": [
+      "A5",
+      "A14"
+    ],
+    "random_ids": [
+      "A10",
+      "A5"
+    ],
+    "overlap": 1,
+    "line_count": 5,
+    "cited_characters": 187,
+    "random_characters": 190
+  },
+  {
+    "pair_id": "B27-0010",
+    "cited_ids": [
+      "A1",
+      "A21",
+      "A48"
+    ],
+    "random_ids": [
+      "A39",
+      "A34",
+      "A65"
+    ],
+    "overlap": 0,
+    "line_count": 40,
+    "cited_characters": 329,
+    "random_characters": 79
+  },
+  {
+    "pair_id": "B27-0287",
+    "cited_ids": [
+      "A1",
+      "A34",
+      "A44"
+    ],
+    "random_ids": [
+      "A37",
+      "A11",
+      "A7"
+    ],
+    "overlap": 0,
+    "line_count": 20,
+    "cited_characters": 137,
+    "random_characters": 44
+  },
+  {
+    "pair_id": "B27-0167",
+    "cited_ids": [
+      "A26",
+      "A32",
+      "A37"
+    ],
+    "random_ids": [
+      "A26",
+      "A11",
+      "A12"
+    ],
+    "overlap": 1,
+    "line_count": 25,
+    "cited_characters": 33,
+    "random_characters": 34
+  },
+  {
+    "pair_id": "B27-0348",
+    "cited_ids": [
+      "A10",
+      "A21",
+      "A28"
+    ],
+    "random_ids": [
+      "A24",
+      "A6",
+      "A16"
+    ],
+    "overlap": 0,
+    "line_count": 18,
+    "cited_characters": 257,
+    "random_characters": 94
+  },
+  {
+    "pair_id": "B27-0234",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A10"
+    ],
+    "random_ids": [
+      "A1",
+      "A5",
+      "A12"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 405,
+    "random_characters": 329
+  },
+  {
+    "pair_id": "B27-0168",
+    "cited_ids": [
+      "A1",
+      "A7",
+      "A36"
+    ],
+    "random_ids": [
+      "A35",
+      "A38",
+      "A14"
+    ],
+    "overlap": 0,
+    "line_count": 23,
+    "cited_characters": 160,
+    "random_characters": 43
+  },
+  {
+    "pair_id": "B27-0205",
+    "cited_ids": [
+      "A1",
+      "A7",
+      "A17"
+    ],
+    "random_ids": [
+      "A12",
+      "A7",
+      "A17"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 234,
+    "random_characters": 162
+  },
+  {
+    "pair_id": "B27-0017",
+    "cited_ids": [
+      "A15",
+      "A34"
+    ],
+    "random_ids": [
+      "A19",
+      "A26"
+    ],
+    "overlap": 0,
+    "line_count": 16,
+    "cited_characters": 12,
+    "random_characters": 346
+  },
+  {
+    "pair_id": "B27-0126",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 375,
+    "random_characters": 375
+  },
+  {
+    "pair_id": "B27-0277",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A1",
+      "A5"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 144,
+    "random_characters": 144
+  },
+  {
+    "pair_id": "B27-0188",
+    "cited_ids": [
+      "A1",
+      "A13",
+      "A19"
+    ],
+    "random_ids": [
+      "A13",
+      "A1",
+      "A9"
+    ],
+    "overlap": 2,
+    "line_count": 16,
+    "cited_characters": 213,
+    "random_characters": 130
+  },
+  {
+    "pair_id": "B27-0202",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A1",
+      "A9",
+      "A5"
+    ],
+    "overlap": 3,
+    "line_count": 3,
+    "cited_characters": 437,
+    "random_characters": 437
+  },
+  {
+    "pair_id": "B27-0349",
+    "cited_ids": [
+      "A6",
+      "A7",
+      "A8"
+    ],
+    "random_ids": [
+      "A10",
+      "A6",
+      "A8"
+    ],
+    "overlap": 2,
+    "line_count": 7,
+    "cited_characters": 77,
+    "random_characters": 59
+  },
+  {
+    "pair_id": "B27-0243",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A5",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 252,
+    "random_characters": 252
+  },
+  {
+    "pair_id": "B27-0281",
+    "cited_ids": [
+      "A1",
+      "A9",
+      "A31"
+    ],
+    "random_ids": [
+      "A9",
+      "A39",
+      "A27"
+    ],
+    "overlap": 1,
+    "line_count": 15,
+    "cited_characters": 187,
+    "random_characters": 85
+  },
+  {
+    "pair_id": "B27-0124",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A9",
+      "A1",
+      "A5"
+    ],
+    "overlap": 3,
+    "line_count": 4,
+    "cited_characters": 407,
+    "random_characters": 407
+  },
+  {
+    "pair_id": "B27-0197",
+    "cited_ids": [
+      "A1",
+      "A15",
+      "A19"
+    ],
+    "random_ids": [
+      "A1",
+      "A39",
+      "A54"
+    ],
+    "overlap": 1,
+    "line_count": 23,
+    "cited_characters": 339,
+    "random_characters": 445
+  },
+  {
+    "pair_id": "B27-0021",
+    "cited_ids": [
+      "A1",
+      "A17",
+      "A22"
+    ],
+    "random_ids": [
+      "A16",
+      "A17",
+      "A5"
+    ],
+    "overlap": 1,
+    "line_count": 11,
+    "cited_characters": 483,
+    "random_characters": 288
+  },
+  {
+    "pair_id": "B27-0006",
+    "cited_ids": [
+      "A63",
+      "A64",
+      "A65"
+    ],
+    "random_ids": [
+      "A69",
+      "A17",
+      "A37"
+    ],
+    "overlap": 0,
+    "line_count": 42,
+    "cited_characters": 561,
+    "random_characters": 239
+  },
+  {
+    "pair_id": "B27-0089",
+    "cited_ids": [
+      "A1",
+      "A14",
+      "A15"
+    ],
+    "random_ids": [
+      "A9",
+      "A1",
+      "A11"
+    ],
+    "overlap": 1,
+    "line_count": 10,
+    "cited_characters": 248,
+    "random_characters": 189
+  },
+  {
+    "pair_id": "B27-0229",
+    "cited_ids": [
+      "A6"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 0,
+    "line_count": 5,
+    "cited_characters": 15,
+    "random_characters": 29
+  },
+  {
+    "pair_id": "B27-0260",
+    "cited_ids": [
+      "A1",
+      "A9",
+      "A15"
+    ],
+    "random_ids": [
+      "A23",
+      "A20",
+      "A7"
+    ],
+    "overlap": 0,
+    "line_count": 19,
+    "cited_characters": 381,
+    "random_characters": 76
+  },
+  {
+    "pair_id": "B27-0135",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A1",
+      "A5"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 137,
+    "random_characters": 137
+  },
+  {
+    "pair_id": "B27-0369",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A13"
+    ],
+    "random_ids": [
+      "A40",
+      "A43",
+      "A41"
+    ],
+    "overlap": 0,
+    "line_count": 36,
+    "cited_characters": 390,
+    "random_characters": 92
+  },
+  {
+    "pair_id": "B27-0328",
+    "cited_ids": [
+      "A1",
+      "A16",
+      "A18"
+    ],
+    "random_ids": [
+      "A31",
+      "A23",
+      "A32"
+    ],
+    "overlap": 0,
+    "line_count": 30,
+    "cited_characters": 309,
+    "random_characters": 88
+  },
+  {
+    "pair_id": "B27-0310",
+    "cited_ids": [
+      "A1",
+      "A19",
+      "A28"
+    ],
+    "random_ids": [
+      "A25",
+      "A1",
+      "A19"
+    ],
+    "overlap": 2,
+    "line_count": 24,
+    "cited_characters": 87,
+    "random_characters": 99
+  },
+  {
+    "pair_id": "B27-0091",
+    "cited_ids": [
+      "A1",
+      "A6"
+    ],
+    "random_ids": [
+      "A1",
+      "A6"
+    ],
+    "overlap": 2,
+    "line_count": 4,
+    "cited_characters": 192,
+    "random_characters": 192
+  },
+  {
+    "pair_id": "B27-0022",
+    "cited_ids": [
+      "A2",
+      "A8"
+    ],
+    "random_ids": [
+      "A2",
+      "A12"
+    ],
+    "overlap": 1,
+    "line_count": 9,
+    "cited_characters": 153,
+    "random_characters": 117
+  },
+  {
+    "pair_id": "B27-0077",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A17"
+    ],
+    "random_ids": [
+      "A6",
+      "A5",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 7,
+    "cited_characters": 114,
+    "random_characters": 54
+  },
+  {
+    "pair_id": "B27-0103",
+    "cited_ids": [
+      "A1",
+      "A37",
+      "A42"
+    ],
+    "random_ids": [
+      "A6",
+      "A16",
+      "A53"
+    ],
+    "overlap": 0,
+    "line_count": 39,
+    "cited_characters": 219,
+    "random_characters": 26
+  },
+  {
+    "pair_id": "B27-0162",
+    "cited_ids": [
+      "A3",
+      "A8",
+      "A12"
+    ],
+    "random_ids": [
+      "A14",
+      "A12",
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 10,
+    "cited_characters": 76,
+    "random_characters": 62
+  },
+  {
+    "pair_id": "B27-0221",
+    "cited_ids": [
+      "A1",
+      "A9",
+      "A13"
+    ],
+    "random_ids": [
+      "A5",
+      "A9",
+      "A1"
+    ],
+    "overlap": 2,
+    "line_count": 4,
+    "cited_characters": 777,
+    "random_characters": 573
+  },
+  {
+    "pair_id": "B27-0341",
+    "cited_ids": [
+      "A1",
+      "A15",
+      "A31"
+    ],
+    "random_ids": [
+      "A1",
+      "A26",
+      "A6"
+    ],
+    "overlap": 1,
+    "line_count": 14,
+    "cited_characters": 156,
+    "random_characters": 115
+  },
+  {
+    "pair_id": "B27-0075",
+    "cited_ids": [
+      "A10",
+      "A12",
+      "A13"
+    ],
+    "random_ids": [
+      "A9",
+      "A15",
+      "A19"
+    ],
+    "overlap": 0,
+    "line_count": 12,
+    "cited_characters": 128,
+    "random_characters": 38
+  },
+  {
+    "pair_id": "B27-0014",
+    "cited_ids": [
+      "A9"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 0,
+    "line_count": 3,
+    "cited_characters": 197,
+    "random_characters": 135
+  },
+  {
+    "pair_id": "B27-0033",
+    "cited_ids": [
+      "A1",
+      "A10",
+      "A16"
+    ],
+    "random_ids": [
+      "A1",
+      "A12",
+      "A9"
+    ],
+    "overlap": 1,
+    "line_count": 7,
+    "cited_characters": 155,
+    "random_characters": 90
+  },
+  {
+    "pair_id": "B27-0133",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A10"
+    ],
+    "random_ids": [
+      "A16",
+      "A12",
+      "A21"
+    ],
+    "overlap": 0,
+    "line_count": 9,
+    "cited_characters": 402,
+    "random_characters": 109
+  },
+  {
+    "pair_id": "B27-0153",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A21"
+    ],
+    "random_ids": [
+      "A1",
+      "A7",
+      "A16"
+    ],
+    "overlap": 1,
+    "line_count": 11,
+    "cited_characters": 140,
+    "random_characters": 114
+  },
+  {
+    "pair_id": "B27-0190",
+    "cited_ids": [
+      "A9",
+      "A10",
+      "A16"
+    ],
+    "random_ids": [
+      "A7",
+      "A1",
+      "A9"
+    ],
+    "overlap": 1,
+    "line_count": 8,
+    "cited_characters": 300,
+    "random_characters": 49
+  },
+  {
+    "pair_id": "B27-0015",
+    "cited_ids": [
+      "A2",
+      "A6",
+      "A10"
+    ],
+    "random_ids": [
+      "A6",
+      "A10",
+      "A2"
+    ],
+    "overlap": 3,
+    "line_count": 4,
+    "cited_characters": 706,
+    "random_characters": 706
+  },
+  {
+    "pair_id": "B27-0108",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A1"
+    ],
+    "overlap": 1,
+    "line_count": 1,
+    "cited_characters": 169,
+    "random_characters": 169
+  },
+  {
+    "pair_id": "B27-0324",
+    "cited_ids": [
+      "A2"
+    ],
+    "random_ids": [
+      "A4"
+    ],
+    "overlap": 0,
+    "line_count": 3,
+    "cited_characters": 50,
+    "random_characters": 7
+  },
+  {
+    "pair_id": "B27-0211",
+    "cited_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "random_ids": [
+      "A1",
+      "A5",
+      "A9"
+    ],
+    "overlap": 3,
+    "line_count": 3,
+    "cited_characters": 299,
+    "random_characters": 299
+  },
+  {
+    "pair_id": "B27-0204",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A12"
+    ],
+    "random_ids": [
+      "A1",
+      "A5",
+      "A6"
+    ],
+    "overlap": 2,
+    "line_count": 5,
+    "cited_characters": 831,
+    "random_characters": 605
+  },
+  {
+    "pair_id": "B27-0051",
+    "cited_ids": [
+      "A5",
+      "A10"
+    ],
+    "random_ids": [
+      "A12",
+      "A5"
+    ],
+    "overlap": 1,
+    "line_count": 5,
+    "cited_characters": 132,
+    "random_characters": 117
+  },
+  {
+    "pair_id": "B27-0275",
+    "cited_ids": [
+      "A5",
+      "A29",
+      "A33"
+    ],
+    "random_ids": [
+      "A11",
+      "A40",
+      "A35"
+    ],
+    "overlap": 0,
+    "line_count": 32,
+    "cited_characters": 96,
+    "random_characters": 46
+  },
+  {
+    "pair_id": "B27-0333",
+    "cited_ids": [
+      "A1",
+      "A18",
+      "A20"
+    ],
+    "random_ids": [
+      "A17",
+      "A18",
+      "A23"
+    ],
+    "overlap": 1,
+    "line_count": 18,
+    "cited_characters": 179,
+    "random_characters": 43
+  },
+  {
+    "pair_id": "B27-0072",
+    "cited_ids": [
+      "A1",
+      "A11",
+      "A16"
+    ],
+    "random_ids": [
+      "A16",
+      "A1",
+      "A11"
+    ],
+    "overlap": 3,
+    "line_count": 4,
+    "cited_characters": 149,
+    "random_characters": 149
+  },
+  {
+    "pair_id": "B27-0375",
+    "cited_ids": [
+      "A1",
+      "A5"
+    ],
+    "random_ids": [
+      "A1",
+      "A5"
+    ],
+    "overlap": 2,
+    "line_count": 2,
+    "cited_characters": 217,
+    "random_characters": 217
+  },
+  {
+    "pair_id": "B27-0251",
+    "cited_ids": [
+      "A1",
+      "A10",
+      "A22"
+    ],
+    "random_ids": [
+      "A13",
+      "A1",
+      "A9"
+    ],
+    "overlap": 1,
+    "line_count": 14,
+    "cited_characters": 283,
+    "random_characters": 101
+  },
+  {
+    "pair_id": "B27-0040",
+    "cited_ids": [
+      "A30",
+      "A52"
+    ],
+    "random_ids": [
+      "A19",
+      "A32"
+    ],
+    "overlap": 0,
+    "line_count": 30,
+    "cited_characters": 106,
+    "random_characters": 51
+  },
+  {
+    "pair_id": "B27-0070",
+    "cited_ids": [
+      "A1"
+    ],
+    "random_ids": [
+      "A11"
+    ],
+    "overlap": 0,
+    "line_count": 4,
+    "cited_characters": 148,
+    "random_characters": 48
+  },
+  {
+    "pair_id": "B27-0235",
+    "cited_ids": [
+      "A1",
+      "A21",
+      "A22"
+    ],
+    "random_ids": [
+      "A1",
+      "A42",
+      "A17"
+    ],
+    "overlap": 1,
+    "line_count": 38,
+    "cited_characters": 132,
+    "random_characters": 126
+  },
+  {
+    "pair_id": "B27-0187",
+    "cited_ids": [
+      "A6",
+      "A18",
+      "A30"
+    ],
+    "random_ids": [
+      "A1",
+      "A9",
+      "A19"
+    ],
+    "overlap": 0,
+    "line_count": 14,
+    "cited_characters": 83,
+    "random_characters": 33
+  },
+  {
+    "pair_id": "B27-0259",
+    "cited_ids": [
+      "A1",
+      "A6",
+      "A12"
+    ],
+    "random_ids": [
+      "A1",
+      "A5",
+      "A8"
+    ],
+    "overlap": 1,
+    "line_count": 5,
+    "cited_characters": 179,
+    "random_characters": 95
+  },
+  {
+    "pair_id": "B27-0104",
+    "cited_ids": [
+      "A23",
+      "A27",
+      "A28"
+    ],
+    "random_ids": [
+      "A6",
+      "A17",
+      "A16"
+    ],
+    "overlap": 0,
+    "line_count": 14,
+    "cited_characters": 141,
+    "random_characters": 54
+  }
+]

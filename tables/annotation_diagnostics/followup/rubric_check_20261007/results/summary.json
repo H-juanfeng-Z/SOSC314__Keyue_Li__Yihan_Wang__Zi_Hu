@@ -1,0 +1,17 @@
+{
+  "completed_calls": 768,
+  "planned": 768,
+  "statuses": {
+    "empty/concise_rubric/valid": 96,
+    "empty/no_examples_control/valid": 96,
+    "generic/concise_rubric/valid": 96,
+    "generic/no_examples_control/valid": 96,
+    "original/concise_rubric/valid": 96,
+    "original/no_examples_control/valid": 96,
+    "swapped/concise_rubric/valid": 96,
+    "swapped/no_examples_control/valid": 96
+  },
+  "elapsed_seconds": 3095.302953004837,
+  "completed": true,
+  "stop_reason": "all_tasks"
+}

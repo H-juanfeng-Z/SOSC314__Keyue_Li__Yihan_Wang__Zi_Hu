@@ -1,0 +1,16 @@
+{
+  "purpose": "Test whether intent depends on question-body evidence and helpfulness ratings depend on cited answer content.",
+  "design": "96 reused pairs:7 intent categories x2 input views +4 answer variants =1728 generations.",
+  "intent": "Identical direct intent prompt, full question versus title only. Missing context may legitimately yield uncertain; no accuracy claim. Full control compared with old labels.",
+  "helpfulness": "Fixed no-example rubric. Original, cited-lines removed, equal-number random-lines removed, cited-lines only. Original IDs preserved. Random selection may overlap citations; audit overlap and character counts.",
+  "limitations": [
+    "Citations are model-selected, not causal ground truth",
+    "Deleting lines can break code syntax, remove context or leave redundant assistance; changes are exploratory and not expected always to lower scores",
+    "Random deletion matches line count, not length or semantic importance",
+    "All96 are reused development cases; no reserved80",
+    "Same model cannot independently validate itself"
+  ],
+  "analysis": "Separate parse validity from semantic constraints; paired transitions, absence of evidence for positive ratings, control reproduction. No automatic relabeling or selecting favorable associations.",
+  "budget": "One GPU, four CPU threads, max3hours. Stop at fixed task count, no automatic expansion.",
+  "next": "Review high-impact evidence failures, freeze protocol and then sensitivity-adjusted association analysis."
+}
