@@ -1,3 +1,8 @@
 # Preserve byte-level hashes of versioned annotation decision exports.
 tables/annotation_diagnostics/**/*.jsonl text eol=lf
 tables/annotation_diagnostics/**/*.json text eol=lf
+
+# Frozen follow-up files retain their original bytes, including historic CRLF.
+# Hashes are checked after lossless decompression; do not normalize these paths.
+tables/annotation_diagnostics/followup/** -text
+scripts/helpfulness/followup/** -text
