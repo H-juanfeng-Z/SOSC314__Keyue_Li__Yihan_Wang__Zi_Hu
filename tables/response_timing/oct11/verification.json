@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "classification_group_checks": 36,
+  "timestamp_checks": 21954,
+  "weight_checks": 2000,
+  "topic_selected": 19998,
+  "topic_answered": 17749,
+  "topic_no_observed_answer": 2249,
+  "expanded_first_answer_mapping": "2000 checked against clean source in analyze.py",
+  "limits": "Arithmetic and data-link verification, not label validity, independent archive collection or causal identification."
+}
