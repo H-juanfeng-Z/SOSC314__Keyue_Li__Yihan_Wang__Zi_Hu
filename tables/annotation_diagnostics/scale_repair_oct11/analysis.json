@@ -1,0 +1,406 @@
+{
+  "planned": 242,
+  "observed": 242,
+  "missing": [],
+  "statuses": {
+    "valid": 236,
+    "invalid": 6
+  },
+  "hashes_and_messages_verified": true,
+  "control_count": 26,
+  "controls": [
+    {
+      "question_id": "31471805",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "26666367",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "2727355",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "26962575",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/partial_steps",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "8376609",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/complete_steps",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "28695633",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "4376640",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/empty",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/complete_narrow",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "8206707",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "31344002",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "1078593",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "29548949",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "34981144",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/unrelated",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "11295325",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "3031225",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/generic",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "25803573",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/conceptual",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "synthetic/repeat",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "27021056",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "38776882",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    },
+    {
+      "question_id": "26806571",
+      "status_same": true,
+      "score_same": true,
+      "json_same": true
+    }
+  ],
+  "stats": {
+    "new82": {
+      "coarse": {
+        "n": 82,
+        "statuses": {
+          "valid": 81,
+          "invalid": 1
+        },
+        "scores": {
+          "2": 21,
+          "1": 60
+        }
+      },
+      "fine": {
+        "n": 82,
+        "statuses": {
+          "valid": 81,
+          "invalid": 1
+        },
+        "scores": {
+          "8": 12,
+          "2": 15,
+          "4": 20,
+          "7": 6,
+          "6": 18,
+          "3": 6,
+          "10": 3,
+          "1": 1
+        }
+      },
+      "paired_valid": 81,
+      "paired_numeric": 81,
+      "coarse_fine_cells": {
+        "(2, 8)": 9,
+        "(1, 2)": 13,
+        "(1, 4)": 20,
+        "(1, 7)": 3,
+        "(1, 6)": 15,
+        "(2, 6)": 3,
+        "(2, 7)": 3,
+        "(1, 3)": 5,
+        "(1, 8)": 3,
+        "(2, 10)": 3,
+        "(2, 3)": 1,
+        "(2, 2)": 2,
+        "(1, 1)": 1
+      }
+    },
+    "reviewed18": {
+      "coarse": {
+        "n": 18,
+        "statuses": {
+          "valid": 18
+        },
+        "scores": {
+          "2": 2,
+          "1": 16
+        }
+      },
+      "fine": {
+        "n": 18,
+        "statuses": {
+          "valid": 18
+        },
+        "scores": {
+          "3": 2,
+          "2": 7,
+          "4": 4,
+          "6": 4,
+          "8": 1
+        }
+      },
+      "paired_valid": 18,
+      "paired_numeric": 18,
+      "coarse_fine_cells": {
+        "(2, 3)": 1,
+        "(1, 2)": 7,
+        "(1, 4)": 4,
+        "(1, 6)": 3,
+        "(2, 6)": 1,
+        "(1, 8)": 1,
+        "(1, 3)": 1
+      }
+    },
+    "synthetic8": {
+      "coarse": {
+        "n": 8,
+        "statuses": {
+          "valid": 5,
+          "invalid": 3
+        },
+        "scores": {
+          "0": 3,
+          "1": 2
+        }
+      },
+      "fine": {
+        "n": 8,
+        "statuses": {
+          "valid": 7,
+          "invalid": 1
+        },
+        "scores": {
+          "0": 3,
+          "2": 1,
+          "3": 1,
+          "8": 1,
+          "1": 1
+        }
+      },
+      "paired_valid": 5,
+      "paired_numeric": 5,
+      "coarse_fine_cells": {
+        "(0, 0)": 3,
+        "(1, 3)": 1,
+        "(1, 1)": 1
+      }
+    }
+  },
+  "designed_checks": [
+    {
+      "condition": "complete_narrow",
+      "value": null,
+      "passes": null
+    },
+    {
+      "condition": "conceptual",
+      "value": 8,
+      "passes": true
+    },
+    {
+      "condition": "empty",
+      "value": 0,
+      "passes": true
+    },
+    {
+      "condition": "repeat",
+      "value": 1,
+      "passes": true
+    },
+    {
+      "condition": "unrelated",
+      "value": 0,
+      "passes": true
+    },
+    {
+      "condition": "complete_steps>partial_steps",
+      "values": [
+        2,
+        3
+      ],
+      "passes": false
+    },
+    {
+      "condition": "partial_steps>generic",
+      "values": [
+        3,
+        0
+      ],
+      "passes": true
+    }
+  ],
+  "style_over100words": [
+    {
+      "task_id": "repair/natural/20034338/fine",
+      "words": 113
+    },
+    {
+      "task_id": "repair/natural/28277785/fine",
+      "words": 113
+    },
+    {
+      "task_id": "repair/natural/25345995/fine",
+      "words": 101
+    },
+    {
+      "task_id": "repair/natural/34829145/fine",
+      "words": 102
+    },
+    {
+      "task_id": "repair/natural/7803082/fine",
+      "words": 105
+    },
+    {
+      "task_id": "repair/natural/6851428/coarse",
+      "words": 115
+    },
+    {
+      "task_id": "repair/natural/6851428/fine",
+      "words": 105
+    },
+    {
+      "task_id": "repair/natural/17203329/fine",
+      "words": 119
+    },
+    {
+      "task_id": "repair/natural/30199263/fine",
+      "words": 107
+    },
+    {
+      "task_id": "repair/natural/34981144/coarse",
+      "words": 106
+    },
+    {
+      "task_id": "repair/natural/34981144/fine",
+      "words": 110
+    },
+    {
+      "task_id": "repair/natural/39035329/coarse",
+      "words": 112
+    },
+    {
+      "task_id": "repair/natural/29785134/fine",
+      "words": 106
+    },
+    {
+      "task_id": "repair/natural/38606804/coarse",
+      "words": 102
+    },
+    {
+      "task_id": "repair/natural/8555491/coarse",
+      "words": 127
+    },
+    {
+      "task_id": "repair/natural/18325521/fine",
+      "words": 115
+    },
+    {
+      "task_id": "repair/natural/33117607/fine",
+      "words": 125
+    },
+    {
+      "task_id": "repair/natural/23858257/fine",
+      "words": 107
+    }
+  ],
+  "limits": "Candidate revision, reused development data, constructed checks and GPT review not human gold; role separation and clarifications changed together. Do not choose by dispersion or group association."
+}

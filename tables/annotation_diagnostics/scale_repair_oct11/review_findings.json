@@ -1,0 +1,78 @@
+{
+  "reviewer": "GPT assistant in this conversation; not human gold or independent accuracy validation",
+  "scope": "Inspected all 216 repaired request fields against titles for obvious assessment-instruction copying; full-text targeted review of eight synthetic cases and natural cases listed below. Remaining natural full-text reviews are not claimed complete.",
+  "request_copying": {
+    "inspected": 216,
+    "obvious_assessment_instruction_copies": 0,
+    "caution": "This narrow check does not establish faithful scope extraction; several request summaries still broaden the problem."
+  },
+  "format": {
+    "valid": 236,
+    "total": 242,
+    "empty_remaining_gap": 4,
+    "too_many_evidence_ids": 2,
+    "word_budget_exceedances_among_repaired_valid": 18,
+    "note": "Nonempty fields and evidence cap remain fixed. Word budget is a separate instruction-compliance diagnostic not retroactively added to schema validity."
+  },
+  "control": {
+    "exact_parsed_json": 26,
+    "total": 26,
+    "note": "Deterministic reproduction, not accuracy."
+  },
+  "cases": [
+    {
+      "question_id": "synthetic/complete_steps",
+      "finding": "Full read_csv(...).drop_duplicates() receives fine2 for missing prose explanation, below partial read_csv-only fine3. Completeness ordering fails despite explicit short-code instruction. Coarse raw2 is schema-invalid due empty remaining_gap."
+    },
+    {
+      "question_id": "synthetic/partial_steps",
+      "finding": "Fine3 correctly identifies missing deduplication, but pairwise ordering versus complete answer is reversed."
+    },
+    {
+      "question_id": "synthetic/complete_narrow",
+      "finding": "len(xs) now recognized as direct help; raw fine10 and coarse2, both invalid only for empty remaining_gap. Keep excluded from valid-score comparisons, while reporting the semantic improvement separately."
+    },
+    {
+      "question_id": "synthetic/conceptual",
+      "finding": "Explanation of aliasing receives fine8, within preregistered8-10 range, but still invents need for extra examples. Coarse raw2 invalid for empty remaining_gap."
+    },
+    {
+      "question_id": "synthetic/unrelated",
+      "finding": "Unrelated plot-title answer now receives0 rather than null, matching the intended condition."
+    },
+    {
+      "question_id": "synthetic/empty",
+      "finding": "No answer receives0 in both arms."
+    },
+    {
+      "question_id": "synthetic/generic",
+      "finding": "Generic encouragement receives0 in both arms."
+    },
+    {
+      "question_id": "synthetic/repeat",
+      "finding": "Restatement receives1 in both arms. This passes the inherited lenient0-1 diagnostic interval but violates the explicit current zero anchor for repetition-only help. Preserve both facts; do not silently tighten historical check."
+    },
+    {
+      "question_id": "8376609",
+      "finding": "Question asks to disable imshow smoothing; answer supplies nearest interpolation with examples. Coarse2 but fine3 because no confirmation it works. This adds outcome-verification requirements beyond supplied request, not evidence the answer became less useful."
+    },
+    {
+      "question_id": "11295325",
+      "finding": "Question is stuck on input/split error; answer explains Python2 input evaluation and raw_input fix. Fine2 demands a complete age-calculation script, so broader-homework versus immediate-debugging scope confusion remains."
+    },
+    {
+      "question_id": "38776882",
+      "finding": "Configuration-file/CLI alternatives address avoiding direct script edits. Fine4 still demands implementing user input within the script, potentially substituting its own design requirement."
+    },
+    {
+      "question_id": "26962575",
+      "finding": "Repaired score4 explicitly acknowledges floating-point explanation while identifying missing R remedy; prior null arose from request confusion. This is a plausible improvement, not gold-confirmed accuracy."
+    },
+    {
+      "question_id": "4376640",
+      "finding": "Score4 acknowledges pty suggestion but retains the actual pexpect-versus-Popen explanation gap; narrower request extraction than blanket solution demand."
+    }
+  ],
+  "decision": "Do not adopt or automatically expand candidate to2000. Task-instruction copying improved, but short-answer penalties, invented confirmation/implementation requirements, and strict-format failures persist. The test does not show that fine scales are inherently useless, nor that lower scores are more correct.",
+  "pending": "Complete remaining natural-case semantic audit if needed; discuss whether request identification and evidence coverage should be assessed separately before any next GPU design. DKUCC intent expansion can continue independently."
+}
