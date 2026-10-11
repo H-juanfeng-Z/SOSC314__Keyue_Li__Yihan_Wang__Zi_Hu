@@ -14,6 +14,12 @@ development and require validation before substantive relationships can be
 established. The workflow does not treat voting scores, output-format validity,
 or agreement between prompts as verified technical correctness.
 
+## October 11 staged additions
+
+- [Response timing and frozen helpfulness](scripts/response_timing/oct11/README.md): standard-library replay of group, year and timing summaries; ordinal time-adjusted indices are exploratory, not validated quality.
+- [Candidate 0–10 scoring diagnostics](scripts/helpfulness/scale_repair_oct11/README.md): completed242-task test, preserved failures and counterexamples; the candidate is **not adopted**.
+- [Intent expansion program](scripts/intent_annotation/expansion_oct11/README.md): fixed seven-label protocol and runner; full expansion results are **pending**, not part of this release.
+
 ## Data
 
 The analysis uses the historical Kaggle dataset [Python Questions from Stack

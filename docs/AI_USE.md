@@ -64,6 +64,13 @@ policy.
   `6ccbd15`. Figures are computed from recorded results, not generated images.
   Automated schema tests and repeatability checks do not establish semantic
   annotation accuracy. No independent human validation is claimed for this stage.
+## October 11 staged diagnostic publication (Zi Hu)
+
+- OpenAI Codex assisted with the response-time aggregation, diagnostic prompt repair, inference/verification programs, case review, and publication packaging. See `scripts/response_timing/oct11/`, `scripts/helpfulness/scale_repair_oct11/`, and `scripts/intent_annotation/expansion_oct11/`. This entry does not attribute collaborators' topic-model work or AI use to Zi Hu.
+- Qwen2.5-Coder-14B-Instruct generated the experimental scores and intent judgments. GPT conversational review is explicitly AI review, not human gold. The exact backend model identifier for that review is not available. Synthetic examples are AI-constructed diagnostic conditions, not independently validated gold labels.
+- The scoring candidate remains unadopted: request-instruction copying improved but short-code penalties and invented requirements remain. Twenty-six exact controls measure deterministic reproduction, not accuracy. The ongoing intent expansion contributes code only in this release; incomplete results are not substituted for the frozen reusable score release.
+- Public decision exports omit natural post bodies, raw completions, machine paths and connection credentials. They permit schema/summary replay, not full raw-log or new-model reproduction. Original records remain local. The timing bundle contains IDs, timestamps, memberships and existing scores. No paid API was used by these replay programs.
+
 # Measurement follow-up September 26–27 2026
 
 - Zi Hu: OpenAI Codex assisted with preparation and inference code, prompt revisions, testing, result export, plotting, interpretation and report editing. Related files: `scripts/helpfulness/{prepare_measurement,prepare_request_bridge,run_measurement,run_scope_calibration,run_bridge,request_protocol,measurement_taxonomy,analyze_measurement,summarize_bridge,summarize_scope,export_measurement,test_request_protocol}.py`, `scripts/visualization/make_measurement_report_figure.py`, and `docs/experiments/request_first_measurement.md`.
