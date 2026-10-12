@@ -1,0 +1,7 @@
+{
+  "candidate": "Not adopted;400questions800valid candidate ratings;398 same-support analysis.",
+  "semantic_review": "24of48 stratified cases reviewed locally; incomplete, not released as final audit.",
+  "main_result": "No larger-group contrast excludes0 after shared-bootstrap simultaneous correction across both prompt families.",
+  "limits": "Question overlap preserved; ordinal means descriptive. Existing development data, not holdout; GPT not gold. Do not choose prompt by larger differences.",
+  "ai_use": "Qwen scoring; Codex analysis. No raw post bodies or infrastructure exported."
+}

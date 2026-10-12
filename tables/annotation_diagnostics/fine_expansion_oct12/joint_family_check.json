@@ -1,0 +1,225 @@
+{
+  "n": 398,
+  "bootstrap_draws": 4000,
+  "seed": 31410125,
+  "family_size": 20,
+  "groups": [
+    "api_usage",
+    "conceptual",
+    "discrepancy",
+    "errors",
+    "review"
+  ],
+  "radius": 0.6330515604418527,
+  "contrasts": [
+    {
+      "arm": "format",
+      "a": "api_usage",
+      "b": "conceptual",
+      "difference": -0.37073654476064544,
+      "joint_simultaneous95": [
+        -1.0037881052024982,
+        0.2623150156812073
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "api_usage",
+      "b": "discrepancy",
+      "difference": -0.3217158837515859,
+      "joint_simultaneous95": [
+        -0.9547674441934386,
+        0.31133567669026685
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "api_usage",
+      "b": "errors",
+      "difference": -0.3937803417186805,
+      "joint_simultaneous95": [
+        -1.0268319021605332,
+        0.23927121872317225
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "api_usage",
+      "b": "review",
+      "difference": -0.016552177725810857,
+      "joint_simultaneous95": [
+        -0.6496037381676636,
+        0.6164993827160419
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "conceptual",
+      "b": "discrepancy",
+      "difference": 0.04902066100905955,
+      "joint_simultaneous95": [
+        -0.5840308994327932,
+        0.6820722214509123
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "conceptual",
+      "b": "errors",
+      "difference": -0.023043796958035045,
+      "joint_simultaneous95": [
+        -0.6560953573998878,
+        0.6100077634838177
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "conceptual",
+      "b": "review",
+      "difference": 0.3541843670348346,
+      "joint_simultaneous95": [
+        -0.27886719340701815,
+        0.9872359274766873
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "discrepancy",
+      "b": "errors",
+      "difference": -0.0720644579670946,
+      "joint_simultaneous95": [
+        -0.7051160184089473,
+        0.5609871024747581
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "discrepancy",
+      "b": "review",
+      "difference": 0.30516370602577503,
+      "joint_simultaneous95": [
+        -0.3278878544160777,
+        0.9382152664676278
+      ]
+    },
+    {
+      "arm": "format",
+      "a": "errors",
+      "b": "review",
+      "difference": 0.3772281639928696,
+      "joint_simultaneous95": [
+        -0.2558233964489831,
+        1.0102797244347224
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "api_usage",
+      "b": "conceptual",
+      "difference": -0.23241277759413403,
+      "joint_simultaneous95": [
+        -0.8654643380359868,
+        0.4006387828477187
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "api_usage",
+      "b": "discrepancy",
+      "difference": -0.348572766135689,
+      "joint_simultaneous95": [
+        -0.9816243265775417,
+        0.28447879430616374
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "api_usage",
+      "b": "errors",
+      "difference": -0.5349599646932726,
+      "joint_simultaneous95": [
+        -1.1680115251351253,
+        0.09809159574858017
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "api_usage",
+      "b": "review",
+      "difference": 0.08045893013738681,
+      "joint_simultaneous95": [
+        -0.5525926303044659,
+        0.7135104905792395
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "conceptual",
+      "b": "discrepancy",
+      "difference": -0.11615998854155496,
+      "joint_simultaneous95": [
+        -0.7492115489834077,
+        0.5168915719002978
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "conceptual",
+      "b": "errors",
+      "difference": -0.3025471870991385,
+      "joint_simultaneous95": [
+        -0.9355987475409913,
+        0.3305043733427142
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "conceptual",
+      "b": "review",
+      "difference": 0.31287170773152084,
+      "joint_simultaneous95": [
+        -0.3201798527103319,
+        0.9459232681733736
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "discrepancy",
+      "b": "errors",
+      "difference": -0.18638719855758357,
+      "joint_simultaneous95": [
+        -0.8194387589994363,
+        0.44666436188426917
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "discrepancy",
+      "b": "review",
+      "difference": 0.4290316962730758,
+      "joint_simultaneous95": [
+        -0.20401986416877693,
+        1.0620832567149285
+      ]
+    },
+    {
+      "arm": "scope",
+      "a": "errors",
+      "b": "review",
+      "difference": 0.6154188948306594,
+      "joint_simultaneous95": [
+        -0.017632665611193366,
+        1.248470455272512
+      ]
+    }
+  ],
+  "excluding_zero": [],
+  "self_check": "Unique398 IDs and exact reproduction of both earlier per-arm bootstrap radii passed",
+  "method": "Shared question resampling preserves overlapping intent membership and both arm scores;95% maximum absolute centered deviation across20 contrasts, two arms jointly. Same method as previous analysis, expanded family only.",
+  "limits": "Post hoc sensitivity, not preregistered confirmation. Does not adjust entire research history or establish accuracy/causality. Ordinal means descriptive; groups n<20 excluded from contrasts, not pooled. GPT not gold.",
+  "ai_source": "Codex local analysis of frozen Qwen outputs",
+  "sha256": {
+    "comparison.json": "652a879edade780761772cc1f4369053ac4a63ce9e309c4c183c65d21cdf83eb",
+    "joint_family_check.py": "04c545f9665d7915354ef6c0ba63f28a41f21e410931bfc638e761255512d752"
+  }
+}

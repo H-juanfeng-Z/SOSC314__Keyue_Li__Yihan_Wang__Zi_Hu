@@ -1,0 +1,10 @@
+{
+  "sha256": {
+    "joint_family_check.json": "58398fdb180b1b2c7aaa7e6a15dbbaac454e6a91f620d59256c7d0cdc2f93455",
+    "paired_intent_scores.json": "a6d5d47a193d0f0039f244902ea659615bff3a9f67fbd67121f62ad089151131",
+    "paired_scores.json": "cf9a83a981a1dbc98082450d661337bbeb3f4654414d4eaecd1467bd1f0434a0",
+    "statistics.json": "20c9e87f6287af04494d3bbd1a14a6e202e882c353734fd3844b47ba66acc3dd",
+    "status.json": "bcfca81e3e85260e07b1426e379a41977b8ca656d079326acb65a69576a76fa2"
+  },
+  "purpose": "Public export integrity, not accuracy verification"
+}
