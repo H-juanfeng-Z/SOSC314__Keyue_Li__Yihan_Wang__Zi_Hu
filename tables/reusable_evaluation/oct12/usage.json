@@ -1,0 +1,9 @@
+{
+  "join": "Join question_id to your independent question classifications; answer_id distinguishes multiple answers. Filter status=valid; answer_rank=1 for first-answer analysis. Preserve missing/invalid; do not turn them into0.",
+  "overall": "Frozen overall categories unhelpful/partial/substantial; numeric relevance/actionability/sufficiency0-2 separately. Do not silently replace with candidate0-10.",
+  "scope": "1000 additional questions, not a replacement for prior2000 release. Seven overlapping intents; denominators cannot be summed. No holdout80.",
+  "ai_use": "Qwen2.5-Coder-14B outputs; Codex verification/aggregation. Not human gold, not causal.",
+  "privacy": "Only IDs, decisions and scores; no raw posts, credentials, server paths or model files. Existing repository attribution/licensing applies; IDs retain source linkage.",
+  "quality": "3 invalid answer outputs and1 context skip retained;4 invalid intent outputs across3 questions retained. Raw data stays local.",
+  "verification": "Run python scripts/reusable_evaluation/verify_oct12.py from repository root."
+}

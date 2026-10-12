@@ -1,0 +1,77 @@
+{
+  "questions": 1000,
+  "answers": 1820,
+  "answer_statuses": {
+    "valid": 1816,
+    "invalid": 3,
+    "context_skipped": 1
+  },
+  "intent_complete": 997,
+  "paired_first": 995,
+  "paired_distribution": {
+    "partial": 93,
+    "unhelpful": 31,
+    "substantial": 871
+  },
+  "overlapping_intent_groups": {
+    "api_change": {
+      "n": 36,
+      "distribution": {
+        "substantial": 31,
+        "partial": 3,
+        "unhelpful": 2
+      }
+    },
+    "api_usage": {
+      "n": 746,
+      "distribution": {
+        "unhelpful": 27,
+        "substantial": 645,
+        "partial": 74
+      }
+    },
+    "conceptual": {
+      "n": 290,
+      "distribution": {
+        "substantial": 253,
+        "partial": 27,
+        "unhelpful": 10
+      }
+    },
+    "discrepancy": {
+      "n": 634,
+      "distribution": {
+        "unhelpful": 20,
+        "substantial": 568,
+        "partial": 46
+      }
+    },
+    "errors": {
+      "n": 487,
+      "distribution": {
+        "unhelpful": 15,
+        "substantial": 436,
+        "partial": 36
+      }
+    },
+    "learning": {
+      "n": 45,
+      "distribution": {
+        "partial": 2,
+        "substantial": 39,
+        "unhelpful": 4
+      }
+    },
+    "review": {
+      "n": 667,
+      "distribution": {
+        "unhelpful": 23,
+        "substantial": 576,
+        "partial": 68
+      }
+    }
+  },
+  "historical_controls_exact": 28,
+  "raw_intent_tasks": 7028,
+  "raw_intent_invalid": 4
+}
