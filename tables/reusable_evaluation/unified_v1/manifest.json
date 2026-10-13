@@ -23,9 +23,9 @@
     "all_three_usable": 993
   },
   "files": {
-    "scores_0_2_5000.json": "876487112eeba89066c42e79362c4a669114e6324726b5b3803ea13e70fbf9a3",
-    "scores_0_10_1000.json": "54e05addb2baf839bfd20f0ed9d40a620d49b8001db8ca32368be90601f4d73c",
-    "scores_0_2_matched_1000.json": "e32c3fca3a1f2516f8df3647f36d156a728bb9f71541bcea06069438a3ec2074"
+    "scores_0_2_5000.json": "d5ff53b5079344b6e38c483037fc2e4105e5f0cc20cd9cbee2368c525ca4f55c",
+    "scores_0_10_1000.json": "09e1920b4c54158dd27f83f671edb21ea9631bc4fb4e8eb3c355ebf9e3dcee07",
+    "scores_0_2_matched_1000.json": "285416d203e44209e60968f166f9b86522959501ab96a3e141da22f32da7b9f1"
   },
   "source_hashes": {
     "old_repository/expanded_v1/first_answer_scores.json": "43b62f16eccf5f920c7f242a51db9a4bbd717642dccdc72ee3169ce1fa3dd3af",
@@ -33,6 +33,6 @@
     "oct13/answer_scores.json": "8b8be85b88f63f35d026fedd3ddad717ee7a27c2a74f2014220756807d73abdb",
     "oct13/fine_scores.json": "4503a1600c3ae84d3e1e1cece3f7991783421865f2e521bed00d11014caab19b"
   },
-  "build_script_sha256": "7884fdc5c2ddebf0bdb995667e56029d88470fb2347ce33d6b17e0152cbf217d",
+  "build_script_sha256": "ccb791f2f0e9357f02c9555739e23191f934fe1b0af9ba3e96514e7e22c411dd",
   "ai_source": "Existing Qwen ratings; Codex packaging and checks. No new inference or human gold."
 }
