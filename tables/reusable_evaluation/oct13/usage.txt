@@ -1,0 +1,23 @@
+SOSC314 oct13_overnight_v1 交接说明
+
+仓库路径：tables/reusable_evaluation/oct13/
+既有 oct12 路径保持不变。此包仅含新增一批 2000 题，不是全部历史数据。
+
+文件与连接方法
+1. question_index.json：2000 个 question_id。给分类伙伴只需此文件；请从原始问题库按 ID 取 title + body_html，使用原分类器同版本预处理。不要使用回答或评分来分类。
+2. answer_scores.json：2000 条首次回答记录。question_id 连接问题分类；answer_id 确认被评分的具体回答；answer_rank=1。overall_numeric 是 unhelpful=0、partial=1、substantial=2 的显式映射，不是三个维度的平均。
+3. fine_scores.json：其中固定 1000 题的两种候选 0–10 评分，共 2000 行。format/scope 分开，不平均、不择高、不自动替换旧评分。
+4. question_intents.json：2000×7=14000 条意图决策。七类可重叠，不可把各类人数相加当作总样本；uncertain 不是 no。
+5. summary.json：实际有效分母和状态。manifest.json：文件 SHA256。verify.py：在任何工作目录运行 python /路径/verify.py 可核验此包。
+
+统计规则
+仅 status=valid 且所需数值非 null 的记录进入对应数值分析。invalid/context_skipped/null 保留，不填成 0。
+比较两套量表必须按 question_id + answer_id 取共同有效样本；三套评分共同有效分母是 993，再要求完整七意图后为 989，不可混用。
+单独冻结 0–2 有效为 1992；完整七意图为 1987；两者交集为 1982；两套 fine 数值交集为 994。
+伙伴分类合并应验证每个 question_id 在同一 classification_version 下只有一个主题标签；多标签分类则另用长表，并明确重叠。
+报告每组样本量、均分、分布及区间；重叠分组按问题重采样。协议有效不代表语义准确，GPT 审阅不是人工 gold。
+
+发布边界
+本包不含原文、模型理由、服务器路径、凭据和模型文件。
+请勿上传原 calls/tasks、访问脚本、包含私有路径的原分析 JSON 或未审查的其他工作文件。
+模型输出为 AI 标注，不是人工真值；0–10 仍为候选测量版本。保留来源编号与项目既有许可、署名要求。

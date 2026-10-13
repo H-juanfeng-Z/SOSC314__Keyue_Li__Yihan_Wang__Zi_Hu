@@ -1,0 +1,37 @@
+{
+  "release": "oct13_overnight_v1",
+  "question_count": 2000,
+  "coarse_rows": 2000,
+  "coarse_valid": 1992,
+  "fine_rows": 2000,
+  "fine_questions": 1000,
+  "fine_paired_numeric": 994,
+  "intent_rows": 14000,
+  "complete_seven_intents": 1987,
+  "coarse_intent_paired": 1982,
+  "status_counts": {
+    "coarse": {
+      "valid": 1992,
+      "invalid": 4,
+      "context_skipped": 4
+    },
+    "fine": {
+      "valid": 1991,
+      "invalid": 4,
+      "context_skipped": 5
+    },
+    "intent": {
+      "valid": 13957,
+      "invalid": 6,
+      "context_skipped": 35,
+      "invalid_json": 2
+    }
+  },
+  "limitations": [
+    "Valid means protocol-valid, not verified correctness.",
+    "Candidate 0-10 versions are not adopted standards or a linear conversion of 0-2.",
+    "Seven intents overlap. Missing, invalid and abstention are not zero scores.",
+    "New batch only; does not replace previous releases."
+  ],
+  "ai_source": "Qwen model outputs; Codex integrity verification and packaging; not human gold"
+}

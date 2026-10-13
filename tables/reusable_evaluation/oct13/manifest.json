@@ -1,0 +1,29 @@
+{
+  "release": "oct13_overnight_v1",
+  "distribution": "identifier_only_versioned_release",
+  "files_sha256": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "answer_scores.json": "8b8be85b88f63f35d026fedd3ddad717ee7a27c2a74f2014220756807d73abdb",
+    "fine_scores.json": "4503a1600c3ae84d3e1e1cece3f7991783421865f2e521bed00d11014caab19b",
+    "question_index.json": "abede0a370e4acdd6f2081fb9ca8b3d81507fb10588ee8a680210cffe9ab00fa",
+    "question_intents.json": "3f074a7c24367f0238e433876afcf4950fd50faf8cd6e9524e148d59a9dbf54a",
+    "summary.json": "fd03462bba25e18921cfd3cd5f71242c1d510033734bb930662fc4bc76ff9b50",
+    "usage.txt": "86f0a57ffd3a3282b930a8c5042502d2e7a5c9252f23a26015d929aa33912111",
+    "verify.py": "9c077c43db67ad31eaef44d852957ea9ead05c0e812ab5f5910fe39749456c37"
+  },
+  "source_call_hashes": [
+    "06404a5897115aa0e791a8828f2de247bdc5a1fa008858e9061221e746c32c5a",
+    "0ee39a5cca63c93af9ff29bba235f4b306bf0ad8ab43b8bca11531a920cc4856",
+    "2c79005ec3dd45069198a078dbb24ede89e274c5b2e446da25331aab2dfb3d34",
+    "2fdcd8c90edf4a2ff1816d9f4745d380d818018fdfc8464ea2cbca6cd89def4f",
+    "8c0275447e4a854ca8f8704f199e326adce302e8f7b7cbf392060f18c82c58b3",
+    "aaa18f7e91edbe0f1b665af780fc465d6022ddce0dced7199b883ecabaa7b7d1",
+    "b7a349620606a161f3b903d4186e06ae8c9fd889b524164959aac945cadc478d",
+    "c130794cec1efca6ef721fad6ed6ae98eb2fe9ee50db5e49913b1bbde5121383",
+    "cb532d2d4c365aed3428ad661f3865981f3582486f18016b139540a6b689f84c",
+    "db7224328f4ae6b334eec5f921c464fba1ccd34c23fa0280f40b3d04500fc5bd",
+    "e1f5bf6c6d9bbe63a34bb0591d9eede2e6ec88eaedb5173b016037057e43f972",
+    "fedaee3ccbfa7f6893aa1797e5cd173b992d6f8655b6056df7158b315e6316a2"
+  ],
+  "export_code_sha256": "892e68dd4c658d197e5c380c98b871e4dd8c8e44814fa3e32415138243422328"
+}
