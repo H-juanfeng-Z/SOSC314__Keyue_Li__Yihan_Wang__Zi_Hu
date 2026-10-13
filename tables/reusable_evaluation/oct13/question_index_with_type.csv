@@ -1,0 +1,2001 @@
+﻿question_id,type_name,type_id
+169810,numpy,7
+177492,Django models,3
+227282,Python basics,1
+302379,Python basics,1
+305924,OOP,4
+321795,API/server,11
+516946,API/server,11
+535426,Django models,3
+542212,Python basics,1
+575196,Python basics,1
+583857,install/package,9
+625288,install/package,9
+705370,API/server,11
+735545,install/package,9
+752482,numpy,7
+794995,Django models,3
+915726,API/server,11
+981200,Django views/urls,13
+1032976,API/server,11
+1119754,API/server,11
+1185867,API/server,11
+1196708,BeautifulSoup/scraping,12
+1200046,Django models,3
+1211806,API/server,11
+1226584,API/server,11
+1229202,Python basics,1
+1247501,Django models,3
+1281944,Python basics,1
+1283664,BeautifulSoup/scraping,12
+1315368,errors/environment,2
+1356255,API/server,11
+1356348,API/server,11
+1414581,Python basics,1
+1415553,Django models,3
+1423260,BeautifulSoup/scraping,12
+1449620,API/server,11
+1472876,OOP,4
+1528016,Python basics,1
+1535702,Python basics,1
+1546816,Django models,3
+1576459,Python basics,1
+1616767,numpy,7
+1642441,errors/environment,2
+1665742,install/package,9
+1725268,file/os/path,10
+1759193,errors/environment,2
+1759208,numpy,7
+1768011,install/package,9
+1770755,install/package,9
+1780618,pandas,6
+1920936,install/package,9
+1975693,errors/environment,2
+2027658,install/package,9
+2029814,Django models,3
+2053021,OOP,4
+2133326,API/server,11
+2214694,Tkinter GUI,5
+2282727,matplotlib,8
+2286633,API/server,11
+2311718,install/package,9
+2347953,Python basics,1
+2360699,Django models,3
+2392949,API/server,11
+2413297,install/package,9
+2422905,API/server,11
+2454329,Django models,3
+2464685,BeautifulSoup/scraping,12
+2481839,Django models,3
+2489643,API/server,11
+2505317,errors/environment,2
+2512264,errors/environment,2
+2529198,install/package,9
+2534786,numpy,7
+2568653,Django models,3
+2630146,OOP,4
+2637760,file/os/path,10
+2658622,file/os/path,10
+2752915,BeautifulSoup/scraping,12
+2793783,errors/environment,2
+2794296,Tkinter GUI,5
+2795134,file/os/path,10
+2841451,API/server,11
+2844902,OOP,4
+2850074,install/package,9
+2863406,file/os/path,10
+2891589,errors/environment,2
+2922735,pandas,6
+3017176,BeautifulSoup/scraping,12
+3021884,API/server,11
+3049101,Python basics,1
+3076045,BeautifulSoup/scraping,12
+3078537,install/package,9
+3107991,numpy,7
+3117580,API/server,11
+3142770,BeautifulSoup/scraping,12
+3164699,install/package,9
+3176025,API/server,11
+3223604,BeautifulSoup/scraping,12
+3224207,Python basics,1
+3248559,numpy,7
+3272070,Python basics,1
+3298176,Django models,3
+3330690,errors/environment,2
+3362292,Tkinter GUI,5
+3372885,pandas,6
+3387680,Django models,3
+3392843,errors/environment,2
+3433131,Django models,3
+3478033,API/server,11
+3518597,numpy,7
+3530910,file/os/path,10
+3548919,errors/environment,2
+3569604,install/package,9
+3648781,OOP,4
+3677368,matplotlib,8
+3728655,Python basics,1
+3766657,Django views/urls,13
+3795554,API/server,11
+3803386,API/server,11
+3843095,Python basics,1
+3849632,BeautifulSoup/scraping,12
+3871464,errors/environment,2
+3916306,Django models,3
+3920820,pandas,6
+3927628,API/server,11
+3988193,install/package,9
+4010714,Python basics,1
+4029353,numpy,7
+4039884,install/package,9
+4055388,Django views/urls,13
+4087847,API/server,11
+4112264,API/server,11
+4135829,Tkinter GUI,5
+4145282,API/server,11
+4145350,API/server,11
+4189328,API/server,11
+4190683,BeautifulSoup/scraping,12
+4242205,install/package,9
+4260528,numpy,7
+4286648,OOP,4
+4293101,API/server,11
+4300208,Django views/urls,13
+4354011,errors/environment,2
+4359292,errors/environment,2
+4390628,Django views/urls,13
+4456125,file/os/path,10
+4479295,Django views/urls,13
+4523006,OOP,4
+4548082,install/package,9
+4551296,Tkinter GUI,5
+4583557,Django views/urls,13
+4610169,Python basics,1
+4618918,Django views/urls,13
+4624222,API/server,11
+4686715,file/os/path,10
+4693462,OOP,4
+4731572,Python basics,1
+4739597,OOP,4
+4744372,numpy,7
+4773603,OOP,4
+4808221,numpy,7
+4879036,Django models,3
+4879228,Django models,3
+4895102,Python basics,1
+4938224,Python basics,1
+4960332,Python basics,1
+5066811,API/server,11
+5074803,install/package,9
+5084720,pandas,6
+5104356,BeautifulSoup/scraping,12
+5126413,Python basics,1
+5152522,API/server,11
+5160405,Python basics,1
+5160812,Django models,3
+5224400,file/os/path,10
+5229188,Python basics,1
+5237080,API/server,11
+5292758,Python basics,1
+5319167,Python basics,1
+5413449,API/server,11
+5423811,Python basics,1
+5430502,OOP,4
+5510336,API/server,11
+5511708,Python basics,1
+5518435,Python basics,1
+5530646,API/server,11
+5568555,API/server,11
+5585670,Django views/urls,13
+5587419,Python basics,1
+5605172,pandas,6
+5655198,Python basics,1
+5697378,Python basics,1
+5731840,Django views/urls,13
+5787613,Django models,3
+5819118,numpy,7
+5878686,Django models,3
+5904673,Django models,3
+5918316,OOP,4
+5937782,install/package,9
+5979861,OOP,4
+6005960,Tkinter GUI,5
+6019768,install/package,9
+6061225,Django models,3
+6068522,API/server,11
+6088569,Python basics,1
+6132423,Django views/urls,13
+6141354,Python basics,1
+6156392,Python basics,1
+6158788,API/server,11
+6161219,numpy,7
+6215808,file/os/path,10
+6223426,Django views/urls,13
+6355456,errors/environment,2
+6374474,Tkinter GUI,5
+6419890,install/package,9
+6458006,Python basics,1
+6480595,Django views/urls,13
+6503793,API/server,11
+6513311,file/os/path,10
+6557959,Django models,3
+6560299,file/os/path,10
+6576163,API/server,11
+6685752,Python basics,1
+6703993,Python basics,1
+6706825,Django models,3
+6719309,Django views/urls,13
+6739215,Django views/urls,13
+6752139,install/package,9
+6763801,install/package,9
+6774166,API/server,11
+6804045,Python basics,1
+6857384,numpy,7
+6918794,BeautifulSoup/scraping,12
+6942843,API/server,11
+6950557,install/package,9
+6980749,API/server,11
+7027809,API/server,11
+7053284,API/server,11
+7115829,Python basics,1
+7137613,Python basics,1
+7149836,API/server,11
+7156010,Python basics,1
+7162850,file/os/path,10
+7210873,errors/environment,2
+7234518,Python basics,1
+7274221,numpy,7
+7303275,install/package,9
+7312326,API/server,11
+7330284,API/server,11
+7338618,Django models,3
+7352345,API/server,11
+7382246,API/server,11
+7416170,numpy,7
+7477864,Python basics,1
+7490408,Python basics,1
+7510511,Django models,3
+7528816,numpy,7
+7567377,errors/environment,2
+7572386,Python basics,1
+7605212,errors/environment,2
+7613089,Django views/urls,13
+7631676,API/server,11
+7636806,Python basics,1
+7654247,Python basics,1
+7655784,install/package,9
+7656692,OOP,4
+7671348,Django views/urls,13
+7674823,Django views/urls,13
+7697532,API/server,11
+7712389,BeautifulSoup/scraping,12
+7731324,Django views/urls,13
+7746232,Python basics,1
+7758260,Django views/urls,13
+7763972,Django views/urls,13
+7780683,Python basics,1
+7782772,file/os/path,10
+7807425,API/server,11
+7933166,OOP,4
+7971309,Python basics,1
+7986492,BeautifulSoup/scraping,12
+8021331,Python basics,1
+8031476,errors/environment,2
+8041276,Python basics,1
+8068019,numpy,7
+8075877,Python basics,1
+8114005,Tkinter GUI,5
+8114826,file/os/path,10
+8125930,Django models,3
+8143682,Python basics,1
+8169873,install/package,9
+8200062,OOP,4
+8207038,OOP,4
+8244915,Python basics,1
+8283536,Python basics,1
+8314012,Django views/urls,13
+8327791,Django models,3
+8329183,BeautifulSoup/scraping,12
+8336173,Tkinter GUI,5
+8360512,Django views/urls,13
+8375283,install/package,9
+8392104,Python basics,1
+8393107,Django models,3
+8406242,Python basics,1
+8447920,install/package,9
+8456836,install/package,9
+8479092,Django views/urls,13
+8503720,Django views/urls,13
+8545078,Django models,3
+8554354,Python basics,1
+8684947,API/server,11
+8689825,API/server,11
+8732120,Python basics,1
+8775547,OOP,4
+8778051,Django views/urls,13
+8781229,OOP,4
+8836536,Python basics,1
+8849635,file/os/path,10
+8903592,API/server,11
+8936544,API/server,11
+9008228,OOP,4
+9027092,API/server,11
+9054365,Python basics,1
+9143689,BeautifulSoup/scraping,12
+9146725,Django models,3
+9200292,install/package,9
+9245845,OOP,4
+9280248,API/server,11
+9334987,Django views/urls,13
+9337735,Tkinter GUI,5
+9346095,Python basics,1
+9391167,BeautifulSoup/scraping,12
+9391835,OOP,4
+9399050,pandas,6
+9415041,matplotlib,8
+9545442,errors/environment,2
+9582686,Python basics,1
+9595251,install/package,9
+9612128,Python basics,1
+9635128,Python basics,1
+9655725,API/server,11
+9678361,install/package,9
+9692496,Python basics,1
+9763053,API/server,11
+9770673,BeautifulSoup/scraping,12
+9790555,API/server,11
+9812574,Python basics,1
+9817134,OOP,4
+9847615,Python basics,1
+9848290,Python basics,1
+9882856,file/os/path,10
+9905471,Python basics,1
+9927573,Python basics,1
+9962147,errors/environment,2
+9964535,errors/environment,2
+9978534,pandas,6
+9992713,BeautifulSoup/scraping,12
+10011904,Django models,3
+10042915,Django views/urls,13
+10067976,OOP,4
+10070703,API/server,11
+10083188,Python basics,1
+10091996,install/package,9
+10107571,Django models,3
+10119819,errors/environment,2
+10203839,Django views/urls,13
+10208147,BeautifulSoup/scraping,12
+10250279,errors/environment,2
+10264739,numpy,7
+10289242,Django models,3
+10320096,Python basics,1
+10382810,Python basics,1
+10399614,Python basics,1
+10431516,OOP,4
+10463487,Django models,3
+10466962,install/package,9
+10467361,Python basics,1
+10477750,BeautifulSoup/scraping,12
+10494329,install/package,9
+10497418,Django models,3
+10507864,Python basics,1
+10521238,errors/environment,2
+10546309,Python basics,1
+10558986,Python basics,1
+10570818,numpy,7
+10578554,Python basics,1
+10643682,Django models,3
+10661255,Django models,3
+10691359,Python basics,1
+10791157,Django views/urls,13
+10819723,Python basics,1
+10847568,OOP,4
+10887372,errors/environment,2
+10925035,Python basics,1
+10927913,API/server,11
+10941030,pandas,6
+10944482,Django models,3
+10947983,OOP,4
+10957820,Python basics,1
+10965003,errors/environment,2
+10970817,Django models,3
+11016175,install/package,9
+11027527,file/os/path,10
+11029122,API/server,11
+11059229,install/package,9
+11100216,errors/environment,2
+11109859,API/server,11
+11157853,Python basics,1
+11163311,install/package,9
+11178260,API/server,11
+11205254,Python basics,1
+11216991,API/server,11
+11223147,API/server,11
+11246888,Python basics,1
+11270077,errors/environment,2
+11272708,Tkinter GUI,5
+11275201,OOP,4
+11278049,install/package,9
+11280420,API/server,11
+11301138,Python basics,1
+11346956,numpy,7
+11347499,Tkinter GUI,5
+11350770,pandas,6
+11395466,API/server,11
+11424989,BeautifulSoup/scraping,12
+11426416,pandas,6
+11485999,Python basics,1
+11512525,API/server,11
+11513866,Django views/urls,13
+11523721,API/server,11
+11524475,BeautifulSoup/scraping,12
+11531567,Tkinter GUI,5
+11596623,Python basics,1
+11651164,errors/environment,2
+11696338,Python basics,1
+11704627,Python basics,1
+11730452,BeautifulSoup/scraping,12
+11762721,OOP,4
+11769471,numpy,7
+11792629,OOP,4
+11813555,API/server,11
+11858159,Python basics,1
+11875309,pandas,6
+11876618,API/server,11
+11879366,API/server,11
+11886718,install/package,9
+11891755,API/server,11
+11895688,install/package,9
+11898382,Tkinter GUI,5
+11902821,API/server,11
+11915432,errors/environment,2
+11923018,matplotlib,8
+11925895,errors/environment,2
+11955506,install/package,9
+11985626,Django models,3
+11987949,OOP,4
+12020676,errors/environment,2
+12024358,BeautifulSoup/scraping,12
+12034755,API/server,11
+12038771,file/os/path,10
+12105146,Django models,3
+12116524,BeautifulSoup/scraping,12
+12124810,Python basics,1
+12150957,Tkinter GUI,5
+12183268,BeautifulSoup/scraping,12
+12203254,errors/environment,2
+12220850,Python basics,1
+12229929,file/os/path,10
+12229972,numpy,7
+12255537,Django views/urls,13
+12290336,API/server,11
+12322999,pandas,6
+12336747,OOP,4
+12360530,BeautifulSoup/scraping,12
+12367755,errors/environment,2
+12369409,install/package,9
+12379446,Python basics,1
+12464254,Python basics,1
+12486598,Python basics,1
+12600989,numpy,7
+12604619,Python basics,1
+12605265,API/server,11
+12636812,Django models,3
+12693139,numpy,7
+12723135,BeautifulSoup/scraping,12
+12725802,Django models,3
+12761387,pandas,6
+12763735,file/os/path,10
+12814983,BeautifulSoup/scraping,12
+12823274,errors/environment,2
+12840129,matplotlib,8
+12843189,Python basics,1
+12859502,Python basics,1
+12864692,install/package,9
+12927516,errors/environment,2
+12960424,install/package,9
+12992737,Python basics,1
+13014984,errors/environment,2
+13019719,pandas,6
+13047235,Tkinter GUI,5
+13061055,Python basics,1
+13070948,OOP,4
+13073163,Django views/urls,13
+13075496,errors/environment,2
+13079056,OOP,4
+13090012,install/package,9
+13105337,Python basics,1
+13179826,Python basics,1
+13179909,pandas,6
+13285973,Django views/urls,13
+13288294,numpy,7
+13296681,BeautifulSoup/scraping,12
+13297754,OOP,4
+13346408,Python basics,1
+13371215,Python basics,1
+13388897,Django models,3
+13391900,Python basics,1
+13420988,API/server,11
+13422653,Django views/urls,13
+13483004,Django models,3
+13525266,numpy,7
+13551004,Python basics,1
+13557221,Django models,3
+13716265,numpy,7
+13717314,BeautifulSoup/scraping,12
+13717463,Python basics,1
+13720566,install/package,9
+13721289,pandas,6
+13723764,API/server,11
+13740275,numpy,7
+13740672,pandas,6
+13741873,BeautifulSoup/scraping,12
+13745922,API/server,11
+13762181,BeautifulSoup/scraping,12
+13798774,install/package,9
+13836932,Python basics,1
+13864608,Python basics,1
+13872049,Python basics,1
+13926789,Tkinter GUI,5
+13930888,install/package,9
+13983629,Django views/urls,13
+14022647,Python basics,1
+14026392,pandas,6
+14040092,OOP,4
+14065722,API/server,11
+14071121,matplotlib,8
+14073682,Python basics,1
+14126201,numpy,7
+14147990,errors/environment,2
+14166043,Django models,3
+14172700,Python basics,1
+14248692,Python basics,1
+14249916,BeautifulSoup/scraping,12
+14270889,errors/environment,2
+14283186,Tkinter GUI,5
+14296136,numpy,7
+14319397,numpy,7
+14447044,errors/environment,2
+14484201,Python basics,1
+14559547,API/server,11
+14571863,Django models,3
+14586171,API/server,11
+14586173,matplotlib,8
+14587317,Python basics,1
+14597880,errors/environment,2
+14634444,install/package,9
+14656696,install/package,9
+14670867,API/server,11
+14689455,numpy,7
+14715758,Django models,3
+14744945,file/os/path,10
+14772199,Tkinter GUI,5
+14795894,OOP,4
+14816286,Django views/urls,13
+14821174,errors/environment,2
+14843259,install/package,9
+14844385,Python basics,1
+14881374,Python basics,1
+14903755,Django models,3
+14980938,install/package,9
+15024461,matplotlib,8
+15046093,Python basics,1
+15054534,pandas,6
+15109123,Python basics,1
+15125272,errors/environment,2
+15148841,Python basics,1
+15173001,errors/environment,2
+15216136,API/server,11
+15233735,Python basics,1
+15241203,Django views/urls,13
+15243858,Python basics,1
+15286827,Python basics,1
+15339280,BeautifulSoup/scraping,12
+15365807,numpy,7
+15395359,Python basics,1
+15399095,matplotlib,8
+15401497,Python basics,1
+15441796,errors/environment,2
+15446276,OOP,4
+15448694,Python basics,1
+15458613,OOP,4
+15514659,file/os/path,10
+15537399,OOP,4
+15564410,API/server,11
+15572647,Python basics,1
+15597576,Python basics,1
+15609289,OOP,4
+15632969,API/server,11
+15634958,install/package,9
+15668804,Django views/urls,13
+15672416,OOP,4
+15679067,Python basics,1
+15703098,Django views/urls,13
+15775166,Python basics,1
+15821581,Django models,3
+15838183,Django views/urls,13
+15838733,numpy,7
+15867967,Python basics,1
+15876307,file/os/path,10
+15888319,install/package,9
+15891676,install/package,9
+15906591,numpy,7
+15909598,Django views/urls,13
+15923441,install/package,9
+15940389,OOP,4
+15953337,numpy,7
+15968031,file/os/path,10
+15971201,Python basics,1
+16034512,Python basics,1
+16042089,Django views/urls,13
+16049778,matplotlib,8
+16055874,OOP,4
+16057217,BeautifulSoup/scraping,12
+16058429,Python basics,1
+16071423,errors/environment,2
+16096754,Python basics,1
+16104267,OOP,4
+16106895,Python basics,1
+16142086,pandas,6
+16184761,API/server,11
+16192638,install/package,9
+16227113,BeautifulSoup/scraping,12
+16284433,file/os/path,10
+16310074,OOP,4
+16313753,Django views/urls,13
+16319878,Python basics,1
+16397200,BeautifulSoup/scraping,12
+16402883,API/server,11
+16405187,Python basics,1
+16428500,Django views/urls,13
+16431538,OOP,4
+16448894,API/server,11
+16452212,install/package,9
+16513573,Python basics,1
+16524269,API/server,11
+16573174,Python basics,1
+16574466,pandas,6
+16576756,Django models,3
+16596188,pandas,6
+16619121,errors/environment,2
+16622836,Python basics,1
+16650313,API/server,11
+16650426,matplotlib,8
+16653129,API/server,11
+16659889,file/os/path,10
+16736240,install/package,9
+16741448,pandas,6
+16774127,pandas,6
+16781819,pandas,6
+16789677,OOP,4
+16861339,matplotlib,8
+16866540,Tkinter GUI,5
+16902557,numpy,7
+17047524,OOP,4
+17049777,pandas,6
+17050262,BeautifulSoup/scraping,12
+17072697,API/server,11
+17080491,Django views/urls,13
+17085278,OOP,4
+17099458,pandas,6
+17118520,Django models,3
+17144536,file/os/path,10
+17149253,matplotlib,8
+17197609,Tkinter GUI,5
+17211238,API/server,11
+17230163,matplotlib,8
+17236934,pandas,6
+17242836,pandas,6
+17246205,matplotlib,8
+17261180,Python basics,1
+17267863,Python basics,1
+17306029,API/server,11
+17309125,API/server,11
+17331528,install/package,9
+17339905,Python basics,1
+17340292,BeautifulSoup/scraping,12
+17346905,API/server,11
+17351524,Tkinter GUI,5
+17354973,BeautifulSoup/scraping,12
+17376212,numpy,7
+17388912,API/server,11
+17405503,OOP,4
+17414130,pandas,6
+17423369,Python basics,1
+17432638,file/os/path,10
+17438223,Django views/urls,13
+17447767,API/server,11
+17455107,Python basics,1
+17470795,Python basics,1
+17506518,Python basics,1
+17522246,BeautifulSoup/scraping,12
+17524685,Python basics,1
+17587160,BeautifulSoup/scraping,12
+17617150,Python basics,1
+17627488,errors/environment,2
+17628241,API/server,11
+17631595,BeautifulSoup/scraping,12
+17637390,install/package,9
+17686698,BeautifulSoup/scraping,12
+17688643,Python basics,1
+17696561,install/package,9
+17708416,BeautifulSoup/scraping,12
+17773741,numpy,7
+17775648,pandas,6
+17814340,Django views/urls,13
+17848281,API/server,11
+17852462,Python basics,1
+17880986,OOP,4
+17881050,API/server,11
+17887584,errors/environment,2
+17917292,file/os/path,10
+17930878,Python basics,1
+17932383,Django views/urls,13
+17970142,Python basics,1
+18000965,OOP,4
+18009266,Django models,3
+18015704,OOP,4
+18018872,errors/environment,2
+18027836,Python basics,1
+18029086,file/os/path,10
+18036530,install/package,9
+18103916,API/server,11
+18104333,API/server,11
+18105267,Python basics,1
+18108040,Django models,3
+18117581,file/os/path,10
+18146596,Tkinter GUI,5
+18149420,install/package,9
+18170896,numpy,7
+18219007,Python basics,1
+18222227,OOP,4
+18257400,BeautifulSoup/scraping,12
+18265145,file/os/path,10
+18277190,API/server,11
+18344328,BeautifulSoup/scraping,12
+18383384,BeautifulSoup/scraping,12
+18387102,errors/environment,2
+18423762,OOP,4
+18434302,errors/environment,2
+18442003,pandas,6
+18455538,errors/environment,2
+18550634,pandas,6
+18594182,OOP,4
+18598928,API/server,11
+18602802,OOP,4
+18610144,OOP,4
+18610752,file/os/path,10
+18623769,Python basics,1
+18632320,numpy,7
+18653889,Python basics,1
+18662951,file/os/path,10
+18676823,Python basics,1
+18723384,OOP,4
+18747105,Django views/urls,13
+18750833,OOP,4
+18797424,Python basics,1
+18819674,errors/environment,2
+18860986,Python basics,1
+18863429,API/server,11
+18872807,pandas,6
+18943690,pandas,6
+18957205,errors/environment,2
+18957994,API/server,11
+18977637,Django models,3
+18985395,numpy,7
+19014722,install/package,9
+19026520,Python basics,1
+19038844,Python basics,1
+19067239,API/server,11
+19073579,API/server,11
+19104771,Tkinter GUI,5
+19105687,Python basics,1
+19110942,matplotlib,8
+19130102,API/server,11
+19143573,Django models,3
+19207611,BeautifulSoup/scraping,12
+19261267,API/server,11
+19286191,Python basics,1
+19328610,matplotlib,8
+19340559,numpy,7
+19356881,install/package,9
+19370503,Python basics,1
+19400115,API/server,11
+19409112,OOP,4
+19429393,errors/environment,2
+19432741,Python basics,1
+19434337,Python basics,1
+19441031,API/server,11
+19485855,OOP,4
+19493701,pandas,6
+19525319,BeautifulSoup/scraping,12
+19530442,Python basics,1
+19556920,API/server,11
+19563093,errors/environment,2
+19569995,file/os/path,10
+19577592,file/os/path,10
+19577973,API/server,11
+19625814,BeautifulSoup/scraping,12
+19642368,Django views/urls,13
+19670787,Python basics,1
+19676192,pandas,6
+19677009,Django views/urls,13
+19694626,BeautifulSoup/scraping,12
+19701071,OOP,4
+19729158,errors/environment,2
+19737363,numpy,7
+19755511,OOP,4
+19782010,Python basics,1
+19796344,pandas,6
+19814560,API/server,11
+19829618,Python basics,1
+19858465,Django models,3
+19874789,numpy,7
+19888437,matplotlib,8
+19893851,Python basics,1
+19901196,API/server,11
+19903928,errors/environment,2
+19909374,file/os/path,10
+19935939,Python basics,1
+19988889,Django views/urls,13
+20006584,Django views/urls,13
+20024831,Python basics,1
+20027338,Python basics,1
+20086319,Django models,3
+20121390,OOP,4
+20161322,errors/environment,2
+20183773,errors/environment,2
+20184207,API/server,11
+20202841,Python basics,1
+20208929,OOP,4
+20332447,API/server,11
+20333476,API/server,11
+20361381,Python basics,1
+20375831,errors/environment,2
+20489297,pandas,6
+20510768,Python basics,1
+20524506,install/package,9
+20557275,Python basics,1
+20557440,OOP,4
+20558934,Python basics,1
+20575751,errors/environment,2
+20583465,Python basics,1
+20588542,Django models,3
+20590507,Python basics,1
+20594475,Python basics,1
+20613160,file/os/path,10
+20645521,pandas,6
+20645532,Tkinter GUI,5
+20679380,numpy,7
+20685508,Python basics,1
+20735908,BeautifulSoup/scraping,12
+20742488,file/os/path,10
+20768415,Python basics,1
+20789890,install/package,9
+20814674,errors/environment,2
+20844908,OOP,4
+20850179,install/package,9
+20857188,Python basics,1
+20863295,Django views/urls,13
+20874621,Python basics,1
+20895281,errors/environment,2
+20928692,API/server,11
+20933018,pandas,6
+20945983,install/package,9
+20954125,Python basics,1
+20959455,Django views/urls,13
+20978982,API/server,11
+21032981,Django views/urls,13
+21041395,OOP,4
+21045978,OOP,4
+21050487,OOP,4
+21053985,OOP,4
+21079995,errors/environment,2
+21093346,install/package,9
+21172553,BeautifulSoup/scraping,12
+21185706,errors/environment,2
+21225640,file/os/path,10
+21257865,Tkinter GUI,5
+21280862,pandas,6
+21319936,OOP,4
+21321826,Django views/urls,13
+21358700,Python basics,1
+21369683,API/server,11
+21382395,matplotlib,8
+21390899,errors/environment,2
+21415059,numpy,7
+21419306,Python basics,1
+21440846,errors/environment,2
+21483799,matplotlib,8
+21503149,Django views/urls,13
+21505732,pandas,6
+21541800,Django views/urls,13
+21545122,Django models,3
+21576142,API/server,11
+21584601,Python basics,1
+21669374,Python basics,1
+21671001,Python basics,1
+21693360,Python basics,1
+21700527,numpy,7
+21705210,OOP,4
+21712279,OOP,4
+21712584,file/os/path,10
+21803452,Django models,3
+21843143,file/os/path,10
+21855706,numpy,7
+21867501,install/package,9
+21875590,errors/environment,2
+21903619,Python basics,1
+21914922,API/server,11
+21959386,Python basics,1
+21963903,install/package,9
+21965881,Python basics,1
+22000568,Django views/urls,13
+22062799,install/package,9
+22092402,Python basics,1
+22133694,Python basics,1
+22149126,Python basics,1
+22161717,Python basics,1
+22165641,errors/environment,2
+22175780,numpy,7
+22183128,Python basics,1
+22221427,errors/environment,2
+22222525,file/os/path,10
+22232705,Tkinter GUI,5
+22269535,BeautifulSoup/scraping,12
+22310781,API/server,11
+22313702,OOP,4
+22314888,Python basics,1
+22361620,install/package,9
+22364565,matplotlib,8
+22383446,API/server,11
+22384396,pandas,6
+22392752,API/server,11
+22425567,API/server,11
+22430915,install/package,9
+22430926,Python basics,1
+22458900,pandas,6
+22545234,numpy,7
+22569181,Python basics,1
+22604809,Django views/urls,13
+22612682,install/package,9
+22615288,pandas,6
+22639682,pandas,6
+22664304,OOP,4
+22671586,API/server,11
+22674520,BeautifulSoup/scraping,12
+22680116,Python basics,1
+22693360,API/server,11
+22712321,Django models,3
+22714831,Django models,3
+22733951,install/package,9
+22737760,OOP,4
+22747332,errors/environment,2
+22775228,Python basics,1
+22783564,OOP,4
+22837490,install/package,9
+22844674,file/os/path,10
+22879009,Python basics,1
+22902054,Django models,3
+22917320,Tkinter GUI,5
+22947984,errors/environment,2
+22974016,OOP,4
+22974499,Python basics,1
+22976827,API/server,11
+22977026,file/os/path,10
+22982419,API/server,11
+22996972,pandas,6
+23002762,pandas,6
+23003538,install/package,9
+23026004,API/server,11
+23038926,numpy,7
+23073604,install/package,9
+23101223,Python basics,1
+23130008,API/server,11
+23145722,API/server,11
+23147244,API/server,11
+23157911,OOP,4
+23166975,Django views/urls,13
+23181121,API/server,11
+23189513,errors/environment,2
+23190090,API/server,11
+23191221,BeautifulSoup/scraping,12
+23209293,OOP,4
+23214380,Python basics,1
+23228650,API/server,11
+23229675,Python basics,1
+23235252,errors/environment,2
+23241143,errors/environment,2
+23247983,Python basics,1
+23252574,API/server,11
+23254394,Django views/urls,13
+23257079,numpy,7
+23281590,OOP,4
+23301841,Python basics,1
+23305063,Python basics,1
+23354380,pandas,6
+23404175,matplotlib,8
+23422259,Django views/urls,13
+23441695,matplotlib,8
+23446237,Django models,3
+23456734,pandas,6
+23473454,Python basics,1
+23475938,Python basics,1
+23488744,API/server,11
+23500942,install/package,9
+23506723,errors/environment,2
+23535578,pandas,6
+23541080,Django models,3
+23644100,pandas,6
+23646441,OOP,4
+23663188,errors/environment,2
+23691509,OOP,4
+23699655,Django models,3
+23702405,errors/environment,2
+23718229,Python basics,1
+23726962,file/os/path,10
+23735500,file/os/path,10
+23775134,Django models,3
+23827195,Django models,3
+23840886,errors/environment,2
+23897809,file/os/path,10
+23900139,Python basics,1
+23902056,file/os/path,10
+23935029,Django views/urls,13
+23947281,API/server,11
+23976073,API/server,11
+23982960,numpy,7
+23984584,Django views/urls,13
+23985450,Django models,3
+24002306,install/package,9
+24050708,OOP,4
+24080009,file/os/path,10
+24082248,errors/environment,2
+24106733,Python basics,1
+24151102,pandas,6
+24153585,Django views/urls,13
+24227747,OOP,4
+24272226,errors/environment,2
+24296730,pandas,6
+24300121,Django views/urls,13
+24301649,errors/environment,2
+24307192,Django models,3
+24313059,install/package,9
+24332576,API/server,11
+24347427,Tkinter GUI,5
+24350859,matplotlib,8
+24364560,Python basics,1
+24386028,Django models,3
+24441116,errors/environment,2
+24448220,Django models,3
+24494596,Python basics,1
+24496735,BeautifulSoup/scraping,12
+24500668,API/server,11
+24516489,API/server,11
+24542439,errors/environment,2
+24576570,Tkinter GUI,5
+24589738,pandas,6
+24598050,Python basics,1
+24613377,API/server,11
+24637278,Python basics,1
+24660578,matplotlib,8
+24670333,API/server,11
+24671133,file/os/path,10
+24695095,OOP,4
+24710918,Python basics,1
+24729030,Python basics,1
+24739216,matplotlib,8
+24739390,API/server,11
+24789671,matplotlib,8
+24793241,matplotlib,8
+24819137,pandas,6
+24827634,matplotlib,8
+24837867,numpy,7
+24844257,errors/environment,2
+24876470,API/server,11
+24877496,BeautifulSoup/scraping,12
+24892615,numpy,7
+24951973,OOP,4
+24963062,pandas,6
+24971761,numpy,7
+25066245,Python basics,1
+25071910,API/server,11
+25108472,numpy,7
+25116673,Python basics,1
+25177945,OOP,4
+25181147,pandas,6
+25193192,Python basics,1
+25222857,errors/environment,2
+25226791,Python basics,1
+25249249,Python basics,1
+25274772,API/server,11
+25284229,numpy,7
+25319851,numpy,7
+25372677,install/package,9
+25409169,install/package,9
+25437882,OOP,4
+25471690,Python basics,1
+25474670,Python basics,1
+25490459,Python basics,1
+25493161,Django views/urls,13
+25606907,numpy,7
+25609989,BeautifulSoup/scraping,12
+25618445,file/os/path,10
+25628505,API/server,11
+25647264,OOP,4
+25704645,errors/environment,2
+25734213,Python basics,1
+25770885,pandas,6
+25792226,Django models,3
+25815155,errors/environment,2
+25822960,API/server,11
+25842426,API/server,11
+25877062,OOP,4
+25893925,file/os/path,10
+25920287,numpy,7
+25922769,pandas,6
+25943156,Django views/urls,13
+25944273,API/server,11
+25983420,errors/environment,2
+25985934,install/package,9
+25988941,API/server,11
+26001133,API/server,11
+26028348,BeautifulSoup/scraping,12
+26031688,file/os/path,10
+26053086,Python basics,1
+26084470,OOP,4
+26098610,errors/environment,2
+26112253,API/server,11
+26136109,API/server,11
+26155985,Python basics,1
+26158706,BeautifulSoup/scraping,12
+26178626,errors/environment,2
+26199088,numpy,7
+26203469,file/os/path,10
+26206124,Python basics,1
+26253199,Django models,3
+26292478,errors/environment,2
+26311030,OOP,4
+26318253,matplotlib,8
+26337437,API/server,11
+26346593,Python basics,1
+26358852,Python basics,1
+26370738,numpy,7
+26394703,Python basics,1
+26468327,Python basics,1
+26477165,Django models,3
+26491224,Django models,3
+26498884,Python basics,1
+26498981,API/server,11
+26499156,file/os/path,10
+26524919,Python basics,1
+26531116,Python basics,1
+26539799,OOP,4
+26557914,Python basics,1
+26577893,install/package,9
+26653800,Python basics,1
+26655546,BeautifulSoup/scraping,12
+26663398,install/package,9
+26695829,API/server,11
+26700084,BeautifulSoup/scraping,12
+26735377,numpy,7
+26735590,API/server,11
+26745536,install/package,9
+26761734,Python basics,1
+26767653,numpy,7
+26832379,OOP,4
+26852176,install/package,9
+26878543,Python basics,1
+26901882,API/server,11
+26920914,Python basics,1
+26922304,Django views/urls,13
+26927571,OOP,4
+26928838,Python basics,1
+26958217,install/package,9
+26961876,BeautifulSoup/scraping,12
+26981704,BeautifulSoup/scraping,12
+26995537,matplotlib,8
+27041875,numpy,7
+27070272,Python basics,1
+27076249,Python basics,1
+27081056,errors/environment,2
+27088284,OOP,4
+27103889,errors/environment,2
+27119934,errors/environment,2
+27221771,Python basics,1
+27259562,pandas,6
+27266033,matplotlib,8
+27281317,Django views/urls,13
+27297406,Python basics,1
+27308951,pandas,6
+27354598,Python basics,1
+27358594,pandas,6
+27385422,errors/environment,2
+27389355,Tkinter GUI,5
+27414415,Django views/urls,13
+27451858,matplotlib,8
+27452170,errors/environment,2
+27464553,Python basics,1
+27473021,Python basics,1
+27489575,errors/environment,2
+27498925,pandas,6
+27518844,errors/environment,2
+27591429,BeautifulSoup/scraping,12
+27663065,pandas,6
+27703449,BeautifulSoup/scraping,12
+27716407,Django models,3
+27720948,install/package,9
+27784926,Django models,3
+27804112,Python basics,1
+27842234,BeautifulSoup/scraping,12
+27842935,errors/environment,2
+27847833,Tkinter GUI,5
+27858386,BeautifulSoup/scraping,12
+27863243,install/package,9
+27864991,pandas,6
+27875668,OOP,4
+27887145,errors/environment,2
+27901880,API/server,11
+27925958,numpy,7
+27929895,numpy,7
+27940492,pandas,6
+27967589,API/server,11
+27975879,numpy,7
+27984642,numpy,7
+28001768,errors/environment,2
+28009013,Tkinter GUI,5
+28037667,errors/environment,2
+28076957,Tkinter GUI,5
+28132751,errors/environment,2
+28133177,Django models,3
+28149350,file/os/path,10
+28159069,errors/environment,2
+28185802,OOP,4
+28186137,errors/environment,2
+28202870,pandas,6
+28209508,errors/environment,2
+28226675,install/package,9
+28227340,matplotlib,8
+28228496,numpy,7
+28239767,Python basics,1
+28297630,OOP,4
+28320582,matplotlib,8
+28401426,OOP,4
+28412285,numpy,7
+28419477,Django models,3
+28432910,BeautifulSoup/scraping,12
+28460461,pandas,6
+28463552,Django views/urls,13
+28480140,API/server,11
+28480525,Python basics,1
+28481414,API/server,11
+28490987,Python basics,1
+28515250,matplotlib,8
+28532457,BeautifulSoup/scraping,12
+28547351,pandas,6
+28547640,errors/environment,2
+28554325,Python basics,1
+28566731,Python basics,1
+28568110,pandas,6
+28580973,Django views/urls,13
+28646553,errors/environment,2
+28647434,pandas,6
+28665818,API/server,11
+28689098,Python basics,1
+28692608,matplotlib,8
+28730964,errors/environment,2
+28731250,API/server,11
+28732741,Python basics,1
+28732753,Python basics,1
+28733156,errors/environment,2
+28734055,API/server,11
+28751425,Python basics,1
+28768066,file/os/path,10
+28768629,Tkinter GUI,5
+28777327,numpy,7
+28778265,BeautifulSoup/scraping,12
+28818700,Python basics,1
+28845007,matplotlib,8
+28845657,install/package,9
+28865352,pandas,6
+28882008,API/server,11
+28883189,file/os/path,10
+28886878,Python basics,1
+28894747,Tkinter GUI,5
+28904863,Django models,3
+28921029,Django models,3
+28923139,BeautifulSoup/scraping,12
+29023019,API/server,11
+29026600,Python basics,1
+29026888,numpy,7
+29047287,Python basics,1
+29071320,Python basics,1
+29075577,Tkinter GUI,5
+29080402,API/server,11
+29096366,install/package,9
+29112631,numpy,7
+29132195,OOP,4
+29141727,Python basics,1
+29147164,file/os/path,10
+29149066,numpy,7
+29157297,OOP,4
+29158012,OOP,4
+29161028,Django models,3
+29176587,errors/environment,2
+29178844,API/server,11
+29180159,Django views/urls,13
+29183355,Python basics,1
+29218398,pandas,6
+29245663,pandas,6
+29253228,install/package,9
+29254707,errors/environment,2
+29269370,API/server,11
+29288914,pandas,6
+29311096,Django views/urls,13
+29314974,pandas,6
+29331044,errors/environment,2
+29392390,errors/environment,2
+29396361,API/server,11
+29397777,Python basics,1
+29448915,matplotlib,8
+29461933,Python basics,1
+29503189,Python basics,1
+29511349,Python basics,1
+29517934,install/package,9
+29531094,Django views/urls,13
+29559746,Python basics,1
+29563161,errors/environment,2
+29573625,file/os/path,10
+29582080,API/server,11
+29631391,BeautifulSoup/scraping,12
+29633924,Python basics,1
+29637709,numpy,7
+29660592,Python basics,1
+29675262,Python basics,1
+29689429,install/package,9
+29715837,Python basics,1
+29723279,install/package,9
+29728341,BeautifulSoup/scraping,12
+29729962,errors/environment,2
+29733903,file/os/path,10
+29779471,numpy,7
+29811980,Tkinter GUI,5
+29830291,pandas,6
+29866269,Python basics,1
+29867945,pandas,6
+29868660,errors/environment,2
+29873082,Python basics,1
+29885930,Python basics,1
+29895039,BeautifulSoup/scraping,12
+29908408,Python basics,1
+29960592,Python basics,1
+29982809,Python basics,1
+30012795,pandas,6
+30020468,Python basics,1
+30022637,Tkinter GUI,5
+30026903,Python basics,1
+30039287,BeautifulSoup/scraping,12
+30047752,API/server,11
+30066671,numpy,7
+30112357,pandas,6
+30129734,BeautifulSoup/scraping,12
+30140737,Python basics,1
+30144381,install/package,9
+30148133,errors/environment,2
+30148557,Python basics,1
+30153837,Python basics,1
+30154108,file/os/path,10
+30155147,install/package,9
+30157521,API/server,11
+30184253,API/server,11
+30197052,pandas,6
+30205690,OOP,4
+30207296,Django views/urls,13
+30239547,API/server,11
+30337759,Django views/urls,13
+30346936,install/package,9
+30356811,numpy,7
+30369408,OOP,4
+30384995,pandas,6
+30437381,matplotlib,8
+30445051,Django models,3
+30446131,install/package,9
+30449952,Python basics,1
+30476565,errors/environment,2
+30488849,OOP,4
+30491307,numpy,7
+30491427,BeautifulSoup/scraping,12
+30521530,API/server,11
+30525966,Django views/urls,13
+30538784,errors/environment,2
+30543636,Python basics,1
+30563337,BeautifulSoup/scraping,12
+30575552,install/package,9
+30591982,install/package,9
+30604350,file/os/path,10
+30608877,Django views/urls,13
+30617484,pandas,6
+30641509,pandas,6
+30645568,BeautifulSoup/scraping,12
+30678174,pandas,6
+30684273,install/package,9
+30695012,errors/environment,2
+30713968,install/package,9
+30725055,file/os/path,10
+30740210,Django views/urls,13
+30740548,Python basics,1
+30743756,OOP,4
+30766364,numpy,7
+30780249,pandas,6
+30814299,Django models,3
+30820896,API/server,11
+30823644,pandas,6
+30834232,Python basics,1
+30844135,BeautifulSoup/scraping,12
+30853559,file/os/path,10
+30862915,Tkinter GUI,5
+30875349,numpy,7
+30885314,install/package,9
+30921359,errors/environment,2
+30967048,file/os/path,10
+30987293,numpy,7
+30989328,pandas,6
+30994027,Python basics,1
+31034730,API/server,11
+31049443,API/server,11
+31079412,errors/environment,2
+31098412,Django models,3
+31123986,OOP,4
+31132659,pandas,6
+31134222,BeautifulSoup/scraping,12
+31157095,Tkinter GUI,5
+31159602,numpy,7
+31168789,pandas,6
+31181064,Django models,3
+31233424,API/server,11
+31245175,Python basics,1
+31247878,errors/environment,2
+31261068,file/os/path,10
+31264365,BeautifulSoup/scraping,12
+31283914,errors/environment,2
+31288824,API/server,11
+31289590,Tkinter GUI,5
+31311684,Django models,3
+31367425,API/server,11
+31370534,install/package,9
+31418317,errors/environment,2
+31419106,pandas,6
+31428869,Python basics,1
+31442210,BeautifulSoup/scraping,12
+31481849,errors/environment,2
+31536027,Python basics,1
+31556471,errors/environment,2
+31576198,pandas,6
+31600224,numpy,7
+31606676,file/os/path,10
+31621431,matplotlib,8
+31662825,Django models,3
+31689775,API/server,11
+31691671,API/server,11
+31692660,Python basics,1
+31746977,errors/environment,2
+31750408,Django models,3
+31751394,Django models,3
+31808910,install/package,9
+31841467,Python basics,1
+31849346,API/server,11
+31849376,numpy,7
+31865576,file/os/path,10
+31876290,Python basics,1
+31886081,Python basics,1
+31888289,OOP,4
+31901425,OOP,4
+31914522,Python basics,1
+31941532,numpy,7
+31951396,API/server,11
+31957222,Tkinter GUI,5
+31964676,install/package,9
+31967031,install/package,9
+32029554,Python basics,1
+32071481,API/server,11
+32101145,Python basics,1
+32102528,Tkinter GUI,5
+32152890,pandas,6
+32193844,file/os/path,10
+32194893,install/package,9
+32221890,Python basics,1
+32239577,numpy,7
+32255018,Django views/urls,13
+32260264,Django models,3
+32332364,API/server,11
+32362384,Django models,3
+32403276,errors/environment,2
+32419510,numpy,7
+32469052,pandas,6
+32533851,Python basics,1
+32534002,errors/environment,2
+32540422,file/os/path,10
+32569732,OOP,4
+32573261,BeautifulSoup/scraping,12
+32598046,API/server,11
+32613579,Python basics,1
+32628907,BeautifulSoup/scraping,12
+32633417,pandas,6
+32637076,pandas,6
+32654664,Python basics,1
+32658445,Django views/urls,13
+32662123,BeautifulSoup/scraping,12
+32673036,Django views/urls,13
+32680534,file/os/path,10
+32689557,BeautifulSoup/scraping,12
+32707263,Python basics,1
+32726226,file/os/path,10
+32760802,OOP,4
+32782580,API/server,11
+32789103,Django models,3
+32790362,Python basics,1
+32791377,Python basics,1
+32793537,API/server,11
+32846846,numpy,7
+32868122,Python basics,1
+32869449,Django models,3
+32900731,errors/environment,2
+32925173,matplotlib,8
+32941689,numpy,7
+32941931,file/os/path,10
+32947993,install/package,9
+32958805,API/server,11
+33016495,API/server,11
+33029595,Python basics,1
+33057293,install/package,9
+33059254,pandas,6
+33073650,Python basics,1
+33091755,numpy,7
+33119972,pandas,6
+33142395,Django models,3
+33146296,numpy,7
+33147542,Django models,3
+33181055,pandas,6
+33196457,OOP,4
+33254826,Python basics,1
+33275082,OOP,4
+33275096,pandas,6
+33303314,pandas,6
+33319309,BeautifulSoup/scraping,12
+33337546,numpy,7
+33341132,OOP,4
+33344094,OOP,4
+33375559,pandas,6
+33383027,pandas,6
+33393231,errors/environment,2
+33398369,Django models,3
+33412110,BeautifulSoup/scraping,12
+33416541,matplotlib,8
+33423667,Python basics,1
+33424693,Python basics,1
+33447937,Python basics,1
+33452953,Django models,3
+33490274,BeautifulSoup/scraping,12
+33495273,Python basics,1
+33518028,install/package,9
+33521704,Django models,3
+33526561,errors/environment,2
+33551880,API/server,11
+33556294,Python basics,1
+33556418,API/server,11
+33567375,Python basics,1
+33578426,OOP,4
+33588668,Django models,3
+33615906,Python basics,1
+33643385,Python basics,1
+33681804,BeautifulSoup/scraping,12
+33710829,numpy,7
+33723149,Django views/urls,13
+33727311,Python basics,1
+33729239,BeautifulSoup/scraping,12
+33756187,numpy,7
+33777080,pandas,6
+33814607,Python basics,1
+33818770,Django views/urls,13
+33839540,pandas,6
+33860744,OOP,4
+33861220,Django views/urls,13
+33884789,Python basics,1
+33889952,BeautifulSoup/scraping,12
+33905358,Django models,3
+33928399,pandas,6
+33932654,file/os/path,10
+33934210,pandas,6
+33998624,matplotlib,8
+34007676,Python basics,1
+34026962,BeautifulSoup/scraping,12
+34031098,Tkinter GUI,5
+34051037,file/os/path,10
+34090437,Python basics,1
+34097386,API/server,11
+34165983,install/package,9
+34191878,numpy,7
+34192791,Python basics,1
+34213777,API/server,11
+34221772,Python basics,1
+34234488,API/server,11
+34248887,Python basics,1
+34273871,file/os/path,10
+34286492,errors/environment,2
+34293534,pandas,6
+34313084,install/package,9
+34321978,install/package,9
+34324599,Python basics,1
+34371654,numpy,7
+34373133,Python basics,1
+34414719,BeautifulSoup/scraping,12
+34420864,pandas,6
+34432454,Python basics,1
+34434133,errors/environment,2
+34454683,pandas,6
+34460363,install/package,9
+34510749,pandas,6
+34515028,Django models,3
+34518570,Python basics,1
+34569186,numpy,7
+34590909,BeautifulSoup/scraping,12
+34596868,Python basics,1
+34611188,matplotlib,8
+34638811,file/os/path,10
+34665441,file/os/path,10
+34708314,Tkinter GUI,5
+34712547,API/server,11
+34714863,errors/environment,2
+34718369,install/package,9
+34734761,Python basics,1
+34744959,errors/environment,2
+34767715,API/server,11
+34780497,Python basics,1
+34790725,numpy,7
+34830755,Python basics,1
+34832334,OOP,4
+34842150,errors/environment,2
+34860853,Python basics,1
+34865409,numpy,7
+34877189,install/package,9
+34881747,Django views/urls,13
+34932809,Python basics,1
+34948964,pandas,6
+34992915,Django models,3
+34997436,errors/environment,2
+35018871,OOP,4
+35027571,matplotlib,8
+35068664,Python basics,1
+35084574,matplotlib,8
+35095442,Tkinter GUI,5
+35117491,Django models,3
+35138645,Python basics,1
+35143531,Django views/urls,13
+35144398,Python basics,1
+35159572,errors/environment,2
+35163569,API/server,11
+35173782,BeautifulSoup/scraping,12
+35186420,Python basics,1
+35186798,Python basics,1
+35226055,API/server,11
+35226115,numpy,7
+35249623,install/package,9
+35251091,file/os/path,10
+35266595,Python basics,1
+35273294,Django models,3
+35282775,Python basics,1
+35301379,Django views/urls,13
+35309785,Django views/urls,13
+35316594,pandas,6
+35329211,OOP,4
+35348595,errors/environment,2
+35368666,OOP,4
+35385441,matplotlib,8
+35393501,file/os/path,10
+35403031,OOP,4
+35415468,numpy,7
+35435015,numpy,7
+35436331,pandas,6
+35442782,file/os/path,10
+35447755,BeautifulSoup/scraping,12
+35469525,Python basics,1
+35479347,OOP,4
+35487445,OOP,4
+35495658,file/os/path,10
+35518520,API/server,11
+35536534,file/os/path,10
+35566414,pandas,6
+35580188,API/server,11
+35586599,Python basics,1
+35602984,Python basics,1
+35607818,numpy,7
+35616030,file/os/path,10
+35630748,matplotlib,8
+35637968,numpy,7
+35672223,file/os/path,10
+35692546,API/server,11
+35696510,API/server,11
+35719165,API/server,11
+35728100,install/package,9
+35749546,Tkinter GUI,5
+35756549,numpy,7
+35762123,Python basics,1
+35774261,numpy,7
+35807817,Tkinter GUI,5
+35809554,file/os/path,10
+35830822,file/os/path,10
+35849184,Django models,3
+35866232,Python basics,1
+35915133,pandas,6
+35919462,matplotlib,8
+35930563,pandas,6
+35933481,matplotlib,8
+35962193,errors/environment,2
+35993734,install/package,9
+36038330,Tkinter GUI,5
+36048713,Python basics,1
+36073640,API/server,11
+36076662,Django models,3
+36080548,errors/environment,2
+36084900,install/package,9
+36097292,file/os/path,10
+36103164,numpy,7
+36103955,API/server,11
+36113811,file/os/path,10
+36135169,install/package,9
+36140278,OOP,4
+36184402,API/server,11
+36185877,API/server,11
+36203221,BeautifulSoup/scraping,12
+36209324,API/server,11
+36218337,pandas,6
+36227413,errors/environment,2
+36242798,errors/environment,2
+36247173,Python basics,1
+36248610,API/server,11
+36251706,API/server,11
+36274036,Python basics,1
+36308433,Python basics,1
+36318889,install/package,9
+36326458,numpy,7
+36346573,errors/environment,2
+36349646,install/package,9
+36365401,Django views/urls,13
+36372034,OOP,4
+36372061,Python basics,1
+36413567,Python basics,1
+36425344,API/server,11
+36434706,OOP,4
+36438619,install/package,9
+36440618,pandas,6
+36457076,Django models,3
+36483483,Python basics,1
+36505847,pandas,6
+36562080,numpy,7
+36579648,pandas,6
+36579996,Python basics,1
+36618898,file/os/path,10
+36638045,OOP,4
+36650376,OOP,4
+36684589,API/server,11
+36684679,pandas,6
+36723861,errors/environment,2
+36780856,API/server,11
+36808940,Python basics,1
+36864929,pandas,6
+36867328,pandas,6
+36905097,errors/environment,2
+36907586,Python basics,1
+36928007,BeautifulSoup/scraping,12
+36928852,pandas,6
+36933130,BeautifulSoup/scraping,12
+36957829,install/package,9
+36958074,Django models,3
+36959589,API/server,11
+36959847,Tkinter GUI,5
+36971738,pandas,6
+36972368,Python basics,1
+36981050,numpy,7
+36983360,pandas,6
+37000569,pandas,6
+37023559,Django models,3
+37048494,pandas,6
+37070940,Python basics,1
+37074209,Python basics,1
+37074991,BeautifulSoup/scraping,12
+37079640,numpy,7
+37080385,pandas,6
+37087685,file/os/path,10
+37088039,Python basics,1
+37093601,numpy,7
+37120866,pandas,6
+37124944,BeautifulSoup/scraping,12
+37136211,pandas,6
+37147955,Django views/urls,13
+37166892,BeautifulSoup/scraping,12
+37182129,Python basics,1
+37194789,Python basics,1
+37206857,Python basics,1
+37209205,install/package,9
+37216486,BeautifulSoup/scraping,12
+37241902,Django models,3
+37270133,matplotlib,8
+37296564,Django models,3
+37306639,BeautifulSoup/scraping,12
+37332977,API/server,11
+37337281,matplotlib,8
+37355204,matplotlib,8
+37374733,errors/environment,2
+37402998,Django models,3
+37406032,Python basics,1
+37406912,file/os/path,10
+37407776,API/server,11
+37408370,install/package,9
+37437600,Python basics,1
+37459872,BeautifulSoup/scraping,12
+37501227,numpy,7
+37510076,Python basics,1
+37513178,Python basics,1
+37517165,Python basics,1
+37543975,pandas,6
+37614303,pandas,6
+37622023,Python basics,1
+37633443,Tkinter GUI,5
+37645894,API/server,11
+37652172,install/package,9
+37671014,Django views/urls,13
+37689534,OOP,4
+37691910,install/package,9
+37695218,Python basics,1
+37700484,Django views/urls,13
+37726083,file/os/path,10
+37733916,numpy,7
+37737238,OOP,4
+37749088,file/os/path,10
+37793063,OOP,4
+37822369,Python basics,1
+37823060,OOP,4
+37833210,pandas,6
+37836054,Django models,3
+37837311,OOP,4
+37844149,numpy,7
+37846721,Django models,3
+37853548,install/package,9
+37871087,API/server,11
+37907635,file/os/path,10
+37909692,Python basics,1
+37931540,pandas,6
+37958332,file/os/path,10
+37977617,Python basics,1
+38017465,matplotlib,8
+38026681,API/server,11
+38028781,Python basics,1
+38030688,Python basics,1
+38036699,pandas,6
+38073571,matplotlib,8
+38074587,install/package,9
+38118999,pandas,6
+38140427,install/package,9
+38214032,numpy,7
+38214596,pandas,6
+38251317,matplotlib,8
+38276130,API/server,11
+38287716,OOP,4
+38291908,pandas,6
+38304548,API/server,11
+38311108,install/package,9
+38312995,pandas,6
+38319104,API/server,11
+38325753,Python basics,1
+38331669,Django models,3
+38356629,OOP,4
+38413050,Django views/urls,13
+38443292,numpy,7
+38446425,pandas,6
+38457449,API/server,11
+38462235,Python basics,1
+38474476,OOP,4
+38483591,numpy,7
+38526285,numpy,7
+38536959,Django models,3
+38551276,errors/environment,2
+38565606,numpy,7
+38569760,errors/environment,2
+38580073,pandas,6
+38589570,Django views/urls,13
+38597831,Python basics,1
+38618964,API/server,11
+38621539,pandas,6
+38641712,errors/environment,2
+38652893,file/os/path,10
+38661635,BeautifulSoup/scraping,12
+38669374,OOP,4
+38670502,Python basics,1
+38675965,API/server,11
+38691032,install/package,9
+38732671,Python basics,1
+38732979,pandas,6
+38774135,numpy,7
+38776104,API/server,11
+38787618,pandas,6
+38803320,Python basics,1
+38817377,errors/environment,2
+38819444,Python basics,1
+38857778,Django models,3
+38914104,API/server,11
+38922952,pandas,6
+38938236,errors/environment,2
+38959744,install/package,9
+38960001,numpy,7
+38963882,pandas,6
+38968943,install/package,9
+38973168,install/package,9
+38976558,API/server,11
+38994530,API/server,11
+39007601,Django views/urls,13
+39022782,errors/environment,2
+39048562,Python basics,1
+39057729,OOP,4
+39066382,Python basics,1
+39069701,errors/environment,2
+39148200,matplotlib,8
+39150193,matplotlib,8
+39155391,Django views/urls,13
+39176638,Python basics,1
+39187042,numpy,7
+39187958,Python basics,1
+39216593,Python basics,1
+39222991,file/os/path,10
+39236924,Django views/urls,13
+39280741,Python basics,1
+39292190,Python basics,1
+39308625,pandas,6
+39310559,matplotlib,8
+39317702,pandas,6
+39373550,install/package,9
+39380560,Python basics,1
+39397878,file/os/path,10
+39465259,errors/environment,2
+39470645,API/server,11
+39493732,pandas,6
+39520095,BeautifulSoup/scraping,12
+39534584,file/os/path,10
+39539090,Python basics,1
+39549426,BeautifulSoup/scraping,12
+39556719,Django models,3
+39559401,Python basics,1
+39585238,errors/environment,2
+39601759,Python basics,1
+39602188,pandas,6
+39604918,numpy,7
+39613065,API/server,11
+39629464,Python basics,1
+39638801,pandas,6
+39657215,API/server,11
+39682366,errors/environment,2
+39687975,Django views/urls,13
+39700644,Django models,3
+39730184,matplotlib,8
+39767718,pandas,6
+39772625,OOP,4
+39795784,Python basics,1
+39829827,Python basics,1
+39863881,pandas,6
+39866056,install/package,9
+39882388,errors/environment,2
+39883786,Python basics,1
+39901163,errors/environment,2
+39904477,file/os/path,10
+39922132,file/os/path,10
+39926676,Python basics,1
+39952634,Python basics,1
+39967540,pandas,6
+39981775,BeautifulSoup/scraping,12
+39992009,Python basics,1
+39999239,numpy,7
+40001301,numpy,7
+40026885,file/os/path,10
+40070615,numpy,7
+40075578,errors/environment,2
+40094156,install/package,9
+40103855,matplotlib,8
