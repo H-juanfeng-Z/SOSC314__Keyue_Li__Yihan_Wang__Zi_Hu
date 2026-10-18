@@ -12,6 +12,9 @@ def main():
     source=root/'report_data.json';expected=json.loads((root/'provenance.json').read_text(encoding='utf8'))['report_data_sha256']
     assert hashlib.sha256(source.read_bytes()).hexdigest()==expected,'Report data hash mismatch'
     for name in ['report_data.json','qwen_example.json','qwen_prompts.json']:shutil.copyfile(root/name,out/name)
+    shutil.copytree(root/'assets',out/'assets',dirs_exist_ok=True)
+    for name in ['README.md','provenance.json','partner_feature_audit.json','feature_id_support.json','partner_feature_review.py']:
+        shutil.copyfile(root/name,out/name)
     nb=nbformat.read(root/'report.ipynb',as_version=4)
     for c in nb.cells:
         if c.cell_type=='code':c.outputs=[];c.execution_count=None

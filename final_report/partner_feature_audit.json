@@ -1,0 +1,761 @@
+{
+  "date": "2026-10-18",
+  "purpose": "Verify feature generation and denominators, not accuracy or causal mechanisms.",
+  "inputs": {
+    "question .py": "03b3e9b67f6478dba4e6cb59dc6f8ec2ae1c4d1c699fbe5bed1af798859e0eb6",
+    "questions_clean.parquet": "79440abbf56be552c0c1d1ed3fec12a7c3855eabb8b35ea8ebf8bc68e8bea3e7",
+    "questions_with_types.csv": "f7af3aedbf65b2fab8598efcfe6ea1db7d42408ce698c4d76df26258ef9a16fd",
+    "technical topics(1).ipynb": "f474f7021d7585e5bff2092a197ce75a6e668dd1679ee965857a74ba593c7c47"
+  },
+  "audit_code_sha256": "044ccf75b4574df6d32675454086b4b2310316252c960f7bb1df095ab3e4147c",
+  "runtime_path_changes_only": true,
+  "clean_rows": 607282,
+  "type_rows": 20000,
+  "matched_type_rows": 20000,
+  "unmatched_type_rows": 0,
+  "duplicates_clean": 0,
+  "duplicates_type": 0,
+  "classification_conflicts": 0,
+  "manual_review_author_report": "Yihan reports inspecting 15 per type and NumPy/Matplotlib/API/Django features. Code establishes selection, not a reviewer-decision log.",
+  "sampling_seed": 42,
+  "sample_results": {
+    "API_server": {
+      "n": 15,
+      "question_ids": [
+        "3158098",
+        "37913921",
+        "5617322",
+        "36014646",
+        "17943523",
+        "22349741",
+        "30339847",
+        "36773492",
+        "3800530",
+        "39948448",
+        "28026470",
+        "22127346",
+        "40044040",
+        "37643520",
+        "31200648"
+      ],
+      "features": {
+        "mentions_code": {
+          "hits": 14,
+          "n": 15,
+          "pct": 93.3
+        },
+        "mentions_version": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        },
+        "mentions_auth": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        },
+        "mentions_request_response": {
+          "hits": 9,
+          "n": 15,
+          "pct": 60.0
+        },
+        "mentions_error": {
+          "hits": 4,
+          "n": 15,
+          "pct": 26.7
+        },
+        "mentions_expected_output": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_environment": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        }
+      }
+    },
+    "NumPy": {
+      "n": 15,
+      "question_ids": [
+        "6047243",
+        "32943227",
+        "34079787",
+        "39507592",
+        "32989483",
+        "7931382",
+        "26030515",
+        "34853386",
+        "31551410",
+        "32414960",
+        "25991666",
+        "27631702",
+        "29594936",
+        "36437397",
+        "36554456"
+      ],
+      "features": {
+        "mentions_code": {
+          "hits": 14,
+          "n": 15,
+          "pct": 93.3
+        },
+        "mentions_version": {
+          "hits": 2,
+          "n": 15,
+          "pct": 13.3
+        },
+        "mentions_auth": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_request_response": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_error": {
+          "hits": 5,
+          "n": 15,
+          "pct": 33.3
+        },
+        "mentions_expected_output": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_environment": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        }
+      }
+    },
+    "Matplotlib": {
+      "n": 15,
+      "question_ids": [
+        "19827792",
+        "20085929",
+        "19859609",
+        "33457731",
+        "3489451",
+        "30105541",
+        "22084163",
+        "22991226",
+        "22670505",
+        "26323143",
+        "17127083",
+        "35704716",
+        "39907708",
+        "21240195",
+        "19036477"
+      ],
+      "features": {
+        "mentions_code": {
+          "hits": 11,
+          "n": 15,
+          "pct": 73.3
+        },
+        "mentions_version": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_auth": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_request_response": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_error": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        },
+        "mentions_expected_output": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_environment": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        }
+      }
+    },
+    "Python_basics": {
+      "n": 15,
+      "question_ids": [
+        "26182916",
+        "31079649",
+        "24643338",
+        "7829188",
+        "6728719",
+        "12880324",
+        "13409559",
+        "11162798",
+        "6075974",
+        "35685146",
+        "12080957",
+        "28596441",
+        "15405460",
+        "36980910",
+        "3165213"
+      ],
+      "features": {
+        "mentions_code": {
+          "hits": 14,
+          "n": 15,
+          "pct": 93.3
+        },
+        "mentions_version": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_auth": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_request_response": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        },
+        "mentions_error": {
+          "hits": 2,
+          "n": 15,
+          "pct": 13.3
+        },
+        "mentions_expected_output": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_environment": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        }
+      }
+    },
+    "Django": {
+      "n": 15,
+      "question_ids": [
+        "14450645",
+        "8071586",
+        "36068113",
+        "37111118",
+        "33791608",
+        "39407674",
+        "21597469",
+        "32868911",
+        "2465675",
+        "30979817",
+        "37986329",
+        "36353016",
+        "39355048",
+        "18472826",
+        "6296584"
+      ],
+      "features": {
+        "mentions_code": {
+          "hits": 13,
+          "n": 15,
+          "pct": 86.7
+        },
+        "mentions_version": {
+          "hits": 1,
+          "n": 15,
+          "pct": 6.7
+        },
+        "mentions_auth": {
+          "hits": 2,
+          "n": 15,
+          "pct": 13.3
+        },
+        "mentions_request_response": {
+          "hits": 6,
+          "n": 15,
+          "pct": 40.0
+        },
+        "mentions_error": {
+          "hits": 7,
+          "n": 15,
+          "pct": 46.7
+        },
+        "mentions_expected_output": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        },
+        "mentions_environment": {
+          "hits": 0,
+          "n": 15,
+          "pct": 0.0
+        }
+      }
+    }
+  },
+  "full_category_results": {
+    "API_server": {
+      "n": 2008,
+      "unique_ids": 2008,
+      "original_labels": {
+        "API/server": 1303,
+        "BeautifulSoup/scraping": 705
+      },
+      "features": {
+        "mentions_code": {
+          "hits": 1633,
+          "n": 2008,
+          "pct": 81.3
+        },
+        "mentions_version": {
+          "hits": 155,
+          "n": 2008,
+          "pct": 7.7
+        },
+        "mentions_auth": {
+          "hits": 349,
+          "n": 2008,
+          "pct": 17.4
+        },
+        "mentions_request_response": {
+          "hits": 783,
+          "n": 2008,
+          "pct": 39.0
+        },
+        "mentions_error": {
+          "hits": 612,
+          "n": 2008,
+          "pct": 30.5
+        },
+        "mentions_expected_output": {
+          "hits": 15,
+          "n": 2008,
+          "pct": 0.7
+        },
+        "mentions_environment": {
+          "hits": 157,
+          "n": 2008,
+          "pct": 7.8
+        }
+      }
+    },
+    "NumPy": {
+      "n": 1249,
+      "unique_ids": 1249,
+      "original_labels": {
+        "numpy": 1249
+      },
+      "features": {
+        "mentions_code": {
+          "hits": 1112,
+          "n": 1249,
+          "pct": 89.0
+        },
+        "mentions_version": {
+          "hits": 70,
+          "n": 1249,
+          "pct": 5.6
+        },
+        "mentions_auth": {
+          "hits": 9,
+          "n": 1249,
+          "pct": 0.7
+        },
+        "mentions_request_response": {
+          "hits": 14,
+          "n": 1249,
+          "pct": 1.1
+        },
+        "mentions_error": {
+          "hits": 256,
+          "n": 1249,
+          "pct": 20.5
+        },
+        "mentions_expected_output": {
+          "hits": 20,
+          "n": 1249,
+          "pct": 1.6
+        },
+        "mentions_environment": {
+          "hits": 52,
+          "n": 1249,
+          "pct": 4.2
+        }
+      }
+    },
+    "Matplotlib": {
+      "n": 592,
+      "unique_ids": 592,
+      "original_labels": {
+        "matplotlib": 592
+      },
+      "features": {
+        "mentions_code": {
+          "hits": 504,
+          "n": 592,
+          "pct": 85.1
+        },
+        "mentions_version": {
+          "hits": 21,
+          "n": 592,
+          "pct": 3.5
+        },
+        "mentions_auth": {
+          "hits": 4,
+          "n": 592,
+          "pct": 0.7
+        },
+        "mentions_request_response": {
+          "hits": 4,
+          "n": 592,
+          "pct": 0.7
+        },
+        "mentions_error": {
+          "hits": 98,
+          "n": 592,
+          "pct": 16.6
+        },
+        "mentions_expected_output": {
+          "hits": 1,
+          "n": 592,
+          "pct": 0.2
+        },
+        "mentions_environment": {
+          "hits": 22,
+          "n": 592,
+          "pct": 3.7
+        }
+      }
+    },
+    "Python_basics": {
+      "n": 3815,
+      "unique_ids": 3815,
+      "original_labels": {
+        "Python basics": 3815
+      },
+      "features": {
+        "mentions_code": {
+          "hits": 3574,
+          "n": 3815,
+          "pct": 93.7
+        },
+        "mentions_version": {
+          "hits": 160,
+          "n": 3815,
+          "pct": 4.2
+        },
+        "mentions_auth": {
+          "hits": 80,
+          "n": 3815,
+          "pct": 2.1
+        },
+        "mentions_request_response": {
+          "hits": 58,
+          "n": 3815,
+          "pct": 1.5
+        },
+        "mentions_error": {
+          "hits": 674,
+          "n": 3815,
+          "pct": 17.7
+        },
+        "mentions_expected_output": {
+          "hits": 96,
+          "n": 3815,
+          "pct": 2.5
+        },
+        "mentions_environment": {
+          "hits": 44,
+          "n": 3815,
+          "pct": 1.2
+        }
+      }
+    },
+    "Django": {
+      "n": 1693,
+      "unique_ids": 1693,
+      "original_labels": {
+        "Django models": 1166,
+        "Django views/urls": 527
+      },
+      "features": {
+        "mentions_code": {
+          "hits": 1506,
+          "n": 1693,
+          "pct": 89.0
+        },
+        "mentions_version": {
+          "hits": 103,
+          "n": 1693,
+          "pct": 6.1
+        },
+        "mentions_auth": {
+          "hits": 354,
+          "n": 1693,
+          "pct": 20.9
+        },
+        "mentions_request_response": {
+          "hits": 537,
+          "n": 1693,
+          "pct": 31.7
+        },
+        "mentions_error": {
+          "hits": 542,
+          "n": 1693,
+          "pct": 32.0
+        },
+        "mentions_expected_output": {
+          "hits": 11,
+          "n": 1693,
+          "pct": 0.6
+        },
+        "mentions_environment": {
+          "hits": 63,
+          "n": 1693,
+          "pct": 3.7
+        }
+      }
+    }
+  },
+  "reported_table_comparison": [
+    {
+      "group": "NumPy",
+      "feature": "mentions_code",
+      "recomputed_pct": 89.0,
+      "reported_pct": 89.0,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_version",
+      "recomputed_pct": 5.6,
+      "reported_pct": 5.6,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_auth",
+      "recomputed_pct": 0.7,
+      "reported_pct": 0.7,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_request_response",
+      "recomputed_pct": 1.1,
+      "reported_pct": 1.1,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_error",
+      "recomputed_pct": 20.5,
+      "reported_pct": 20.5,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_expected_output",
+      "recomputed_pct": 1.6,
+      "reported_pct": 1.6,
+      "matches": true
+    },
+    {
+      "group": "NumPy",
+      "feature": "mentions_environment",
+      "recomputed_pct": 4.2,
+      "reported_pct": 4.2,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_code",
+      "recomputed_pct": 85.1,
+      "reported_pct": 85.1,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_version",
+      "recomputed_pct": 3.5,
+      "reported_pct": 3.5,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_auth",
+      "recomputed_pct": 0.7,
+      "reported_pct": 0.7,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_request_response",
+      "recomputed_pct": 0.7,
+      "reported_pct": 0.7,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_error",
+      "recomputed_pct": 16.6,
+      "reported_pct": 16.6,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_expected_output",
+      "recomputed_pct": 0.2,
+      "reported_pct": 0.2,
+      "matches": true
+    },
+    {
+      "group": "Matplotlib",
+      "feature": "mentions_environment",
+      "recomputed_pct": 3.7,
+      "reported_pct": 3.7,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_code",
+      "recomputed_pct": 81.3,
+      "reported_pct": 81.3,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_version",
+      "recomputed_pct": 7.7,
+      "reported_pct": 7.7,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_auth",
+      "recomputed_pct": 17.4,
+      "reported_pct": 17.4,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_request_response",
+      "recomputed_pct": 39.0,
+      "reported_pct": 39.0,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_error",
+      "recomputed_pct": 30.5,
+      "reported_pct": 30.5,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_expected_output",
+      "recomputed_pct": 0.7,
+      "reported_pct": 0.7,
+      "matches": true
+    },
+    {
+      "group": "API_server",
+      "feature": "mentions_environment",
+      "recomputed_pct": 7.8,
+      "reported_pct": 7.8,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_code",
+      "recomputed_pct": 89.0,
+      "reported_pct": 89.0,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_version",
+      "recomputed_pct": 6.1,
+      "reported_pct": 6.1,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_auth",
+      "recomputed_pct": 20.9,
+      "reported_pct": 20.9,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_request_response",
+      "recomputed_pct": 31.7,
+      "reported_pct": 31.7,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_error",
+      "recomputed_pct": 32.0,
+      "reported_pct": 32.0,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_expected_output",
+      "recomputed_pct": 0.6,
+      "reported_pct": 0.6,
+      "matches": true
+    },
+    {
+      "group": "Django",
+      "feature": "mentions_environment",
+      "recomputed_pct": 3.7,
+      "reported_pct": 3.7,
+      "matches": true
+    }
+  ],
+  "all_28_reported_cells_match": true,
+  "keyword_patterns": {
+    "mentions_code": "<code|<pre>|```|\\bdef\\s+\\w+|import\\s+\\w+|\\bnp\\.\\w+|plt\\.\\w+",
+    "mentions_version": "\\bversion\\b|\\bv\\d+(?:\\.\\d+)+\\b|python\\s*3\\.\\d+",
+    "mentions_auth": "auth(?:entication|orization)?|token|oauth|api key",
+    "mentions_request_response": "\\brequest\\b|\\bresponse\\b|status code|HTTP\\s*[45]\\d\\d",
+    "mentions_error": "traceback|exception|\\berror\\b|failed|doesn't work|not working",
+    "mentions_expected_output": "expected output|expected result|should return|instead returns",
+    "mentions_environment": "operating system|windows|linux|macos|environment|configuration"
+  },
+  "console_bug": "Section 11 samples category_results without feature columns, so row.get(feature,False) prints None detected. Section 8 sample percentages and Section 12 full-category percentages are unaffected.",
+  "keyue_user_transmitted_clarification": {
+    "no_verb_phrase": 5,
+    "reason": "No verb phrase could be extracted, so no category assigned",
+    "verification": "Author explanation relayed by user; exact IDs/extraction logs not independently checked",
+    "aggregate_accounting": {
+      "strict": 3423,
+      "recovered": 1568,
+      "deleted": 4,
+      "no_verb_phrase": 5,
+      "total": 5000
+    }
+  },
+  "limitations": [
+    "Regex matches on body HTML are not validated difficulty or correctness measures.",
+    "Authentication pattern token/auth can match other uses/substrings.",
+    "20000-question technical corpus is not the 5000 scored sample.",
+    "Question features do not directly establish why historical human responders answered differently.",
+    "Original outcome labels remain unchanged."
+  ],
+  "ai_use": "Codex reviewed source and reran unchanged logic with local paths, checked IDs/arithmetic, and prepared report wording. No new model inference."
+}

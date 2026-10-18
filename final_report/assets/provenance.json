@@ -1,0 +1,14 @@
+{
+  "yihan_topic_similarity.png": {
+    "author": "Yihan Wang",
+    "source": "technical topics(1).ipynb, embedded output of similarity.png",
+    "source_sha256": "f474f7021d7585e5bff2092a197ce75a6e668dd1679ee965857a74ba593c7c47",
+    "role": "Provided visual evidence; not independently regenerated in summary replay"
+  },
+  "keyue_lda_phrases.png": {
+    "author": "Keyue Li",
+    "source": "fig_as_topics_.png",
+    "source_sha256": "60f3f64629fc961743dfcb11c467bf87820ac2db406273ea317c73d98cd69a92",
+    "role": "Provided archived LDA topic-word display, not a classification accuracy result"
+  }
+}
