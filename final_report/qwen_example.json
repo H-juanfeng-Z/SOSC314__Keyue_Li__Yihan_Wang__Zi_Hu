@@ -1,0 +1,25 @@
+{
+  "question_id": 19851005,
+  "task_id": "fine400/19851005/scope",
+  "prompt_arm": "scope",
+  "status": "valid",
+  "input_excerpt": {
+    "question_title": "Rename Pandas DataFrame Index",
+    "answer_line_A8": "df.index.names = ['Date']"
+  },
+  "recorded_output": {
+    "request": "Rename the index and column name of a Pandas DataFrame.",
+    "provided_help": "The answer provides information on how to rename the index and column names using the `rename` method and the `index.names` attribute.",
+    "remaining_gap": "No material gap discernible in supplied text.",
+    "reason": "The answer correctly explains how to rename both the index and column names using the appropriate methods and attributes.",
+    "evidence_ids": [
+      "A8",
+      "A10",
+      "A18"
+    ],
+    "score": 9,
+    "confidence": "high"
+  },
+  "note": "Excerpt of input; actual saved output. Display is illustrative, not an independently established correct score.",
+  "source_log_sha256": "49b850663e4f9a4cabb9e5b9c77b0775ac668b9f19ad776880228022352369ef"
+}

@@ -1,0 +1,23 @@
+{
+  "generated": "2026-10-18",
+  "report_data_sha256": "a86c4f1ec873d8b8bba8e35266a79138115dc77c2f8ef8fcfe4e6654fef3ef07",
+  "source_content_sha256": {
+    "2026-10/technical topics(1).ipynb": "f474f7021d7585e5bff2092a197ce75a6e668dd1679ee965857a74ba593c7c47",
+    "2026-10/\u8865\u5145\u8bf4\u660e(1).docx": "617f781951e55c179ca633ba2ab7a2779bff66d7f9c590431e19983213d6faae",
+    "final_report_20261017/analysis.json": "c86287a3e8b8287bdd316111ae7be9a570a53990ebf3c8f36a0166262c228417",
+    "final_report_20261017/additional_evidence.json": "d0555b1482be5a4d215c4b7994f28bd8f9553916f7ed9e9c4ecc03d35b49352f",
+    "final_report_20261017/joined_oct13.json": "6152c1a9bc37c2205e49b8fd123ef1c1a65937d3fa54fa93be747e1336f82489",
+    "NMF_result_baseline/nmf_K_evaluation.csv": "243b0e46a689005a5d24fdcc78a34fd1362ff99efdcb3ffebba3fb5856589bb8",
+    "NMF_result_natural_language/nmf_K_evaluation.csv": "66388631d5ceb3b227892d28d4f80740b70595789fbcc4416f56547f4e47507a",
+    "Kmeans_result_baseline/kmeans_K_comparison.csv": "1b9278b0a16a78b4275015a09d1d33dda69268e6df1e872a72dc8795c3b9fbc4",
+    "Kmeans_result_natural_language_optimized/kmeans_K_comparison.csv": "ebc0b4be8920b93eddb06e25dbc7ee829c7cc6639515e614ac5b20006328eb2c"
+  },
+  "ai_use": "Codex reviewed author explanations and saved evidence; no human gold, model calls or changed labels.",
+  "limits": [
+    "Summary replay is not raw-source regeneration",
+    "Recovered text changes the historical question snapshot",
+    "No formal classification/scoring accuracy estimate; no causal claims"
+  ],
+  "manual_review": "Authors report numerous informal manual inspections; no uniform adjudication protocol or accuracy estimate. Separate GPT-assisted48-case review.",
+  "user_review_statement_date": "2026-10-18"
+}

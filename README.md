@@ -1,5 +1,11 @@
 # Question Characteristics, Response Time, and Answer Quality on Stack Overflow
 
+## Final project report
+
+[Read the report website](https://h-juanfeng-z.github.io/SOSC314__Keyue_Li__Yihan_Wang__Zi_Hu/) · [Source Notebook](final_report/report.ipynb) · [Reproduction instructions](final_report/README.md)
+
+The final report includes seven figures and two tables covering Qwen annotation, model selection, help-seeking intentions, first-answer helpfulness, response speed and measurement sensitivity. The authors conducted many informal manual checks; no accuracy estimate is claimed from those checks. Full prompts, an actual output example, summary data and reproduction instructions are included in `final_report/`. Earlier weekly work is preserved below.
+
 ## Project Direction
 
 This project investigates how the help-seeking intent and presentation of Python
