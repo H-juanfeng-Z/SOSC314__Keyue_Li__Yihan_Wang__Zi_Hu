@@ -105,5 +105,15 @@
     ],
     "computation_cells_scores_figures_unchanged": true,
     "builder_sha256": "f0c7169aab08d20cce328c008d526f3e620bb37a2f4ff8520bbd0619e3a7e5dc"
+  },
+  "user_requested_interpretation_revision": {
+    "date": "2026-10-19",
+    "base_commit": "e609458caf388202e4a0449dd1755ed86eea73b2",
+    "change": "Replace three technical-feature interpretation paragraphs with user-supplied wording verbatim; retain existing literature comparison.",
+    "changed_markdown_cells": [
+      46
+    ],
+    "scores_code_figures_unchanged": true,
+    "builder_sha256": "c30b8f4f2604c827fd173267910226ea7890d29a99066aac504ac9e24f88bce4"
   }
 }
