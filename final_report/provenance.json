@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18",
+  "generated": "2026-10-19",
   "report_data_sha256": "284057fe71a36efe94710358d1da4d72f889b096e3f600d1985738faa088b409",
   "source_content_sha256": {
     "2026-10/technical topics(1).ipynb": "f474f7021d7585e5bff2092a197ce75a6e668dd1679ee965857a74ba593c7c47",
@@ -49,6 +49,14 @@
       "source": "fig_as_topics_.png",
       "source_sha256": "60f3f64629fc961743dfcb11c467bf87820ac2db406273ea317c73d98cd69a92",
       "role": "Provided archived LDA topic-word display, not a classification accuracy result"
+    },
+    "code_element_scores.png": {
+      "author": "Yihan Wang",
+      "source": "User-supplied PNG and code_element vs scores(1).py",
+      "source_sha256": "a7ced4a293dfc0444a588d6f8ffd1c1cd00cb5109d8f5ba9803c0c49913f23b8",
+      "image_sha256": "cbbcdb8ca406853e1a56c14dac810bf012fbe088ce0bb660b65da0bcff8c2661",
+      "role": "Supplied code-element mean/SE figure, preserved unchanged; 10 means/counts and SE definition independently checked against frozen scores and question metadata.",
+      "error_bars": "mean +/- 1 SE; source Step 6 computes sample std / sqrt(count)."
     }
   },
   "new_checks": {
@@ -58,5 +66,26 @@
     "timing_complete": 1987,
     "all_new_labels_or_scores": false
   },
-  "builder_sha256": "c9bbb26323a94cfcd1d075e00bfd1fbbfd6053680c441c1e0225b6c2d7d73976"
+  "builder_sha256": "2d7132e1e288c449e5d20ed6e9886332c36fe5ab262028d25ad3f69ba25058f9",
+  "revision": {
+    "base_commit": "2e168a3f5dceba7b390f2355b687f4a1f7de9420",
+    "retains_partner_colab_edits": true,
+    "concurrent_merge": "Preserves the latest expanded motivation and NMF explanation; retains the Doc2Vec separation rationale with metric-specific qualification, and reconciles figure numbering and ceiling-effect wording. Removes one empty code cell only.",
+    "changes": "Add supplied code-element asset and statistical support; correct interpretation, sample example, headings and figure numbering; rebuild coherent notebook/HTML release.",
+    "original_scores_unchanged": true,
+    "code_element_check": {
+      "base_commit": "cdfb51da4ec6bf7c8123ad69edabfe7c64ea1c89",
+      "all_10_means_and_counts_match_attachment": true,
+      "all_1000_metadata_ids_unique_and_matched": true,
+      "format_valid": 995,
+      "scope_valid": 996,
+      "se_definition_verified_in_source": true,
+      "source_hashes": {
+        "scores_0_10_1000.json": "09e1920b4c54158dd27f83f671edb21ea9631bc4fb4e8eb3c355ebf9e3dcee07",
+        "questions_clean.parquet": "79440abbf56be552c0c1d1ed3fec12a7c3855eabb8b35ea8ebf8bc68e8bea3e7",
+        "partner_original.py": "a7ced4a293dfc0444a588d6f8ffd1c1cd00cb5109d8f5ba9803c0c49913f23b8",
+        "attachment.png": "cbbcdb8ca406853e1a56c14dac810bf012fbe088ce0bb660b65da0bcff8c2661"
+      }
+    }
+  }
 }

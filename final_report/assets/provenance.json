@@ -10,5 +10,13 @@
     "source": "fig_as_topics_.png",
     "source_sha256": "60f3f64629fc961743dfcb11c467bf87820ac2db406273ea317c73d98cd69a92",
     "role": "Provided archived LDA topic-word display, not a classification accuracy result"
+  },
+  "code_element_scores.png": {
+    "author": "Yihan Wang",
+    "source": "User-supplied PNG and code_element vs scores(1).py",
+    "source_sha256": "a7ced4a293dfc0444a588d6f8ffd1c1cd00cb5109d8f5ba9803c0c49913f23b8",
+    "image_sha256": "cbbcdb8ca406853e1a56c14dac810bf012fbe088ce0bb660b65da0bcff8c2661",
+    "role": "Supplied code-element mean/SE figure, preserved unchanged; 10 means/counts and SE definition independently checked against frozen scores and question metadata.",
+    "error_bars": "mean +/- 1 SE; source Step 6 computes sample std / sqrt(count)."
   }
 }

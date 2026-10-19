@@ -1,0 +1,117 @@
+{
+  "selected_questions": 1000,
+  "variable": "code_element_count: number of <code> elements, including inline and block code; not code length",
+  "bins": [
+    "0",
+    "1-2",
+    "3-5",
+    "6-10",
+    "11+"
+  ],
+  "error_bars": "mean +/- 1 standard error; sample SD (ddof=1) / sqrt(n); not 95% confidence intervals",
+  "support": "Per-arm valid numeric scores from the fixed 1000-question fine sample; not restricted to identical three-score-valid support.",
+  "arms": {
+    "format": {
+      "valid_n": 995,
+      "not_valid_n": 5,
+      "groups": [
+        {
+          "bin": "0",
+          "n": 143,
+          "mean": 5.559440559440559,
+          "sample_sd": 2.98026933659108,
+          "se": 0.24922264203934238,
+          "mean_minus_se": 5.310217917401217,
+          "mean_plus_se": 5.808663201479901
+        },
+        {
+          "bin": "1-2",
+          "n": 454,
+          "mean": 6.539647577092511,
+          "sample_sd": 2.9554403546837915,
+          "se": 0.13870568856342347,
+          "mean_minus_se": 6.400941888529088,
+          "mean_plus_se": 6.678353265655934
+        },
+        {
+          "bin": "3-5",
+          "n": 272,
+          "mean": 6.985294117647059,
+          "sample_sd": 2.791619757879858,
+          "se": 0.16926681071029195,
+          "mean_minus_se": 6.816027306936767,
+          "mean_plus_se": 7.154560928357351
+        },
+        {
+          "bin": "6-10",
+          "n": 102,
+          "mean": 6.421568627450981,
+          "sample_sd": 3.1573778897699274,
+          "se": 0.31262699598045707,
+          "mean_minus_se": 6.108941631470524,
+          "mean_plus_se": 6.734195623431438
+        },
+        {
+          "bin": "11+",
+          "n": 24,
+          "mean": 6.208333333333333,
+          "sample_sd": 3.078384198790385,
+          "se": 0.6283725432735717,
+          "mean_minus_se": 5.579960790059761,
+          "mean_plus_se": 6.836705876606905
+        }
+      ]
+    },
+    "scope": {
+      "valid_n": 996,
+      "not_valid_n": 4,
+      "groups": [
+        {
+          "bin": "0",
+          "n": 143,
+          "mean": 6.055944055944056,
+          "sample_sd": 3.0158646805677654,
+          "se": 0.25219927423873806,
+          "mean_minus_se": 5.803744781705317,
+          "mean_plus_se": 6.308143330182794
+        },
+        {
+          "bin": "1-2",
+          "n": 455,
+          "mean": 6.894505494505495,
+          "sample_sd": 2.9737975631430675,
+          "se": 0.1394137800948747,
+          "mean_minus_se": 6.75509171441062,
+          "mean_plus_se": 7.03391927460037
+        },
+        {
+          "bin": "3-5",
+          "n": 272,
+          "mean": 7.3088235294117645,
+          "sample_sd": 2.845374847081441,
+          "se": 0.17252619174988942,
+          "mean_minus_se": 7.136297337661875,
+          "mean_plus_se": 7.481349721161654
+        },
+        {
+          "bin": "6-10",
+          "n": 102,
+          "mean": 7.196078431372549,
+          "sample_sd": 3.0280510860826353,
+          "se": 0.2998217342892572,
+          "mean_minus_se": 6.896256697083292,
+          "mean_plus_se": 7.495900165661807
+        },
+        {
+          "bin": "11+",
+          "n": 24,
+          "mean": 6.583333333333333,
+          "sample_sd": 3.091596838931744,
+          "se": 0.6310695621486837,
+          "mean_minus_se": 5.952263771184649,
+          "mean_plus_se": 7.214402895482017
+        }
+      ]
+    }
+  }
+}
