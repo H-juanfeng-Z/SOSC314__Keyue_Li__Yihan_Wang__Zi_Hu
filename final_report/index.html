@@ -8232,7 +8232,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Figure 9. Mean fine score by code-element count.</strong> The fixed 1,000-question fine sample contributes 995 valid Format ratings and 996 valid Scope ratings; each bar shows its bin-specific n. Five Format and four Scope outputs are not valid, so these are arm-specific descriptive samples, not the 993-question three-score common support. Code elements count HTML <code>&lt;code&gt;</code> elements, including inline and block code, not code length. Black error bars show <strong>mean ±1 standard error (SE = sample standard deviation / √n)</strong>, not 95% confidence intervals or the spread of individual scores. Yihan supplied the figure and <a href="code_element_original.py">generation code</a>; its ten means, counts and SE calculation were independently reproduced (<a href="code_element_summary.json">bin statistics</a>).</p>
+<p><strong>Figure 9. Mean fine score by code-element count.</strong> The fixed 1,000-question sample yields 995 valid Format ratings and 996 valid Scope ratings, with each bar showing its bin-specific n. Each scoring arm uses all its valid ratings rather than being restricted to a strict common-support subset. Code elements count HTML <code>&lt;code&gt;</code> elements, including inline and block code, not code length. Black error bars indicate mean ±1 standard error (SE = s/√n, where s is the sample standard deviation), not 95% confidence intervals. Yihan supplied the figure and <a href="code_element_original.py">generation code</a>; the bin means, counts, and standard errors were independently reproduced (<a href="code_element_summary.json">bin statistics</a>).</p>
 </div>
 </div>
 </div>
@@ -8243,7 +8243,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Mean ratings peak in the 3–5-element bin: Scope averages 7.31, compared with 6.06 for no code elements. The pattern is consistent with concrete examples helping respondents interpret a request, but does not establish an optimal code amount or that longer code causes worse answers. Element count is not code length, question composition differs, and the 11+ bin contains only 24 cases per prompt.</p>
+<p>Mean ratings peak in the 3–5 element bin, with the Scope prompt averaging 7.31 compared to 6.06 for questions with no code elements. This pattern suggests that providing concrete code examples may help respondents better interpret a request. However, it does not establish an optimal amount of code or imply that longer code causes worse answers. Furthermore, code element count is not equivalent to code length, overall question composition varies, and the 11+ bin contains only 24 cases per prompt, limiting robust conclusions for that group.</p>
 </div>
 </div>
 </div>

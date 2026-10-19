@@ -94,5 +94,16 @@
     "change": "Add explicit ML task, outcomes/targets, inputs and assumptions; move assumptions out of Data, renumber sections, and distinguish measurement/group comparison from supervised reply prediction.",
     "all_scores_and_figures_unchanged": true,
     "builder_sha256": "62a2739743e188beaf1318655ba01b5bd1722b2508f9ec64387da4948d9e4690"
+  },
+  "agreed_figure9_wording": {
+    "date": "2026-10-19",
+    "base_commit": "4f7c89b51c2a5f15ce9a9e586a8b29a1e7d8e944",
+    "changes": "Replace Figure 9 caption and analysis with wording approved by the user; clarify SE formula and attribution; retain links to original code and reproduced bin statistics.",
+    "changed_markdown_cells": [
+      35,
+      36
+    ],
+    "computation_cells_scores_figures_unchanged": true,
+    "builder_sha256": "f0c7169aab08d20cce328c008d526f3e620bb37a2f4ff8520bbd0619e3a7e5dc"
   }
 }
