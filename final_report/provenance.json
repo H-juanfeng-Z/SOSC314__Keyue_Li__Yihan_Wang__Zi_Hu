@@ -87,5 +87,12 @@
         "attachment.png": "cbbcdb8ca406853e1a56c14dac810bf012fbe088ce0bb660b65da0bcff8c2661"
       }
     }
+  },
+  "problem_setup_revision": {
+    "date": "2026-10-19",
+    "base_commit": "6b6c95b5c7f50ed2fc988fe39003440c21cbf94e",
+    "change": "Add explicit ML task, outcomes/targets, inputs and assumptions; move assumptions out of Data, renumber sections, and distinguish measurement/group comparison from supervised reply prediction.",
+    "all_scores_and_figures_unchanged": true,
+    "builder_sha256": "62a2739743e188beaf1318655ba01b5bd1722b2508f9ec64387da4948d9e4690"
   }
 }
