@@ -6,3 +6,6 @@ __pycache__/
 data/raw_csv/
 data/interim/
 data/processed/
+final_report/reproduced/
+artifacts/
+models/

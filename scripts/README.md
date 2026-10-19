@@ -1,3 +1,17 @@
+# Current submission reproduction entry points
+
+Start with [the root README](../README.md) and [reproduction guide](../docs/REPRODUCIBILITY.md).
+`python scripts/check_reproducibility.py --replay-report` verifies the public data
+releases and re-executes the notebook without raw data or model inference.
+For a source-data rerun, follow screening → feature construction → original plots,
+then optional model/annotation branches. `inspect_raw_data.py` records raw input
+hashes; `export_annotation_inputs.py` creates schema-compatible body inputs in a
+new directory without modifying historical scores.
+
+The historical `.ipynb` screening filename below is a plain Python script, not the
+report notebook. Earlier model settings and result folders remain dated records,
+not a claim that every archived development variant is the final model.
+
 # Reproducible data workflow
 
 ## Functional script directories

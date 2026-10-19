@@ -83,3 +83,14 @@ policy.
 - Locally deployed Qwen2.5-Coder-14B-Instruct and Qwen2.5-Coder-7B-Instruct generated experimental intent, presentation-feature and helpfulness judgments. Frozen prompts, inputs, outputs and validation failures are retained under `tables/annotation_diagnostics/followup/`; designed diagnostic texts are AI-assisted checks, not human gold examples.
 - GPT in the Codex conversation reviewed 31 questions and 62 answers, recording labels, confidence, evidence lines and reasons. Exact backend model ID was not exposed. This was AI review, not human annotation or strictly independent validation: previous labels and answer order were hidden during rating, but the conversation contained aggregate context. Ratings were frozen before unmasking; the protocol, review packet, ratings and freeze receipt are included in `gpt_case_review_20261008`. The review scripts do not call an API or automatically regenerate these judgments.
 - Plots are computed from recorded data, not generated images. Input-preservation tests do not establish model accuracy. The context-preserving model rerun remains unfinished. Records are linked by file here; commit references can be added after publication without relabeling AI-generated judgments as human work.
+
+
+## Final repository reproducibility update (2026-10-19)
+
+At Zi Hu's request, Codex assisted with README line-ending repair, dependency
+profiles, data-access/run-order documentation, a read-only raw-input inventory,
+a schema-compatible Parquet export, compatibility imports and synthetic CPU
+workflow tests. The new export is not claimed to recreate historical Parquet
+bytes/order; original model/annotation definitions and frozen scores are unchanged.
+Tests check software interfaces and saved outputs, not annotation accuracy. The
+user-approved report prose remains unchanged in this repository-only update.

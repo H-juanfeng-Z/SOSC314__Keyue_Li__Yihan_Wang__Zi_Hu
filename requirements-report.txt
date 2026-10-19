@@ -1,0 +1,2 @@
+# Exact report-only CPU replay environment; Python 3.12.
+-r final_report/requirements.txt

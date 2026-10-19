@@ -1,0 +1,41 @@
+name: Check CPU reproducibility
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'final_report/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'tables/reusable_evaluation/**'
+      - 'requirements*.txt'
+      - '.github/workflows/reproducibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      MPLBACKEND: Agg
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-report.txt
+            requirements-features.txt
+            final_report/requirements.txt
+      - name: Install CPU report and smoke-test requirements
+        run: python -m pip install -r requirements.txt -r requirements-report.txt -r requirements-features.txt
+      - name: Verify frozen releases and replay notebook
+        run: python scripts/check_reproducibility.py --replay-report
+      - name: Exercise data pipeline on synthetic rows
+        run: python -m unittest discover -s tests -p "test_*.py"

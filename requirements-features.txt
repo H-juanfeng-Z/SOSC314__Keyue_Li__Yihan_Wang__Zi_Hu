@@ -1,0 +1,6 @@
+# Optional collaborator feature extraction and Parquet/workbook support.
+numpy>=1.26,<3
+pandas>=2.0,<3
+beautifulsoup4>=4.12,<5
+pyarrow>=16,<25
+openpyxl>=3.1,<4

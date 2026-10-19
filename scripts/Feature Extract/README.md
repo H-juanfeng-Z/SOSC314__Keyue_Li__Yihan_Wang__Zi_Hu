@@ -9,7 +9,7 @@ from a cleaned Stack Overflow question dataset stored as Parquet.
   tokenization, stopword removal, and uppercase character ratio calculation.
 - `02_feature_extract_singlequestion.py` — definitions of the question-level
   features extracted from each Stack Overflow question.
-- `03-extract_features_full.py` — main script. Reads the full cleaned dataset,
+- `03_extract_features_full.py` — main script. Reads the full cleaned dataset,
   extracts features for all questions, computes descriptive statistics, and
   saves the results in a single Excel workbook.
 
@@ -71,4 +71,20 @@ The workbook contains two sheets:
 Install the required Python packages with:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt -r requirements-features.txt
+```
+
+
+## Run from this repository
+
+From the repository root, install the optional feature requirements and use the
+actual numbered filename (the compatibility imports preserve feature definitions):
+
+```sh
+python -m pip install -r requirements.txt -r requirements-features.txt
+python "scripts/Feature Extract/03_extract_features_full.py" --parquet /path/to/questions_clean.parquet --out /path/to/new_output.xlsx
+```
+
+See [the reproduction guide](../../docs/REPRODUCIBILITY.md) for data acquisition
+and a schema-compatible reconstruction/export. Existing historical Parquet
+snapshots and reconstructed inputs are not claimed to be byte-identical.

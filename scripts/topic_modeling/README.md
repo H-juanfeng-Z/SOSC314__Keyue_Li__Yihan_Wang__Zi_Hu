@@ -18,3 +18,14 @@ python "../../scripts/topic_modeling/question classfication NMF.py"
 Substitute another script filename to run the other configuration. Dependencies include pandas, NumPy, scikit-learn, BeautifulSoup, an HTML parser and a Parquet engine; Doc2Vec additionally needs gensim. Local outputs are created under this working directory, not over the committed result snapshots. The `code for NMF_nature K=2-40 figure.py` program reruns NMF and displays a plot; it is not a lightweight figure-only regeneration script.
 
 The LDA program requires spaCy and its `en_core_web_sm` model. Its `QUESTIONS_CSV` and `OUT_DIR` settings still contain the author's original local paths and must be configured before running. They were not silently changed to another dataset in this migration. No topic naming, model settings or results were changed.
+
+
+## Optional environment and portable input export
+
+Install `requirements.txt` and `requirements-topics.txt` from the repository root.
+The [reproduction guide](../../docs/REPRODUCIBILITY.md) gives the raw-input run order,
+an explicit `export_annotation_inputs.py` bridge and commands from its output
+directory. New exports have their own hashes/order and do not silently replace the
+historical team Parquet snapshots or frozen classifications. An exact historical
+sample requires the recorded input snapshot/selection. Do not download spaCy or
+transformer models as part of routine report verification.

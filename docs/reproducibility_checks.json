@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-19",
+  "base_report_commit": "63686230c2ea3b885106de2ce06fb88bc2aec70c",
+  "interpreter": "Python 3.12.14",
+  "platform": "Windows x86_64",
+  "fresh_isolated_environment": true,
+  "installed_profiles": ["requirements.txt", "requirements-report.txt", "requirements-features.txt"],
+  "pip_check_exit_code": 0,
+  "frozen_release_and_report_replay_exit_code": 0,
+  "displayed_report_image_outputs": 11,
+  "exact_report_png_output_hash_match_in_tested_environment": true,
+  "synthetic_pipeline_tests": {"run": 3, "failures": 0, "errors": 0},
+  "existing_protocol_tests": {"run": 4, "failures": 0, "errors": 0},
+  "existing_transformation_tests": {"run": 3, "failures": 0, "errors": 0},
+  "synthetic_fixture": {"questions": 3, "raw_answers": 4, "retained_answers": 3, "orphan_tag_rows": 1},
+  "unchanged": ["submitted report prose", "original scores and labels", "supplied figures", "model definitions"],
+  "not_tested": ["full raw Kaggle archive regeneration", "new model inference", "all optional topic/model dependency profiles", "annotation technical accuracy"],
+  "scope": "Software/data-interface and frozen-output verification, not a new research experiment or an accuracy estimate. CI separately checks a fresh Linux environment."
+}

@@ -103,6 +103,8 @@ def read_exclusion_manifest(path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
 
             fields = next(csv.reader([line]))
             if fields[0] in {"AnswerId", "QuestionId"}:
+                # Support both recorded comment styles without changing exclusions.
+                section = "answers" if fields[0] == "AnswerId" else "tags"
                 continue
 
             if section == "answers":
